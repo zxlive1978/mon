@@ -35,7 +35,7 @@ def read_well(sbor,table):
 			
 			cur_rec=i
 			#print cur_rec
-			cur_lst_disp =i
+			cur_lst_disp =cur_lst_disp+21
 			print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
