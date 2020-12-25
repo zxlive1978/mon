@@ -722,6 +722,12 @@ t544.start()
 t544.join(180)
 if t544.is_alive(): t544.terminate()
 
+# 9917
+t630 = Process(target=read_well, args=["/mnt/630","s630depth"])
+t630.start()
+t630.join(180)
+if t630.is_alive(): t630.terminate()
+
 # #6611
 # #read_well("/mnt/4450","s4450")
 # t4450 = Process(target=read_well, args=["/mnt/4450","s4450"])
@@ -729,12 +735,6 @@ if t544.is_alive(): t544.terminate()
 # t4450.join(30)
 # if t4450.is_alive(): t4450.terminate()
 
-# #628
-# #read_well("/mnt/630","s630")
-# t630 = Process(target=read_well, args=["/mnt/630","s630"])
-# t630.start()
-# t630.join(30)
-# if t630.is_alive(): t630.terminate()
 
 # #read_well("/mnt/630","s630")
 # #629
