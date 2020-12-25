@@ -1,0 +1,8672 @@
+﻿[
+	{
+		"ID": "1",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "1",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "8",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "9",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "10",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "11",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "12",
+		"Description": "Block Position",
+		"ShortMnemonic": "BPOS",
+		"LongMnemonic": "BLKPOS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "13",
+		"Description": "Rate of Penetration (avg)",
+		"ShortMnemonic": "ROPA",
+		"LongMnemonic": "ROPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "14",
+		"Description": "Hookload (avg)",
+		"ShortMnemonic": "HKLA",
+		"LongMnemonic": "HKLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "15",
+		"Description": "Hookload (max)",
+		"ShortMnemonic": "HKLX",
+		"LongMnemonic": "HKLX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "16",
+		"Description": "Weight-on-Bit (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "WOBA",
+		"Type": "WOBA",
+		"Length": "F"
+	},
+	{
+		"ID": "1",
+		"Index": "17",
+		"Description": "Weight-on-Bit (surf",
+		"ShortMnemonic": "max)",
+		"LongMnemonic": "WOBX",
+		"Type": "WOBX",
+		"Length": "F"
+	},
+	{
+		"ID": "1",
+		"Index": "18",
+		"Description": "Rotary Torque (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "TQA",
+		"Type": "TORQA",
+		"Length": "F"
+	},
+	{
+		"ID": "1",
+		"Index": "19",
+		"Description": "Rotary Torque (surf",
+		"ShortMnemonic": "max)",
+		"LongMnemonic": "TQX",
+		"Type": "TORQX",
+		"Length": "F"
+	},
+	{
+		"ID": "1",
+		"Index": "20",
+		"Description": "Rotary Speed (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "RPMA",
+		"Type": "RPMA",
+		"Length": "S"
+	},
+	{
+		"ID": "1",
+		"Index": "21",
+		"Description": "Standpipe Pressure (avg)",
+		"ShortMnemonic": "SPPA",
+		"LongMnemonic": "SPPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "22",
+		"Description": "Casing (Choke) Pressure",
+		"ShortMnemonic": "CHKP",
+		"LongMnemonic": "CHKP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "23",
+		"Description": "Pump Stroke Rate #1",
+		"ShortMnemonic": "SPM1",
+		"LongMnemonic": "SPM1",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "24",
+		"Description": "Pump Stroke Rate #2",
+		"ShortMnemonic": "SPM2",
+		"LongMnemonic": "SPM2",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "25",
+		"Description": "Pump Stroke Rate #3",
+		"ShortMnemonic": "SPM3",
+		"LongMnemonic": "SPM3",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "26",
+		"Description": "Tank Volume (active)",
+		"ShortMnemonic": "TVA",
+		"LongMnemonic": "TVOLACT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "27",
+		"Description": "Tank Volume Change (act)",
+		"ShortMnemonic": "TVCA",
+		"LongMnemonic": "TVOLCACT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "28",
+		"Description": "Mud Flow Out %",
+		"ShortMnemonic": "MFOP",
+		"LongMnemonic": "MFOP",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "29",
+		"Description": "Mud Flow Out (avg)",
+		"ShortMnemonic": "MFOA",
+		"LongMnemonic": "MFOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "30",
+		"Description": "Mud Flow In (avg)",
+		"ShortMnemonic": "MFIA",
+		"LongMnemonic": "MFIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "31",
+		"Description": "Mud Density Out (avg)",
+		"ShortMnemonic": "MDOA",
+		"LongMnemonic": "MDOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "32",
+		"Description": "Mud Density In (avg)",
+		"ShortMnemonic": "MDIA",
+		"LongMnemonic": "MDIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "33",
+		"Description": "Mud Temperature Out (avg)",
+		"ShortMnemonic": "MTOA",
+		"LongMnemonic": "MTOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "34",
+		"Description": "Mud Temperature In (avg)",
+		"ShortMnemonic": "MTIA",
+		"LongMnemonic": "MTIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "35",
+		"Description": "Mud Conductivity Out (avg)",
+		"ShortMnemonic": "MCOA",
+		"LongMnemonic": "MCOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "36",
+		"Description": "Mud Conductivity In (avg)",
+		"ShortMnemonic": "MCIA",
+		"LongMnemonic": "MCIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "37",
+		"Description": "Pump Stroke Count (cum)",
+		"ShortMnemonic": "STKC",
+		"LongMnemonic": "STKC",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "38",
+		"Description": "Lag Strokes",
+		"ShortMnemonic": "LSTK",
+		"LongMnemonic": "LAGSTKS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "1",
+		"Index": "39",
+		"Description": "Depth Returns (meas)",
+		"ShortMnemonic": "DRTM",
+		"LongMnemonic": "DEPTRETM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "40",
+		"Description": "Gas (avg)",
+		"ShortMnemonic": "GASA",
+		"LongMnemonic": "GASA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "41",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "42",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "43",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "44",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "1",
+		"Index": "45",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "2",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "2",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "2",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "2",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "10",
+		"Description": "Rate of Penetration (avg)",
+		"ShortMnemonic": "ROPA",
+		"LongMnemonic": "ROPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "11",
+		"Description": "Weight-on-Bit (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "WOBA",
+		"Type": "WOBA",
+		"Length": "F"
+	},
+	{
+		"ID": "2",
+		"Index": "12",
+		"Description": "Hookload (avg)",
+		"ShortMnemonic": "HKLA",
+		"LongMnemonic": "HKLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "13",
+		"Description": "Standpipe Pressure (avg)",
+		"ShortMnemonic": "SPPA",
+		"LongMnemonic": "SPPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "14",
+		"Description": "Rotary Torque (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "TQA",
+		"Type": "TORQA",
+		"Length": "F"
+	},
+	{
+		"ID": "2",
+		"Index": "15",
+		"Description": "Rotary Speed (surf",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "RPMA",
+		"Type": "RPMA",
+		"Length": "S"
+	},
+	{
+		"ID": "2",
+		"Index": "16",
+		"Description": "Bit Revolutions (cum)",
+		"ShortMnemonic": "BRVC",
+		"LongMnemonic": "BTREVC",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "17",
+		"Description": "Mud Density In (avg)",
+		"ShortMnemonic": "MDIA",
+		"LongMnemonic": "MDIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "18",
+		"Description": "ECD at Total Depth",
+		"ShortMnemonic": "ECDT",
+		"LongMnemonic": "ECDTD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "19",
+		"Description": "Mud Flow In (avg)",
+		"ShortMnemonic": "MFIA",
+		"LongMnemonic": "MFIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "20",
+		"Description": "Mud Flow Out (avg)",
+		"ShortMnemonic": "MFOA",
+		"LongMnemonic": "MFOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "21",
+		"Description": "Mud Flow Out %",
+		"ShortMnemonic": "MFOP",
+		"LongMnemonic": "MFOP",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "2",
+		"Index": "22",
+		"Description": "Tank Volume (active)",
+		"ShortMnemonic": "TVA",
+		"LongMnemonic": "TVOLACT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "23",
+		"Description": "Cost/Distance (inst)",
+		"ShortMnemonic": "CPDI",
+		"LongMnemonic": "CPDI",
+		"Type": "F",
+		"Length": "0"
+	},
+	{
+		"ID": "2",
+		"Index": "24",
+		"Description": "Cost/Distance (cum)",
+		"ShortMnemonic": "CPDC",
+		"LongMnemonic": "CPDC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "25",
+		"Description": "Bit Drilled Time",
+		"ShortMnemonic": "BDTI",
+		"LongMnemonic": "BTDTIME",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "26",
+		"Description": "Bit Drilled Distance",
+		"ShortMnemonic": "BDDI",
+		"LongMnemonic": "BTDDIST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "27",
+		"Description": "Corr. Drilling Exponent",
+		"ShortMnemonic": "DXC",
+		"LongMnemonic": "DXC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "28",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "29",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "30",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "31",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "32",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "33",
+		"Description": "SPARE 6",
+		"ShortMnemonic": "SPR6",
+		"LongMnemonic": "SPARE6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "34",
+		"Description": "SPARE 7",
+		"ShortMnemonic": "SPR7",
+		"LongMnemonic": "SPARE7",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "35",
+		"Description": "SPARE 8",
+		"ShortMnemonic": "SPR8",
+		"LongMnemonic": "SPARE8",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "2",
+		"Index": "36",
+		"Description": "SPARE 9",
+		"ShortMnemonic": "SPR9",
+		"LongMnemonic": "SPARE9",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "3",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "8",
+		"Description": "Depth Connection (meas)",
+		"ShortMnemonic": "DCNM",
+		"LongMnemonic": "DEPTCONM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "9",
+		"Description": "Depth Connection (vert)",
+		"ShortMnemonic": "DCNV",
+		"LongMnemonic": "DEPTCONV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "10",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "11",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "12",
+		"Description": "Elapsed Time Bottom-Slips",
+		"ShortMnemonic": "ETBS",
+		"LongMnemonic": "ETIMEBTS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "13",
+		"Description": "Elapsed Time In-Slips",
+		"ShortMnemonic": "ETSL",
+		"LongMnemonic": "ETIMESLP",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "14",
+		"Description": "Elapsed Time Slips-Bottom",
+		"ShortMnemonic": "ETSB",
+		"LongMnemonic": "ETIMESTB",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "15",
+		"Description": "Elapsed Time Pumps-Off",
+		"ShortMnemonic": "ETPO",
+		"LongMnemonic": "ETIMEPOF",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "3",
+		"Index": "16",
+		"Description": "Running Speed - up (max)",
+		"ShortMnemonic": "RSUX",
+		"LongMnemonic": "RSUX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "17",
+		"Description": "Running Speed - down (max)",
+		"ShortMnemonic": "RSDX",
+		"LongMnemonic": "RSDX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "18",
+		"Description": "Hookload (max)",
+		"ShortMnemonic": "HKLX",
+		"LongMnemonic": "HKLX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "19",
+		"Description": "String Weight (rot",
+		"ShortMnemonic": "avg)",
+		"LongMnemonic": "STWT",
+		"Type": "STRGWT",
+		"Length": "F"
+	},
+	{
+		"ID": "3",
+		"Index": "20",
+		"Description": "Torque - Make Up (max)",
+		"ShortMnemonic": "TQMX",
+		"LongMnemonic": "TORQMUX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "21",
+		"Description": "Torque - Breakout (max)",
+		"ShortMnemonic": "TQBX",
+		"LongMnemonic": "TORQBOX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "22",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "23",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "24",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "25",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "3",
+		"Index": "26",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "4",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "4",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "4",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "4",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "10",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "11",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "12",
+		"Description": "Mud Density In (avg)",
+		"ShortMnemonic": "MDIA",
+		"LongMnemonic": "MDIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "13",
+		"Description": "Mud Flow In (avg)",
+		"ShortMnemonic": "MFIA",
+		"LongMnemonic": "MFIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "14",
+		"Description": "Standpipe Pressure (avg)",
+		"ShortMnemonic": "SPPA",
+		"LongMnemonic": "SPPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "15",
+		"Description": "Plastic Viscosity",
+		"ShortMnemonic": "PV",
+		"LongMnemonic": "PV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "16",
+		"Description": "Yield Point",
+		"ShortMnemonic": "YP",
+		"LongMnemonic": "YP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "17",
+		"Description": "Pressure Loss - bit",
+		"ShortMnemonic": "PLB",
+		"LongMnemonic": "PLB",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "18",
+		"Description": "Pressure Loss - string",
+		"ShortMnemonic": "PLDS",
+		"LongMnemonic": "PLDS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "19",
+		"Description": "Pressure Loss - annulus",
+		"ShortMnemonic": "PLA",
+		"LongMnemonic": "PLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "20",
+		"Description": "Pressure Loss - surface",
+		"ShortMnemonic": "PLSU",
+		"LongMnemonic": "PLSU",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "21",
+		"Description": "Pressure Loss - mud motor",
+		"ShortMnemonic": "PLMM",
+		"LongMnemonic": "PLMM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "22",
+		"Description": "Pressure Loss - MWD tool",
+		"ShortMnemonic": "PLMW",
+		"LongMnemonic": "PLMWD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "23",
+		"Description": "Pressure Loss - % at bit",
+		"ShortMnemonic": "PLPB",
+		"LongMnemonic": "PLPB",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "24",
+		"Description": "Bit Hydraulic Power",
+		"ShortMnemonic": "BHP",
+		"LongMnemonic": "BHP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "25",
+		"Description": "Bit Hydraulic Power/Area",
+		"ShortMnemonic": "BHPA",
+		"LongMnemonic": "BHPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "26",
+		"Description": "Jet Impact Force",
+		"ShortMnemonic": "JIF",
+		"LongMnemonic": "JIF",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "27",
+		"Description": "Jet Velocity",
+		"ShortMnemonic": "JV",
+		"LongMnemonic": "JV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "28",
+		"Description": "Annular Velocity (min)",
+		"ShortMnemonic": "AVN",
+		"LongMnemonic": "AVELN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "29",
+		"Description": "Annular Velocity (max)",
+		"ShortMnemonic": "AVX",
+		"LongMnemonic": "AVELX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "30",
+		"Description": "ECD at Total Depth",
+		"ShortMnemonic": "ECDT",
+		"LongMnemonic": "ECDTD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "31",
+		"Description": "ECD at Bit",
+		"ShortMnemonic": "ECDB",
+		"LongMnemonic": "ECDBIT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "32",
+		"Description": "ECD at Casing Shoe",
+		"ShortMnemonic": "ECDC",
+		"LongMnemonic": "ECDCSG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "33",
+		"Description": "Pump Hydraulic Power",
+		"ShortMnemonic": "PHP",
+		"LongMnemonic": "PHP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "34",
+		"Description": "Calc/Obs Press.Loss ratio",
+		"ShortMnemonic": "PLCO",
+		"LongMnemonic": "PLCO",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "35",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "36",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "37",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "38",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "4",
+		"Index": "39",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "5",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "5",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "5",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "5",
+		"Index": "8",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "9",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "10",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "11",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "12",
+		"Description": "Trip Number",
+		"ShortMnemonic": "TNUM",
+		"LongMnemonic": "TRIPNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "5",
+		"Index": "13",
+		"Description": "In-Slips Status",
+		"ShortMnemonic": "STIS",
+		"LongMnemonic": "STATUSIS",
+		"Type": "A",
+		"Length": "2"
+	},
+	{
+		"ID": "5",
+		"Index": "14",
+		"Description": "Hookload (avg)",
+		"ShortMnemonic": "HKLA",
+		"LongMnemonic": "HKLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "15",
+		"Description": "Block Position",
+		"ShortMnemonic": "BPOS",
+		"LongMnemonic": "BLKPOS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "16",
+		"Description": "Running Speed - up (max)",
+		"ShortMnemonic": "RSUX",
+		"LongMnemonic": "RSUX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "17",
+		"Description": "Running Speed - down (max)",
+		"ShortMnemonic": "RSDX",
+		"LongMnemonic": "RSDX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "18",
+		"Description": "Fill/Gain Volume Obs.(cum)",
+		"ShortMnemonic": "FVOC",
+		"LongMnemonic": "FVOLOC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "19",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "20",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "21",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "22",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "5",
+		"Index": "23",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "6",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "8",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "9",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "10",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "11",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "12",
+		"Description": "Trip Number",
+		"ShortMnemonic": "TNUM",
+		"LongMnemonic": "TRIPNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "13",
+		"Description": "Connections Done",
+		"ShortMnemonic": "CDON",
+		"LongMnemonic": "CONNDONE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "14",
+		"Description": "Connections Remaining",
+		"ShortMnemonic": "CREM",
+		"LongMnemonic": "CONNREM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "15",
+		"Description": "Elapsed Time In-Slips",
+		"ShortMnemonic": "ETSL",
+		"LongMnemonic": "ETIMESLP",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "16",
+		"Description": "Elapsed Time Out-of-Slips",
+		"ShortMnemonic": "ETOS",
+		"LongMnemonic": "ETIMEOS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "6",
+		"Index": "17",
+		"Description": "Running Speed -up (max)",
+		"ShortMnemonic": "RSUX",
+		"LongMnemonic": "RSUX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "18",
+		"Description": "Running Speed -up (avg)",
+		"ShortMnemonic": "RSUA",
+		"LongMnemonic": "RSUA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "19",
+		"Description": "Running Speed -down (max)",
+		"ShortMnemonic": "RSDX",
+		"LongMnemonic": "RSDX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "20",
+		"Description": "Running Speed -down (avg)",
+		"ShortMnemonic": "RSDA",
+		"LongMnemonic": "RSDA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "21",
+		"Description": "Hookload (max)",
+		"ShortMnemonic": "HKLX",
+		"LongMnemonic": "HKLX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "22",
+		"Description": "Hookload (min)",
+		"ShortMnemonic": "HKLN",
+		"LongMnemonic": "HKLN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "23",
+		"Description": "Hookload (avg)",
+		"ShortMnemonic": "HKLA",
+		"LongMnemonic": "HKLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "24",
+		"Description": "Torque - Make Up (max)",
+		"ShortMnemonic": "TQMX",
+		"LongMnemonic": "TORQMUX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "25",
+		"Description": "Torque - Breakout (max)",
+		"ShortMnemonic": "TQBX",
+		"LongMnemonic": "TORQBOX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "26",
+		"Description": "Fill/Gain Volume Obs.",
+		"ShortMnemonic": "FVO",
+		"LongMnemonic": "FVOLO",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "27",
+		"Description": "Fill/Gain Volume Exp.",
+		"ShortMnemonic": "FVE",
+		"LongMnemonic": "FVOLE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "28",
+		"Description": "Fill/Gain Volume Obs.(cum)",
+		"ShortMnemonic": "FVOC",
+		"LongMnemonic": "FVOLOC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "29",
+		"Description": "Fill/Gain Volume Exp (cum)",
+		"ShortMnemonic": "FVEC",
+		"LongMnemonic": "FVOLEC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "30",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "31",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "32",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "33",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "6",
+		"Index": "34",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "7",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "7",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "7",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "7",
+		"Index": "8",
+		"Description": "Depth Svy/reading (meas)",
+		"ShortMnemonic": "DSVM",
+		"LongMnemonic": "DEPTSVYM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "9",
+		"Description": "Depth Svy/reading (vert)",
+		"ShortMnemonic": "DSVV",
+		"LongMnemonic": "DEPTSVYV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "10",
+		"Description": "Pass Number",
+		"ShortMnemonic": "PASS",
+		"LongMnemonic": "PASSNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "7",
+		"Index": "11",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "12",
+		"Description": "Svy Type",
+		"ShortMnemonic": "STYP",
+		"LongMnemonic": "SVYTYPE",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "7",
+		"Index": "13",
+		"Description": "Svy Inclination",
+		"ShortMnemonic": "SINC",
+		"LongMnemonic": "SVYINC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "14",
+		"Description": "Svy Azimuth (uncorrected)",
+		"ShortMnemonic": "SAZU",
+		"LongMnemonic": "SVYAZU",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "15",
+		"Description": "Svy Azimuth (corrected)",
+		"ShortMnemonic": "SAZC",
+		"LongMnemonic": "SVYAZC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "16",
+		"Description": "Svy Magnetic Toolface",
+		"ShortMnemonic": "SMTF",
+		"LongMnemonic": "SVYMTF",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "17",
+		"Description": "Svy Gravity Toolface",
+		"ShortMnemonic": "SGTF",
+		"LongMnemonic": "SVYGTF",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "18",
+		"Description": "Svy North-South Position",
+		"ShortMnemonic": "SNS",
+		"LongMnemonic": "SVYNS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "19",
+		"Description": "Svy East-West Position",
+		"ShortMnemonic": "SEW",
+		"LongMnemonic": "SVYEW",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "20",
+		"Description": "Svy Dog Leg Severity",
+		"ShortMnemonic": "SDLS",
+		"LongMnemonic": "SVYDLS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "21",
+		"Description": "Svy Rate of Walk",
+		"ShortMnemonic": "SWLK",
+		"LongMnemonic": "SVYWALK",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "22",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "23",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "24",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "25",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "7",
+		"Index": "26",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "8",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "8",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "8",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "8",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "10",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "11",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "12",
+		"Description": "Pass Number",
+		"ShortMnemonic": "PASS",
+		"LongMnemonic": "PASSNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "8",
+		"Index": "13",
+		"Description": "Depth Resis 1 sensor (meas)",
+		"ShortMnemonic": "DR1M",
+		"LongMnemonic": "DEPTRS1M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "14",
+		"Description": "Depth Resis 1 sensor (vert)",
+		"ShortMnemonic": "DR1V",
+		"LongMnemonic": "DEPTRS1V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "15",
+		"Description": "Resis 1 reading",
+		"ShortMnemonic": "MR1",
+		"LongMnemonic": "MR1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "16",
+		"Description": "Resis 1 (borehole corr)",
+		"ShortMnemonic": "MR1C",
+		"LongMnemonic": "MR1C",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "17",
+		"Description": "Depth Resis 2 sensor (meas)",
+		"ShortMnemonic": "DR2M",
+		"LongMnemonic": "DEPTRS2M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "18",
+		"Description": "Depth Resis 2 sensor (vert)",
+		"ShortMnemonic": "DR2V",
+		"LongMnemonic": "DEPTRS2V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "19",
+		"Description": "Resis 2 reading",
+		"ShortMnemonic": "MR2",
+		"LongMnemonic": "MR2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "20",
+		"Description": "Resis 2 (borehole corr)",
+		"ShortMnemonic": "MR2C",
+		"LongMnemonic": "MR2C",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "21",
+		"Description": "Depth G.Ray 1 sensor(meas)",
+		"ShortMnemonic": "DG1M",
+		"LongMnemonic": "DEPTGR1M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "22",
+		"Description": "Depth G.Ray 1 sensor(vert)",
+		"ShortMnemonic": "DG1V",
+		"LongMnemonic": "DEPTGR1V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "23",
+		"Description": "Gamma Ray 1 reading",
+		"ShortMnemonic": "MG1",
+		"LongMnemonic": "MG1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "24",
+		"Description": "Gamma Ray 1(borehole corr)",
+		"ShortMnemonic": "MG1C",
+		"LongMnemonic": "MG1C",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "25",
+		"Description": "Depth G.Ray 2 sensor(meas)",
+		"ShortMnemonic": "DG2M",
+		"LongMnemonic": "DEPTGR2M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "26",
+		"Description": "Depth G.Ray 2 sensor(vert)",
+		"ShortMnemonic": "DG2V",
+		"LongMnemonic": "DEPTGR2V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "27",
+		"Description": "Gamma Ray 2 reading",
+		"ShortMnemonic": "MG2",
+		"LongMnemonic": "MG2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "28",
+		"Description": "Gamma Ray 2(borehole corr)",
+		"ShortMnemonic": "MG2C",
+		"LongMnemonic": "MG2C",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "29",
+		"Description": "Depth Por 1 sensor (meas)",
+		"ShortMnemonic": "DP1M",
+		"LongMnemonic": "DEPTP1M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "30",
+		"Description": "Depth Por 1 sensor (vert)",
+		"ShortMnemonic": "DP1V",
+		"LongMnemonic": "DEPTP1V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "31",
+		"Description": "Porosity Tool 1 reading",
+		"ShortMnemonic": "MPO1",
+		"LongMnemonic": "MPO1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "32",
+		"Description": "Depth Por 2 sensor (meas)",
+		"ShortMnemonic": "DP2M",
+		"LongMnemonic": "DEPTP2M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "33",
+		"Description": "Depth Por 2 sensor (vert)",
+		"ShortMnemonic": "DP2V",
+		"LongMnemonic": "DEPTP2V",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "34",
+		"Description": "Porosity Tool 2 reading",
+		"ShortMnemonic": "MPO2",
+		"LongMnemonic": "MPO2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "35",
+		"Description": "Downhole Fluid Temp (ann)",
+		"ShortMnemonic": "MFTA",
+		"LongMnemonic": "MFTANN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "36",
+		"Description": "Downhole Fluid Temp (pipe)",
+		"ShortMnemonic": "MFTP",
+		"LongMnemonic": "MFTPIPE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "37",
+		"Description": "Downhole Fluid Resis (ann)",
+		"ShortMnemonic": "MFRA",
+		"LongMnemonic": "MFRANN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "38",
+		"Description": "Downhole Fluid Resis (pipe)",
+		"ShortMnemonic": "MFRP",
+		"LongMnemonic": "MFRPIPE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "39",
+		"Description": "Depth Form Density (meas)",
+		"ShortMnemonic": "DFDM",
+		"LongMnemonic": "DEPTFDM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "40",
+		"Description": "Depth Form Density (vert)",
+		"ShortMnemonic": "DFDV",
+		"LongMnemonic": "DEPTFDV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "41",
+		"Description": "Formation Density",
+		"ShortMnemonic": "MFD",
+		"LongMnemonic": "MFD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "42",
+		"Description": "Depth Caliper (meas)",
+		"ShortMnemonic": "DCLM",
+		"LongMnemonic": "DEPTCALM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "43",
+		"Description": "Depth Caliper (vert)",
+		"ShortMnemonic": "DCLV",
+		"LongMnemonic": "DEPTCALV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "44",
+		"Description": "Caliper",
+		"ShortMnemonic": "MCLP",
+		"LongMnemonic": "MCLP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "45",
+		"Description": "Pore Pressure Grad MWD",
+		"ShortMnemonic": "MFPP",
+		"LongMnemonic": "MFPP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "46",
+		"Description": "Frac Pressure Grad MWD",
+		"ShortMnemonic": "MFFP",
+		"LongMnemonic": "MFFP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "47",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "48",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "49",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "50",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "51",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "52",
+		"Description": "SPARE 6",
+		"ShortMnemonic": "SPR6",
+		"LongMnemonic": "SPARE6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "53",
+		"Description": "SPARE 7",
+		"ShortMnemonic": "SPR7",
+		"LongMnemonic": "SPARE7",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "54",
+		"Description": "SPARE 8",
+		"ShortMnemonic": "SPR8",
+		"LongMnemonic": "SPARE8",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "8",
+		"Index": "55",
+		"Description": "SPARE 9",
+		"ShortMnemonic": "SPR9",
+		"LongMnemonic": "SPARE9",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "9",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "10",
+		"Description": "Depth Bit (meas)",
+		"ShortMnemonic": "DBTM",
+		"LongMnemonic": "DEPTBITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "11",
+		"Description": "Depth Bit (vert)",
+		"ShortMnemonic": "DBTV",
+		"LongMnemonic": "DEPTBITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "12",
+		"Description": "Pass Number",
+		"ShortMnemonic": "PASS",
+		"LongMnemonic": "PASSNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "13",
+		"Description": "Bottom-hole annulus press",
+		"ShortMnemonic": "MBPA",
+		"LongMnemonic": "MBHPANN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "14",
+		"Description": "Bottom-hole internal press",
+		"ShortMnemonic": "MBPI",
+		"LongMnemonic": "MBHPINT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "15",
+		"Description": "Downhole Wt-on-Bit (avg)",
+		"ShortMnemonic": "MWBA",
+		"LongMnemonic": "MWOBA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "16",
+		"Description": "Downhole Wt-on-Bit (max)",
+		"ShortMnemonic": "MWBX",
+		"LongMnemonic": "MWOBX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "17",
+		"Description": "Downhole Torque (avg)",
+		"ShortMnemonic": "MTQA",
+		"LongMnemonic": "MTORQA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "18",
+		"Description": "Downhole Torque (max)",
+		"ShortMnemonic": "MTQX",
+		"LongMnemonic": "MTORQX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "19",
+		"Description": "Downhole Motor RPM",
+		"ShortMnemonic": "MMRP",
+		"LongMnemonic": "MMMRPM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "20",
+		"Description": "MWD Tool Alternator Voltage",
+		"ShortMnemonic": "MALT",
+		"LongMnemonic": "MALTVOLT",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "9",
+		"Index": "21",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "22",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "23",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "24",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "25",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "26",
+		"Description": "SPARE 6",
+		"ShortMnemonic": "SPR6",
+		"LongMnemonic": "SPARE6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "27",
+		"Description": "SPARE 7",
+		"ShortMnemonic": "SPR7",
+		"LongMnemonic": "SPARE7",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "28",
+		"Description": "SPARE 8",
+		"ShortMnemonic": "SPR8",
+		"LongMnemonic": "SPARE8",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "9",
+		"Index": "29",
+		"Description": "SPARE 9",
+		"ShortMnemonic": "SPR9",
+		"LongMnemonic": "SPARE9",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "10",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "10",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "10",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "10",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "10",
+		"Description": "Depth Sample (meas)",
+		"ShortMnemonic": "DSAM",
+		"LongMnemonic": "DEPTSAMM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "11",
+		"Description": "Depth Sample (vert)",
+		"ShortMnemonic": "DSAV",
+		"LongMnemonic": "DEPTSAMV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "12",
+		"Description": "Est. Form. Pore Press Grad.",
+		"ShortMnemonic": "FPPG",
+		"LongMnemonic": "FPOREPG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "13",
+		"Description": "Est. Form. Frac Press Grad.",
+		"ShortMnemonic": "FFPG",
+		"LongMnemonic": "FFRACPG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "14",
+		"Description": "Est. Form. Overburden Grad.",
+		"ShortMnemonic": "FOPG",
+		"LongMnemonic": "FOBPG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "15",
+		"Description": "Est. Kick Tolerance",
+		"ShortMnemonic": "KTOL",
+		"LongMnemonic": "KTOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "16",
+		"Description": "Max. Permitted SICP (init)",
+		"ShortMnemonic": "PSIP",
+		"LongMnemonic": "PSIPX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "17",
+		"Description": "Connection Gas (avg)",
+		"ShortMnemonic": "CGSA",
+		"LongMnemonic": "CONNGASA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "18",
+		"Description": "Connection Gas (max)",
+		"ShortMnemonic": "CGSX",
+		"LongMnemonic": "CONNGASX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "19",
+		"Description": "Connection Gas (last)",
+		"ShortMnemonic": "CGSL",
+		"LongMnemonic": "CONNGASL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "20",
+		"Description": "Last Trip Gas",
+		"ShortMnemonic": "TGAS",
+		"LongMnemonic": "TRIPGAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "21",
+		"Description": "Shale Density",
+		"ShortMnemonic": "SDEN",
+		"LongMnemonic": "SHALEDEN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "22",
+		"Description": "Cuttings CEC",
+		"ShortMnemonic": "CEC",
+		"LongMnemonic": "CEC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "23",
+		"Description": "Cavings %",
+		"ShortMnemonic": "CAV",
+		"LongMnemonic": "CAVINGS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "10",
+		"Index": "24",
+		"Description": "Corr. Drilling Exponent",
+		"ShortMnemonic": "DXC",
+		"LongMnemonic": "DXC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "25",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "26",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "27",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "28",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "29",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "30",
+		"Description": "SPARE 6",
+		"ShortMnemonic": "SPR6",
+		"LongMnemonic": "SPARE6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "31",
+		"Description": "SPARE 7",
+		"ShortMnemonic": "SPR7",
+		"LongMnemonic": "SPARE7",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "32",
+		"Description": "SPARE 8",
+		"ShortMnemonic": "SPR8",
+		"LongMnemonic": "SPARE8",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "10",
+		"Index": "33",
+		"Description": "SPARE 9",
+		"ShortMnemonic": "SPR9",
+		"LongMnemonic": "SPARE9",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "11",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "11",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "11",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "11",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "10",
+		"Description": "Tank Volume (total)",
+		"ShortMnemonic": "TVT",
+		"LongMnemonic": "TVOLTOT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "11",
+		"Description": "Tank Volume (active)",
+		"ShortMnemonic": "TVA",
+		"LongMnemonic": "TVOLACT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "12",
+		"Description": "Tank Volume Change (total)",
+		"ShortMnemonic": "TVCT",
+		"LongMnemonic": "TVOLCTOT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "13",
+		"Description": "Tank Volume Change (active)",
+		"ShortMnemonic": "TVCA",
+		"LongMnemonic": "TVOLCACT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "14",
+		"Description": "Tank Volume Reset Time",
+		"ShortMnemonic": "TVRT",
+		"LongMnemonic": "TVRESET",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "15",
+		"Description": "Tank 01 Volume",
+		"ShortMnemonic": "TV01",
+		"LongMnemonic": "TVOL01",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "16",
+		"Description": "Tank 02 Volume",
+		"ShortMnemonic": "TV02",
+		"LongMnemonic": "TVOL02",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "17",
+		"Description": "Tank 03 Volume",
+		"ShortMnemonic": "TV03",
+		"LongMnemonic": "TVOL03",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "18",
+		"Description": "Tank 04 Volume",
+		"ShortMnemonic": "TV04",
+		"LongMnemonic": "TVOL04",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "19",
+		"Description": "Tank 05 Volume",
+		"ShortMnemonic": "TV05",
+		"LongMnemonic": "TVOL05",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "20",
+		"Description": "Tank 06 Volume",
+		"ShortMnemonic": "TV06",
+		"LongMnemonic": "TVOL06",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "21",
+		"Description": "Tank 07 Volume",
+		"ShortMnemonic": "TV07",
+		"LongMnemonic": "TVOL07",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "22",
+		"Description": "Tank 08 Volume",
+		"ShortMnemonic": "TV08",
+		"LongMnemonic": "TVOL08",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "23",
+		"Description": "Tank 09 Volume",
+		"ShortMnemonic": "TV09",
+		"LongMnemonic": "TVOL09",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "24",
+		"Description": "Tank 10 Volume",
+		"ShortMnemonic": "TV10",
+		"LongMnemonic": "TVOL10",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "25",
+		"Description": "Tank 11 Volume",
+		"ShortMnemonic": "TV11",
+		"LongMnemonic": "TVOL11",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "26",
+		"Description": "Tank 12 Volume",
+		"ShortMnemonic": "TV12",
+		"LongMnemonic": "TVOL12",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "27",
+		"Description": "Tank 13 Volume",
+		"ShortMnemonic": "TV13",
+		"LongMnemonic": "TVOL13",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "28",
+		"Description": "Tank 14 Volume",
+		"ShortMnemonic": "TV14",
+		"LongMnemonic": "TVOL14",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "29",
+		"Description": "Trip Tank 1 Volume",
+		"ShortMnemonic": "TTV1",
+		"LongMnemonic": "TTVOL1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "30",
+		"Description": "Trip Tank 2 Volume",
+		"ShortMnemonic": "TTV2",
+		"LongMnemonic": "TTVOL2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "31",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "32",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "33",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "34",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "11",
+		"Index": "35",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "12",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "12",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "12",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "12",
+		"Index": "8",
+		"Description": "Depth Chrom Sample (meas)",
+		"ShortMnemonic": "DCHM",
+		"LongMnemonic": "DEPTCHRM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "9",
+		"Description": "Depth Chrom Sample (vert)",
+		"ShortMnemonic": "DCHV",
+		"LongMnemonic": "DEPTCHRV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "10",
+		"Description": "Date Chrom Sample",
+		"ShortMnemonic": "DCHR",
+		"LongMnemonic": "DATECHR",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "11",
+		"Description": "Time Chrom Sample",
+		"ShortMnemonic": "TCHR",
+		"LongMnemonic": "TIMECHR",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "12",
+		"Description": "Methane (C1)",
+		"ShortMnemonic": "METH",
+		"LongMnemonic": "METHANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "13",
+		"Description": "Ethane (C2)",
+		"ShortMnemonic": "ETH",
+		"LongMnemonic": "ETHANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "14",
+		"Description": "Propane (C3)",
+		"ShortMnemonic": "PRP",
+		"LongMnemonic": "PROPANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "15",
+		"Description": "Iso-Butane (IC4)",
+		"ShortMnemonic": "IBUT",
+		"LongMnemonic": "IBUTANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "16",
+		"Description": "Nor-Butane (NC4)",
+		"ShortMnemonic": "NBUT",
+		"LongMnemonic": "NBUTANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "17",
+		"Description": "Iso-Pentane (IC5)",
+		"ShortMnemonic": "IPEN",
+		"LongMnemonic": "IPENTANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "18",
+		"Description": "Nor-Pentane (NC5)",
+		"ShortMnemonic": "NPEN",
+		"LongMnemonic": "NPENTANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "19",
+		"Description": "Neo-Pentane (EC5)",
+		"ShortMnemonic": "EPEN",
+		"LongMnemonic": "EPENTANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "20",
+		"Description": "Iso-Hexane (IC6)",
+		"ShortMnemonic": "IHEX",
+		"LongMnemonic": "IHEXANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "21",
+		"Description": "Nor-Hexane (NC6)",
+		"ShortMnemonic": "NHEX",
+		"LongMnemonic": "NHEXANE",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "22",
+		"Description": "Carbon Dioxide",
+		"ShortMnemonic": "CO2",
+		"LongMnemonic": "CO2",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "23",
+		"Description": "Acetylene",
+		"ShortMnemonic": "ACET",
+		"LongMnemonic": "ACET",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "24",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "25",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "26",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "27",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "12",
+		"Index": "28",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "13",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "13",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "13",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "13",
+		"Index": "8",
+		"Description": "Depth Returns (meas)",
+		"ShortMnemonic": "DRTM",
+		"LongMnemonic": "DEPTRETM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "9",
+		"Description": "Depth Returns (vert)",
+		"ShortMnemonic": "DRTV",
+		"LongMnemonic": "DEPTRETV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "10",
+		"Description": "Methane (C1) (avg)",
+		"ShortMnemonic": "MTHA",
+		"LongMnemonic": "METHA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "11",
+		"Description": "Methane (C1) (min)",
+		"ShortMnemonic": "MTHN",
+		"LongMnemonic": "METHN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "12",
+		"Description": "Methane (C1) (max)",
+		"ShortMnemonic": "MTHX",
+		"LongMnemonic": "METHX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "13",
+		"Description": "Ethane (C2) (avg)",
+		"ShortMnemonic": "ETHA",
+		"LongMnemonic": "ETHA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "14",
+		"Description": "Ethane (C2) (min)",
+		"ShortMnemonic": "ETHN",
+		"LongMnemonic": "ETHN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "15",
+		"Description": "Ethane (C2) (max)",
+		"ShortMnemonic": "ETHX",
+		"LongMnemonic": "ETHX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "16",
+		"Description": "Propane (C3) (avg)",
+		"ShortMnemonic": "PRPA",
+		"LongMnemonic": "PROPA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "17",
+		"Description": "Propane (C3) (min)",
+		"ShortMnemonic": "PRPN",
+		"LongMnemonic": "PROPN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "18",
+		"Description": "Propane (C3) (max)",
+		"ShortMnemonic": "PRPX",
+		"LongMnemonic": "PROPX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "19",
+		"Description": "Iso-Butane (IC4) (avg)",
+		"ShortMnemonic": "IBTA",
+		"LongMnemonic": "IBUTA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "20",
+		"Description": "Iso-Butane (IC4) (min)",
+		"ShortMnemonic": "IBTN",
+		"LongMnemonic": "IBUTN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "21",
+		"Description": "Iso-Butane (IC4) (max)",
+		"ShortMnemonic": "IBTX",
+		"LongMnemonic": "IBUTX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "22",
+		"Description": "Nor-Butane (NC4) (avg)",
+		"ShortMnemonic": "NBTA",
+		"LongMnemonic": "NBUTA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "23",
+		"Description": "Nor-Butane (NC4) (min)",
+		"ShortMnemonic": "NBTN",
+		"LongMnemonic": "NBUTN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "24",
+		"Description": "Nor-Butane (NC4) (max)",
+		"ShortMnemonic": "NBTX",
+		"LongMnemonic": "NBUTX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "25",
+		"Description": "Iso-Pentane (IC5) (avg)",
+		"ShortMnemonic": "IPNA",
+		"LongMnemonic": "IPENTA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "26",
+		"Description": "Iso-Pentane (IC5) (min)",
+		"ShortMnemonic": "IPNN",
+		"LongMnemonic": "IPENTN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "27",
+		"Description": "Iso-Pentane (IC5) (max)",
+		"ShortMnemonic": "IPNX",
+		"LongMnemonic": "IPENTX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "28",
+		"Description": "Nor-Pentane (NC5) (avg)",
+		"ShortMnemonic": "NPNA",
+		"LongMnemonic": "NPENTA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "29",
+		"Description": "Nor-Pentane (NC5) (min)",
+		"ShortMnemonic": "NPNN",
+		"LongMnemonic": "NPENTN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "30",
+		"Description": "Nor-Pentane (NC5) (max)",
+		"ShortMnemonic": "NPNX",
+		"LongMnemonic": "NPENTX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "31",
+		"Description": "Neo-Pentane (EC5) (avg)",
+		"ShortMnemonic": "EPNA",
+		"LongMnemonic": "EPENTA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "32",
+		"Description": "Neo-Pentane (EC5) (min)",
+		"ShortMnemonic": "EPNN",
+		"LongMnemonic": "EPENTN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "33",
+		"Description": "Neo-Pentane (EC5) (max)",
+		"ShortMnemonic": "EPNX",
+		"LongMnemonic": "EPENTX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "34",
+		"Description": "Iso-Hexane (IC6) (avg)",
+		"ShortMnemonic": "IHXA",
+		"LongMnemonic": "IHEXA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "35",
+		"Description": "Iso-Hexane (IC6) (min)",
+		"ShortMnemonic": "IHXN",
+		"LongMnemonic": "IHEXN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "36",
+		"Description": "Iso-Hexane (IC6) (max)",
+		"ShortMnemonic": "IHXX",
+		"LongMnemonic": "IHEXX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "37",
+		"Description": "Nor-Hexane (NC6) (avg)",
+		"ShortMnemonic": "NHXA",
+		"LongMnemonic": "NHEXA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "38",
+		"Description": "Nor-Hexane (NC6) (min)",
+		"ShortMnemonic": "NHXN",
+		"LongMnemonic": "NHEXN",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "39",
+		"Description": "Nor-Hexane (NC6) (max)",
+		"ShortMnemonic": "NHXX",
+		"LongMnemonic": "NHEXX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "40",
+		"Description": "Carbon Dioxide (avg)",
+		"ShortMnemonic": "CO2A",
+		"LongMnemonic": "CO2A",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "41",
+		"Description": "Carbon Dioxide (min)",
+		"ShortMnemonic": "CO2N",
+		"LongMnemonic": "CO2N",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "42",
+		"Description": "Carbon Dioxide (max)",
+		"ShortMnemonic": "CO2X",
+		"LongMnemonic": "CO2X",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "43",
+		"Description": "Acetylene",
+		"ShortMnemonic": "ACET",
+		"LongMnemonic": "ACET",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "44",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "45",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "46",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "47",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "13",
+		"Index": "48",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "14",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "14",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "14",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "14",
+		"Index": "8",
+		"Description": "Depth Returns (meas)",
+		"ShortMnemonic": "DRTM",
+		"LongMnemonic": "DEPTRETM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "9",
+		"Description": "Depth Returns (vert)",
+		"ShortMnemonic": "DRTV",
+		"LongMnemonic": "DEPTRETV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "10",
+		"Description": "Mud Density In (lagd)",
+		"ShortMnemonic": "MDIL",
+		"LongMnemonic": "MDIL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "11",
+		"Description": "Mud Density Out (avg)",
+		"ShortMnemonic": "MDOA",
+		"LongMnemonic": "MDOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "12",
+		"Description": "Mud Temperature In (lagd)",
+		"ShortMnemonic": "MTIL",
+		"LongMnemonic": "MTIL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "13",
+		"Description": "Mud Temperature Out (avg)",
+		"ShortMnemonic": "MTOA",
+		"LongMnemonic": "MTOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "14",
+		"Description": "Mud Conductivity In (lagd)",
+		"ShortMnemonic": "MCIL",
+		"LongMnemonic": "MCIL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "15",
+		"Description": "Mud Conductivity Out (avg)",
+		"ShortMnemonic": "MCOA",
+		"LongMnemonic": "MCOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "16",
+		"Description": "Hyd.Sulfide Haz.Pot. (avg)",
+		"ShortMnemonic": "HHPA",
+		"LongMnemonic": "HSHPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "17",
+		"Description": "Hyd.Sulfide pH (avg)",
+		"ShortMnemonic": "HPHA",
+		"LongMnemonic": "HSPHA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "18",
+		"Description": "Hyd.Sulfide pHS (avg)",
+		"ShortMnemonic": "HPSA",
+		"LongMnemonic": "HSPHSA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "19",
+		"Description": "Gas In (lagd)",
+		"ShortMnemonic": "GSIL",
+		"LongMnemonic": "GASIL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "20",
+		"Description": "Gas (avg)",
+		"ShortMnemonic": "GASA",
+		"LongMnemonic": "GASA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "21",
+		"Description": "Gas (max)",
+		"ShortMnemonic": "GASX",
+		"LongMnemonic": "GASX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "22",
+		"Description": "Carbon Dioxide (avg)",
+		"ShortMnemonic": "CO2A",
+		"LongMnemonic": "CO2A",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "23",
+		"Description": "Hydrogen Sulfide (avg)",
+		"ShortMnemonic": "HSA",
+		"LongMnemonic": "HSA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "24",
+		"Description": "Hydrogen Sulfide (max)",
+		"ShortMnemonic": "HSX",
+		"LongMnemonic": "HSX",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "25",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "26",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "27",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "28",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "14",
+		"Index": "29",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "8",
+		"Description": "Depth Sample (meas)",
+		"ShortMnemonic": "DSAM",
+		"LongMnemonic": "DEPTSAMM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "9",
+		"Description": "Depth Sample (vert)",
+		"ShortMnemonic": "DSAV",
+		"LongMnemonic": "DEPTSAMV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "10",
+		"Description": "Descriptionription type",
+		"ShortMnemonic": "Description",
+		"LongMnemonic": "DescriptionTYPE",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "15",
+		"Index": "11",
+		"Description": "Lith 1 type",
+		"ShortMnemonic": "L1TY",
+		"LongMnemonic": "L1TYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "12",
+		"Description": "Lith 1 %",
+		"ShortMnemonic": "L1PC",
+		"LongMnemonic": "L1PERC",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "13",
+		"Description": "Lith 1 classification",
+		"ShortMnemonic": "L1CL",
+		"LongMnemonic": "L1CLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "14",
+		"Description": "Lith 1 color",
+		"ShortMnemonic": "L1CO",
+		"LongMnemonic": "L1COLOR",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "15",
+		"Description": "Lith 1 texture",
+		"ShortMnemonic": "L1TX",
+		"LongMnemonic": "L1TEXT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "16",
+		"Description": "Lith 1 hardness",
+		"ShortMnemonic": "L1HD",
+		"LongMnemonic": "L1HARD",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "17",
+		"Description": "Lith 1 grain size",
+		"ShortMnemonic": "L1SZ",
+		"LongMnemonic": "L1SIZE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "18",
+		"Description": "Lith 1 roundness",
+		"ShortMnemonic": "L1RD",
+		"LongMnemonic": "L1ROUND",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "19",
+		"Description": "Lith 1 sorting",
+		"ShortMnemonic": "L1SO",
+		"LongMnemonic": "L1SORT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "20",
+		"Description": "Lith 1 matrix/cement",
+		"ShortMnemonic": "L1MC",
+		"LongMnemonic": "L1MATCEM",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "21",
+		"Description": "Lith 1 accessories",
+		"ShortMnemonic": "L1AC",
+		"LongMnemonic": "L1ACC",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "22",
+		"Description": "Lith 1 porosity",
+		"ShortMnemonic": "L1PO",
+		"LongMnemonic": "L1POR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "23",
+		"Description": "Lith 1 permeability",
+		"ShortMnemonic": "L1PE",
+		"LongMnemonic": "L1PERM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "24",
+		"Description": "Lith 2 type",
+		"ShortMnemonic": "L2TY",
+		"LongMnemonic": "L2TYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "25",
+		"Description": "Lith 2 %",
+		"ShortMnemonic": "L2PC",
+		"LongMnemonic": "L2PERC",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "26",
+		"Description": "Lith 2 classification",
+		"ShortMnemonic": "L2CL",
+		"LongMnemonic": "L2CLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "27",
+		"Description": "Lith 2 color",
+		"ShortMnemonic": "L2CO",
+		"LongMnemonic": "L2COLOR",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "28",
+		"Description": "Lith 2 texture",
+		"ShortMnemonic": "L2TX",
+		"LongMnemonic": "L2TEXT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "29",
+		"Description": "Lith 2 hardness",
+		"ShortMnemonic": "L2HD",
+		"LongMnemonic": "L2HARD",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "30",
+		"Description": "Lith 2 grain size",
+		"ShortMnemonic": "L2SZ",
+		"LongMnemonic": "L2SIZE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "31",
+		"Description": "Lith 2 roundness",
+		"ShortMnemonic": "L2RD",
+		"LongMnemonic": "L2ROUND",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "32",
+		"Description": "Lith 2 sorting",
+		"ShortMnemonic": "L2SO",
+		"LongMnemonic": "L2SORT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "33",
+		"Description": "Lith 2 matrix/cement",
+		"ShortMnemonic": "L2MC",
+		"LongMnemonic": "L2MATCEM",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "34",
+		"Description": "Lith 2 accessories",
+		"ShortMnemonic": "L2AC",
+		"LongMnemonic": "L2ACC",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "35",
+		"Description": "Lith 2 porosity",
+		"ShortMnemonic": "L2PO",
+		"LongMnemonic": "L2POR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "36",
+		"Description": "Lith 2 permeability",
+		"ShortMnemonic": "L2PE",
+		"LongMnemonic": "L2PERM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "37",
+		"Description": "Lith 3 type",
+		"ShortMnemonic": "L3TY",
+		"LongMnemonic": "L3TYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "38",
+		"Description": "Lith 3 %",
+		"ShortMnemonic": "L3PC",
+		"LongMnemonic": "L3PERC",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "39",
+		"Description": "Lith 3 classification",
+		"ShortMnemonic": "L3CL",
+		"LongMnemonic": "L3CLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "40",
+		"Description": "Lith 4 type",
+		"ShortMnemonic": "L4TY",
+		"LongMnemonic": "L4TYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "41",
+		"Description": "Lith 4 %",
+		"ShortMnemonic": "L4PC",
+		"LongMnemonic": "L4PERC",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "42",
+		"Description": "Lith 4 classification",
+		"ShortMnemonic": "L4CL",
+		"LongMnemonic": "L4CLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "43",
+		"Description": "Lith 5 type",
+		"ShortMnemonic": "L5TY",
+		"LongMnemonic": "L5TYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "44",
+		"Description": "Lith 5 %",
+		"ShortMnemonic": "L5PC",
+		"LongMnemonic": "L5PERC",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "45",
+		"Description": "Lith 5 classification",
+		"ShortMnemonic": "L5CL",
+		"LongMnemonic": "L5CLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "46",
+		"Description": "Fossils",
+		"ShortMnemonic": "FOSS",
+		"LongMnemonic": "FOSS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "47",
+		"Description": "Composite Show",
+		"ShortMnemonic": "SHOW",
+		"LongMnemonic": "COMPSHOW",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "15",
+		"Index": "48",
+		"Description": "Bulk Density",
+		"ShortMnemonic": "BDEN",
+		"LongMnemonic": "BULKDEN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "49",
+		"Description": "Cuttings Gas",
+		"ShortMnemonic": "GCUT",
+		"LongMnemonic": "GASCUTT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "50",
+		"Description": "Calcimetry Calcite %",
+		"ShortMnemonic": "CCAL",
+		"LongMnemonic": "CCAL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "51",
+		"Description": "Calcimetry Dolomite %",
+		"ShortMnemonic": "CDOL",
+		"LongMnemonic": "CDOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "52",
+		"Description": "Cuttings CEC",
+		"ShortMnemonic": "CEC",
+		"LongMnemonic": "CEC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "53",
+		"Description": "Cavings %",
+		"ShortMnemonic": "CAV",
+		"LongMnemonic": "CAVINGS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "15",
+		"Index": "54",
+		"Description": "Shale Density",
+		"ShortMnemonic": "SDEN",
+		"LongMnemonic": "SHALEDEN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "55",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "56",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "57",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "58",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "15",
+		"Index": "59",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "16",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "16",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "16",
+		"Index": "8",
+		"Description": "Show Number",
+		"ShortMnemonic": "SWNO",
+		"LongMnemonic": "SHOWNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "16",
+		"Index": "9",
+		"Description": "Show Intv1 Top Depth (meas)",
+		"ShortMnemonic": "DSTM",
+		"LongMnemonic": "DEPTSITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "10",
+		"Description": "Show Intv1 Top Depth (vert)",
+		"ShortMnemonic": "DSTV",
+		"LongMnemonic": "SEPTSITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "11",
+		"Description": "Show Intv Bott Depth (meas)",
+		"ShortMnemonic": "DSBM",
+		"LongMnemonic": "DEPTSIBM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "12",
+		"Description": "Show Intv1 Bott Depth (vert)",
+		"ShortMnemonic": "DSBV",
+		"LongMnemonic": "DEPTSIBV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "13",
+		"Description": "Show Lith type",
+		"ShortMnemonic": "WLTY",
+		"LongMnemonic": "SHLTYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "14",
+		"Description": "Show Lith classification",
+		"ShortMnemonic": "WLCL",
+		"LongMnemonic": "SHLCLASS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "15",
+		"Description": "Show Lith color",
+		"ShortMnemonic": "WLCO",
+		"LongMnemonic": "SHLCOLOR",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "16",
+		"Description": "Show Lith texture",
+		"ShortMnemonic": "WLTX",
+		"LongMnemonic": "SHLTEXT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "17",
+		"Description": "Show Lith hardness",
+		"ShortMnemonic": "WLHD",
+		"LongMnemonic": "SHLHARD",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "18",
+		"Description": "Show Lith grain size",
+		"ShortMnemonic": "WLSZ",
+		"LongMnemonic": "SHLSIZE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "19",
+		"Description": "Show Lith roundness",
+		"ShortMnemonic": "WLRD",
+		"LongMnemonic": "SHLROUND",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "20",
+		"Description": "Show Lith sorting",
+		"ShortMnemonic": "WLSO",
+		"LongMnemonic": "SHLSORT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "21",
+		"Description": "Show Lith matrix/cement",
+		"ShortMnemonic": "WLMC",
+		"LongMnemonic": "SHLMC",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "22",
+		"Description": "Show Lith accessories",
+		"ShortMnemonic": "WLAC",
+		"LongMnemonic": "SHLACC",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "23",
+		"Description": "Show Lith porosity - visible",
+		"ShortMnemonic": "WLPV",
+		"LongMnemonic": "SHLPORV",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "16",
+		"Index": "24",
+		"Description": "Show Lith porosity - meas",
+		"ShortMnemonic": "WLPM",
+		"LongMnemonic": "SHLPORM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "25",
+		"Description": "Show Lith permeability",
+		"ShortMnemonic": "WLPE",
+		"LongMnemonic": "SHLPERM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "26",
+		"Description": "Show Lith stain description",
+		"ShortMnemonic": "WLST",
+		"LongMnemonic": "SHLSTAIN",
+		"Type": "A",
+		"Length": "64"
+	},
+	{
+		"ID": "16",
+		"Index": "27",
+		"Description": "Show Lith fluor description",
+		"ShortMnemonic": "WLFL",
+		"LongMnemonic": "SHLFLUOR",
+		"Type": "A",
+		"Length": "64"
+	},
+	{
+		"ID": "16",
+		"Index": "28",
+		"Description": "Show Lith cut description",
+		"ShortMnemonic": "WLCT",
+		"LongMnemonic": "SHLCUT",
+		"Type": "A",
+		"Length": "64"
+	},
+	{
+		"ID": "16",
+		"Index": "29",
+		"Description": "Show Lith cuttings gas",
+		"ShortMnemonic": "WLGC",
+		"LongMnemonic": "SHLGCUT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "30",
+		"Description": "Show titrated salinity",
+		"ShortMnemonic": "WSAL",
+		"LongMnemonic": "SHSAL",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "31",
+		"Description": "Show Mud Smple Methane",
+		"ShortMnemonic": "MTHM",
+		"LongMnemonic": "METHMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "32",
+		"Description": "Show Mud Smple Ethane",
+		"ShortMnemonic": "ETHM",
+		"LongMnemonic": "ETHMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "33",
+		"Description": "Show Mud Smple Propane",
+		"ShortMnemonic": "PRPM",
+		"LongMnemonic": "PROPMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "34",
+		"Description": "Show Mud Smple I-Butane",
+		"ShortMnemonic": "IBTM",
+		"LongMnemonic": "IBUTMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "35",
+		"Description": "Show Mud Smple N-Butane",
+		"ShortMnemonic": "NBTM",
+		"LongMnemonic": "NBUTMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "36",
+		"Description": "Show Mud Smple I-Pentane",
+		"ShortMnemonic": "IPNM",
+		"LongMnemonic": "IPENMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "37",
+		"Description": "Show Mud Smple N-Pentane",
+		"ShortMnemonic": "NPNM",
+		"LongMnemonic": "NPENMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "38",
+		"Description": "Show Mud Smple N-Pentane",
+		"ShortMnemonic": "EPNM",
+		"LongMnemonic": "EPENMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "39",
+		"Description": "Show Mud Smple I-Hexane",
+		"ShortMnemonic": "IHXM",
+		"LongMnemonic": "IHEXMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "40",
+		"Description": "Show Mud Smple N-Hexane",
+		"ShortMnemonic": "NHXM",
+		"LongMnemonic": "NHEXMUD",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "16",
+		"Index": "41",
+		"Description": "Show Comments",
+		"ShortMnemonic": "WCOM",
+		"LongMnemonic": "SHOWCOMM",
+		"Type": "A",
+		"Length": "128"
+	},
+	{
+		"ID": "17",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "17",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "17",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "17",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "17",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "10",
+		"Description": "Depth Casing Shoe (meas)",
+		"ShortMnemonic": "DCGM",
+		"LongMnemonic": "DEPTCSGM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "11",
+		"Description": "Depth Casing Shoe (vert)",
+		"ShortMnemonic": "DCGV",
+		"LongMnemonic": "DEPTCSGV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "12",
+		"Description": "Cem Pump Pressure (avg)",
+		"ShortMnemonic": "CPPA",
+		"LongMnemonic": "CEMPPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "13",
+		"Description": "Hookload (avg)",
+		"ShortMnemonic": "HKLA",
+		"LongMnemonic": "HKLA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "14",
+		"Description": "Block Position",
+		"ShortMnemonic": "BPOS",
+		"LongMnemonic": "BLKPOS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "15",
+		"Description": "Cem Flow Rate In (calc)",
+		"ShortMnemonic": "CFIC",
+		"LongMnemonic": "CEMFIC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "16",
+		"Description": "Cem Flow Rate In (avg)",
+		"ShortMnemonic": "CFIA",
+		"LongMnemonic": "CEMFIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "17",
+		"Description": "Cem Flow Rate Out (avg)",
+		"ShortMnemonic": "CFOA",
+		"LongMnemonic": "CEMFOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "18",
+		"Description": "Cem Flow Out %",
+		"ShortMnemonic": "CFOP",
+		"LongMnemonic": "CEMFOP",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "17",
+		"Index": "19",
+		"Description": "Cem Fluid Dens In (avg)",
+		"ShortMnemonic": "CDIA",
+		"LongMnemonic": "CEMDIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "20",
+		"Description": "Cem Fluid Dens Out (avg)",
+		"ShortMnemonic": "CDOA",
+		"LongMnemonic": "CEMDOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "21",
+		"Description": "ECD at Casing Shoe",
+		"ShortMnemonic": "ECDC",
+		"LongMnemonic": "ECDCSG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "22",
+		"Description": "Cem Fluid Temp In (avg)",
+		"ShortMnemonic": "CTIA",
+		"LongMnemonic": "CEMTIA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "23",
+		"Description": "Cem Fluid Temp Out (avg)",
+		"ShortMnemonic": "CTOA",
+		"LongMnemonic": "CEMTOA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "24",
+		"Description": "Cem Stage Number",
+		"ShortMnemonic": "CSTG",
+		"LongMnemonic": "CEMSTAGE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "17",
+		"Index": "25",
+		"Description": "Cem Depth to DV Tool",
+		"ShortMnemonic": "DDVT",
+		"LongMnemonic": "DEPTDVT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "26",
+		"Description": "Cem Fluid Type/Batch",
+		"ShortMnemonic": "CTYP",
+		"LongMnemonic": "CEMFTYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "17",
+		"Index": "27",
+		"Description": "Cem Cumulative Returns",
+		"ShortMnemonic": "CCRT",
+		"LongMnemonic": "CEMCUMRT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "28",
+		"Description": "Cem Indiv Vol Pumped",
+		"ShortMnemonic": "CIVL",
+		"LongMnemonic": "CEMIVOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "29",
+		"Description": "Cem Cement Vol Pumped",
+		"ShortMnemonic": "CCVL",
+		"LongMnemonic": "CEMCVOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "30",
+		"Description": "Cem Total Vol Pumped",
+		"ShortMnemonic": "CTVL",
+		"LongMnemonic": "CEMTVOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "31",
+		"Description": "Cem Volume to Bump Plug",
+		"ShortMnemonic": "CBVL",
+		"LongMnemonic": "CEMBPVOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "32",
+		"Description": "Cem No./Status of Plug(s)",
+		"ShortMnemonic": "CPLG",
+		"LongMnemonic": "CEMPLUGS",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "17",
+		"Index": "33",
+		"Description": "Cem Job Type",
+		"ShortMnemonic": "CJTY",
+		"LongMnemonic": "CEMJTYP",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "17",
+		"Index": "34",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "35",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "36",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "37",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "17",
+		"Index": "38",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "18",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "18",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "18",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "18",
+		"Index": "8",
+		"Description": "DST identification",
+		"ShortMnemonic": "DSID",
+		"LongMnemonic": "DSTID",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "18",
+		"Index": "9",
+		"Description": "DST Intvl Top Depth (meas)",
+		"ShortMnemonic": "DDTM",
+		"LongMnemonic": "DEPTDITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "10",
+		"Description": "DST Intvl Top Depth (vert)",
+		"ShortMnemonic": "DDTV",
+		"LongMnemonic": "DEPTDITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "11",
+		"Description": "DST Intvl Bott Depth (meas)",
+		"ShortMnemonic": "DDBM",
+		"LongMnemonic": "DEPTDIBM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "12",
+		"Description": "DST Intvl Bott Depth (vert)",
+		"ShortMnemonic": "DDBV",
+		"LongMnemonic": "DEPTDIBV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "13",
+		"Description": "DST Tool Time",
+		"ShortMnemonic": "DTTI",
+		"LongMnemonic": "DSTTTIME",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "14",
+		"Description": "DST State of Well",
+		"ShortMnemonic": "DSTA",
+		"LongMnemonic": "DSTSTATE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "18",
+		"Index": "15",
+		"Description": "DST Surf Pressure",
+		"ShortMnemonic": " Tubing",
+		"LongMnemonic": "DSPT",
+		"Type": "DSTSPTUB",
+		"Length": "F"
+	},
+	{
+		"ID": "18",
+		"Index": "16",
+		"Description": "DST Surf Pressure",
+		"ShortMnemonic": " Casing",
+		"LongMnemonic": "DSPC",
+		"Type": "DSTSPCAS",
+		"Length": "F"
+	},
+	{
+		"ID": "18",
+		"Index": "17",
+		"Description": "DST Surf Temp",
+		"ShortMnemonic": " Tubing",
+		"LongMnemonic": "DSTT",
+		"Type": "DSTSTTUB",
+		"Length": "F"
+	},
+	{
+		"ID": "18",
+		"Index": "18",
+		"Description": "DST Bottom Hole Pressure",
+		"ShortMnemonic": "DBHP",
+		"LongMnemonic": "DSTBHP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "19",
+		"Description": "DST Bottom Hole Temp",
+		"ShortMnemonic": "DBHT",
+		"LongMnemonic": "DSTBHT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "20",
+		"Description": "DST Liquid Flow Rate",
+		"ShortMnemonic": "DLFR",
+		"LongMnemonic": "DSTLIQFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "21",
+		"Description": "DST Gas Flow Rate",
+		"ShortMnemonic": "DGFR",
+		"LongMnemonic": "DSTGASFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "22",
+		"Description": "DST Total Flow Rate",
+		"ShortMnemonic": "DTFR",
+		"LongMnemonic": "DSTTOTFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "23",
+		"Description": "DST Cum Liquid Production",
+		"ShortMnemonic": "DCLP",
+		"LongMnemonic": "DSTCLP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "24",
+		"Description": "DST Cum Gas Production",
+		"ShortMnemonic": "DCGP",
+		"LongMnemonic": "DSTCGP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "25",
+		"Description": "DST Cum Total Production",
+		"ShortMnemonic": "DCTP",
+		"LongMnemonic": "DSTCTP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "26",
+		"Description": "Hydrogen Sulfide (avg)",
+		"ShortMnemonic": "HSA",
+		"LongMnemonic": "HSA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "27",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "28",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "29",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "30",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "18",
+		"Index": "31",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "19",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "19",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "19",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "19",
+		"Index": "8",
+		"Description": "DST identification",
+		"ShortMnemonic": "DSID",
+		"LongMnemonic": "DSTID",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "19",
+		"Index": "9",
+		"Description": "DST Intvl Top Depth (meas)",
+		"ShortMnemonic": "DDTM",
+		"LongMnemonic": "DEPTDITM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "10",
+		"Description": "DST Intvl Top Depth (vert)",
+		"ShortMnemonic": "DDTV",
+		"LongMnemonic": "DEPTDITV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "11",
+		"Description": "DST Intvl Bott Depth (meas)",
+		"ShortMnemonic": "DDBM",
+		"LongMnemonic": "DEPTDIBM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "12",
+		"Description": "DST Intvl Bott Depth (vert)",
+		"ShortMnemonic": "DDBV",
+		"LongMnemonic": "DEPTDIBV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "13",
+		"Description": "DST Tool Time",
+		"ShortMnemonic": "DTTI",
+		"LongMnemonic": "DSTTTIME",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "14",
+		"Description": "DST State of Well",
+		"ShortMnemonic": "DSTA",
+		"LongMnemonic": "DSTSTATE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "19",
+		"Index": "15",
+		"Description": "DST Surf Pressure",
+		"ShortMnemonic": " Tubing",
+		"LongMnemonic": "DSPT",
+		"Type": "DSTSPTUB",
+		"Length": "F"
+	},
+	{
+		"ID": "19",
+		"Index": "16",
+		"Description": "DST Surf Pressure",
+		"ShortMnemonic": " Casing",
+		"LongMnemonic": "DSPC",
+		"Type": "DSTSPCAS",
+		"Length": "F"
+	},
+	{
+		"ID": "19",
+		"Index": "17",
+		"Description": "DST Surf Temp",
+		"ShortMnemonic": " Tubing",
+		"LongMnemonic": "DSTT",
+		"Type": "DSTSTTUB",
+		"Length": "F"
+	},
+	{
+		"ID": "19",
+		"Index": "18",
+		"Description": "DST Bottom Hole Pressure",
+		"ShortMnemonic": "DBHP",
+		"LongMnemonic": "DSTBHP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "19",
+		"Description": "DST Bottom Hole Temp",
+		"ShortMnemonic": "DBHT",
+		"LongMnemonic": "DSTBHT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "20",
+		"Description": "DST Liquid Flow Rate",
+		"ShortMnemonic": "DLFR",
+		"LongMnemonic": "DSTLIQFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "21",
+		"Description": "DST Gas Flow Rate",
+		"ShortMnemonic": "DGFR",
+		"LongMnemonic": "DSTGASFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "22",
+		"Description": "DST Total Flow Rate",
+		"ShortMnemonic": "DTFR",
+		"LongMnemonic": "DSTTOTFR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "23",
+		"Description": "DST Cum Liquid Production",
+		"ShortMnemonic": "DCLP",
+		"LongMnemonic": "DSTCLP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "24",
+		"Description": "DST Cum Gas Production",
+		"ShortMnemonic": "DCGP",
+		"LongMnemonic": "DSTCGP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "25",
+		"Description": "DST Cum Total Production",
+		"ShortMnemonic": "DCTP",
+		"LongMnemonic": "DSTCTP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "26",
+		"Description": "Hydrogen Sulfide (avg)",
+		"ShortMnemonic": "HSA",
+		"LongMnemonic": "HSA",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "27",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "28",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "29",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "30",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "19",
+		"Index": "31",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "20",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "8",
+		"Description": "Mud Rept Depth (meas)",
+		"ShortMnemonic": "MRDM",
+		"LongMnemonic": "MREPDM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "9",
+		"Description": "Mud Rept Depth (vert)",
+		"ShortMnemonic": "MRDV",
+		"LongMnemonic": "MREPDV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "10",
+		"Description": "Mud Rept Number",
+		"ShortMnemonic": "MNUM",
+		"LongMnemonic": "MREPNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "11",
+		"Description": "Mud Rept Mud Type",
+		"ShortMnemonic": "MTYP",
+		"LongMnemonic": "MRMTYPE",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "20",
+		"Index": "12",
+		"Description": "Mud Rept Sample Location",
+		"ShortMnemonic": "MLOC",
+		"LongMnemonic": "MRSLOC",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "20",
+		"Index": "13",
+		"Description": "Mud Rept Sample Date",
+		"ShortMnemonic": "MDAT",
+		"LongMnemonic": "MRSDATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "14",
+		"Description": "Mud Rept Sample Time",
+		"ShortMnemonic": "MTIM",
+		"LongMnemonic": "MRSTIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "15",
+		"Description": "Mud Rept Mud Density",
+		"ShortMnemonic": "MDEN",
+		"LongMnemonic": "MRDENS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "16",
+		"Description": "Mud Rept Funnel Vis",
+		"ShortMnemonic": "MFV",
+		"LongMnemonic": "MRFVIS",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "17",
+		"Description": "Mud Rept Funnel Vis Temp",
+		"ShortMnemonic": "MFVT",
+		"LongMnemonic": "MRFVIST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "18",
+		"Description": "Mud Rept Plastic Vis",
+		"ShortMnemonic": "MPV",
+		"LongMnemonic": "MRPV",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "19",
+		"Description": "Mud Rept Yield Point",
+		"ShortMnemonic": "MYP",
+		"LongMnemonic": "MRYP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "20",
+		"Description": "Mud Rept Gel - 10 sec",
+		"ShortMnemonic": "MGL1",
+		"LongMnemonic": "MRGEL10S",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "21",
+		"Description": "Mud Rept Gel - 10 min",
+		"ShortMnemonic": "MGL2",
+		"LongMnemonic": "MRGEL10M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "22",
+		"Description": "Mud Rept Gel - 30 min",
+		"ShortMnemonic": "MGL3",
+		"LongMnemonic": "MRGEL30M",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "23",
+		"Description": "Mud Rept Filtrate",
+		"ShortMnemonic": "MFIL",
+		"LongMnemonic": "MRFILT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "24",
+		"Description": "Mud Rept Filter Cake",
+		"ShortMnemonic": "MCAK",
+		"LongMnemonic": "MRCAKE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "25",
+		"Description": "Mud Rept HTHP Temp",
+		"ShortMnemonic": "MHT",
+		"LongMnemonic": "MRHT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "26",
+		"Description": "Mud Rept HTHP Pressure",
+		"ShortMnemonic": "MHP",
+		"LongMnemonic": "MRHP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "27",
+		"Description": "Mud Rept HTHP Filtrate",
+		"ShortMnemonic": "MHFI",
+		"LongMnemonic": "MRHFILT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "28",
+		"Description": "Mud Rept HTHP Filter Cake",
+		"ShortMnemonic": "MHCK",
+		"LongMnemonic": "MRHCAKE",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "20",
+		"Index": "29",
+		"Description": "Mud Rept Solids % (retort)",
+		"ShortMnemonic": "MSOL",
+		"LongMnemonic": "MRSOLRET",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "30",
+		"Description": "Mud Rept Water % (retort)",
+		"ShortMnemonic": "MWAT",
+		"LongMnemonic": "MRWATRET",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "31",
+		"Description": "Mud Rept Oil % (retort)",
+		"ShortMnemonic": "MOIL",
+		"LongMnemonic": "MROILRET",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "32",
+		"Description": "Mud Rept Sand %",
+		"ShortMnemonic": "MSAN",
+		"LongMnemonic": "MRSAND",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "33",
+		"Description": "Mud Rept Low Grav Sol %",
+		"ShortMnemonic": "MLGS",
+		"LongMnemonic": "MRLGSOL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "34",
+		"Description": "Mud Rept Solids % (calc)",
+		"ShortMnemonic": "MSCA",
+		"LongMnemonic": "MRSOLCAL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "35",
+		"Description": "Mud Rept Barite content",
+		"ShortMnemonic": "MBRT",
+		"LongMnemonic": "MRBARITE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "36",
+		"Description": "Mud Rept LCM content",
+		"ShortMnemonic": "MLCM",
+		"LongMnemonic": "MRLCM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "37",
+		"Description": "Mud Rept MBT capacity",
+		"ShortMnemonic": "MMBT",
+		"LongMnemonic": "MRMBT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "38",
+		"Description": "Mud Rept pH",
+		"ShortMnemonic": "MPH",
+		"LongMnemonic": "MRPH",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "39",
+		"Description": "Mud Rept pH sample temp",
+		"ShortMnemonic": "MPHT",
+		"LongMnemonic": "MRPHT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "40",
+		"Description": "Mud Rept Pm",
+		"ShortMnemonic": "MPM",
+		"LongMnemonic": "MRPM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "41",
+		"Description": "Mud Rept Pf",
+		"ShortMnemonic": "MPF",
+		"LongMnemonic": "MRPF",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "42",
+		"Description": "Mud Rept Mf",
+		"ShortMnemonic": "MMF",
+		"LongMnemonic": "MRMF",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "43",
+		"Description": "Mud Rept P1",
+		"ShortMnemonic": "MRP1",
+		"LongMnemonic": "MRP1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "44",
+		"Description": "Mud Rept P2",
+		"ShortMnemonic": "MRP2",
+		"LongMnemonic": "MRP2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "45",
+		"Description": "Mud Rept Chlorides",
+		"ShortMnemonic": "MCHL",
+		"LongMnemonic": "MRCHLOR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "46",
+		"Description": "Mud Rept Calcium",
+		"ShortMnemonic": "MCAL",
+		"LongMnemonic": "MRCALC",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "47",
+		"Description": "Mud Rept Magnesium",
+		"ShortMnemonic": "MMAG",
+		"LongMnemonic": "MRMAG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "48",
+		"Description": "Mud Rept Potassium",
+		"ShortMnemonic": "MPOT",
+		"LongMnemonic": "MRPOT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "49",
+		"Description": "Mud Rept Rheometer temp",
+		"ShortMnemonic": "MRHT",
+		"LongMnemonic": "MRRHETEM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "50",
+		"Description": "Mud Rept Viscom 3 rpm",
+		"ShortMnemonic": "M3",
+		"LongMnemonic": "MRVIS3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "51",
+		"Description": "Mud Rept Viscom 6 rpm",
+		"ShortMnemonic": "M6",
+		"LongMnemonic": "MRVIS6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "52",
+		"Description": "Mud Rept Viscom 100 rpm",
+		"ShortMnemonic": "M100",
+		"LongMnemonic": "MRVIS100",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "53",
+		"Description": "Mud Rept Viscom 200 rpm",
+		"ShortMnemonic": "M200",
+		"LongMnemonic": "MRVIS200",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "54",
+		"Description": "Mud Rept Viscom 300 rpm",
+		"ShortMnemonic": "M300",
+		"LongMnemonic": "MRVIS300",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "55",
+		"Description": "Mud Rept Viscom 600 rpm",
+		"ShortMnemonic": "M600",
+		"LongMnemonic": "MRVIS600",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "56",
+		"Description": "Mud Rept Brine %",
+		"ShortMnemonic": "MBRI",
+		"LongMnemonic": "MRBRINE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "57",
+		"Description": "Mud Rept Alkalinity",
+		"ShortMnemonic": "MALK",
+		"LongMnemonic": "MRALK",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "58",
+		"Description": "Mud Rept Lime content",
+		"ShortMnemonic": "MLIM",
+		"LongMnemonic": "MRLIME",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "59",
+		"Description": "Mud Rept Elect. Stability",
+		"ShortMnemonic": "MELS",
+		"LongMnemonic": "MRELECST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "60",
+		"Description": "Mud Rept CaCl",
+		"ShortMnemonic": " Wt %",
+		"LongMnemonic": "MCCL",
+		"Type": "MRCACL",
+		"Length": "F"
+	},
+	{
+		"ID": "20",
+		"Index": "61",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "62",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "63",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "64",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "20",
+		"Index": "65",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "21",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "21",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "21",
+		"Index": "8",
+		"Description": "Bit Number",
+		"ShortMnemonic": "BNUM",
+		"LongMnemonic": "BTNUM",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "21",
+		"Index": "9",
+		"Description": "Bit Diameter",
+		"ShortMnemonic": "BDIA",
+		"LongMnemonic": "BTDIAM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "10",
+		"Description": "Bit Manufacturer",
+		"ShortMnemonic": "BMAN",
+		"LongMnemonic": "BTMANUF",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "11",
+		"Description": "Bit Name",
+		"ShortMnemonic": "BNAM",
+		"LongMnemonic": "BTNAME",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "12",
+		"Description": "Bit IADC Code",
+		"ShortMnemonic": "BCOD",
+		"LongMnemonic": "BTCODE",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "21",
+		"Index": "13",
+		"Description": "Bit Serial Number",
+		"ShortMnemonic": "BSER",
+		"LongMnemonic": "BTSERNUM",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "14",
+		"Description": "Bit Cost",
+		"ShortMnemonic": "BCST",
+		"LongMnemonic": "BTCOST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "15",
+		"Description": "Bit Jet 1 Diameter",
+		"ShortMnemonic": "BJT1",
+		"LongMnemonic": "BTJET1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "16",
+		"Description": "Bit Jet 2 Diameter",
+		"ShortMnemonic": "BJT2",
+		"LongMnemonic": "BTJET2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "17",
+		"Description": "Bit Jet 3 Diameter",
+		"ShortMnemonic": "BJT3",
+		"LongMnemonic": "BTJET3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "18",
+		"Description": "Bit Jet 4 Diameter",
+		"ShortMnemonic": "BJT4",
+		"LongMnemonic": "BTJET4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "19",
+		"Description": "Bit Center Jet Diameter",
+		"ShortMnemonic": "BJTC",
+		"LongMnemonic": "BTJETCEN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "20",
+		"Description": "Bit Total Flow Area",
+		"ShortMnemonic": "BTFA",
+		"LongMnemonic": "BTTFA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "21",
+		"Description": "Bit Starting Depth (In)",
+		"ShortMnemonic": "BDPI",
+		"LongMnemonic": "BTDEPIN",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "22",
+		"Description": "Bit Ending Depth (Out)",
+		"ShortMnemonic": "BDPO",
+		"LongMnemonic": "BTDEPOUT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "23",
+		"Description": "Bit Run Drilled Distance",
+		"ShortMnemonic": "BDDI",
+		"LongMnemonic": "BTDDIST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "24",
+		"Description": "Bit Run Drilled Time",
+		"ShortMnemonic": "BDTI",
+		"LongMnemonic": "BTDTIME",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "25",
+		"Description": "Bit Run Reamed Time",
+		"ShortMnemonic": "BRTI",
+		"LongMnemonic": "BTRTIME",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "26",
+		"Description": "Bit Penetration Rate (avg)",
+		"ShortMnemonic": "BRPA",
+		"LongMnemonic": "BTROPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "27",
+		"Description": "Bit Weight-on-Bit (avg)",
+		"ShortMnemonic": "BWBA",
+		"LongMnemonic": "BTWOBA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "28",
+		"Description": "Bit Weight-on-Bit (max)",
+		"ShortMnemonic": "BWBX",
+		"LongMnemonic": "BTWOBX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "29",
+		"Description": "Bit Rotary Speed (avg)",
+		"ShortMnemonic": "BRMA",
+		"LongMnemonic": "BTRPMA",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "21",
+		"Index": "30",
+		"Description": "Bit Rotary Speed (max)",
+		"ShortMnemonic": "BRMX",
+		"LongMnemonic": "BTRPMX",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "21",
+		"Index": "31",
+		"Description": "Bit Mud Flow Rate (avg)",
+		"ShortMnemonic": "BMFA",
+		"LongMnemonic": "BTMFA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "32",
+		"Description": "Bit Mud Density (avg)",
+		"ShortMnemonic": "BMDA",
+		"LongMnemonic": "BTMDA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "33",
+		"Description": "Bit Standpipe Pressure (avg)",
+		"ShortMnemonic": "BSPA",
+		"LongMnemonic": "BTSPPA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "34",
+		"Description": "Bit Reason Run",
+		"ShortMnemonic": "BRUN",
+		"LongMnemonic": "BTRUN",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "35",
+		"Description": "Bit Reason Pulled",
+		"ShortMnemonic": "BPUL",
+		"LongMnemonic": "BTPULL",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "36",
+		"Description": "Bit Grade In",
+		"ShortMnemonic": "BGI",
+		"LongMnemonic": "BTGRDIN",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "37",
+		"Description": "Bit Grade Out",
+		"ShortMnemonic": "BGO",
+		"LongMnemonic": "BTGRDOUT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "21",
+		"Index": "38",
+		"Description": "Bit Shock Sub Used ?",
+		"ShortMnemonic": "BSHK",
+		"LongMnemonic": "BTSHKSUB",
+		"Type": "A",
+		"Length": "1"
+	},
+	{
+		"ID": "21",
+		"Index": "39",
+		"Description": "Bit Mud Motor Used ?",
+		"ShortMnemonic": "BMM",
+		"LongMnemonic": "BTMUDMOT",
+		"Type": "A",
+		"Length": "1"
+	},
+	{
+		"ID": "21",
+		"Index": "40",
+		"Description": "Bit Comments",
+		"ShortMnemonic": "BCOM",
+		"LongMnemonic": "BTCOMM",
+		"Type": "A",
+		"Length": "128"
+	},
+	{
+		"ID": "21",
+		"Index": "41",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "42",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "43",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "44",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "45",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "46",
+		"Description": "SPARE 6",
+		"ShortMnemonic": "SPR6",
+		"LongMnemonic": "SPARE6",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "47",
+		"Description": "SPARE 7",
+		"ShortMnemonic": "SPR7",
+		"LongMnemonic": "SPARE7",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "48",
+		"Description": "SPARE 8",
+		"ShortMnemonic": "SPR8",
+		"LongMnemonic": "SPARE8",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "21",
+		"Index": "49",
+		"Description": "SPARE 9",
+		"ShortMnemonic": "SPR9",
+		"LongMnemonic": "SPARE9",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "22",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "22",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "22",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "22",
+		"Index": "8",
+		"Description": "Depth Hole (meas)",
+		"ShortMnemonic": "DMEA",
+		"LongMnemonic": "DEPTMEAS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "9",
+		"Description": "Depth Hole (vert)",
+		"ShortMnemonic": "DVER",
+		"LongMnemonic": "DEPTVERT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "22",
+		"Index": "10",
+		"Description": "Comments",
+		"ShortMnemonic": "COMM",
+		"LongMnemonic": "COMM",
+		"Type": "A",
+		"Length": "256"
+	},
+	{
+		"ID": "23",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "23",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "23",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "23",
+		"Index": "8",
+		"Description": "Well Name",
+		"ShortMnemonic": "WELL",
+		"LongMnemonic": "WELLNAME",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "9",
+		"Description": "Well Identification Number",
+		"ShortMnemonic": "WNUM",
+		"LongMnemonic": "WELLNUM",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "10",
+		"Description": "Operator",
+		"ShortMnemonic": "OPER",
+		"LongMnemonic": "OPERATOR",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "11",
+		"Description": "Well Classification (Lahee)",
+		"ShortMnemonic": "WCLS",
+		"LongMnemonic": "WELLCLAS",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "12",
+		"Description": "Well Location",
+		"ShortMnemonic": "WLOC",
+		"LongMnemonic": "LOCATION",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "13",
+		"Description": "Well Univ.Tran.Mercator",
+		"ShortMnemonic": "WUTM",
+		"LongMnemonic": "WELLUTM",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "14",
+		"Description": "Well Surface Latitude",
+		"ShortMnemonic": "WLAT",
+		"LongMnemonic": "WELLLAT",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "15",
+		"Description": "Well Surface Longitude",
+		"ShortMnemonic": "WLON",
+		"LongMnemonic": "WELLLON",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "23",
+		"Index": "16",
+		"Description": "Field Name",
+		"ShortMnemonic": "FLD",
+		"LongMnemonic": "FIELD",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "17",
+		"Description": "Elev : Datum-MSL",
+		"ShortMnemonic": "ELDP",
+		"LongMnemonic": "ELEVDP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "18",
+		"Description": "Elev : Kelly Bushing-MSL",
+		"ShortMnemonic": "ELKB",
+		"LongMnemonic": "ELEVKB",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "19",
+		"Description": "Elev : Ground Level-MSL",
+		"ShortMnemonic": "ELGL",
+		"LongMnemonic": "ELEVGL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "20",
+		"Description": "Water Depth (mean)",
+		"ShortMnemonic": "WDPM",
+		"LongMnemonic": "WATDEPT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "21",
+		"Description": "Spud Date",
+		"ShortMnemonic": "SPDT",
+		"LongMnemonic": "SPUDDATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "22",
+		"Description": "Custom Field 01 Identifier",
+		"ShortMnemonic": "CUS1",
+		"LongMnemonic": "CUS1",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "23",
+		"Description": "Custom Field 02 Identifier",
+		"ShortMnemonic": "CUS2",
+		"LongMnemonic": "CUS2",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "24",
+		"Description": "Custom Field 03 Identifier",
+		"ShortMnemonic": "CUS3",
+		"LongMnemonic": "CUS3",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "25",
+		"Description": "Custom Field 04 Identifier",
+		"ShortMnemonic": "CUS4",
+		"LongMnemonic": "CUS4",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "26",
+		"Description": "Custom Field 05 Identifier",
+		"ShortMnemonic": "CUS5",
+		"LongMnemonic": "CUS5",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "27",
+		"Description": "Custom Field 06 Identifier",
+		"ShortMnemonic": "CUS6",
+		"LongMnemonic": "CUS6",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "28",
+		"Description": "Custom Field 07 Identifier",
+		"ShortMnemonic": "CUS7",
+		"LongMnemonic": "CUS7",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "29",
+		"Description": "Custom Field 08 Identifier",
+		"ShortMnemonic": "CUS8",
+		"LongMnemonic": "CUS8",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "30",
+		"Description": "Custom Field 09 Identifier",
+		"ShortMnemonic": "CUS9",
+		"LongMnemonic": "CUS9",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "31",
+		"Description": "Custom Field 10 Identifier",
+		"ShortMnemonic": "CUS0",
+		"LongMnemonic": "CUS0",
+		"Type": "A",
+		"Length": "32"
+	},
+	{
+		"ID": "23",
+		"Index": "32",
+		"Description": "Units Type used",
+		"ShortMnemonic": "UNIT",
+		"LongMnemonic": "UNIT",
+		"Type": "A",
+		"Length": "8"
+	},
+	{
+		"ID": "23",
+		"Index": "33",
+		"Description": "Time Zone Offset",
+		"ShortMnemonic": "TOFF",
+		"LongMnemonic": "TOFFSET",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "34",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "35",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "36",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "23",
+		"Index": "37",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "24",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "24",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "24",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "24",
+		"Index": "8",
+		"Description": "Water Depth (mean)",
+		"ShortMnemonic": "WDPM",
+		"LongMnemonic": "WATDEPT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "9",
+		"Description": "Tide",
+		"ShortMnemonic": "TIDE",
+		"LongMnemonic": "TIDE",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "10",
+		"Description": "Vessel Heading",
+		"ShortMnemonic": "VHED",
+		"LongMnemonic": "VESSHEAD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "11",
+		"Description": "Rig VCG",
+		"ShortMnemonic": "RVCG",
+		"LongMnemonic": "RIGVCG",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "12",
+		"Description": "Riser Tension",
+		"ShortMnemonic": "RTEN",
+		"LongMnemonic": "RISTENS",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "13",
+		"Description": "Rig Offset (avg)",
+		"ShortMnemonic": "OFSA",
+		"LongMnemonic": "OFFSETA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "14",
+		"Description": "Rig Offset (max)",
+		"ShortMnemonic": "OFSX",
+		"LongMnemonic": "OFFSETX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "15",
+		"Description": "Rig Offset Direction",
+		"ShortMnemonic": "OFSD",
+		"LongMnemonic": "OFFSETD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "16",
+		"Description": "LMRP Angle (avg)",
+		"ShortMnemonic": "LANA",
+		"LongMnemonic": "LMRPANA",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "17",
+		"Description": "LMRP Angle (max)",
+		"ShortMnemonic": "LANX",
+		"LongMnemonic": "LMRPANX",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "18",
+		"Description": "LMRP Angle",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "LAND",
+		"Type": "LMRPAND",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "19",
+		"Description": "Fluid Density in Riser",
+		"ShortMnemonic": "MDRI",
+		"LongMnemonic": "MDRISER",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "20",
+		"Description": "Mooring Line #01 Tens(avg)",
+		"ShortMnemonic": "TA01",
+		"LongMnemonic": "MLTA01",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "21",
+		"Description": "Mooring Line #01 Tens(max)",
+		"ShortMnemonic": "TX01",
+		"LongMnemonic": "MLTX01",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "22",
+		"Description": "Mooring Line #02 Tens(avg)",
+		"ShortMnemonic": "TA02",
+		"LongMnemonic": "MLTA02",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "23",
+		"Description": "Mooring Line #02 Tens(max)",
+		"ShortMnemonic": "TX02",
+		"LongMnemonic": "MLTX02",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "24",
+		"Description": "Mooring Line #03 Tens(avg)",
+		"ShortMnemonic": "TA03",
+		"LongMnemonic": "MLTA03",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "25",
+		"Description": "Mooring Line #03 Tens(max)",
+		"ShortMnemonic": "TX03",
+		"LongMnemonic": "MLTX03",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "26",
+		"Description": "Mooring Line #04 Tens(avg)",
+		"ShortMnemonic": "TA04",
+		"LongMnemonic": "MLTA04",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "27",
+		"Description": "Mooring Line #04 Tens(max)",
+		"ShortMnemonic": "TX04",
+		"LongMnemonic": "MLTX04",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "28",
+		"Description": "Mooring Line #05 Tens(avg)",
+		"ShortMnemonic": "TA05",
+		"LongMnemonic": "MLTA05",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "29",
+		"Description": "Mooring Line #05 Tens(max)",
+		"ShortMnemonic": "TX05",
+		"LongMnemonic": "MLTX05",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "30",
+		"Description": "Mooring Line #06 Tens(avg)",
+		"ShortMnemonic": "TA06",
+		"LongMnemonic": "MLTA06",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "31",
+		"Description": "Mooring Line #06 Tens(max)",
+		"ShortMnemonic": "TX06",
+		"LongMnemonic": "MLTX06",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "32",
+		"Description": "Mooring Line #07 Tens(avg)",
+		"ShortMnemonic": "TA07",
+		"LongMnemonic": "MLTA07",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "33",
+		"Description": "Mooring Line #07 Tens(max)",
+		"ShortMnemonic": "TX07",
+		"LongMnemonic": "MLTX07",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "34",
+		"Description": "Mooring Line #08 Tens(avg)",
+		"ShortMnemonic": "TA08",
+		"LongMnemonic": "MLTA08",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "35",
+		"Description": "Mooring Line #08 Tens(max)",
+		"ShortMnemonic": "TX08",
+		"LongMnemonic": "MLTX08",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "36",
+		"Description": "Mooring Line #09 Tens(avg)",
+		"ShortMnemonic": "TA09",
+		"LongMnemonic": "MLTA09",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "37",
+		"Description": "Mooring Line #09 Tens(max)",
+		"ShortMnemonic": "TX09",
+		"LongMnemonic": "MLTX09",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "38",
+		"Description": "Mooring Line #10 Tens(avg)",
+		"ShortMnemonic": "TA10",
+		"LongMnemonic": "MLTA10",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "39",
+		"Description": "Mooring Line #10 Tens(max)",
+		"ShortMnemonic": "TX10",
+		"LongMnemonic": "MLTX10",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "40",
+		"Description": "Mooring Line #11 Tens(avg)",
+		"ShortMnemonic": "TA11",
+		"LongMnemonic": "MLTA11",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "41",
+		"Description": "Mooring Line #11 Tens(max)",
+		"ShortMnemonic": "TX11",
+		"LongMnemonic": "MLTX11",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "42",
+		"Description": "Mooring Line #12 Tens(avg)",
+		"ShortMnemonic": "TA12",
+		"LongMnemonic": "MLTA12",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "43",
+		"Description": "Mooring Line #12 Tens(max)",
+		"ShortMnemonic": "TX12",
+		"LongMnemonic": "MLTX12",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "44",
+		"Description": "Thruster #01",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF01",
+		"Type": "THRF01",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "45",
+		"Description": "Thruster #01",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD01",
+		"Type": "THRD01",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "46",
+		"Description": "Thruster #02",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF02",
+		"Type": "THRF02",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "47",
+		"Description": "Thruster #02",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD02",
+		"Type": "THRD02",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "48",
+		"Description": "Thruster #03",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF03",
+		"Type": "THRF03",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "49",
+		"Description": "Thruster #03",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD03",
+		"Type": "THRD03",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "50",
+		"Description": "Thruster #04",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF04",
+		"Type": "THRF04",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "51",
+		"Description": "Thruster #04",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD04",
+		"Type": "THRD04",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "52",
+		"Description": "Thruster #05",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF05",
+		"Type": "THRF05",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "53",
+		"Description": "Thruster #05",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD05",
+		"Type": "THRD05",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "54",
+		"Description": "Thruster #06",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF06",
+		"Type": "THRF06",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "55",
+		"Description": "Thruster #06",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD06",
+		"Type": "THRF06",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "56",
+		"Description": "Thruster #07",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF07",
+		"Type": "THRF07",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "57",
+		"Description": "Thruster #07",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD07",
+		"Type": "THRD07",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "58",
+		"Description": "Thruster #08",
+		"ShortMnemonic": " Force",
+		"LongMnemonic": "TF08",
+		"Type": "THRF08",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "59",
+		"Description": "Thruster #08",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "TD08",
+		"Type": "THRD08",
+		"Length": "F"
+	},
+	{
+		"ID": "24",
+		"Index": "60",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "61",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "62",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "63",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "24",
+		"Index": "64",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "1",
+		"Description": "Well Identifier",
+		"ShortMnemonic": "WID",
+		"LongMnemonic": "WELLID",
+		"Type": "A",
+		"Length": "16"
+	},
+	{
+		"ID": "25",
+		"Index": "2",
+		"Description": "Sidetrack/Hole Sect No.",
+		"ShortMnemonic": "SKNO",
+		"LongMnemonic": "STKNUM",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "25",
+		"Index": "3",
+		"Description": "Record Identifier",
+		"ShortMnemonic": "RID",
+		"LongMnemonic": "RECID",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "25",
+		"Index": "4",
+		"Description": "Sequence Identifier",
+		"ShortMnemonic": "SQID",
+		"LongMnemonic": "SEQID",
+		"Type": "L",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "5",
+		"Description": "Date",
+		"ShortMnemonic": "DATE",
+		"LongMnemonic": "DATE",
+		"Type": "D",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "6",
+		"Description": "Time",
+		"ShortMnemonic": "TIME",
+		"LongMnemonic": "TIME",
+		"Type": "T",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "7",
+		"Description": "Activity Code",
+		"ShortMnemonic": "ACTC",
+		"LongMnemonic": "ACTCOD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "25",
+		"Index": "8",
+		"Description": "Water Depth (mean)",
+		"ShortMnemonic": "WDPM",
+		"LongMnemonic": "WATDEPT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "9",
+		"Description": "Air Temperature",
+		"ShortMnemonic": "AIRT",
+		"LongMnemonic": "AIRTEMP",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "10",
+		"Description": "Barometric Pressure",
+		"ShortMnemonic": "BARP",
+		"LongMnemonic": "BARPRES",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "11",
+		"Description": "Waves",
+		"ShortMnemonic": " Significant Height",
+		"LongMnemonic": "WVSH",
+		"Type": "WVSHGHT",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "12",
+		"Description": "Waves",
+		"ShortMnemonic": " Maximum Height",
+		"LongMnemonic": "WVMH",
+		"Type": "WVMHGHT",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "13",
+		"Description": "Waves",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "WVMP",
+		"Type": "WVMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "14",
+		"Description": "Waves",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "WVDI",
+		"Type": "WVDIR",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "15",
+		"Description": "Swell",
+		"ShortMnemonic": " Significant Height",
+		"LongMnemonic": "SWSH",
+		"Type": "SWSHGHT",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "16",
+		"Description": "Swell",
+		"ShortMnemonic": " Maximum Height",
+		"LongMnemonic": "SWMH",
+		"Type": "SWMHGHT",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "17",
+		"Description": "Swell",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "SWMP",
+		"Type": "SWMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "18",
+		"Description": "Swell",
+		"ShortMnemonic": " Direction",
+		"LongMnemonic": "SWDI",
+		"Type": "SWDIR",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "19",
+		"Description": "Wind Speed ( 1 min )",
+		"ShortMnemonic": "WSPD",
+		"LongMnemonic": "WINDSPD",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "20",
+		"Description": "Wind Gusts ( 5 sec )",
+		"ShortMnemonic": "WGST",
+		"LongMnemonic": "WINDGUST",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "21",
+		"Description": "Wind Direction",
+		"ShortMnemonic": "WDIR",
+		"LongMnemonic": "WINDDIR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "22",
+		"Description": "Anemometer Height",
+		"ShortMnemonic": "ANEM",
+		"LongMnemonic": "ANEMHGHT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "23",
+		"Description": "Current Speed",
+		"ShortMnemonic": "CSPD",
+		"LongMnemonic": "CURRSPD",
+		"Type": "S",
+		"Length": "2"
+	},
+	{
+		"ID": "25",
+		"Index": "24",
+		"Description": "Current Direction",
+		"ShortMnemonic": "CDIR",
+		"LongMnemonic": "CURRDIR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "25",
+		"Description": "Depth current measured",
+		"ShortMnemonic": "DCUR",
+		"LongMnemonic": "DEPTCURR",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "26",
+		"Description": "Vessel Mean Draft",
+		"ShortMnemonic": "VMD",
+		"LongMnemonic": "VESMDRFT",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "27",
+		"Description": "Heave",
+		"ShortMnemonic": " Peak-to-Peak (sig)",
+		"LongMnemonic": "HVSG",
+		"Type": "HEAVSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "28",
+		"Description": "Heave",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "HVMX",
+		"Type": "HEAVMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "29",
+		"Description": "Heave",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "HVMP",
+		"Type": "HEAVMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "30",
+		"Description": "Roll",
+		"ShortMnemonic": " Peak-to-Peak (sig)",
+		"LongMnemonic": "RLSG",
+		"Type": "ROLLSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "31",
+		"Description": "Roll",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "RLMX",
+		"Type": "ROLLMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "32",
+		"Description": "Roll",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "RLMP",
+		"Type": "ROLLMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "33",
+		"Description": "Pitch",
+		"ShortMnemonic": " Peak-to-Peak (sig)",
+		"LongMnemonic": "PTSG",
+		"Type": "PTCHSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "34",
+		"Description": "Pitch",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "PTMX",
+		"Type": "PTCHMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "35",
+		"Description": "Pitch",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "PTMP",
+		"Type": "PTCHMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "36",
+		"Description": "Yaw",
+		"ShortMnemonic": " Peak-to Peak (sig)",
+		"LongMnemonic": "YWSG",
+		"Type": "YAWSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "37",
+		"Description": "Yaw",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "YWMX",
+		"Type": "YAWMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "38",
+		"Description": "Yaw",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "YWMP",
+		"Type": "YAWMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "39",
+		"Description": "Surge",
+		"ShortMnemonic": " Peak-to-Peak (sig)",
+		"LongMnemonic": "SUSG",
+		"Type": "SURGSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "40",
+		"Description": "Surge",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "SUMX",
+		"Type": "SURGMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "41",
+		"Description": "Surge",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "SUMP",
+		"Type": "SURGMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "42",
+		"Description": "Sway",
+		"ShortMnemonic": " Peak-to-Peak (sig)",
+		"LongMnemonic": "SYSG",
+		"Type": "SWAYSIG",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "43",
+		"Description": "Sway",
+		"ShortMnemonic": " Peak-to-Peak (max)",
+		"LongMnemonic": "SYMX",
+		"Type": "SWAYMAX",
+		"Length": "F"
+	},
+	{
+		"ID": "25",
+		"Index": "44",
+		"Description": "Sway",
+		"ShortMnemonic": " Mean Period",
+		"LongMnemonic": "SYMP",
+		"Type": "SWAYMPER",
+		"Length": "S"
+	},
+	{
+		"ID": "25",
+		"Index": "45",
+		"Description": "Trim",
+		"ShortMnemonic": "TRIM",
+		"LongMnemonic": "TRIM",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "46",
+		"Description": "Heel",
+		"ShortMnemonic": "HEEL",
+		"LongMnemonic": "HEEL",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "47",
+		"Description": "Weather Comments",
+		"ShortMnemonic": "WSCM",
+		"LongMnemonic": "WSSCOMM",
+		"Type": "A",
+		"Length": "128"
+	},
+	{
+		"ID": "25",
+		"Index": "48",
+		"Description": "SPARE 1",
+		"ShortMnemonic": "SPR1",
+		"LongMnemonic": "SPARE1",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "49",
+		"Description": "SPARE 2",
+		"ShortMnemonic": "SPR2",
+		"LongMnemonic": "SPARE2",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "50",
+		"Description": "SPARE 3",
+		"ShortMnemonic": "SPR3",
+		"LongMnemonic": "SPARE3",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "51",
+		"Description": "SPARE 4",
+		"ShortMnemonic": "SPR4",
+		"LongMnemonic": "SPARE4",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": "25",
+		"Index": "52",
+		"Description": "SPARE 5",
+		"ShortMnemonic": "SPR5",
+		"LongMnemonic": "SPARE5",
+		"Type": "F",
+		"Length": "4"
+	},
+	{
+		"ID": ""
+	}
+]

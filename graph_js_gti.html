@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<!-- <meta http-equiv="Refresh" content="5" /> -->
+<link rel="stylesheet" type="text/css" href="jschart5.css">
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+
+
+<script type="text/javascript" src="/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jschart-2.2.2.min.js"></script>
+
+<script type="text/javascript">
+<?php echo 'var d916 = '.json_encode($xy_value916).';'; ?>;
+<?php echo 'var numbs916 = '.json_encode($numbs_rec916).';' ?>;
+<?php echo 'var d4450 = '.json_encode($xy_value4450).';'; ?>;
+<?php echo 'var numbs4450 = '.json_encode($numbs_rec4450).';' ?>;
+<?php echo 'var d631 = '.json_encode($xy_value631).';'; ?>;
+<?php echo 'var numbs631 = '.json_encode($numbs_rec631).';' ?>;
+<?php echo 'var d110 = '.json_encode($xy_value110).';'; ?>;
+<?php echo 'var numbs110 = '.json_encode($numbs_rec110).';' ?>;
+<?php echo 'var d2241 = '.json_encode($xy_value2241).';'; ?>;
+<?php echo 'var numbs2241 = '.json_encode($numbs_rec2241).';' ?>;
+<?php echo 'var d908 = '.json_encode($xy_value908).';'; ?>;
+<?php echo 'var numbs908 = '.json_encode($numbs_rec908).';' ?>;
+<?php echo 'var d411 = '.json_encode($xy_value411).';'; ?>;
+<?php echo 'var numbs411 = '.json_encode($numbs_rec411).';' ?>;
+<?php echo 'var dconn = '.json_encode($xy_valueconn).';'; ?>;
+<?php echo 'var numbsconn = '.json_encode($numbs_recconn).';' ?>;
+<?php echo 'var d89 = '.json_encode($xy_value89).';'; ?>;
+<?php echo 'var numbs89 = '.json_encode($numbs_rec89).';' ?>;
+<?php echo 'var d110d = '.json_encode($xy_value110d).';'; ?>;
+<?php echo 'var numbs110d = '.json_encode($numbs_rec110d).';' ?>;
+<?php echo 'var d224d = '.json_encode($xy_value224d).';'; ?>;
+<?php echo 'var numbs224d = '.json_encode($numbs_rec224d).';' ?>;
+<?php echo 'var d908d = '.json_encode($xy_value908d).';'; ?>;
+<?php echo 'var numbs908d = '.json_encode($numbs_rec908d).';' ?>;
+<?php echo 'var d411d = '.json_encode($xy_value411d).';'; ?>;
+<?php echo 'var numbs411d = '.json_encode($numbs_rec411d).';' ?>;
+<?php echo 'var d89d = '.json_encode($xy_value89d).';'; ?>;
+<?php echo 'var numbs89d = '.json_encode($numbs_rec89d).';' ?>;
+
+</script>
+
+<script type="text/javascript" src="/js/wellcharts.js"></script>
+
+<!-- <script> -->
+<!-- setTimeout(function(){ -->
+    <!-- location.reload(); -->
+<!-- }, 4000); -->
+<!-- </script> -->
+
+<title></title>
+
+</head>
+
+<body>
+
+<div id="leg2"> Inet 8.8.8.8  <span id="p29" >0.0</span> Astr 62.220.55.149 <span id="p30" >0.0</span>
+<br>Msk 80.247.113.226  <span id="p31" >0.0</span>  УМ 192.168.77.3 <span id="p32" >0.0</span>
+</div>
+<script type="text/javascript">
+//var utcSeconds = d908[numbs908-1]["date"];
+//var d = new Date(0);
+//d.setUTCSeconds(utcSeconds);
+//document.getElementById("p33").innerHTML=d;
+document.getElementById("p29").innerHTML=dconn[numbsconn-1]["p8888"];
+dconn[numbsconn-1]["p8888"]>0?document.getElementById("p29").style.backgroundColor="DarkGreen":document.getElementById("p29").style.backgroundColor="red";
+document.getElementById("p30").innerHTML=dconn[numbsconn-1]["p6222055149"];
+dconn[numbsconn-1]["p6222055149"]>0?document.getElementById("p30").style.backgroundColor="magenta":document.getElementById("p30").style.backgroundColor="red";
+document.getElementById("p31").innerHTML=dconn[numbsconn-1]["p8084114180"];
+dconn[numbsconn-1]["p8084114180"]>0?document.getElementById("p31").style.backgroundColor="orange":document.getElementById("p31").style.backgroundColor="red";
+document.getElementById("p32").innerHTML=dconn[numbsconn-1]["p192168773"];
+dconn[numbsconn-1]["p192168773"]>0?document.getElementById("p32").style.backgroundColor="blue":document.getElementById("p32").style.backgroundColor="red";
+</script>
+
+<div id="chart8"></div>
+
+
+<div id="leg">АГКМ916-1 37.29.78.226 <span id="p1" >0</span>  <a href="https://www.google.ru/maps/place/46%C2%B047'07.8%22N+48%C2%B016'25.9%22E/@46.7862956,48.2731656,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.7855!4d48.2738611">(46°47'07.8"N 48°16'25.9"E)</a>
+<br>Poz 192.168.146.1 RX:<span id="p10" >0.0</span>Mbps TX:<span id="p11" >0.0</span>Mbps
+<br>Mlcache 192.168.146.3 <span id="p22" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p1").innerHTML=d916[numbs916-1]["value"];
+d916[numbs916-1]["value"]>0?document.getElementById("p1").style.backgroundColor="blue":document.getElementById("p1").style.backgroundColor="red";
+document.getElementById("p10").innerHTML=d916[numbs916-1]["rx"];
+d916[numbs916-1]["rx"]>0?document.getElementById("p10").style.backgroundColor="magenta":document.getElementById("p10").style.backgroundColor="red";
+document.getElementById("p11").innerHTML=d916[numbs916-1]["tx"];
+d916[numbs916-1]["tx"]>0?document.getElementById("p11").style.backgroundColor="orange":document.getElementById("p11").style.backgroundColor="red";
+d916[numbs916-1]["ml"]>0?document.getElementById("p22").innerHTML="[ on ]":document.getElementById("p22").innerHTML="[ off ]";
+d916[numbs916-1]["ml"]>0?document.getElementById("p22").style.backgroundColor="DarkGreen":document.getElementById("p22").style.backgroundColor="red";
+</script>
+
+<div id="chart"> </div>
+
+<div id="leg">АГКМ4450-1 31.173.139.214 <span id="p2">0</span>  <a href="https://www.google.ru/maps/place/46%C2%B047'44.5%22N+48%C2%B008'59.2%22E/@46.7953592,48.1488888,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.7957!4d48.1497667">  (46°47.742'N 48°8.986'E)</a>
+<br>Poz 192.168.146.33 RX:<span id="p12" >0.0</span>Mbps TX:<span id="p13" >0.0</span>Mbps
+<br>Mlcache 192.168.146.35 <span id="p23" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p2").innerHTML=d4450[numbs4450-1]["value"];
+d4450[numbs4450-1]["value"]>0?document.getElementById("p2").style.backgroundColor="blue":document.getElementById("p2").style.backgroundColor="red";
+document.getElementById("p12").innerHTML=d4450[numbs4450-1]["rx"];
+d4450[numbs4450-1]["rx"]>0?document.getElementById("p12").style.backgroundColor="magenta":document.getElementById("p12").style.backgroundColor="red";
+document.getElementById("p13").innerHTML=d4450[numbs4450-1]["tx"];
+d4450[numbs4450-1]["tx"]>0?document.getElementById("p13").style.backgroundColor="orange":document.getElementById("p13").style.backgroundColor="red";
+d4450[numbs4450-1]["ml"]>0?document.getElementById("p23").innerHTML="[ on ]":document.getElementById("p23").innerHTML="[ off ]";
+d4450[numbs4450-1]["ml"]>0?document.getElementById("p23").style.backgroundColor="DarkGreen":document.getElementById("p23").style.backgroundColor="red";
+</script>
+
+<div id="chart2"></div>
+
+<div id="leg">АГКМ631-1 31.173.139.218 <span id="p3">0</span>  <a href="https://www.google.ru/maps/place/46%C2%B043'50.8%22N+48%C2%B020'37.1%22E/@46.7304101,48.3427145,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.7307667!4d48.34365">(46°43.846'N 48°20.619'E)</a>
+<br>Poz 192.168.146.17 RX:<span id="p14" >0.0</span>Mbps TX:<span id="p15" >0.0</span>Mbps
+<br>Mlcache 192.168.146.18 <span id="p24" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p3").innerHTML=d631[numbs631-1]["value"];
+d631[numbs631-1]["value"]>0?document.getElementById("p3").style.backgroundColor="blue":document.getElementById("p3").style.backgroundColor="red";
+document.getElementById("p14").innerHTML=d631[numbs631-1]["rx"];
+d631[numbs631-1]["rx"]>0?document.getElementById("p14").style.backgroundColor="magenta":document.getElementById("p14").style.backgroundColor="red";
+document.getElementById("p15").innerHTML=d631[numbs631-1]["tx"];
+d631[numbs631-1]["tx"]>0?document.getElementById("p15").style.backgroundColor="orange":document.getElementById("p15").style.backgroundColor="red";
+d631[numbs631-1]["ml"]>0?document.getElementById("p24").innerHTML="[ on ]":document.getElementById("p24").innerHTML="[ off ]";
+d631[numbs631-1]["ml"]>0?document.getElementById("p24").style.backgroundColor="DarkGreen":document.getElementById("p24").style.backgroundColor="red";
+</script>
+
+<div id="chart3"></div>
+
+<div id="leg">АГКМ110-1 31.173.139.222 <span id="p4" >0</span>  <a href="https://www.google.ru/maps/place/46%C2%B053'14.5%22N+47%C2%B059'52.7%22E/@46.8871387,47.9957939,395m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.8873611!4d47.9979722">(46°53'14.5"N 47°59'52.7"E)</a>
+<br>Poz 192.168.146.49 RX:<span id="p16" >0.0</span>Mbps TX:<span id="p17" >0.0</span>Mbps
+<br>Mlcache 192.168.146.51 <span id="p25" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p4").innerHTML=d110[numbs110-1]["value"];
+d110[numbs110-1]["value"]>0?document.getElementById("p4").style.backgroundColor="blue":document.getElementById("p4").style.backgroundColor="red";
+document.getElementById("p16").innerHTML=d110[numbs110-1]["rx"];
+d110[numbs110-1]["rx"]>0?document.getElementById("p16").style.backgroundColor="magenta":document.getElementById("p16").style.backgroundColor="red";
+document.getElementById("p17").innerHTML=d110[numbs110-1]["tx"];
+d110[numbs110-1]["tx"]>0?document.getElementById("p17").style.backgroundColor="orange":document.getElementById("p17").style.backgroundColor="red";
+d110[numbs110-1]["ml"]>0?document.getElementById("p25").innerHTML="[ on ]":document.getElementById("p25").innerHTML="[ off ]";
+d110[numbs110-1]["ml"]>0?document.getElementById("p25").style.backgroundColor="DarkGreen":document.getElementById("p25").style.backgroundColor="red";
+</script>
+
+<div id="chart4"></div>
+
+<div id="leg"><span id="p37" >0</span> <span id="p45" >0</span> <span id="p46" >0</span>
+ <span id="p38" >0.0</span> <span id="p39" >0.0</span>
+ <span id="p40" >0.0</span> <span id="p41" >0.0</span>
+ <span id="p42" >0.0</span> <span id="p43" >0.0</span>
+ <span id="p44" >0.0</span> <span id="p47" >0.0</span> <span id="p48" >0.0</span> <span id="p49" >0.0</span> <span id="p50" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d110d[numbs110d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p37").innerHTML=" Время:"+iso[1];
+document.getElementById("p45").innerHTML=" Забой:"+d110d[numbs110d-1]["Zaboj"];
+document.getElementById("p46").innerHTML=" Инстр:"+d110d[numbs110d-1]["Instr"];
+document.getElementById("p38").innerHTML=" Wкр:"+d110d[numbs110d-1]["Wkp"];
+document.getElementById("p39").innerHTML=" Wдол:"+d110d[numbs110d-1]["Wdol"];
+document.getElementById("p40").innerHTML=" Мрот:"+d110d[numbs110d-1]["Mpot"]+"х10";
+document.getElementById("p41").innerHTML=" Nрот:"+d110d[numbs110d-1]["Npot"];
+document.getElementById("p42").innerHTML=" Pвх:"+d110d[numbs110d-1]["Pbx"];
+document.getElementById("p43").innerHTML=" Qвх:"+d110d[numbs110d-1]["Qbx"];
+document.getElementById("p44").innerHTML=" Т.блок:"+d110d[numbs110d-1]["Talblok"];
+document.getElementById("p47").innerHTML=" Хн1:"+d110d[numbs110d-1]["Xn1"];
+document.getElementById("p48").innerHTML=" Хн2:"+d110d[numbs110d-1]["Xn2"];
+document.getElementById("p49").innerHTML=" Поток:"+d110d[numbs110d-1]["Potok"]+"х10";
+document.getElementById("p50").innerHTML=" Твых:"+d110d[numbs110d-1]["Tbix"];
+</script>
+
+<div id="chart10"></div>
+
+<div id="leg2"><span id="p51" >0</span> <span id="p52" >0</span> <span id="p53" >0</span>
+ <span id="p54" >0.0</span> <span id="p55" >0.0</span>
+ <span id="p56" >0.0</span> <span id="p57" >0.0</span>
+ <span id="p58" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p51").innerHTML=" V1:"+d110d[numbs110d-1]["V1"];
+document.getElementById("p52").innerHTML=" V2:"+d110d[numbs110d-1]["V2"];
+document.getElementById("p53").innerHTML=" V3:"+d110d[numbs110d-1]["V3"];
+document.getElementById("p54").innerHTML=" V4:"+d110d[numbs110d-1]["V4"];
+document.getElementById("p55").innerHTML=" Vдол:"+d110d[numbs110d-1]["Vdol"];
+document.getElementById("p56").innerHTML=" Vобщ:"+d110d[numbs110d-1]["Vobj"];
+document.getElementById("p57").innerHTML=" С1: "+d110d[numbs110d-1]["C1"]+"х100";
+document.getElementById("p58").innerHTML=" С1+.+С5: "+d110d[numbs110d-1]["C1C5"]+"х100";
+</script>
+<div id="chart11"></div>
+
+
+<div id="leg">АГКМ224-1 31.173.187.210  <span id="p5" >0</span>  <a href="https://www.google.ru/maps/place/46%C2%B049'09.0%22N+48%C2%B010'52.1%22E/@46.818949,48.1806291,395m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.8191667!4d48.1811389">(46°49'09.0”N 48°10'52.1”E)</a>
+<br>Poz 192.168.146.65 RX:<span id="p18" >0.0</span>Mbps TX:<span id="p19" >0.0</span>Mbps
+<br>Mlcache 192.168.146.67 <span id="p26" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p5").innerHTML=d2241[numbs2241-1]["value"];
+d2241[numbs2241-1]["value"]>0?document.getElementById("p5").style.backgroundColor="blue":document.getElementById("p5").style.backgroundColor="red";
+document.getElementById("p18").innerHTML=d2241[numbs2241-1]["rx"];
+d2241[numbs2241-1]["rx"]>0?document.getElementById("p18").style.backgroundColor="magenta":document.getElementById("p18").style.backgroundColor="red";
+document.getElementById("p19").innerHTML=d2241[numbs2241-1]["tx"];
+d2241[numbs2241-1]["tx"]>0?document.getElementById("p19").style.backgroundColor="orange":document.getElementById("p19").style.backgroundColor="red";
+d2241[numbs2241-1]["ml"]>0?document.getElementById("p26").innerHTML="[ on ]":document.getElementById("p26").innerHTML="[ off ]";
+d2241[numbs2241-1]["ml"]>0?document.getElementById("p26").style.backgroundColor="DarkGreen":document.getElementById("p26").style.backgroundColor="red";
+</script>
+
+<div id="chart5"></div>
+<div id="leg"><span id="p59" >0</span> <span id="p60" >0</span> <span id="p61" >0</span>
+ <span id="p62" >0.0</span> <span id="p63" >0.0</span>
+ <span id="p64" >0.0</span> <span id="p65" >0.0</span>
+ <span id="p66" >0.0</span> <span id="p67" >0.0</span>
+ <span id="p68" >0.0</span> <span id="p69" >0.0</span> <span id="p70" >0.0</span> <span id="p71" >0.0</span> <span id="p72" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d224d[numbs224d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p59").innerHTML=" Время:"+iso[1];
+document.getElementById("p60").innerHTML=" Забой:"+d224d[numbs224d-1]["Zaboj"];
+document.getElementById("p61").innerHTML=" Инстр:"+d224d[numbs224d-1]["Instr"];
+document.getElementById("p62").innerHTML=" Wкр:"+d224d[numbs224d-1]["Wkp"];
+document.getElementById("p63").innerHTML=" Wдол:"+d224d[numbs224d-1]["Wdol"];
+document.getElementById("p64").innerHTML=" Мрот:"+d224d[numbs224d-1]["Mpot"]+"х10";
+document.getElementById("p65").innerHTML=" Nрот:"+d224d[numbs224d-1]["Npot"];
+document.getElementById("p66").innerHTML=" Pвх:"+d224d[numbs224d-1]["Pbx"];
+document.getElementById("p67").innerHTML=" Qвх:"+d224d[numbs224d-1]["Qbx"];
+document.getElementById("p68").innerHTML=" Т.блок:"+d224d[numbs224d-1]["Talblok"];
+document.getElementById("p69").innerHTML=" Хн1:"+d224d[numbs224d-1]["Xn1"];
+document.getElementById("p70").innerHTML=" Хн2:"+d224d[numbs224d-1]["Xn2"];
+document.getElementById("p71").innerHTML=" Поток:"+d224d[numbs224d-1]["Potok"]+"х10";
+document.getElementById("p72").innerHTML=" Твых:"+d224d[numbs224d-1]["Tbix"];
+</script>
+
+<div id="chart12"></div>
+
+<div id="leg2"><span id="p73" >0</span> <span id="p74" >0</span> <span id="p75" >0</span>
+ <span id="p76" >0.0</span> <span id="p77" >0.0</span>
+ <span id="p78" >0.0</span> <span id="p79" >0.0</span>
+ <span id="p80" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p73").innerHTML=" V1:"+d224d[numbs224d-1]["V1"];
+document.getElementById("p74").innerHTML=" V2:"+d224d[numbs224d-1]["V2"];
+document.getElementById("p75").innerHTML=" V3:"+d224d[numbs224d-1]["V3"];
+document.getElementById("p76").innerHTML=" V4:"+d224d[numbs224d-1]["V4"];
+document.getElementById("p77").innerHTML=" Vдол:"+d224d[numbs224d-1]["Vdol"];
+document.getElementById("p78").innerHTML=" Vобщ:"+d224d[numbs224d-1]["Vobj"];
+document.getElementById("p79").innerHTML=" С1: "+d224d[numbs224d-1]["C1"]+"х100";
+document.getElementById("p80").innerHTML=" С1+.+С5: "+d224d[numbs224d-1]["C1C5"]+"х100";
+</script>
+<div id="chart13"></div>
+
+
+<div id="leg">АГКМ908-1 31.173.139.194  <span id="p6" >0</span>  <a href="https://www.google.ru/maps/place/46%C2%B047'32.7%22N+48%C2%B012'33.0%22E/@46.7928835,48.2077619,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.7924167!4d48.2091667">(46°47'32.7”N 48°12'33”E)</a>
+<br>Poz 192.168.146.97 RX:<span id="p20" >0.0</span>Mbps TX:<span id="p21" >0.0</span>Mbps
+<br>Mlcache 192.168.146.99 <span id="p27" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p6").innerHTML=d908[numbs908-1]["value"];
+d908[numbs908-1]["value"]>0?document.getElementById("p6").style.backgroundColor="blue":document.getElementById("p6").style.backgroundColor="red";
+document.getElementById("p20").innerHTML=d908[numbs908-1]["rx"];
+d908[numbs908-1]["rx"]>0?document.getElementById("p20").style.backgroundColor="magenta":document.getElementById("p20").style.backgroundColor="red";
+document.getElementById("p21").innerHTML=d908[numbs908-1]["tx"];
+d908[numbs908-1]["tx"]>0?document.getElementById("p21").style.backgroundColor="orange":document.getElementById("p21").style.backgroundColor="red";
+d908[numbs908-1]["ml"]>0?document.getElementById("p27").innerHTML="[ on ]":document.getElementById("p27").innerHTML="[ off ]";
+d908[numbs908-1]["ml"]>0?document.getElementById("p27").style.backgroundColor="DarkGreen":document.getElementById("p27").style.backgroundColor="red";
+</script>
+
+<div id="chart6"></div>
+<div id="leg"><span id="p81" >0</span> <span id="p82" >0</span> <span id="p83" >0</span>
+ <span id="p84" >0.0</span> <span id="p85" >0.0</span>
+ <span id="p86" >0.0</span> <span id="p87" >0.0</span>
+ <span id="p88" >0.0</span> <span id="p89" >0.0</span>
+ <span id="p90" >0.0</span> <span id="p91" >0.0</span> <span id="p92" >0.0</span> <span id="p93" >0.0</span> <span id="p94" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d908d[numbs908d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p81").innerHTML=" Время:"+iso[1];
+document.getElementById("p82").innerHTML=" Забой:"+d908d[numbs908d-1]["Zaboj"];
+document.getElementById("p83").innerHTML=" Инстр:"+d908d[numbs908d-1]["Instr"];
+document.getElementById("p84").innerHTML=" Wкр:"+d908d[numbs908d-1]["Wkp"];
+document.getElementById("p85").innerHTML=" Wдол:"+d908d[numbs908d-1]["Wdol"];
+document.getElementById("p86").innerHTML=" Мрот:"+d908d[numbs908d-1]["Mpot"]+"х10";
+document.getElementById("p87").innerHTML=" Nрот:"+d908d[numbs908d-1]["Npot"];
+document.getElementById("p88").innerHTML=" Pвх:"+d908d[numbs908d-1]["Pbx"];
+document.getElementById("p89").innerHTML=" Qвх:"+d908d[numbs908d-1]["Qbx"];
+document.getElementById("p90").innerHTML=" Т.блок:"+d908d[numbs908d-1]["Talblok"];
+document.getElementById("p91").innerHTML=" Хн1:"+d908d[numbs908d-1]["Xn1"];
+document.getElementById("p92").innerHTML=" Хн2:"+d908d[numbs908d-1]["Xn2"];
+document.getElementById("p93").innerHTML=" Поток:"+d908d[numbs908d-1]["Potok"]+"х10";
+document.getElementById("p94").innerHTML=" Твых:"+d908d[numbs908d-1]["Tbix"];
+</script>
+
+<div id="chart14"></div>
+
+<div id="leg2"><span id="p95" >0</span> <span id="p96" >0</span> <span id="p97" >0</span>
+ <span id="p98" >0.0</span> <span id="p99" >0.0</span>
+ <span id="p100" >0.0</span> <span id="p101" >0.0</span>
+ <span id="p102" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p95").innerHTML=" V1:"+d908d[numbs908d-1]["V1"];
+document.getElementById("p96").innerHTML=" V2:"+d908d[numbs908d-1]["V2"];
+document.getElementById("p97").innerHTML=" V3:"+d908d[numbs908d-1]["V3"];
+document.getElementById("p98").innerHTML=" V4:"+d908d[numbs908d-1]["V4"];
+document.getElementById("p99").innerHTML=" Vдол:"+d908d[numbs908d-1]["Vdol"];
+document.getElementById("p100").innerHTML=" Vобщ:"+d908d[numbs908d-1]["Vobj"];
+document.getElementById("p101").innerHTML=" С1: "+d908d[numbs908d-1]["C1"]+"х100";
+document.getElementById("p102").innerHTML=" С1+.+С5: "+d908d[numbs908d-1]["C1C5"]+"х100";
+</script>
+<div id="chart15"></div>
+
+
+<div id="leg">АГКМ411-1 37.29.8.14  <span id="p7" >0.0</span>  <a href="https://www.google.ru/maps/place/46%C2%B048'06.6%22N+48%C2%B008'25.8%22E/@46.8018342,48.1394159,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.8018333!4d48.1405">(46°48'06.6"N 48°08'25.8"E)</a>
+<br>Poz 192.168.146.129 RX:<span id="p8" >0.0</span>Mbps TX:<span id="p9" >0.0</span>Mbps
+<br>Mlcache 192.168.146.131 <span id="p28" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p7").innerHTML=d411[numbs411-1]["value"];
+d411[numbs411-1]["value"]>0?document.getElementById("p7").style.backgroundColor="blue":document.getElementById("p7").style.backgroundColor="red";
+document.getElementById("p8").innerHTML=d411[numbs411-1]["rx"];
+d411[numbs411-1]["rx"]>0?document.getElementById("p8").style.backgroundColor="magenta":document.getElementById("p8").style.backgroundColor="red";
+document.getElementById("p9").innerHTML=d411[numbs411-1]["tx"];
+d411[numbs411-1]["tx"]>0?document.getElementById("p9").style.backgroundColor="orange":document.getElementById("p9").style.backgroundColor="red";
+d411[numbs411-1]["ml"]>0?document.getElementById("p28").innerHTML="[ on ]":document.getElementById("p28").innerHTML="[ off ]";
+d411[numbs411-1]["ml"]>0?document.getElementById("p28").style.backgroundColor="DarkGreen":document.getElementById("p28").style.backgroundColor="red";
+</script>
+
+<div id="chart7"></div>
+<div id="leg"><span id="p103" >0</span> <span id="p104" >0</span> <span id="p105" >0</span>
+ <span id="p106" >0.0</span> <span id="p107" >0.0</span>
+ <span id="p108" >0.0</span> <span id="p109" >0.0</span>
+ <span id="p110" >0.0</span> <span id="p111" >0.0</span>
+ <span id="p112" >0.0</span> <span id="p113" >0.0</span> <span id="p114" >0.0</span> <span id="p115" >0.0</span> <span id="p116" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d411d[numbs411d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p103").innerHTML=" Время:"+iso[1];
+document.getElementById("p104").innerHTML=" Забой:"+d411d[numbs411d-1]["Zaboj"];
+document.getElementById("p105").innerHTML=" Инстр:"+d411d[numbs411d-1]["Instr"];
+document.getElementById("p106").innerHTML=" Wкр:"+d411d[numbs411d-1]["Wkp"];
+document.getElementById("p107").innerHTML=" Wдол:"+d411d[numbs411d-1]["Wdol"];
+document.getElementById("p108").innerHTML=" Мрот:"+d411d[numbs411d-1]["Mpot"]+"х10";
+document.getElementById("p109").innerHTML=" Nрот:"+d411d[numbs411d-1]["Npot"];
+document.getElementById("p110").innerHTML=" Pвх:"+d411d[numbs411d-1]["Pbx"];
+document.getElementById("p111").innerHTML=" Qвх:"+d411d[numbs411d-1]["Qbx"];
+document.getElementById("p112").innerHTML=" Т.блок:"+d411d[numbs411d-1]["Talblok"];
+document.getElementById("p113").innerHTML=" Хн1:"+d411d[numbs411d-1]["Xn1"];
+document.getElementById("p114").innerHTML=" Хн2:"+d411d[numbs411d-1]["Xn2"];
+document.getElementById("p115").innerHTML=" Поток:"+d411d[numbs411d-1]["Potok"]+"х10";
+document.getElementById("p116").innerHTML=" Твых:"+d411d[numbs411d-1]["Tbix"];
+</script>
+
+<div id="chart16"></div>
+
+<div id="leg2"><span id="p117" >0</span> <span id="p118" >0</span> <span id="p119" >0</span>
+ <span id="p120" >0.0</span> <span id="p121" >0.0</span>
+ <span id="p122" >0.0</span> <span id="p123" >0.0</span>
+ <span id="p124" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p117").innerHTML=" V1:"+d411d[numbs411d-1]["V1"];
+document.getElementById("p118").innerHTML=" V2:"+d411d[numbs411d-1]["V2"];
+document.getElementById("p119").innerHTML=" V3:"+d411d[numbs411d-1]["V3"];
+document.getElementById("p120").innerHTML=" V4:"+d411d[numbs411d-1]["V4"];
+document.getElementById("p121").innerHTML=" Vдол:"+d411d[numbs411d-1]["Vdol"];
+document.getElementById("p122").innerHTML=" Vобщ:"+d411d[numbs411d-1]["Vobj"];
+document.getElementById("p123").innerHTML=" С1: "+d411d[numbs411d-1]["C1"]+"х100";
+document.getElementById("p124").innerHTML=" С1+.+С5: "+d411d[numbs411d-1]["C1C5"]+"х100";
+</script>
+<div id="chart17"></div>
+
+
+<div id="leg">АГКМ89-1 31.173.139.190  <span id="p33" >0.0</span>  
+<!-- <a href="https://www.google.ru/maps/place/46%C2%B048'06.6%22N+48%C2%B008'25.8%22E/@46.8018342,48.1394159,399m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d46.8018333!4d48.1405">(46°48'06.6"N 48°08'25.8"E)</a> -->
+<br>Poz 192.168.146.161 RX:<span id="p34" >0.0</span>Mbps TX:<span id="p35" >0.0</span>Mbps
+<br>Mlcache 192.168.146.163 <span id="p36" > off </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p33").innerHTML=d89[numbs89-1]["value"];
+d89[numbs89-1]["value"]>0?document.getElementById("p33").style.backgroundColor="blue":document.getElementById("p33").style.backgroundColor="red";
+document.getElementById("p34").innerHTML=d89[numbs89-1]["rx"];
+d89[numbs89-1]["rx"]>0?document.getElementById("p34").style.backgroundColor="magenta":document.getElementById("p34").style.backgroundColor="red";
+document.getElementById("p35").innerHTML=d89[numbs89-1]["tx"];
+d89[numbs89-1]["tx"]>0?document.getElementById("p35").style.backgroundColor="orange":document.getElementById("p35").style.backgroundColor="red";
+d89[numbs89-1]["ml"]>0?document.getElementById("p36").innerHTML="[ on ]":document.getElementById("p36").innerHTML="[ off ]";
+d89[numbs89-1]["ml"]>0?document.getElementById("p36").style.backgroundColor="DarkGreen":document.getElementById("p36").style.backgroundColor="red";
+</script>
+
+<div id="chart9"></div>
+
+<div id="leg"><span id="p125" >0</span> <span id="p126" >0</span> <span id="p127" >0</span>
+ <span id="p128" >0.0</span> <span id="p129" >0.0</span>
+ <span id="p130" >0.0</span> <span id="p131" >0.0</span>
+ <span id="p132" >0.0</span> <span id="p133" >0.0</span>
+ <span id="p134" >0.0</span> <span id="p135" >0.0</span> <span id="p136" >0.0</span> <span id="p137" >0.0</span> <span id="p138" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d89d[numbs89d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p125").innerHTML=" Время:"+iso[1];
+document.getElementById("p126").innerHTML=" Забой:"+d89d[numbs89d-1]["Zaboj"];
+document.getElementById("p127").innerHTML=" Инстр:"+d89d[numbs89d-1]["Instr"];
+document.getElementById("p128").innerHTML=" Wкр:"+d89d[numbs89d-1]["Wkp"];
+document.getElementById("p129").innerHTML=" Wдол:"+d89d[numbs89d-1]["Wdol"];
+document.getElementById("p130").innerHTML=" Мрот:"+d89d[numbs89d-1]["Mpot"]+"х10";
+document.getElementById("p131").innerHTML=" Nрот:"+d89d[numbs89d-1]["Npot"];
+document.getElementById("p132").innerHTML=" Pвх:"+d89d[numbs89d-1]["Pbx"];
+document.getElementById("p133").innerHTML=" Qвх:"+d89d[numbs89d-1]["Qbx"];
+document.getElementById("p134").innerHTML=" Т.блок:"+d89d[numbs89d-1]["Talblok"];
+document.getElementById("p135").innerHTML=" Хн1:"+d89d[numbs89d-1]["Xn1"];
+document.getElementById("p136").innerHTML=" Хн2:"+d89d[numbs89d-1]["Xn2"];
+document.getElementById("p137").innerHTML=" Поток:"+d89d[numbs89d-1]["Potok"]+"х10";
+document.getElementById("p138").innerHTML=" Твых:"+d89d[numbs89d-1]["Tbix"];
+</script>
+
+<div id="chart18"></div>
+
+<div id="leg2"><span id="p139" >0</span> <span id="p140" >0</span> <span id="p141" >0</span>
+ <span id="p142" >0.0</span> <span id="p143" >0.0</span>
+ <span id="p144" >0.0</span> <span id="p145" >0.0</span>
+ <span id="p146" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p139").innerHTML=" V1:"+d89d[numbs89d-1]["V1"];
+document.getElementById("p140").innerHTML=" V2:"+d89d[numbs89d-1]["V2"];
+document.getElementById("p141").innerHTML=" V3:"+d89d[numbs89d-1]["V3"];
+document.getElementById("p142").innerHTML=" V4:"+d89d[numbs89d-1]["V4"];
+document.getElementById("p143").innerHTML=" Vдол:"+d89d[numbs89d-1]["Vdol"];
+document.getElementById("p144").innerHTML=" Vобщ:"+d89d[numbs89d-1]["Vobj"];
+document.getElementById("p145").innerHTML=" С1: "+d89d[numbs89d-1]["C1"]+"х100";
+document.getElementById("p146").innerHTML=" С1+.+С5: "+d89d[numbs89d-1]["C1C5"]+"х100";
+</script>
+<div id="chart19"></div>
+
+
+<div id="leg"><a href>
+<a href="videoreg.php"><img src="camera.png">Видеорегистраторы</a>
+   <a href="videoreg.php"><img src="camera.png">sss</a>
+</div>
+<!-- <div id="leg">АГКМ916-1 192.168.146.7 </div>
+<img src="poz/916_1.jpg" alt="916_1" width="100%" height="800">
+<img src="poz/916_2.jpg"  alt="916_2" width="100%" height="800">
+<img src="poz/916_3.jpg"  alt="916_3" width="100%"  height="800">
+<img src="poz/916_4.jpg"  alt="916_4" width="100%" height="800">
+
+<div id="leg">АГКМ4450-1 192.168.146.39 </div>
+<img src="poz/4450_1.jpg" alt="110_1"  width="100%" height="800" >
+<img src="poz/4450_2.jpg"  alt="110_2"  width="100%" height="800">
+<img src="poz/4450_3.jpg"  alt="110_3"  width="100%" height="800">
+<img src="poz/4450_4.jpg"  alt="110_4"  width="100%" height="800">
+
+<div id="leg">АГКМ631-1 192.168.146.24 </div>
+<img src="poz/631_1.jpg" alt="110_1"  width="100%" height="800">
+<img src="poz/631_2.jpg"  alt="110_2" width="100%" height="800">
+<img src="poz/631_3.jpg"  alt="110_3" width="100%" height="800">
+<img src="poz/631_4.jpg"  alt="110_4" width="100%" height="800">
+
+<div id="leg">АГКМ110-1 192.168.146.53 </div>
+<img src="poz/110_1.jpg" alt="110_1" width="100%" height="800">
+<img src="poz/110_2.jpg"  alt="110_2" width="100%" height="800">
+<img src="poz/110_3.jpg"  alt="110_3" width="100%" height="800">
+<img src="poz/110_4.jpg"  alt="110_4" width="100%" height="800">
+
+<div id="leg">АГКМ224-1 192.168.146.71 </div>
+<img src="poz/224_1.jpg" alt="110_1" width="100%" height="800">
+<img src="poz/224_2.jpg"  alt="110_2" width="100%" height="800">
+<img src="poz/224_3.jpg"  alt="110_3" width="100%" height="800">
+<img src="poz/224_4.jpg"  alt="110_4" width="100%" height="800">
+
+<div id="leg">АГКМ908-1 192.168.146.103  </div>
+<img src="poz/908_1.jpg" alt="908_1" width="100%" height="800">
+<img src="poz/908_2.jpg"  alt="908_2" width="100%" height="800">
+<img src="poz/908_3.jpg"  alt="908_3" width="100%" height="800">
+<img src="poz/908_4.jpg"  alt="908_4" width="100%" height="800">
+
+<div id="leg">АГКМ411-1 192.168.146.135  </div>
+<img src="poz/411_1.jpg" alt="411_1" width="100%" height="800">
+<img src="poz/411_2.jpg"  alt="411_2" width="100%" height="800">
+<img src="poz/411_3.jpg"  alt="411_3" width="100%" height="800">
+<img src="poz/411_4.jpg"  alt="411_4" width="100%" height="800">
+ -->
+</body>
+
+</html>

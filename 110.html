@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<!-- <meta http-equiv="Refresh" content="5" /> -->
+<link rel="stylesheet" type="text/css" href="jschart5.css">
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+
+
+<script type="text/javascript" src="/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jschart-2.2.2.min.js"></script>
+
+<script type="text/javascript">
+
+<?php echo 'var d110d = '.json_encode($xy_value110d).';'; ?>;
+<?php echo 'var numbs110d = '.json_encode($numbs_rec110d).';' ?>;
+</script>
+
+<script type="text/javascript" src="/js/110.js"></script>
+
+<!-- <script> -->
+<!-- setTimeout(function(){ -->
+    <!-- location.reload(); -->
+<!-- }, 4000); -->
+<!-- </script> -->
+
+<title></title>
+
+</head>
+
+<body>
+
+
+<div id="leg"><span id="p37" >0</span> <span id="p45" >0</span> <span id="p46" >0</span>
+ <span id="p38" >0.0</span> <span id="p39" >0.0</span>
+ <span id="p40" >0.0</span> <span id="p41" >0.0</span>
+ <span id="p42" >0.0</span> <span id="p43" >0.0</span>
+ <span id="p44" >0.0</span> <span id="p47" >0.0</span> <span id="p48" >0.0</span> <span id="p49" >0.0</span> <span id="p50" >0.0</span>
+</div>
+<script type="text/javascript">
+var timestamp = d110d[numbs110d-1]["Vrema"];
+var date = new Date(timestamp*1000);
+var iso = date.toISOString().match(/(\d{2}:\d{2}:\d{2})/);
+document.getElementById("p37").innerHTML=" Время:"+iso[1];
+document.getElementById("p45").innerHTML=" Забой:"+d110d[numbs110d-1]["Zaboj"];
+document.getElementById("p46").innerHTML=" Инстр:"+d110d[numbs110d-1]["Instr"];
+document.getElementById("p38").innerHTML=" Wкр:"+d110d[numbs110d-1]["Wkp"];
+document.getElementById("p39").innerHTML=" Wдол:"+d110d[numbs110d-1]["Wdol"];
+document.getElementById("p40").innerHTML=" Мрот:"+d110d[numbs110d-1]["Mpot"]+"х10";
+document.getElementById("p41").innerHTML=" Nрот:"+d110d[numbs110d-1]["Npot"];
+document.getElementById("p42").innerHTML=" Pвх:"+d110d[numbs110d-1]["Pbx"];
+document.getElementById("p43").innerHTML=" Qвх:"+d110d[numbs110d-1]["Qbx"];
+document.getElementById("p44").innerHTML=" Т.блок:"+d110d[numbs110d-1]["Talblok"];
+document.getElementById("p47").innerHTML=" Хн1:"+d110d[numbs110d-1]["Xn1"];
+document.getElementById("p48").innerHTML=" Хн2:"+d110d[numbs110d-1]["Xn2"];
+document.getElementById("p49").innerHTML=" Поток:"+d110d[numbs110d-1]["Potok"]+"х10";
+document.getElementById("p50").innerHTML=" Твых:"+d110d[numbs110d-1]["Tbix"];
+</script>
+
+<div id="chart10"></div>
+
+<div id="leg2"><span id="p51" >0</span> <span id="p52" >0</span> <span id="p53" >0</span>
+ <span id="p54" >0.0</span> <span id="p55" >0.0</span>
+ <span id="p56" >0.0</span> <span id="p57" >0.0</span>
+ <span id="p58" >0.0</span>
+</div>
+<script type="text/javascript">
+document.getElementById("p51").innerHTML=" V1:"+d110d[numbs110d-1]["V1"];
+document.getElementById("p52").innerHTML=" V2:"+d110d[numbs110d-1]["V2"];
+document.getElementById("p53").innerHTML=" V3:"+d110d[numbs110d-1]["V3"];
+document.getElementById("p54").innerHTML=" V4:"+d110d[numbs110d-1]["V4"];
+document.getElementById("p55").innerHTML=" Vдол:"+d110d[numbs110d-1]["Vdol"];
+document.getElementById("p56").innerHTML=" Vобщ:"+d110d[numbs110d-1]["Vobj"];
+document.getElementById("p57").innerHTML=" С1: "+d110d[numbs110d-1]["C1"]+"х100";
+document.getElementById("p58").innerHTML=" С1+.+С5: "+d110d[numbs110d-1]["C1C5"]+"х100";
+</script>
+<div id="chart11"></div>
+
+</body>
+
+</html>

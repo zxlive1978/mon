@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/bin/python /var/www/html/mon/poz/pit_go.py
+

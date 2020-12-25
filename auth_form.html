@@ -1,0 +1,39 @@
+
+<form action="" method="GET">
+
+    <table align=center border=0 style="font-size:50">
+        <tr>
+            <td>Логин:</td>
+            <td><input type="text" style="width:360Px;height:100Px;font-size:50" name="email" value=<?=$_GET["email"]?>></td>
+        </tr>
+        <tr>
+            <td>Пароль:</td>
+            <td><input type="password" style="width:360Px;height:100Px;font-size:50" maxlength="20" name="pass" value=<?=$_GET["pass"]?>></td>
+        </tr>
+        
+		<tr>
+		<td>Интервал:</td>
+		<td colspan="2"><select id="cmbMake" name="timeshift"  style="width:360Px;height:100Px;font-size:65" value=<?=$_GET["timeshift"]?>>
+		<option value="1">1 день</option>
+		<option value="3">3 дня</option>
+		<option value="7">7 дней</option>
+		<option value="90">3 месяца</option>
+		</select>
+		</td>
+		</tr>
+		
+		<tr>
+            <<td>&nbsp;</td>
+            <td colspan="2"><input type="submit" style="width:360Px;height:100Px;font-size:50"  value="Войти" name="submit1" onclick=></td>
+        </tr>
+		<tr>
+            
+            <td colspan="2" align=center><br>
+			<br><br><br><br><br><br>
+			<!--<script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5jfzm3bcruq&amp;d=3&amp;p=1&amp;b=0&amp;w=293&amp;g=3&amp;f=arial&amp;fs=14&amp;r=0&amp;c0=ffffff&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>--></td>
+		</tr>
+		
+
+    </table>
+	
+</form>

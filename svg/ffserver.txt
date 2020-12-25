@@ -1,0 +1,33 @@
+
+
+It seems that recently I did something similar. I have added following section to the /etc/ffserver.conf file:
+
+<Feed monitoring1.ffm>
+File /tmp/monitoring1.ffm
+FileMaxSize 50M
+ACL allow 127.0.0.1
+</Feed>
+
+<Stream monitoring1.mjpg>
+Feed monitoring1.ffm
+Format mpjpeg
+VideoCodec mjpeg
+VideoFrameRate 22
+VideoBufferSize 80
+VideoSize 720x264
+NoAudio
+</Stream>
+
+After that started server with command:
+
+ffserver
+
+and run streaming with command:
+
+ffmpeg -i "rtsp://<ip_camera>:554/user=admin&password=&channel=1&stream=0.sdp" http://localhost:8090/monitoring1.ffm
+
+Tune the ip camera url for your purposes. Now you can access the mjpeg stream by accessing following address with your browser/player:
+
+http://localhost:8090/monitoring1.mjpg
+
+Works fine for me and hope it solves your problem.

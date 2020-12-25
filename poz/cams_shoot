@@ -1,0 +1,4 @@
+#!/bin/bash
+#Screenshot
+
+cd /var/www/html/mon/poz && /usr/bin/python cams_shoot.py

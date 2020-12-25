@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#4450
+/sbin/mount.cifs //192.168.146.34/d/PetroServices/Database/Online/Store /mnt/4450 -o iocharset=utf8,username=root,password=root,rsize=16000,wsize=16000 > /dev/null 2>&1
+
+#631
+/sbin/mount.cifs //192.168.146.19/d/PetroServices/Database/Online/Store /mnt/631 -o iocharset=utf8,username=root,password=root,rsize=16000,wsize=16000 > /dev/null 2>&1
+
+#630
+/sbin/mount.cifs //192.168.146.194/d/IMS/Database/Online/Store /mnt/630 -o iocharset=utf8,username=root,password=root,rsize=16000,wsize=16000 > /dev/null 2>&1
+
+#104
+/sbin/mount.cifs //192.168.146.2/d/PetroServices/Database/Online/Store /mnt/104 -o iocharset=utf8,username=root,password=root,rsize=16000,wsize=16000 > /dev/null 2>&1
+
+
+

@@ -1,0 +1,2321 @@
+object TChartContext
+  Left = 0
+  Top = 0
+  Right = 0
+  Bottom = 0
+  MainID = 0
+  Min = 43227.834234618060000000
+  Max = 43228.494024108800000000
+  Scale = 0.004901960784313725
+  Step = 0.041666666666666660
+  IsDateTime = True
+  ShowBottomHeader = False
+  object TPrintHeader
+    Left = 0
+    Top = 0
+    Right = 0
+    Bottom = 73
+    Invisible = False
+    object TPrintLabel
+      Left = 43
+      Top = 1
+      Right = 148
+      Bottom = 7
+      Caption = #1058#1077#1093#1085#1086#1083#1086#1075#1086'-'#1075#1077#1086#1093#1080#1084#1080#1095#1077#1089#1082#1080#1077' '#1080#1089#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 96
+      Top = 7
+      Right = 107
+      Bottom = 13
+      Caption = #1050#1056#1057
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 37
+      Top = 13
+      Right = 89
+      Bottom = 18
+      Caption = #1048#1085#1090#1077#1088#1074#1072#1083' '#1080#1089#1089#1083#1077#1076#1086#1074#1072#1085#1080#1081':'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintSysVar
+      Left = 91
+      Top = 13
+      Right = 158
+      Bottom = 19
+      Caption = '07.05.18 20:01 - 08.05.18 11:51'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+      VarType = svRange
+    end
+    object TPrintShape
+      Left = 2
+      Top = 18
+      Right = 200
+      Bottom = 24
+      PenColor = clBlack
+      BrushColor = 13434879
+    end
+    object TPrintLabel
+      Left = 38
+      Top = 18
+      Right = 59
+      Bottom = 23
+      Caption = #1055#1083#1086#1097#1072#1076#1100':  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 63
+      Top = 18
+      Right = 75
+      Bottom = 24
+      Caption = #1040#1043#1050#1052
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 102
+      Top = 18
+      Right = 124
+      Bottom = 23
+      Caption = #1057#1082#1074#1072#1078#1080#1085#1072': '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 127
+      Top = 18
+      Right = 136
+      Bottom = 24
+      Caption = '20-'#1069
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 47
+      Top = 69
+      Right = 58
+      Bottom = 73
+      Caption = #1055#1086#1083'.'#1076#1086#1083'.'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 86
+      Top = 69
+      Right = 102
+      Bottom = 73
+      Caption = #1063#1080#1089#1083#1086' '#1089#1074#1077#1095#1077#1081
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 145
+      Top = 69
+      Right = 158
+      Bottom = 73
+      Caption = #1057#1091#1084'.'#1086#1073#1098#1105#1084
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+  end
+  object TPrintField
+    Left = 15
+    Top = 24
+    Right = 59
+    Bottom = 210
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '200'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 150.000000000000000000
+      Caption = #1042#1077#1089' '#1085#1072' '#1042#1057#1055
+      Units = #1090
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '115'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1076#1086#1083#1086#1090#1072
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 34
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1300'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 3.000000000000000000
+      Caption = #1050#1088#1091#1090#1103#1097#1080#1081' '#1084#1086#1084#1077#1085#1090' '#1085#1072' '#1042#1057#1055
+      Units = #1090'*'#1084
+      Color = 38218
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '202'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1053#1072#1075#1088#1091#1079#1082#1072' '#1085#1072' '#1076#1086#1083#1086#1090#1086
+      Units = #1090
+      Color = 16732181
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1200'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1054#1073#1086#1088#1086#1090#1086#1074' '#1042#1057#1055
+      Units = #1084#1080#1085'-1'
+      Color = 16581279
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1149
+      Right = 50
+      Bottom = -1139
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43221.834884259260000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1144
+      Right = 50
+      Bottom = -1134
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43221.857800925930000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1081
+      Right = 50
+      Bottom = -1071
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.168217592600000000
+      Comment = #1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1076
+      Right = 50
+      Bottom = -1066
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.191134259260000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1051
+      Right = 50
+      Bottom = -1041
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.314050925920000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1036
+      Right = 50
+      Bottom = -1026
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.389050925930000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1013
+      Right = 50
+      Bottom = -1003
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.500162037040000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -1010
+      Right = 50
+      Bottom = -1000
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.514050925930000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -991
+      Right = 50
+      Bottom = -981
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.607800925930000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -986
+      Right = 50
+      Bottom = -976
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.632106481480000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -945
+      Right = 45
+      Bottom = -935
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.834907407410000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -924
+      Right = 45
+      Bottom = -914
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.939074074070000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -898
+      Right = 45
+      Bottom = -888
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.062685185180000000
+      Comment = #1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -787
+      Right = 45
+      Bottom = -777
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.611111111110000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -775
+      Right = 45
+      Bottom = -765
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.666666666660000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -753
+      Right = 45
+      Bottom = -743
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.777777777780000000
+      Comment = #1055#1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -741
+      Right = 45
+      Bottom = -731
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.833634259260000000
+      Comment = #1055#1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -699
+      Right = 45
+      Bottom = -689
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.041967592600000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -568
+      Right = 45
+      Bottom = -558
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.680555555550000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -554
+      Right = 45
+      Bottom = -544
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.750300925920000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -537
+      Right = 45
+      Bottom = -527
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.833275462970000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -452
+      Right = 45
+      Bottom = -442
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.249942129630000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -428
+      Right = 45
+      Bottom = -418
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.368055555550000000
+      Comment = #1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -420
+      Right = 45
+      Bottom = -410
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.409722222220000000
+      Comment = #1055#1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -413
+      Right = 45
+      Bottom = -403
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.444444444450000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -388
+      Right = 45
+      Bottom = -378
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.562500000000000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -333
+      Right = 45
+      Bottom = -323
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.833668981480000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -251
+      Right = 45
+      Bottom = -241
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.236446759260000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -218
+      Right = 45
+      Bottom = -208
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.396168981480000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -129
+      Right = 45
+      Bottom = -119
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.834629629630000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -105
+      Right = 45
+      Bottom = -95
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.951388888890000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -82
+      Right = 45
+      Bottom = -72
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.062500000000000000
+      Comment = #1055#1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -39
+      Right = 45
+      Bottom = -29
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.277777777780000000
+      Comment = #1041
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = -10
+      Right = 45
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.417962962970000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = 12
+      Right = 45
+      Bottom = 22
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.527777777780000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -85
+      Right = 45
+      Bottom = -75
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.050601851850000000
+      Comment = #1053'-13.42'
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = 75
+      Right = 45
+      Bottom = 85
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.834224537040000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = 80
+      Right = 45
+      Bottom = 90
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.861111111110000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = 153
+      Right = 45
+      Bottom = 163
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.215277777780000000
+      Comment = #1058#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 20
+      Top = 168
+      Right = 45
+      Bottom = 178
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.292557870370000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+  end
+  object TPrintField
+    Left = 59
+    Top = 24
+    Right = 102
+    Bottom = 210
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '300'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 150.000000000000000000
+      Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1085#1072' '#1084#1072#1085#1080#1092#1086#1083#1100#1076#1077
+      Units = #1082#1075'/'#1089#1084'2'
+      Color = clRed
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1001'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 30.000000000000000000
+      Caption = #1056#1072#1089#1093#1086#1076' '#1085#1072' '#1074#1093#1086#1076#1077
+      Units = #1083'/c'
+      Color = 48992
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1601'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 6.000000000000000000
+      Caption = 'C1'
+      Units = '%'
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1600'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 6.000000000000000000
+      Caption = #1057#1091#1084#1084#1072' '#1057'1-5'
+      Units = '%'
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '103'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 20.000000000000000000
+      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1042#1057#1055
+      Units = #1084'.'
+      Color = 16695041
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '111'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1063#1080#1089#1083#1086' '#1089#1074#1077#1095#1077#1081
+      Color = -1
+      ShowSubLabels = False
+      Flags = []
+      Step = 10.000000000000000000
+      IsTime = False
+      AsChanging = True
+      Offset = 36
+    end
+    object TPrintLineSeries
+      Left = 59
+      Top = 24
+      Right = 59
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '302'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 20.000000000000000000
+      Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1090#1088#1091#1073#1085#1086#1077
+      ShortName = #1044#1072#1074#1083'. '#1079#1072#1090#1088#1091#1073'.'
+      Units = #1082#1075'/'#1089#1084'2'
+      Color = 16581279
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -1149
+      Right = 94
+      Bottom = -1139
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43221.834884259260000000
+      Comment = #1054#1073#1089#1083#1091#1078#1080#1074#1072#1085#1080#1077' '#1042#1057#1055'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -1081
+      Right = 94
+      Bottom = -1071
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.168217592600000000
+      Comment = #1056#1077#1084#1086#1085#1090' '#1087#1085#1077#1074#1084#1086#1082#1083#1080#1085#1100#1077#1074'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -1051
+      Right = 94
+      Bottom = -1041
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.314050925920000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -1043
+      Right = 94
+      Bottom = -1033
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.354328703700000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -1013
+      Right = 94
+      Bottom = -1003
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.501550925920000000
+      Comment = #1054#1073#1089#1083#1091#1078#1080#1074#1072#1085#1080#1077' '#1042#1057#1055'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -991
+      Right = 94
+      Bottom = -981
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.607800925930000000
+      Comment = #1063#1080#1089#1090#1082#1072' '#1089#1091#1093#1072#1088#1077#1081' '#1085#1072' '#1087#1085#1077#1074#1084#1086#1082#1083#1080#1085#1100#1103#1093'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 61
+      Top = -978
+      Right = 101
+      Bottom = -968
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.673773148150000000
+      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 61
+      Top = -962
+      Right = 101
+      Bottom = -952
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.751550925920000000
+      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 61
+      Top = -945
+      Right = 101
+      Bottom = -935
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.834907407410000000
+      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 61
+      Top = -928
+      Right = 101
+      Bottom = -918
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.918240740740000000
+      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -898
+      Right = 94
+      Bottom = -888
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.062685185180000000
+      Comment = #1055#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1082' '#1079#1072#1084#1077#1085#1077' '#1090#1072#1083#1077#1074#1086#1075#1086' '#1082#1072#1085#1072#1090#1072'. '#1047#1072#1084#1077#1085#1072' '#1090#1072#1083#1077#1074#1086#1075#1086' '#1082#1072#1085#1072#1090#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -762
+      Right = 99
+      Bottom = -752
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.729166666660000000
+      Comment = #1057'1=1.318 %'#1072#1073#1089'., '#1057#1091#1084#1084#1072' '#1057'1-5=1.374 %'#1072#1073#1089
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -568
+      Right = 94
+      Bottom = -558
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.680555555550000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -561
+      Right = 94
+      Bottom = -551
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.715277777780000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -438
+      Right = 94
+      Bottom = -428
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.319444444450000000
+      Comment = #1057'1=0.739 %'#1072#1073#1089'., '#1057#1091#1084#1084#1072' '#1057'1-5=0.766 %'#1072#1073#1089
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -428
+      Right = 99
+      Bottom = -418
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.368055555550000000
+      Comment = ' '#1054#1073#1089#1083#1091#1078#1080#1074#1072#1085#1080#1077' '#1042#1057#1055', '#1089#1086#1075#1083#1072#1089#1085#1086' '#1082#1072#1088#1090#1077' '#1089#1084#1072#1079#1082#1080'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -400
+      Right = 94
+      Bottom = -390
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.506944444450000000
+      Comment = #1057'1=0.238 %'#1072#1073#1089'. '#1057#1091#1084#1084#1072' '#1057'1-5=0.243 %'#1072#1073#1089
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -248
+      Right = 94
+      Bottom = -238
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.250335648150000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -231
+      Right = 94
+      Bottom = -221
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.333668981480000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -107
+      Right = 94
+      Bottom = -97
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.944444444450000000
+      Comment = #1042' '#1089#1082#1074': '#1050#1053#1041#1050' + 270 '#1090#1088'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -92
+      Right = 94
+      Bottom = -82
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.013888888890000000
+      Comment = #1057'1=5.058 %'#1072#1073#1089'., '#1057#1091#1084#1084#1072' '#1057'1-5=5.214 %'#1072#1073#1089
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = -71
+      Right = 94
+      Bottom = -61
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.118055555550000000
+      Comment = #1057'1=3.693 %'#1072#1073#1089'.,  '#1057#1091#1084#1084#1072' '#1057'1-5=3.777 %'#1072#1073#1089
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = 75
+      Right = 94
+      Bottom = 85
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.834224537040000000
+      Comment = #1054#1073#1089#1083#1091#1078#1080#1074#1072#1085#1080#1077' '#1042#1057#1055', '#1089#1086#1075#1083#1072#1089#1085#1086' '#1082#1072#1088#1090#1077' '#1089#1084#1072#1079#1082#1080'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = 153
+      Right = 94
+      Bottom = 163
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.215277777780000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 64
+      Top = 161
+      Right = 94
+      Bottom = 171
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.256944444450000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
+      Align = 2
+    end
+  end
+  object TPrintField
+    Left = 102
+    Top = 24
+    Right = 144
+    Bottom = 210
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '900'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 100.000000000000000000
+      Caption = #1058#1077#1084#1087#1077#1088#1072#1090#1091#1088#1072'  '#1085#1072' '#1074#1099#1093'.'
+      Units = #176#1057
+      Color = 27865
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1003'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 90.000000000000000000
+      Caption = #1055#1086#1090#1086#1082' '#1085#1072' '#1074#1099#1093#1086#1076#1077
+      Units = '%'
+      Color = 38218
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '104'
+      ShowHeader = True
+      SrcID = 'GST'
+      Min = -5.000000000000000000
+      Max = 5.000000000000000000
+      Caption = #1057#1082#1086#1088#1086#1089#1090#1100' '#1090#1072#1083#1100#1073#1083#1086#1082#1072
+      Units = #1084'/'#1089
+      Color = 16581279
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '50'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 100.000000000000000000
+      Caption = #1063#1080#1089#1083#1086' '#1093#1086#1076#1086#1074' 1 '#1085#1072#1089#1086#1089#1072
+      Units = #1084#1080#1085'-1'
+      Color = clGray
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 102
+      Top = 24
+      Right = 102
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '51'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 110.000000000000000000
+      Caption = #1063#1080#1089#1083#1086' '#1093#1086#1076#1086#1074' 2 '#1085#1072#1089#1086#1089#1072
+      ShortName = #1061#1086#1076#1099' 2 '#1085#1072#1089'.'
+      Units = #1084#1080#1085'-1'
+      Color = 16748394
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 102
+      Top = 24
+      Right = 102
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '715'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 10.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1076#1086#1083'. '#1077#1084#1082#1086#1089#1090#1080
+      ShortName = #1054#1073#1098#1077#1084' '#1074' '#1076#1086#1083'.'#1077#1084#1082
+      Units = #1084'3'
+      Color = 16711808
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TCommentSeries
+      Left = 104
+      Top = -1036
+      Right = 144
+      Bottom = -1026
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.389050925930000000
+      Comment = #1058#1086#1088#1094#1086#1074#1099#1081' '#1092#1088#1077#1079' 146/38 - 0.28 '#1084'. '#1048#1090#1086#1075#1086' '#1050#1053#1041#1050'=58.79'#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -1129
+      Right = 137
+      Bottom = -1119
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43221.930717592590000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074#1072#1078#1080#1085#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -1112
+      Right = 137
+      Bottom = -1102
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.014050925930000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -1104
+      Right = 137
+      Bottom = -1094
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.055717592590000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074#1072#1078#1080#1085#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -928
+      Right = 137
+      Bottom = -918
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.918240740740000000
+      Comment = #1042' '#1089#1082#1074': '#1050#1053#1041#1050' + 257 '#1090#1088'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -775
+      Right = 137
+      Bottom = -765
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.668240740740000000
+      Comment = #1042' '#1089#1082#1074': '#1050#1053#1041#1050' + 271 '#1090#1088'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -779
+      Right = 142
+      Bottom = -769
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.645833333340000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.5'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -749
+      Right = 137
+      Bottom = -739
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.793240740740000000
+      Comment = '1.08 - 22'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -690
+      Right = 137
+      Bottom = -680
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.083634259260000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074#1072#1078#1080#1085#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -639
+      Right = 137
+      Bottom = -629
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.333634259260000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -563
+      Right = 142
+      Bottom = -553
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.708333333340000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.8'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -716
+      Right = 137
+      Bottom = -706
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.958634259260000000
+      Comment = '1.08 - 22'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -456
+      Right = 142
+      Bottom = -446
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.229166666660000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.5'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -401
+      Right = 137
+      Bottom = -391
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.499942129630000000
+      Comment = '1.08 - 22'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -420
+      Right = 137
+      Bottom = -410
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43225.409664351850000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -248
+      Right = 142
+      Bottom = -238
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.250335648150000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.9'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -240
+      Right = 142
+      Bottom = -230
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.292002314820000000
+      Comment = ' '#1055#1080#1083#1086#1090#1085#1099#1081' '#1092#1088#1077#1079'  146/115 - 0.62 '#1084', '#1048#1090#1086#1075#1086' '#1050#1053#1041#1050'= 58.86 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = -105
+      Right = 142
+      Bottom = -95
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43226.951388888890000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.5'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = 24
+      Right = 137
+      Bottom = 34
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.584629629630000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074#1072#1078#1080#1085#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = 153
+      Right = 142
+      Bottom = 163
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.215277777780000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.9'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = 160
+      Right = 137
+      Bottom = 170
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.250891203700000000
+      Comment = #1052#1041#1059' 100/142 146/38-0.74'#1084'    '#1048#1090#1086#1075#1086' '#1050#1053#1041#1050'= 65.35 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = 83
+      Right = 137
+      Bottom = 93
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43227.875891203700000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074#1072#1078#1080#1085#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 107
+      Top = 123
+      Right = 137
+      Bottom = 133
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43228.069444444450000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074'.'
+      Align = 2
+    end
+  end
+  object TPrintField
+    Left = 144
+    Top = 24
+    Right = 187
+    Bottom = 210
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Arial'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '711'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 1'
+      Units = #1084'3'
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '720'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1081' '#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082#1086#1089#1090#1103#1093
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 0
+    end
+    object TPrintLineSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '712'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 30.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 2'
+      Units = #1084'3'
+      Color = 16732181
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 144
+      Top = 24
+      Right = 144
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '713'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 30.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 3'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 3 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 65408
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 144
+      Top = 24
+      Right = 144
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '716'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 20.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 4'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 4 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 8421631
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 144
+      Top = 24
+      Right = 144
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '717'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 20.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 5'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 5 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 16673735
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 144
+      Top = 24
+      Right = 144
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '718'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 30.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 6'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 6 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 16695041
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 144
+      Top = 24
+      Right = 144
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '720'
+      ShowHeader = True
+      SrcID = 'GST'
+      Min = 100.000000000000000000
+      Max = 200.000000000000000000
+      Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1081' '#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082#1086#1089#1090#1103#1093
+      ShortName = #1057#1091#1084'.'#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082
+      Units = #1084'3'
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TCommentSeries
+      Left = 149
+      Top = -1044
+      Right = 179
+      Bottom = -1034
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.347384259260000000
+      Comment = 'V'#1088#1072#1089#1095'.=9.7'#1084'3 V'#1092#1072#1082#1090'=9.8'#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 149
+      Top = -1010
+      Right = 179
+      Bottom = -1000
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43222.514050925930000000
+      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1088'-'#1088#1072' '#1087#1088#1080' '#1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 149
+      Top = -775
+      Right = 179
+      Bottom = -765
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43223.668240740740000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088'-'#1088#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 149
+      Top = -656
+      Right = 179
+      Bottom = -646
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.250300925920000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088'-'#1088#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 149
+      Top = -503
+      Right = 179
+      Bottom = -493
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 43224.999942129630000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088'-'#1088#1072
+      Align = 2
+    end
+  end
+  object TPrintField
+    Left = 2
+    Top = 24
+    Right = 15
+    Bottom = 210
+    Caption = '    '#1042#1088#1077#1084#1103
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = False
+    VertHeader = True
+    Min = -2
+    Max = 2
+    object TXScaleDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1062#1080#1092#1088#1086#1074#1099#1077' '#1084#1077#1090#1082#1080
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      IsTime = False
+      AsChanging = False
+      Offset = 2
+      DateOnEveryPage = False
+    end
+  end
+  object TPrintField
+    Left = 187
+    Top = 24
+    Right = 200
+    Bottom = 210
+    Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103' '
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = False
+    VertHeader = True
+    Min = -2
+    Max = 2
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '101'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 0
+    end
+  end
+end

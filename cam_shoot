@@ -1,0 +1,90 @@
+#!/bin/bash
+#Видео 4450
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.39:554/cam/realmonitor?channel=1&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/4450_1.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.39:554/cam/realmonitor?channel=2&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/4450_2.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.39:554/cam/realmonitor?channel=3&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/4450_3.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.39:554/cam/realmonitor?channel=4&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/4450_4.jpg > /dev/null 2>&1 &
+
+#Видео 629
+# /usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.24:554/cam/realmonitor?channel=1&subtype=0"  -vframes 1  -y /var/www/html/mon/poz/631_1.jpg > /dev/null 2>&1 &
+# /usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.24:554/cam/realmonitor?channel=2&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/631_2.jpg > /dev/null 2>&1 &
+# /usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.24:554/cam/realmonitor?channel=3&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/631_3.jpg > /dev/null 2>&1 &
+# /usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.24:554/cam/realmonitor?channel=4&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/631_4.jpg > /dev/null 2>&1 &
+#Видео 83а
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.135:554/cam/realmonitor?channel=1&subtype=0"  -vframes 1  -y /var/www/html/mon/poz/83_1.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.135:554/cam/realmonitor?channel=2&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/83_2.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.135:554/cam/realmonitor?channel=3&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/83_3.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.135:554/cam/realmonitor?channel=4&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/83_4.jpg > /dev/null 2>&1 &
+
+#Видео 629
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.26:554/Streaming/Channels/101"  -vframes 1  -y /var/www/html/mon/poz/631_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg  -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.27:554/Streaming/Channels/101" -vframes 1 -y /var/www/html/mon/poz/631_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.28:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/631_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.29:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/631_4.jpg > /dev/null 2>&1 &
+
+#Видео 401
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.8:554/Streaming/Channels/101"  -vframes 1  -y /var/www/html/mon/poz/401_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg  -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.9:554/Streaming/Channels/101" -vframes 1 -y /var/www/html/mon/poz/401_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.10:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/401_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.11:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/401_4.jpg > /dev/null 2>&1 &
+
+#Видео 610
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.147.8:554/Streaming/Channels/101"  -vframes 1  -y /var/www/html/mon/poz/610_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg  -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.147.9:554/Streaming/Channels/101" -vframes 1 -y /var/www/html/mon/poz/610_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.147.10:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/610_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.147.11:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/610_4.jpg > /dev/null 2>&1 &
+
+
+#Видео 83
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.136:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/83_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.137:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/83_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.138:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/83_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:Admin123@192.168.146.139:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/83_4.jpg > /dev/null 2>&1 &
+
+#Видео 104
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.8:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/916_1.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.9:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/916_2.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.10:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/916_3.jpg > /dev/null 2>&1 &
+#/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.11:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/916_4.jpg > /dev/null 2>&1 &
+#Видео 96
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.53:554/cam/realmonitor?channel=1&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/110_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.53:554/cam/realmonitor?channel=2&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/110_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.53:554/cam/realmonitor?channel=3&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/110_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin@192.168.146.53:554/cam/realmonitor?channel=4&subtype=0"  -vframes 1 -y /var/www/html/mon/poz/110_4.jpg > /dev/null 2>&1 &
+#Видео ЗГФ
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.72:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/224_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.73:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/224_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.74:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/224_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.75:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/224_4.jpg > /dev/null 2>&1 &
+#715
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.104:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/908_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.105:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/908_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.106:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/908_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.107:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/908_4.jpg > /dev/null 2>&1 &
+#6611
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.40:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/411_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.41:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/411_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.42:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/411_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.43:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/411_4.jpg > /dev/null 2>&1 &
+#20Э
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.168:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/89_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.169:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/89_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.170:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/89_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.171:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/89_4.jpg > /dev/null 2>&1 &
+
+#915
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.232:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/915_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.233:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/915_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.234:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/915_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.235:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/915_4.jpg > /dev/null 2>&1 &
+
+#628
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.200:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/628_1.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.201:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/628_2.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.202:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/628_3.jpg > /dev/null 2>&1 &
+/usr/bin/ffmpeg -rtsp_transport tcp -i "rtsp://admin:admin123@192.168.146.203:554/Streaming/Channels/101"  -vframes 1 -y /var/www/html/mon/poz/628_4.jpg > /dev/null 2>&1 &
+
+
+
+
+

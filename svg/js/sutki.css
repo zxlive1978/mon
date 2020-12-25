@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+body {
+
+  margin:0;
+
+  padding:0;
+
+  background:#e0e0e0;
+
+  
+  
+}
+
+#drawing {
+
+ -moz-user-select: none;
+ -ms-user-select: none;
+  user-select: none;
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+      }
+
+#dialog input {width: 150px; margin: 5px; text-align: left}
+#dialog label {display:inline-block; width: 120px}
+table {border-collapse: collapse; border: thin solid black; margin: 10px}
+#placeholder {text-align: center}
+#show {margin: 10px}
+td, th {padding: 5px; width: 100px}
+

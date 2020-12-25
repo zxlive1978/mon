@@ -1,0 +1,146 @@
+
+TCHARTCONTEXT 0j^  TPF0TChartContext Left Top Right Bottom MainID Min @K���Ũ@Max ��Sƨ@Scale ��������?Step ��������?
+IsDateTime	ShowBottomHeader TPrintHeader Left Top Right BottomI	Invisible TPrintLabel Left+TopRight� BottomCaptionF   Технолого-геохимические исследованияFont.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.StylefsBold EnableSetup	EveryPage  TPrintLabel Left`TopRightkBottomCaption    !Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.StylefsBold EnableSetup	EveryPage  TPrintLabel Left%TopRightYBottomCaption*   Интервал исследований:Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage  TPrintSysVar Left[TopRight� BottomCaption15.04.18 20:02 - 16.04.18 2:16Font.CharsetRUSSIAN_CHARSET
+Font.ColorclBlueFont.Height�	Font.NameArial
+Font.StylefsBold EnableSetup	EveryPageVarTypesvRange  TPrintShape LeftTopRight� BottomPenColorclBlack
+BrushColor���   TPrintLabel Left&TopRight;BottomCaption   Площадь:  Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage  TPrintLabel Left?TopRightKBottomCaption   Font.CharsetRUSSIAN_CHARSET
+Font.ColorclBlueFont.Height�	Font.NameArial
+Font.StylefsBold EnableSetup	EveryPage  TPrintLabel LeftfTopRight|BottomCaption   Скважина: Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage  TPrintLabel LeftTopRight� BottomCaption   20-ЭFont.CharsetRUSSIAN_CHARSET
+Font.ColorclBlueFont.Height�	Font.NameArial
+Font.StylefsBold EnableSetup	EveryPage  TPrintLabel Left/TopERight:BottomICaption   Пол.дол.Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage  TPrintLabel LeftVTopERightfBottomICaption   Число свечейFont.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage  TPrintLabel Left� TopERight� BottomICaption   Сум.объёмFont.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style EnableSetup	EveryPage   TPrintField LeftTopRight;Bottom� Decades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameTahoma
+Font.Style LogarithmicShowBorders	ShowGrid	
+VertHeaderMin�Max TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID200
+ShowHeader	SrcIDGSTMax       �@Caption   Вес на ВСПUnits   BColor� ShowSubLabelsFlags PenWidth PenStylepsSolid  TDigitalSeries Left Top Right Bottom BlackCaptionGID SGID115
+ShowHeaderSrcIDGSTCaption   Положение долотаColorclBlackShowSubLabelsFlags Step ��������?IsTime
+AsChangingOffset"  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1300
+ShowHeader	SrcIDGSTMax       � @Caption)   Крутящий момент на ВСПUnits   т*мColorJ�  ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID202
+ShowHeader	SrcIDGSTMax       �@Caption"   Нагрузка на долотоUnits   BColorP� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1200
+ShowHeader	SrcIDGSTMax       �@Caption   Оборотов ВСПUnits   мин-1Color�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TCommentSeries LeftTopP�Right-BottomZ�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �������@Comment   !Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value  �qg��@Comment   "Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �qǁ��@Comment   Align  TCommentSeries LeftTop�Right-Bottom"�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �q����@Comment   " Align  TCommentSeries LeftTop�Right-Bottom%�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value  ��x���@Comment   Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value X)Q�b¨@Comment   " Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��8��¨@Comment   !Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��A��¨@Comment   !Align  TCommentSeries LeftTop=�Right-BottomG�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ����Aè@Comment   "Align  TCommentSeries LeftTop\�Right-Bottomf�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �8��hè@Comment   Align  TCommentSeries LeftTopQ�Right-Bottom[�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ����Zè@Comment     Align  TCommentSeries LeftTopm�Right-Bottomw�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value X�LG~è@Comment   Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value XUUU�è@Comment     Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �����è@Comment   Align  TCommentSeries LeftTop��Right-Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��_�è@Comment   Align  TCommentSeries LeftTop��Right-Bottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8�e|,Ĩ@Comment   " Align  TCommentSeries LeftTopQ�Right-Bottom[�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8�e|�Ĩ@Comment   !Align  TCommentSeries LeftTop�Right-Bottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��9x�Ĩ@Comment   !Align  TCommentSeries LeftTop�Right-BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��8�sŨ@Comment   "Align  TCommentSeries LeftTopRight-BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value hP�"�Ũ@Comment   " Align  TCommentSeries LeftTopRight-Bottom'BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �l���Ũ@Comment   Align  TCommentSeries LeftTopRight2BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value hP�"�Ũ@Comment   Wкр=85.5 тAlign   TCommentSeries LeftTopRight2Bottom%BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value H�r�Ũ@Comment   Wкр=85.5 тAlign   TCommentSeries LeftTopKRight-BottomUBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value  �.��Ũ@Comment   Align   TPrintField Left;TopRightfBottom� Decades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameTahoma
+Font.Style LogarithmicShowBorders	ShowGrid	
+VertHeaderMin�Max TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID300
+ShowHeader	SrcIDGSTMax       �@Caption*   Давление на манифольдеUnits
+   кг/см2ColorclRedShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1001
+ShowHeader	SrcIDGSTMax       �@Caption   Расход на входеUnits   л/cColor`�  ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1601
+ShowHeader	SrcIDGSTMax       � @CaptionC1Units%Color� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1600
+ShowHeader	SrcIDGSTMax       � @Caption   С1-5Units%ColorclBlackShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID103
+ShowHeader	SrcIDGSTMax       �@Caption   Положение ВСПUnits   м.Color�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TDigitalSeries Left Top Right Bottom BlackCaptionGID SGID111
+ShowHeaderSrcIDGSTCaption   Число свечейColor�ShowSubLabelsFlags Step       �@IsTime
+AsChanging	Offset$  TPrintLineSeries Left;TopRight;BottomBlackCaptionGID SGID302
+ShowHeader	SrcIDGSTMax       �@Caption#   Давление затрубное	ShortName   Давл. затруб.Units
+   кг/см2Color�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TCommentSeries Left=Top��RighteBottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value  �q��@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=Top��RighteBottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value p�q,��@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=Top��RighteBottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8��8>��@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=Top��RighteBottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �8��X��@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left@Top�Right^Bottom"�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �q����@Comment&   Подготовка к подъёмуAlign  TCommentSeries Left@Top��Right^Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ����b��@Comment"   Спущено: 270 св+КНБК Align  TCommentSeries Left@Top��Right^Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value p�ly��@Comment2   С1=1.417 %абс. Сумма С1-5=1.458 %абс,Align  TCommentSeries Left@Top��Right^Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value X)Q�b¨@Comment   Разборка КНБКAlign  TCommentSeries Left@Top��Right^Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     �¨@Comment   Сборка КНБКAlign  TCommentSeries Left@TopO�Right^BottomY�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     Xè@Comment8   ГП: С1=1.212 %абс., Сумма С1-5=1.254 %абсAlign  TCommentSeries Left@Top��Right^Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value XUUU�è@Comment%   Ремонт манипулятораAlign  TCommentSeries Left@Top��Right^Bottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8�e|,Ĩ@Comment   Разборка КНБКAlign  TCommentSeries Left=Top�RighteBottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ����:Ĩ@Comment�   Подготовка к опрессовке, опрессовка ПВО совместно с устьевой частью эксплуатационной колонны на 360 кг/см? (герметично). Align  TCommentSeries Left@Top�Right^Bottom'�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ����ZĨ@CommentQ   Переоборудование ВСП  под левый инструмент. Align  TCommentSeries Left@TopC�Right^BottomM�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �����Ĩ@Comment"   Сборка КНБК 0-66.17 м. Align  TCommentSeries Left=Top�RighteBottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ���
+Ũ@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=Top�RighteBottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��9x%Ũ@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=Top�RighteBottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ���BŨ@Comment1   Восстановление циркуляцииAlign  TCommentSeries Left=TopRighteBottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     �Ũ@Comment2   С1=1.172 %абс., Сумма С1-5=1.206 %абсAlign  TCommentSeries Left@Top�Right^BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8��8nŨ@Comment"   Спущено: 268 св+КНБК Align  TCommentSeries Left@TopRight^BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value hP�"�Ũ@Comment   Ловильные работыAlign   TPrintField LeftfTopRight� Bottom� Decades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameTahoma
+Font.Style LogarithmicShowBorders	ShowGrid	
+VertHeaderMin�Max TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID900
+ShowHeader	SrcIDGSTMax       �@Caption$   Температура  на вых.Units   � !Color�lShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID1003
+ShowHeader	SrcIDGSTMax       �@Caption   Поток на выходеUnits%ColorJ�  ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID104
+ShowHeader	SrcIDGSTMin       ��Max       �@Caption#   Скорость тальблокаUnits   м/сColor�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID50
+ShowHeader	SrcIDGSTMax       �@Caption$   Число ходов 1 насосаUnits   мин-1ColorclGrayShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries LeftfTopRightfBottomBlackCaptionGID SGID51
+ShowHeader	SrcIDGSTMax       �@Caption$   Число ходов 2 насоса	ShortName   Ходы 2 нас.Units   мин-1Colorj�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries LeftfTopRightfBottomBlackCaptionGID SGID715
+ShowHeader	SrcIDGSTMax       �@Caption,   Объем р-ра в дол. емкости	ShortName   Объем в дол.емкUnits   м3Color� � ShowSubLabelsFlags PenWidth PenStylepsSolid  TCommentSeries LefthTop��Right� Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     `��@Comment$   Vрасч=9.7 м3, Vфакт=9.5 м3Align  TCommentSeries LefthTop��Right� Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value XUUUu¨@Comment#   Vрасч=9.7 м3, Vфакт=10 м3Align  TCommentSeries LefthTop��Right� Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     �¨@Comment   Фрез 3ФЗВС 146/48Align  TCommentSeries LeftkTop��Right� Bottom��BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �����¨@Comment"   Вытеснение при СПИAlign  TCommentSeries LeftkTop3�RightBottom=�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��A�5è@Comment$   Vрасч=9.7 м3, Vфакт=9.5 м3Align  TCommentSeries LeftkTopo�Right� Bottomy�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value     �è@Comment   Долив скв при ПОДAlign  TCommentSeries LeftkTopC�Right� BottomM�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �����Ĩ@Comment#   МБУ 58/94 (левый) - 0.33 мAlign  TCommentSeries LeftkTop��RightBottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value p2I�*Ĩ@Comment#   Vрасч=9.7 м3, Vфакт=10 м3Align  TCommentSeries LefthTop�Right� Bottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��9x�Ĩ@Comment"   Вытеснение при СПИAlign  TCommentSeries LeftkTop�RightBottom BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ���jŨ@Comment$   Vрасч=9.7 м3, Vфакт=9.5 м3Align  TCommentSeries LeftkTop Right� Bottom*BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value hP�"�Ũ@Comment   Долив скв при ПОДAlign  TCommentSeries LeftkTopORight� BottomYBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value K~��Ũ@Comment   Долив скв при ПОДAlign   TPrintField Left� TopRight� Bottom� Decades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameArial
+Font.Style LogarithmicShowBorders	ShowGrid	
+VertHeaderMin�Max TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID711
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 1Units   м3Color� ShowSubLabelsFlags PenWidth PenStylepsSolid  TDigitalSeries Left Top Right Bottom BlackCaptionGID SGID720
+ShowHeaderSrcIDGSTCaption1   Суммарный объем в емкостяхColorclBlackShowSubLabelsFlags Step ��������?IsTime
+AsChangingOffset   TPrintLineSeries Left Top Right Bottom BlackCaptionGID SGID712
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 2Units   м3ColorP� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left� TopRight� BottomBlackCaptionGID SGID713
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 3	ShortName   Объем в 3 емк.Units   м3Color��  ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left� TopRight� BottomBlackCaptionGID SGID716
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 4	ShortName   Объем в 4 емк.Units   м3Color��� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left� TopRight� BottomBlackCaptionGID SGID717
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 5	ShortName   Объем в 5 емк.Units   м3Color�k� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left� TopRight� BottomBlackCaptionGID SGID718
+ShowHeader	SrcIDGSTMax       �@Caption&   Объем р-ра в емкости 6	ShortName   Объем в 6 емк.Units   м3Color�� ShowSubLabelsFlags PenWidth PenStylepsSolid  TPrintLineSeries Left� TopRight� BottomBlackCaptionGID SGID720
+ShowHeader	SrcIDGSTMin       �@Max       �@Caption1   Суммарный объем в емкостях	ShortName   Сум.объем в емкUnits   м3ColorclBlackShowSubLabelsFlags PenWidth PenStylepsSolid  TCommentSeries Left� TopP�Right� BottomZ�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value �������@Comment"   Вытеснение при СПИAlign  TCommentSeries Left� Top�Right� Bottom�BlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value 8��8���@Comment	1.03   23Align  TCommentSeries Left� TopRight� BottomBlackCaptionGID 
+ShowHeaderCaption   ><<5=B0@89ColorclBlackShowSubLabelsFlags Value ��͊Ũ@Comment	1.03   23Align   TPrintField LeftTopRightBottom� Caption       ВремяDecades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameTahoma
+Font.Style LogarithmicShowBorders	ShowGrid
+VertHeader	Min�Max TXScaleDigitalSeries Left Top Right Bottom BlackCaptionGID 
+ShowHeaderCaption   Цифровые меткиColorclBlackShowSubLabelsFlags IsTime
+AsChangingOffsetDateOnEveryPage   TPrintField Left� TopRight� Bottom� Caption   Глубина забоя Decades
+Font.CharsetRUSSIAN_CHARSET
+Font.ColorclWindowTextFont.Height�	Font.NameTahoma
+Font.Style LogarithmicShowBorders	ShowGrid
+VertHeader	Min�Max TDigitalSeries Left Top Right Bottom BlackCaptionGID SGID101
+ShowHeaderSrcIDGSTCaption   Глубина забояColorclBlackShowSubLabelsFlags Step ��������?IsTime
+AsChangingOffset     

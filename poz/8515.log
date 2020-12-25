@@ -1,0 +1,10 @@
+conn=0x560b53c296b0, PGAPI_DriverConnect( in)='DRIVER={PostgreSQL Unicode};DBQ=/var/www/html/mon/poz\suck.mdb', fDriverCompletion=0
+CONN ERROR: func=PGAPI_DriverConnect, desc='', errnum=202, errmsg='connection string lacks some options'
+            ------------------------------------------------------------
+            henv=0x560b53bc31c0, conn=0x560b53c296b0, status=0, num_stmts=16
+            pqconn=(nil), stmts=0x560b53c2a1f0, lobj_type=-999
+conn=0x560b53c29c20, PGAPI_DriverConnect( in)='DRIVER={PostgreSQL Unicode};DBQ=/var/www/html/mon/poz\suck.mdb', fDriverCompletion=0
+CONN ERROR: func=PGAPI_DriverConnect, desc='', errnum=202, errmsg='connection string lacks some options'
+            ------------------------------------------------------------
+            henv=0x560b53bc31c0, conn=0x560b53c29c20, status=0, num_stmts=16
+            pqconn=(nil), stmts=0x560b53c2a760, lobj_type=-999

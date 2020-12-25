@@ -1,0 +1,18 @@
+spawn telnet 192.168.146.33 5188
+Trying 192.168.146.33...
+Connected to 192.168.146.33.
+Escape character is '^]'.
+Router3_4450 login: root
+Password: 
+~ # cat /proc/net/ip_conntrack | grep sport=2206
+tcp      6 416531 ESTABLISHED src=192.168.77.3 dst=192.168.146.35 sport=2206 dport=49559 [UNREPLIED] src=192.168.146.35 dst=192.168.77.3 sport=49559 dport=2206 mark=0 use=1
+tcp      6 431998 ESTABLISHED src=192.168.77.3 dst=192.168.146.35 sport=2206 dport=49160 [UNREPLIED] src=192.168.146.35 dst=192.168.77.3 sport=49160 dport=2206 mark=0 use=1
+tcp      6 393276 ESTABLISHED src=192.168.77.3 dst=192.168.146.35 sport=2206 dport=49555 [UNREPLIED] src=192.168.146.35 dst=192.168.77.3 sport=49555 dport=2206 mark=0 use=1
+tcp      6 393150 ESTABLISHED src=192.168.146.35 dst=192.168.77.3 sport=49553 dport=2206 src=192.168.77.3 dst=192.168.146.35 sport=2206 dport=49553 [ASSURED] mark=0 use=1
+~ # cat /proc/net/ip_conntrack | grep dport=554
+tcp      6 393148 ESTABLISHED src=192.168.77.3 dst=192.168.146.39 sport=50844 dport=554 src=192.168.146.39 dst=192.168.77.3 sport=554 dport=50844 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.39 sport=58544 dport=554 src=192.168.146.39 dst=192.168.146.33 sport=554 dport=58544 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.39 sport=58472 dport=554 src=192.168.146.39 dst=192.168.146.33 sport=554 dport=58472 [ASSURED] mark=0 use=1
+tcp      6 431998 ESTABLISHED src=192.168.77.3 dst=192.168.146.39 sport=51185 dport=554 src=192.168.146.39 dst=192.168.146.33 sport=554 dport=51185 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.39 sport=58468 dport=554 src=192.168.146.39 dst=192.168.146.33 sport=554 dport=58468 [ASSURED] mark=0 use=1
+~ # 

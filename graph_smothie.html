@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>КУКУ</title>
+    <script type="text/javascript" src="smoothie.js"></script>
+  </head>
+  <body>
+
+    <h1>ЁПТА</h1>
+
+    <canvas id="mycanvas" width="800" height="100"></canvas>
+
+    <script type="text/javascript">
+	<?php echo 'var d1 = '.json_encode($xy_value).';'; ?>;
+	//alert(typeof(d1));
+
+	
+    var chart = new SmoothieChart({grid:{millisPerLine:100},timestampFormatter:SmoothieChart.timeFormatter});
+	var timeSeries = new TimeSeries();
+	chart.addTimeSeries(timeSeries, {lineWidth:2,strokeStyle:'#00ff00'});
+
+	// Build some sample data
+	var endTime = Date.now();
+	alert(endTime);
+	alert(d1[0]["0"]);
+	alert(d1[100]["0"]);
+	var endTime =d1[100]["0"];
+	//for (var i = 0; i < 10; i++)
+	//{
+	//	timeSeries.append((d1[i]["0"]), d1[i]["value"]);
+	//}
+	for (var i = 0; i < 200; i++){
+	timeSeries.append(d1[i]["0"], d1[i]["value"]);
+	}
+	//smoothie.streamTo(document.getElementById("mycanvas"), 1000);
+	// Render it
+	var canvas = document.getElementById('mycanvas');
+	chart.render(canvas, d1[199]["0"]);
+    </script>
+	<br>
+
+	<canvas id="mycanvas2" width="800" height="100"></canvas>
+	
+	<script type="text/javascript">
+
+      // Random data
+      var line3 = new TimeSeries();
+      var line4 = new TimeSeries();
+      setInterval(function() {
+        line3.append(new Date().getTime(), Math.random());
+        line4.append(new Date().getTime(), Math.random());
+      }, 1000);
+
+      var smoothie2 = new SmoothieChart({ grid: { strokeStyle: 'rgb(125, 0, 0)', fillStyle: 'rgb(60, 0, 0)', lineWidth: 1, millisPerLine: 250, verticalSections: 6 } });
+      smoothie2.addTimeSeries(line3, { strokeStyle: 'rgb(0, 255, 0)', fillStyle: 'rgba(0, 255, 0, 0.4)', lineWidth: 3 });
+      smoothie2.addTimeSeries(line4, { strokeStyle: 'rgb(255, 0, 255)', fillStyle: 'rgba(255, 0, 255, 0.3)', lineWidth: 3 });
+
+      smoothie2.streamTo(document.getElementById("mycanvas2"), 1000);
+    </script>
+	
+	
+	
+    <p><a href="tutorial.html">Return</a></p>
+  
+  </body>
+</html>

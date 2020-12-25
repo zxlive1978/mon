@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+
+<!-- <link rel="stylesheet" type="text/css" href="/svg/js/sutki.css"> -->
+<link href="/mon/jschart5.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+//ДАТА
+<?php echo 'var d110d = '.json_encode($xy_value110d).';'; ?>;
+<?php echo 'var start = '.json_encode($row[start]).';'; ?>;
+//Номер скважины
+<?php echo 'var wellName = '.json_encode($table).';' ?>;
+
+//Костыль. Сработал ли Ajax ?
+//try{
+//	var test = d110d[d110d.length-1]["Wkp"];}
+//catch(e){ window.onload = window.location.reload("true");}
+
+</script>
+<!-- <link rel="stylesheet" href="basic.css" type="text/css" /> -->
+<script type="text/javascript" src="/mon/svg/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/mon/svg/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/mon/svg/js/svg.js"></script>
+<script type="text/javascript" src="/mon/svg/js/sutki.js"></script>
+<script type="text/javascript" src="/mon/svg/js/read_comment.js"></script>
+<script type="text/javascript" src="/mon/svg/js/navigation.js"></script>
+<!-- <script type="text/javascript" src="/svg/js/svg.path.js"></script> 
+<script type="text/javascript" src="/svg/js/svg.draw.js"></script> 
+<script type="text/javascript" src="/svg/js/svg.shapes.js"></script>
+<!-- <script type="text/javascript" src="svg.resizeall.js"></script> -->
+
+
+
+<script src="/mon/svg/js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/mon/svg/js/jquery-ui.css">
+
+<!--Перезагрузка Отработка на кошках -->
+<script type="text/javascript">
+
+// ТЕСТ
+read_comment();
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<div id="timer" class="hidden" align="center" >
+	<button for="localdate" type="submit" style="width:150px;height:60px;font-size:34px" maxlength="20" onclick="read_up();" >ВВЕРХ</button>
+	<button for="localdate" type="submit" style="width:150px;height:60px;font-size:34px" maxlength="20" onclick="read_down();" >ВНИЗ</button>
+	<select id="cmbMake" name="zooom" value="4" style="width:150px;height:60px;font-size:34px">
+		
+		<option value="4">4 часа</option>
+		<option value="8">8 часов</option>
+		<option value="24">1 день</option>
+	</select>
+	<button type="submit"  style="width:170Px;height:60Px;font-size:34px" maxlength="20" onclick="read_now();">СЕЙЧАС</button>
+	<?php echo "<input type='date' id='localdate' name='date' style='width:250Px;height:50Px;font-size:34px' maxlength='20' value='".date("Y-m-d")."'>"; ?>
+   
+</div>
+<!-- <p id="svgtext">
+SUTKI -->
+<div id="drawing">
+</div>
+<script type="text/javascript">
+//Модальное окно
+<!--
+$(function() {
+	
+    $('#dialog').dialog({
+        buttons: [{text: "OK", click: addDataToTable}],
+        modal: true,
+        autoOpen: false,
+        width: 340
+    })
+    
+    $('#show').button().click(function() {
+        $('#dialog').dialog("open");
+    })
+    
+    function addDataToTable() {
+        $('#placeholder').hide();
+		
+        $('<tr><td>' + $('#product').val() + '</td><td>' + $('#color').val() +
+            '</td><td>' + $('#count').val() + '</td></tr>').appendTo('#prods tbody');
+			
+        $('#dialog').dialog("close");
+    }
+
+	$('#dialog').dialog({
+		open: function() {
+			$('.ui-dialog-titlebar-close').bind('click', function() {
+				$('#dialog').dialog('close');
+			})
+		}
+	});
+			
+});
+-->
+</script>   
+<script type="text/javascript">
+//Выбор времени из календаря
+$('[name="date"]').on('change',function() {
+	var dataEnd = $(this).val();
+	start_time = Math.round(Number((new Date(dataEnd)).getTime())/1000)-14400;
+	end_time = start_time + disp_time;
+	//alert(start_time);
+	//alert(end_time);
+	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
+	read_random();
+
+})
+//Масштаб
+$('[name="zooom"]').on('change',function() {
+	//console.log(disp_time);
+	//console.log(start_time);
+	//console.log(end_time);
+	//час
+	Kzoom = Number($(this).val()) ;
+	disp_time = Math.round(Kzoom)*60*60;
+	//console.log(disp_time);
+	var middle = Number(start_time) + (end_time - start_time)/2;
+	start_time = middle - disp_time/2;
+	end_time = middle + disp_time/2;
+	//console.log(start_time);
+	//console.log(end_time);
+	
+	//alert(start_time);
+	//alert(end_time);
+	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
+	read_random();
+
+})
+//:(((
+function resizeSvg(){
+}
+function first(){
+   //read_comment();
+   init();
+}
+var draw;
+//window.onresize= svgAutosize.all('drawing');
+window.onload = first;
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+spawn telnet 192.168.146.17 5188
+Trying 192.168.146.17...
+Connected to 192.168.146.17.
+Escape character is '^]'.
+Router5_631 login: root
+Password: 
+~ # cat /proc/net/ip_conntrack | grep sport=2206
+tcp      6 388829 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49555 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49555 dport=2206 mark=0 use=1
+tcp      6 380554 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49535 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49535 dport=2206 mark=0 use=1
+tcp      6 307137 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49371 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49371 dport=2206 mark=0 use=1
+tcp      6 393261 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49582 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49582 dport=2206 mark=0 use=1
+tcp      6 378920 ESTABLISHED src=192.168.146.18 dst=192.168.77.3 sport=49524 dport=2206 src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49524 [ASSURED] mark=0 use=1
+tcp      6 389679 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49560 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49560 dport=2206 mark=0 use=1
+tcp      6 386913 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49551 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49551 dport=2206 mark=0 use=1
+tcp      6 380418 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49533 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49533 dport=2206 mark=0 use=1
+tcp      6 389369 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49558 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49558 dport=2206 mark=0 use=1
+tcp      6 307301 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49375 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49375 dport=2206 mark=0 use=1
+tcp      6 307584 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49377 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49377 dport=2206 mark=0 use=1
+tcp      6 386946 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49552 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49552 dport=2206 mark=0 use=1
+tcp      6 388136 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49554 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49554 dport=2206 mark=0 use=1
+tcp      6 42427 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49468 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49468 dport=2206 mark=0 use=1
+tcp      6 305811 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49160 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49160 dport=2206 mark=0 use=1
+tcp      6 43397 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49477 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49477 dport=2206 mark=0 use=1
+tcp      6 378593 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49521 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49521 dport=2206 mark=0 use=1
+tcp      6 392781 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49578 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49578 dport=2206 mark=0 use=1
+tcp      6 380666 ESTABLISHED src=192.168.146.18 dst=192.168.77.3 sport=49536 dport=2206 src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49536 [ASSURED] mark=0 use=1
+tcp      6 45802 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49483 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49483 dport=2206 mark=0 use=1
+tcp      6 43269 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49473 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49473 dport=2206 mark=0 use=1
+tcp      6 392550 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49577 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49577 dport=2206 mark=0 use=1
+tcp      6 386856 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49548 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49548 dport=2206 mark=0 use=1
+tcp      6 306411 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49369 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49369 dport=2206 mark=0 use=1
+tcp      6 379540 ESTABLISHED src=192.168.146.18 dst=192.168.77.3 sport=49528 dport=2206 src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49528 [ASSURED] mark=0 use=1
+tcp      6 306196 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49367 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49367 dport=2206 mark=0 use=1
+tcp      6 390622 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49570 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49570 dport=2206 mark=0 use=1
+tcp      6 147698 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49162 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49162 dport=2206 mark=0 use=1
+tcp      6 378229 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49378 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49378 dport=2206 mark=0 use=1
+tcp      6 391934 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49573 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49573 dport=2206 mark=0 use=1
+tcp      6 77402 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49500 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49500 dport=2206 mark=0 use=1
+tcp      6 393879 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49585 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49585 dport=2206 mark=0 use=1
+tcp      6 25978 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49310 src=192.168.146.18 dst=192.168.77.3 sport=49310 dport=2206 [ASSURED] mark=0 use=1
+tcp      6 431997 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49592 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49592 dport=2206 mark=0 use=1
+tcp      6 391879 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49572 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49572 dport=2206 mark=0 use=1
+tcp      6 47574 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49495 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49495 dport=2206 mark=0 use=1
+tcp      6 386705 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49547 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49547 dport=2206 mark=0 use=1
+tcp      6 386536 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49546 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49546 dport=2206 mark=0 use=1
+tcp      6 43321 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49476 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49476 dport=2206 mark=0 use=1
+tcp      6 380437 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49534 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49534 dport=2206 mark=0 use=1
+tcp      6 42549 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49471 src=192.168.146.18 dst=192.168.77.3 sport=49471 dport=2206 [ASSURED] mark=0 use=1
+tcp      6 389876 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49563 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49563 dport=2206 mark=0 use=1
+tcp      6 306226 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49368 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49368 dport=2206 mark=0 use=1
+tcp      6 378708 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49522 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49522 dport=2206 mark=0 use=1
+tcp      6 45457 ESTABLISHED src=192.168.77.3 dst=192.168.146.18 sport=2206 dport=49480 [UNREPLIED] src=192.168.146.18 dst=192.168.77.3 sport=49480 dport=2206 mark=0 use=1
+~ # cat /proc/net/ip_conntrack | grep dport=554
+tcp      6 66896 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=59143 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=59143 [ASSURED] mark=0 use=1
+tcp      6 385658 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58772 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58772 [ASSURED] mark=0 use=1
+tcp      6 378335 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58244 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58244 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58605 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58605 [ASSURED] mark=0 use=1
+tcp      6 66820 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58076 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58076 [ASSURED] mark=0 use=1
+tcp      6 2219 ESTABLISHED src=192.168.5.217 dst=192.168.146.24 sport=39080 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=39080 [ASSURED] mark=0 use=1
+tcp      6 24253 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=54880 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=54880 [ASSURED] mark=0 use=1
+tcp      6 16650 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=59542 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=59542 [ASSURED] mark=0 use=1
+tcp      6 379333 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=64257 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=64257 [ASSURED] mark=0 use=1
+tcp      6 394303 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=51176 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=51176 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58527 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58527 [ASSURED] mark=0 use=1
+tcp      6 66795 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=57700 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=57700 [ASSURED] mark=0 use=1
+tcp      6 66775 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=57406 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=57406 [ASSURED] mark=0 use=1
+tcp      6 21371 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=61337 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=61337 [ASSURED] mark=0 use=1
+tcp      6 66851 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58526 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58526 [ASSURED] mark=0 use=1
+tcp      6 66894 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=59169 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=59169 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58531 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58531 [ASSURED] mark=0 use=1
+tcp      6 378539 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=51151 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=51151 [ASSURED] mark=0 use=1
+tcp      6 66836 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58285 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58285 [ASSURED] mark=0 use=1
+tcp      6 66753 ESTABLISHED src=192.168.5.217 dst=192.168.146.24 sport=44248 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=44248 [ASSURED] mark=0 use=1
+tcp      6 394303 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=51170 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=51170 [ASSURED] mark=0 use=1
+tcp      6 21461 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=49999 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=49999 [ASSURED] mark=0 use=1
+tcp      6 66852 ESTABLISHED src=192.168.5.217 dst=192.168.146.24 sport=44236 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=44236 [ASSURED] mark=0 use=1
+tcp      6 66846 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58454 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58454 [ASSURED] mark=0 use=1
+tcp      6 66825 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58135 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58135 [ASSURED] mark=0 use=1
+tcp      6 21302 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=64285 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=64285 [ASSURED] mark=0 use=1
+tcp      6 66797 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=57704 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=57704 [ASSURED] mark=0 use=1
+tcp      6 431999 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=58485 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=58485 [ASSURED] mark=0 use=1
+tcp      6 21490 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=64106 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=64106 [ASSURED] mark=0 use=1
+tcp      6 2222 ESTABLISHED src=192.168.77.3 dst=192.168.146.24 sport=59422 dport=554 src=192.168.146.24 dst=192.168.146.17 sport=554 dport=59422 [ASSURED] mark=0 use=1
+~ # 

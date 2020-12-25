@@ -1,0 +1,253 @@
+@CHARSET "UTF-8";
+
+body {
+
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+
+  background:#e0e0e0;
+
+}
+
+
+
+.video {
+	display: block;
+	width: auto;
+	margin: 0 auto; 	
+	margin: 0
+	background-color: black;
+}
+
+
+
+#leg {
+
+	position: relative;
+	width:100%;
+	
+	height:180px;
+	top: 5px;
+	left:5%;
+	font-size:30;
+}
+
+
+.monpng {
+	
+	width:40px;
+	height:40px;
+	/* @media (min-width: 800px) {
+		width:40px;
+		height:40px;
+	} */
+	
+}
+.megaleg{
+	
+	display: inline-block;
+	position: relative;
+	width:550px;
+	height:370px;
+	/* background-color:#e0c0e0; */
+	/* @media (min-width: 800px) {
+		height: 950px;
+		width: 100%;} */
+	
+	
+}
+
+
+.megalegbig{
+	
+	display: inline-block;
+	position: relative;
+	width:100%;
+	height:570px;
+	
+	
+	/*  @media (min-width: 800px) {
+		height: 950px;
+		width: 100%;} */
+	
+	
+}
+
+
+.leg22 {
+
+
+	/* position: relative; */
+	/* display: inline-block; */
+	position: absolute;
+	width:500px;
+	height:250px;
+	top: 0px;
+	left:7%;
+	font-size:16;
+	
+	//если мобильный
+	/*  @media (min-width: 800px) {
+		height: 500px;
+		width: 100%;
+		font-size:30;
+		top: 5px;
+		left:5%;} */
+}
+
+
+
+.leg22sm {
+
+	position: absolute;
+	width:500px;
+	height:130px;
+	top: 0px;
+	left:7%;
+	font-size:17;
+	//если мобильный
+	/* @media (min-width: 800px) {
+		width:100%;
+		height:280px;
+		top: 5px;
+		left:5%;
+		font-size:30;
+		} */
+}
+
+
+.chart {
+	position: absolute;
+	/* display: inline-block; */
+	bottom:0;left:0;
+	width: 500px;
+	height:200px;
+	/* @media (min-width: 800px) {
+		height: 200px;
+		width: 100%;} */
+}
+.chartbig {
+	position: absolute;
+	background: #fa3;
+	/* display: inline-block; */
+	bottom:0;left:0;
+	width: 100%;
+	height:400px;
+	/* @media (min-width: 800px) {
+		height: 400px;
+		width: 100%;}  */
+}
+
+@media only screen and (max-width: 1028px) {
+  /* For mobile phones: */
+  [class*="chart"] {
+	height: 400px;
+    width: 100%;
+  }
+  [class*="megaleg"] {
+	height: 780px;
+    width: 100%;
+  }
+   [class*="leg22"] {
+	height: 500px;
+    width: 100%;
+	font-size:30;
+		top: 5px;
+		left:5%;
+  }
+   [class*="monpng"] {
+	width:96px;
+	height:96px;
+  }
+}
+
+.ppp {
+	
+	color:#e0e0e0;
+	background-color:black;
+	
+}
+.pppred {
+	
+	color:#e0e0e0;
+	background-color:tomato;
+	
+}
+.paper{
+	
+	color:#e0e0e0;
+	background-color:#e0e0e0;
+	
+}
+
+.paperb{
+	
+	color:#e0e0e0;
+	background-color:#000000;
+	
+}
+
+.paperhref{
+	text-decoration:none;
+	color:#000000;
+	background-color:#d0d0d0;
+	
+}
+/* #leg3 {
+
+	position: relative;
+	width:100%;
+	height:110px;
+	top: 5px;
+	left:5%;
+	font-size:30;
+} */
+
+/* #leg2 {
+
+	position: relative;
+	width:100%;
+	height:80px;
+	top: 5px;
+	left:5%;
+	font-size:30;
+} */
+
+
+#chart3 {
+
+}
+#chart4 {
+}
+#chart5 {
+}
+
+#chart6 {
+}
+#chart7 {
+}
+
+#chart9 {
+}
+#chart10 {
+}
+
+#chart11 {
+}
+#chart2 {
+}
+
+#chart8 {
+}
+
+
+
+
+
+
+
+
+span.blue {color:blue;}
+span.black {color:black;}
+span.red {color:red;}

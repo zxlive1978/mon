@@ -1,0 +1,360 @@
+<?php 
+if (!$_SESSION['start']) {
+	header("Location: /index.php");
+	exit;
+}
+
+//выделяем уникальный идентификатор сессии
+$id = session_id();
+
+if ($id!="") {
+ //текущее время
+ $CurrentTime = time();
+ //через какое время сессии удаляются
+ $LastTime = time() - 600;
+ //файл, в котором храним идентификаторы и время
+ $base = "session.txt";
+
+ $file = file($base);
+ $k = 0;
+ for ($i = 0; $i < sizeof($file); $i++) {
+  $line = explode("|", $file[$i]);
+   if ($line[1] > $LastTime) {
+   $ResFile[$k] = $file[$i];
+   $k++;
+  }
+ }
+
+ for ($i = 0; $i<sizeof($ResFile); $i++) {
+  $line = explode("|", $ResFile[$i]);
+  if ($line[0]==$id) {
+      $line[1] = trim($CurrentTime)."\n";
+      $is_sid_in_file = 1;
+  }
+  $line = implode("|", $line); $ResFile[$i] = $line;
+ }
+
+ $fp = fopen($base, "w");
+ for ($i = 0; $i<sizeof($ResFile); $i++) { fputs($fp, $ResFile[$i]); }
+ fclose($fp);
+
+ if (!$is_sid_in_file) {
+  $fp = fopen($base, "a-");
+  $line = $id."|".$CurrentTime."\n";
+  fputs($fp, $line);
+  fclose($fp);
+ }
+}
+
+
+?>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta charset="UTF-8">
+<!-- <meta http-equiv="Refresh" content="60" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="jschart5.css"> -->
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+
+
+<script type="text/javascript" src="/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jschart-2.2.2.min.js"></script>
+
+<script type="text/javascript">
+<?php echo 'var d916 = '.json_encode($xy_value916).';'; ?>;
+<?php echo 'var numbs916 = '.json_encode($numbs_rec916).';' ?>;
+<?php echo 'var d4450 = '.json_encode($xy_value4450).';'; ?>;
+<?php echo 'var numbs4450 = '.json_encode($numbs_rec4450).';' ?>;
+<?php echo 'var d631 = '.json_encode($xy_value631).';'; ?>;
+<?php echo 'var numbs631 = '.json_encode($numbs_rec631).';' ?>;
+<?php echo 'var d110 = '.json_encode($xy_value110).';'; ?>;
+<?php echo 'var numbs110 = '.json_encode($numbs_rec110).';' ?>;
+<?php echo 'var d224 = '.json_encode($xy_value2241).';'; ?>;
+<?php echo 'var numbs224 = '.json_encode($numbs_rec2241).';' ?>;
+<?php echo 'var d908 = '.json_encode($xy_value908).';'; ?>;
+<?php echo 'var numbs908 = '.json_encode($numbs_rec908).';' ?>;
+<?php echo 'var d411 = '.json_encode($xy_value411).';'; ?>;
+<?php echo 'var numbs411 = '.json_encode($numbs_rec411).';' ?>;
+<?php echo 'var dconn = '.json_encode($xy_valueconn).';'; ?>;
+<?php echo 'var numbsconn = '.json_encode($numbs_recconn).';' ?>;
+<?php echo 'var d89 = '.json_encode($xy_value89).';'; ?>;
+<?php echo 'var numbs89 = '.json_encode($numbs_rec89).';' ?>;
+//Костыль. Сработал ли Ajax ?
+try{
+	var test = d916[numbs916-1]["date"];
+	var test = d4450[numbs4450-1]["date"];
+	var test = d631[numbs631-1]["date"];
+	var test = d110[numbs110-1]["date"];
+	var test = d224[numbs224-1]["date"];
+	var test = d411[numbs411-1]["date"];
+	var test = dconn[numbsconn-1]["date"];
+	var test = d89[numbs89-1]["date"];}
+catch(e){ window.onload = window.location.reload("true");}
+</script>
+
+<script type="text/javascript" src="/js/wellcharts.js"></script>
+
+<script type="text/javascript">
+<?php echo 'var timetime = '.json_encode($timeshift);?>;
+
+function obnovit_stranicu() {
+  location.reload();}
+if (timetime<2){setInterval("obnovit_stranicu()", 60*1000);}
+</script>
+
+<title></title>
+
+</head>
+
+<body>
+
+<div id="leg2"> 8.8.8.8  <span id="p29" >0.0</span> Astr 62.220.55.149 <span id="p30" >0.0</span>
+<br>Msk 80.247.113.226  <span id="p31" >0.0</span>  УМ 192.168.77.3 <span id="p32" >0.0</span>
+</div>
+<script type="text/javascript">
+//var utcSeconds = d908[numbs908-1]["date"];
+//var d = new Date(0);
+//d.setUTCSeconds(utcSeconds);
+//document.getElementById("p33").innerHTML=d;
+
+document.getElementById("p29").innerHTML=dconn[numbsconn-1]["p8888"];
+dconn[numbsconn-1]["p8888"]>0?document.getElementById("p29").style.backgroundColor="DarkGreen":document.getElementById("p29").style.backgroundColor="red";
+document.getElementById("p30").innerHTML=dconn[numbsconn-1]["p6222055149"];
+dconn[numbsconn-1]["p6222055149"]>0?document.getElementById("p30").style.backgroundColor="magenta":document.getElementById("p30").style.backgroundColor="red";
+document.getElementById("p31").innerHTML=dconn[numbsconn-1]["p8084114180"];
+dconn[numbsconn-1]["p8084114180"]>0?document.getElementById("p31").style.backgroundColor="orange":document.getElementById("p31").style.backgroundColor="red";
+document.getElementById("p32").innerHTML=dconn[numbsconn-1]["p192168773"];
+dconn[numbsconn-1]["p192168773"]>0?document.getElementById("p32").style.backgroundColor="blue":document.getElementById("p32").style.backgroundColor="red";
+</script>
+
+<div id="chart8"></div>
+
+<div id="leg"> <a href="svg/index.php?well=s20"><img src="monitor.png"></a>     <a href="/cam_video.php?agr=s20"><img src="video.png"></a>АГКМ20Э-1 31.173.139.190 <span id="p1" >0</span> 
+<br>Poz 192.168.146.161 RX:<span id="p10" >0.0</span>Mbps TX:<span id="p11" >0.0</span>Mbps
+<br>Mlcache 192.168.146.163 <span id="p22" > [нет связи] </span> 
+</div>
+<script type="text/javascript">
+document.getElementById("p1").innerHTML=d916[numbs916-1]["value"];
+d916[numbs916-1]["value"]>0?document.getElementById("p1").style.backgroundColor="blue":document.getElementById("p1").style.backgroundColor="red";
+document.getElementById("p10").innerHTML=d916[numbs916-1]["rx"];
+d916[numbs916-1]["rx"]>0?document.getElementById("p10").style.backgroundColor="magenta":document.getElementById("p10").style.backgroundColor="red";
+document.getElementById("p11").innerHTML=d916[numbs916-1]["tx"];
+d916[numbs916-1]["tx"]>0?document.getElementById("p11").style.backgroundColor="orange":document.getElementById("p11").style.backgroundColor="red";
+if (d916[numbs916-1]["ml"]>1.8)
+{
+ document.getElementById("p22").innerHTML="[ on ]";
+ document.getElementById("p22").style.backgroundColor="DarkGreen";  
+}
+if (d916[numbs916-1]["ml"]<1.8)
+{
+document.getElementById("p22").innerHTML="[ off ]";
+document.getElementById("p22").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart"> </div>
+
+<div id="leg"><a href="svg/index.php?well=s4450"><img src="monitor.png"></a>    <a href="/cam_video.php?agr=s4450"><img src="video.png"></a>АГКМ4450-1 31.173.139.214 <span id="p2">0</span>
+<br>Poz 192.168.146.33 RX:<span id="p12" >0.0</span>Mbps TX:<span id="p13" >0.0</span>Mbps
+<br>Mlcache 192.168.146.35 <span id="p23" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p2").innerHTML=d4450[numbs4450-1]["value"];
+d4450[numbs4450-1]["value"]>0?document.getElementById("p2").style.backgroundColor="blue":document.getElementById("p2").style.backgroundColor="red";
+document.getElementById("p12").innerHTML=d4450[numbs4450-1]["rx"];
+d4450[numbs4450-1]["rx"]>0?document.getElementById("p12").style.backgroundColor="magenta":document.getElementById("p12").style.backgroundColor="red";
+document.getElementById("p13").innerHTML=d4450[numbs4450-1]["tx"];
+d4450[numbs4450-1]["tx"]>0?document.getElementById("p13").style.backgroundColor="orange":document.getElementById("p13").style.backgroundColor="red";
+if (d4450[numbs4450-1]["ml"]>1.8)
+{
+ document.getElementById("p23").innerHTML="[ on ]";
+ document.getElementById("p23").style.backgroundColor="DarkGreen";  
+}
+if (d4450[numbs4450-1]["ml"]<1.8)
+{
+document.getElementById("p23").innerHTML="[ off ]";
+document.getElementById("p23").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart2"></div>
+
+<div id="leg"><a href="svg/index.php?well=s631"><img src="monitor.png"></a>    <a href="/cam_video.php?agr=s631"><img src="video.png"></a>АГКМ631-1 31.173.139.218 <span id="p3">0</span> 
+<br>Poz 192.168.146.17 RX:<span id="p14" >0.0</span>Mbps TX:<span id="p15" >0.0</span>Mbps
+<br>Mlcache 192.168.146.18 <span id="p24" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p3").innerHTML=d631[numbs631-1]["value"];
+d631[numbs631-1]["value"]>0?document.getElementById("p3").style.backgroundColor="blue":document.getElementById("p3").style.backgroundColor="red";
+document.getElementById("p14").innerHTML=d631[numbs631-1]["rx"];
+d631[numbs631-1]["rx"]>0?document.getElementById("p14").style.backgroundColor="magenta":document.getElementById("p14").style.backgroundColor="red";
+document.getElementById("p15").innerHTML=d631[numbs631-1]["tx"];
+d631[numbs631-1]["tx"]>0?document.getElementById("p15").style.backgroundColor="orange":document.getElementById("p15").style.backgroundColor="red";
+if (d631[numbs631-1]["ml"]>1.8)
+{
+ document.getElementById("p24").innerHTML="[ on ]";
+ document.getElementById("p24").style.backgroundColor="DarkGreen";  
+}
+if (d631[numbs631-1]["ml"]<1.8)
+{
+document.getElementById("p24").innerHTML="[ off ]";
+document.getElementById("p24").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart3"></div>
+
+<!-- <div id="leg"><a href="svg/index.php?well=s110"><img src="monitor.png"></a> АГКМ110-1 31.173.139.222 <span id="p4" >0</span>
+<br>Poz 192.168.146.49 RX:<span id="p16" >0.0</span>Mbps TX:<span id="p17" >0.0</span>Mbps
+<br>Mlcache 192.168.146.51 <span id="p25" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p4").innerHTML=d110[numbs110-1]["value"];
+d110[numbs110-1]["value"]>0?document.getElementById("p4").style.backgroundColor="blue":document.getElementById("p4").style.backgroundColor="red";
+document.getElementById("p16").innerHTML=d110[numbs110-1]["rx"];
+d110[numbs110-1]["rx"]>0?document.getElementById("p16").style.backgroundColor="magenta":document.getElementById("p16").style.backgroundColor="red";
+document.getElementById("p17").innerHTML=d110[numbs110-1]["tx"];
+d110[numbs110-1]["tx"]>0?document.getElementById("p17").style.backgroundColor="orange":document.getElementById("p17").style.backgroundColor="red";
+if (d110[numbs110-1]["ml"]>1.8)
+{
+ document.getElementById("p25").innerHTML="[ on ]";
+ document.getElementById("p25").style.backgroundColor="DarkGreen";  
+}
+if (d110[numbs110-1]["ml"]<1.8)
+{
+document.getElementById("p25").innerHTML="[ off ]";
+document.getElementById("p25").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart4"></div> -->
+
+
+<!-- <div id="leg"><a href="svg/index.php?well=s224"><img src="monitor.png"></a>АГКМ224-1 31.173.187.210  <span id="p5" >0</span>
+<br>Poz 192.168.146.65 RX:<span id="p18" >0.0</span>Mbps TX:<span id="p19" >0.0</span>Mbps
+<br>Mlcache 192.168.146.67 <span id="p26" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p5").innerHTML=d224[numbs224-1]["value"];
+d224[numbs224-1]["value"]>0?document.getElementById("p5").style.backgroundColor="blue":document.getElementById("p5").style.backgroundColor="red";
+document.getElementById("p18").innerHTML=d224[numbs224-1]["rx"];
+d224[numbs224-1]["rx"]>0?document.getElementById("p18").style.backgroundColor="magenta":document.getElementById("p18").style.backgroundColor="red";
+document.getElementById("p19").innerHTML=d224[numbs224-1]["tx"];
+d224[numbs224-1]["tx"]>0?document.getElementById("p19").style.backgroundColor="orange":document.getElementById("p19").style.backgroundColor="red";
+if (d224[numbs224-1]["ml"]>1.8)
+{
+ document.getElementById("p26").innerHTML="[ on ]";
+ document.getElementById("p26").style.backgroundColor="DarkGreen";  
+}
+if (d224[numbs224-1]["ml"]<1.8)
+{
+document.getElementById("p26").innerHTML="[ off ]";
+document.getElementById("p26").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart5"></div> -->
+
+
+<div id="leg"><a href="svg/index.php?well=s908"><img src="monitor.png"></a>    <a href="/cam_video.php?agr=s908"><img src="video.png"></a>АГКМ908-1 31.173.139.194  <span id="p6" >0</span> 
+<br>Poz 192.168.146.97 RX:<span id="p20" >0.0</span>Mbps TX:<span id="p21" >0.0</span>Mbps
+<br>Mlcache 192.168.146.99 <span id="p27" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p6").innerHTML=d908[numbs908-1]["value"];
+d908[numbs908-1]["value"]>0?document.getElementById("p6").style.backgroundColor="blue":document.getElementById("p6").style.backgroundColor="red";
+document.getElementById("p20").innerHTML=d908[numbs908-1]["rx"];
+d908[numbs908-1]["rx"]>0?document.getElementById("p20").style.backgroundColor="magenta":document.getElementById("p20").style.backgroundColor="red";
+document.getElementById("p21").innerHTML=d908[numbs908-1]["tx"];
+d908[numbs908-1]["tx"]>0?document.getElementById("p21").style.backgroundColor="orange":document.getElementById("p21").style.backgroundColor="red";
+if (d908[numbs908-1]["ml"]>1.8)
+{
+ document.getElementById("p27").innerHTML="[ on ]";
+ document.getElementById("p27").style.backgroundColor="DarkGreen";  
+}
+if (d908[numbs908-1]["ml"]<1.8)
+{
+document.getElementById("p27").innerHTML="[ off ]";
+document.getElementById("p27").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart6"></div>
+
+<div id="leg"><a href="svg/index.php?well=s630"><img src="monitor.png"></a>    <a href="/cam_video.php?agr=s630"><img src="video.png"></a>АГКМ630-1 37.29.8.14  <span id="p7" >0.0</span> 
+<br>Poz 192.168.146.193 RX:<span id="p8" >0.0</span>Mbps TX:<span id="p9" >0.0</span>Mbps
+<br>Mlcache 192.168.146.195 <span id="p28" > [нет связи] </span>
+</div>
+<script type="text/javascript">
+document.getElementById("p7").innerHTML=d411[numbs411-1]["value"];
+d411[numbs411-1]["value"]>0?document.getElementById("p7").style.backgroundColor="blue":document.getElementById("p7").style.backgroundColor="red";
+document.getElementById("p8").innerHTML=d411[numbs411-1]["rx"];
+d411[numbs411-1]["rx"]>0?document.getElementById("p8").style.backgroundColor="magenta":document.getElementById("p8").style.backgroundColor="red";
+document.getElementById("p9").innerHTML=d411[numbs411-1]["tx"];
+d411[numbs411-1]["tx"]>0?document.getElementById("p9").style.backgroundColor="orange":document.getElementById("p9").style.backgroundColor="red";
+if (d411[numbs411-1]["ml"]>1.8)
+{
+ document.getElementById("p28").innerHTML="[ on ]";
+ document.getElementById("p28").style.backgroundColor="DarkGreen";  
+}
+if (d411[numbs411-1]["ml"]<1.8)
+{
+document.getElementById("p28").innerHTML="[ off ]";
+document.getElementById("p28").style.backgroundColor="red";  
+}
+</script>
+
+<div id="chart7"></div>
+
+
+<!-- <div id="leg">АГКМ89-1 31.173.139.190  <span id="p33" >0.0</span>  
+<br>Poz 192.168.146.161 RX:<span id="p34" >0.0</span>Mbps TX:<span id="p35" >0.0</span>Mbps
+<br>Mlcache 192.168.146.163 <span id="p36" > [нет связи] </span>
+</div>
+ -->
+
+<!-- <div id="leg">ZYXEL USG20W-VPN 192.168.146.225 <span id="p33" >0.0</span>  
+<br>WAN RX:<span id="p34" >0.0</span>KBps TX:<span id="p35" >0.0</span>KBps
+<br>Mlcache 192.168.1.102 <span id="p36" > [нет связи] </span>
+</div>
+
+<script type="text/javascript">
+document.getElementById("p33").innerHTML=d89[numbs89-1]["value"];
+d89[numbs89-1]["value"]>0?document.getElementById("p33").style.backgroundColor="blue":document.getElementById("p33").style.backgroundColor="red";
+document.getElementById("p34").innerHTML=d89[numbs89-1]["rx"];
+d89[numbs89-1]["rx"]>0?document.getElementById("p34").style.backgroundColor="magenta":document.getElementById("p34").style.backgroundColor="red";
+document.getElementById("p35").innerHTML=d89[numbs89-1]["tx"];
+d89[numbs89-1]["tx"]>0?document.getElementById("p35").style.backgroundColor="orange":document.getElementById("p35").style.backgroundColor="red";
+if (d89[numbs89-1]["ml"]>1.8)
+{
+ document.getElementById("p36").innerHTML="[ on ]";
+ document.getElementById("p36").style.backgroundColor="DarkGreen";  
+}
+if (d89[numbs89-1]["ml"]<1.8)
+{
+document.getElementById("p36").innerHTML="[ off ]";
+document.getElementById("p36").style.backgroundColor="red";  
+}
+//alert(d89[numbs89-1]["ml"]);
+</script>
+
+<div id="chart9"></div> -->
+
+
+<div id="leg2"><a href>
+<a href="videoreg.php"><img src="camera.png"></a>
+<?php
+echo "  Сейчас на сайте: <b>".sizeof(file($base))."</b>";
+?>
+</div>
+
+</body>
+
+</html>

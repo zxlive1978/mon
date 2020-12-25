@@ -1,0 +1,111 @@
+/* @import url('https://fonts.googleapis.com/css?family=Inconsolata'); */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#drawing{
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #3BBCF2;
+}
+
+/* Шапка */
+#header{
+width: 100%;
+height: 150px;
+background: #3BBCF2;
+}
+
+#coner{
+width: 100px;
+height: 100%;
+float: left;
+background: #FAAABF;
+}
+
+
+#leg1{	
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: blue;
+}
+
+#leg2{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: red;
+}
+
+#leg3{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: yellow;
+}
+
+#leg4{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: orange;
+}
+
+/* Графики */
+#center_wrap{
+width: 100%;
+height: calc(100% - 200px);
+}
+
+#rul{
+width: 100px;
+height: 100%;
+float: left;
+background: green;
+}
+
+#col1{	
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: blue;
+
+}
+
+#col2{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: red;
+}
+
+#col3{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: yellow;
+}
+
+#col4{
+width: calc((100% - 100px)/4);
+height: 100%;
+float: left;
+background: orange;
+}
+
+
+
+
+/* Низ */
+#footer{
+width: 100%;
+height: 50px;
+position: relative;
+background: cyan;
+}

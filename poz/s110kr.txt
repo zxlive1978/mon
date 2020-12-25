@@ -1,0 +1,833 @@
+object TChartContext
+  Left = 0
+  Top = 0
+  Right = 0
+  Bottom = 0
+  MainID = 0
+  FormName = #1044#1080#1072#1075#1088#1072#1084#1084#1072' '#1089' '#1087#1088#1080#1074#1103#1079#1082#1086#1081' '#1087#1086' '#1074#1088#1077#1084#1077#1085#1080
+  Min = 43312.835451875000000000
+  Max = 43313.000469236110000000
+  Scale = 0.004901960784313725
+  Step = 0.041666666666666660
+  IsDateTime = True
+  ShowBottomHeader = False
+  object TPrintHeader
+    Left = 0
+    Top = 0
+    Right = 0
+    Bottom = 73
+    Invisible = False
+    object TPrintLabel
+      Left = 43
+      Top = 1
+      Right = 147
+      Bottom = 7
+      Caption = #1043#1077#1086#1083#1086#1075#1086'-'#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1080#1077' '#1080#1089#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 90
+      Top = 6
+      Right = 101
+      Bottom = 12
+      Caption = #1050#1056#1057
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 37
+      Top = 13
+      Right = 89
+      Bottom = 18
+      Caption = #1048#1085#1090#1077#1088#1074#1072#1083' '#1080#1089#1089#1083#1077#1076#1086#1074#1072#1085#1080#1081':'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintSysVar
+      Left = 91
+      Top = 13
+      Right = 154
+      Bottom = 19
+      Caption = '31.07.18 20:03 - 01.08.18 0:00'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+      VarType = svRange
+    end
+    object TPrintShape
+      Left = 1
+      Top = 18
+      Right = 199
+      Bottom = 24
+      PenColor = clBlack
+      BrushColor = 13434879
+    end
+    object TPrintLabel
+      Left = 38
+      Top = 18
+      Right = 59
+      Bottom = 23
+      Caption = #1055#1083#1086#1097#1072#1076#1100':  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 63
+      Top = 18
+      Right = 75
+      Bottom = 24
+      Caption = #1040#1043#1050#1052
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 102
+      Top = 18
+      Right = 124
+      Bottom = 23
+      Caption = #1057#1082#1074#1072#1078#1080#1085#1072': '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 127
+      Top = 18
+      Right = 132
+      Bottom = 24
+      Caption = '96'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 47
+      Top = 69
+      Right = 58
+      Bottom = 73
+      Caption = #1055#1086#1083'.'#1076#1086#1083'.'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 87
+      Top = 69
+      Right = 100
+      Bottom = 73
+      Caption = #1063#1080#1089#1083#1086' '#1090#1088#1091#1073
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+    object TPrintLabel
+      Left = 145
+      Top = 69
+      Right = 158
+      Bottom = 73
+      Caption = #1057#1091#1084'.'#1086#1073#1098#1105#1084
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Arial'
+      Font.Style = []
+      EnableSetup = False
+      EveryPage = False
+    end
+  end
+  object TPrintField
+    Left = 14
+    Top = 24
+    Right = 58
+    Bottom = 109
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '200'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 150.000000000000000000
+      Caption = #1042#1077#1089' '#1085#1072' '#1082#1088#1102#1082#1077' '
+      Units = #1090'.'
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '115'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1076#1086#1083#1086#1090#1072
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 34
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1300'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 5.000000000000000000
+      Caption = #1050#1088#1091#1090#1103#1097#1080#1081' '#1084#1086#1084#1077#1085#1090' '#1085#1072' '#1088#1086#1090#1086#1088#1077
+      Units = #1090'*'#1084
+      Color = 38218
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '202'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 15.000000000000000000
+      Caption = #1053#1072#1075#1088#1091#1079#1082#1072' '#1085#1072' '#1076#1086#1083#1086#1090#1086
+      Units = #1090'.'
+      Color = 16732181
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1200'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1054#1073#1086#1088#1086#1090#1086#1074' '#1088#1086#1090#1086#1088#1072'.'
+      Units = #1084#1080#1085'-1'
+      Color = 16581279
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+  end
+  object TPrintField
+    Left = 58
+    Top = 24
+    Right = 101
+    Bottom = 109
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '300'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1074' '#1079#1072#1090#1088#1091#1073#1085#1086#1084
+      Units = #1082#1075'/'#1089#1084'2'
+      Color = clRed
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1001'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 20.000000000000000000
+      Caption = #1056#1072#1089#1093#1086#1076' '#1085#1072' '#1074#1093#1086#1076#1077
+      Units = #1083'/c'
+      Color = 48992
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1601'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 5.000000000000000000
+      Caption = 'C1'
+      Units = '%'
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1600'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 5.000000000000000000
+      Caption = #1057#1091#1084#1084#1072' '#1075#1072#1079#1086#1074' '#1057'1-5'
+      Units = '%'
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '103'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 40.000000000000000000
+      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1090#1072#1083#1100#1073#1083#1086#1082#1072
+      Units = #1084'.'
+      Color = 16695041
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '111'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1063#1080#1089#1083#1086' '#1089#1074#1077#1095#1077#1081
+      Color = -1
+      ShowSubLabels = False
+      Flags = []
+      Step = 10.000000000000000000
+      IsTime = False
+      AsChanging = True
+      Offset = 36
+    end
+    object TPrintLineSeries
+      Left = 58
+      Top = 24
+      Right = 58
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '302'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1074' '#1090#1088#1091#1073#1085#1086#1084' '#1087#1088'-'#1074#1077
+      ShortName = #1044#1072#1074#1083'. '#1084#1077#1078#1082#1086#1083'.'
+      Units = #1082#1075'/'#1089#1084'2'
+      Color = 12517567
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+  end
+  object TPrintField
+    Left = 101
+    Top = 24
+    Right = 143
+    Bottom = 109
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '900'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 60.000000000000000000
+      Caption = #1058#1077#1084#1087#1077#1088#1072#1090#1091#1088#1072'  '#1085#1072' '#1074#1099#1093'.'
+      Units = #176#1057
+      Color = clRed
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '1003'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1055#1086#1090#1086#1082' '#1085#1072' '#1074#1099#1093#1086#1076#1077
+      Units = '%'
+      Color = 38218
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '104'
+      ShowHeader = True
+      SrcID = 'GST'
+      Min = -5.000000000000000000
+      Max = 5.000000000000000000
+      Caption = #1057#1082#1086#1088#1086#1089#1090#1100' '#1090#1072#1083#1100#1073#1083#1086#1082#1072
+      Units = #1084'/'#1089
+      Color = 16581279
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '50'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1063#1080#1089#1083#1086' '#1093#1086#1076#1086#1074' 1 '#1085#1072#1089#1086#1089#1072
+      Units = #1084#1080#1085'-1'
+      Color = clGray
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 101
+      Top = 24
+      Right = 101
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '51'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 110.000000000000000000
+      Caption = #1063#1080#1089#1083#1086' '#1093#1086#1076#1086#1074' 2 '#1085#1072#1089#1086#1089#1072
+      ShortName = #1061#1086#1076#1099' 2 '#1085#1072#1089'.'
+      Units = #1084#1080#1085'-1'
+      Color = clFuchsia
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 101
+      Top = 24
+      Right = 101
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '715'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 15.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1076#1086#1083#1080#1074'. '#1077#1084#1082#1086#1089#1090#1080
+      ShortName = #1054#1073#1098#1077#1084' '#1074' '#1076#1086#1083'.'#1077#1084#1082
+      Units = #1084'3'
+      Color = 19093
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+  end
+  object TPrintField
+    Left = 143
+    Top = 24
+    Right = 186
+    Bottom = 109
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Arial'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = True
+    VertHeader = False
+    Min = -2
+    Max = 2
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '711'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 1'
+      Units = #1084'3'
+      Color = 191
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '720'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1081' '#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082#1086#1089#1090#1103#1093
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 0
+    end
+    object TPrintLineSeries
+      Left = -1
+      Top = 0
+      Right = -1
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '712'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 2'
+      Units = #1084'3'
+      Color = 16732181
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 143
+      Top = 24
+      Right = 143
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '713'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 3'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 3 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 38218
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 143
+      Top = 24
+      Right = 143
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '716'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 4'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 4 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 8421631
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 143
+      Top = 24
+      Right = 143
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '717'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 5'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 5 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 9765013
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 143
+      Top = 24
+      Right = 143
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '718'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 50.000000000000000000
+      Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 6'
+      ShortName = #1054#1073#1098#1077#1084' '#1074' 6 '#1077#1084#1082'.'
+      Units = #1084'3'
+      Color = 12488449
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+    object TPrintLineSeries
+      Left = 143
+      Top = 24
+      Right = 143
+      Bottom = 24
+      BlackCaption = False
+      GID = ''
+      SGID = '720'
+      ShowHeader = True
+      SrcID = 'GST'
+      Max = 200.000000000000000000
+      Caption = #1057#1091#1084#1084#1072#1088#1085#1099#1081' '#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082#1086#1089#1090#1103#1093
+      ShortName = #1057#1091#1084'.'#1086#1073#1098#1077#1084' '#1074' '#1077#1084#1082
+      Units = #1084'3'
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      PenWidth = 0
+      PenStyle = psSolid
+    end
+  end
+  object TPrintField
+    Left = 1
+    Top = 24
+    Right = 14
+    Bottom = 109
+    Caption = '    '#1042#1088#1077#1084#1103
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = False
+    VertHeader = True
+    Min = -2
+    Max = 2
+    object TXScaleDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1062#1080#1092#1088#1086#1074#1099#1077' '#1084#1077#1090#1082#1080
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      IsTime = False
+      AsChanging = False
+      Offset = 2
+      DateOnEveryPage = False
+    end
+  end
+  object TPrintField
+    Left = 186
+    Top = 24
+    Right = 199
+    Bottom = 109
+    Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103' '
+    Decades = 10
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Logarithmic = False
+    ShowBorders = True
+    ShowGrid = False
+    VertHeader = True
+    Min = -2
+    Max = 2
+    object TDigitalSeries
+      Left = 0
+      Top = 0
+      Right = 0
+      Bottom = 0
+      BlackCaption = False
+      GID = ''
+      SGID = '101'
+      ShowHeader = False
+      SrcID = 'GST'
+      Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Step = 0.041666666666666660
+      IsTime = False
+      AsChanging = False
+      Offset = 0
+    end
+  end
+end

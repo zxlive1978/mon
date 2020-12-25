@@ -1,0 +1,31 @@
+#VPN KONTORA
+*/1 * * * * /usr/sbin/vpnc /etc/vpnc/default.conf > /dev/null 2>&1
+
+#PING SPEED TEST ML CACHE
+*/2 * * * * /var/www/html/poz/pit_go  > /dev/null 2>&1
+
+#CAM SHOOT
+0,15,30,45 * * * * /var/www/html/poz/cam_shoot  > /dev/null 2>&1
+#CAM KILL
+14,29,44,59 * * * * /var/www/html/poz/killffmpeg  > /dev/null 2>&1
+
+#Clear all base 1 month per 1 weekly
+0 0 * * * /var/www/html/poz/110_clear  > /dev/null 2>&1
+
+#Restote Share 104
+#*/5 * * * * /bin/mount -t cifs -o username=root,password=root //192.168.146.2/d/PetroServices/Database/Online/Store /mnt/104
+#4450
+#*/5 * * * * /bin/mount -t cifs -o username=root,password=root //192.168.146.33/d/PetroServices/Database/Online/Store /mnt/4450
+#631
+#*/5 * * * * /bin/mount -t cifs -o username=root,password=root //192.168.146.19/d/PetroServices/Database/Online/Store /mnt/631
+#630
+#*/5 * * * * /bin/mount -t cifs -o username=root,password=root //192.168.146.194/d/IMS/Database/Online/Store /mnt/630
+
+#*/5 * * * * /var/www/html/poz/restore_mnt  > /dev/null 2>&1
+
+#DTCIS
+* * * * * for i in $(seq 1 5); do  /var/www/html/poz/dtcis_read ; sleep 10; done.
+
+#Geoscape
+* * * * * for i in $(seq 1 5); do  /var/www/html/poz/110_read ; sleep 10; done.
+

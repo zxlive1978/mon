@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/python /var/www/html/mon/poz/check_trouble.py

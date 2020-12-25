@@ -1,0 +1,8 @@
+#!/bin/sh
+
+/usr/bin/killall -9 ffmpeg
+/usr/bin/killall -9 cam_shoot
+
+/usr/bin/killall -9 dtcis_read
+
+/usr/bin/killall -9 python

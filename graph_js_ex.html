@@ -1,0 +1,1606 @@
+<?php 
+
+if (!$_SESSION['start']) {
+	header("Location: index.php");
+	exit;
+}
+
+//выделяем уникальный идентификатор сессии
+$id = session_id();
+
+if ($id!="") {
+ //текущее время
+ $CurrentTime = time();
+ //через какое время сессии удаляются
+ $LastTime = time() - 600;
+ //файл, в котором храним идентификаторы и время
+ $base = "session.txt";
+
+ $file = file($base);
+ $k = 0;
+ for ($i = 0; $i < sizeof($file); $i++) {
+  $line = explode("|", $file[$i]);
+   if ($line[1] > $LastTime) {
+   $ResFile[$k] = $file[$i];
+   $k++;
+  }
+ }
+
+ for ($i = 0; $i<sizeof($ResFile); $i++) {
+  $line = explode("|", $ResFile[$i]);
+  if ($line[0]==$id) {
+      $line[1] = trim($CurrentTime)."\n";
+      $is_sid_in_file = 1;
+  }
+  $line = implode("|", $line); $ResFile[$i] = $line;
+ }
+
+ $fp = fopen($base, "w");
+ for ($i = 0; $i<sizeof($ResFile); $i++) { fputs($fp, $ResFile[$i]); }
+ fclose($fp);
+
+ if (!$is_sid_in_file) {
+  $fp = fopen($base, "a-");
+  $line = $id."|".$CurrentTime."\n";
+  fputs($fp, $line);
+  fclose($fp);
+ }
+}
+
+
+?>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+
+<meta charset="UTF-8">
+<!-- <meta http-equiv="Refresh" content="60" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="jschart5.css"> -->
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+
+
+<script type="text/javascript" src="/mon/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="/mon/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/mon/js/jschart-2.2.2.min.js"></script>
+<script type="text/javascript" src="/mon/js/but.js"></script>
+
+<script type="text/javascript">
+<?php echo 'var d916 = '.json_encode($xy_value916).';'; ?>;
+<?php echo 'var numbs916 = '.json_encode($numbs_rec916).';' ?>;
+<?php echo 'var d4450 = '.json_encode($xy_value4450).';'; ?>;
+<?php echo 'var numbs4450 = '.json_encode($numbs_rec4450).';' ?>;
+<?php echo 'var d631 = '.json_encode($xy_value631).';'; ?>;
+<?php echo 'var numbs631 = '.json_encode($numbs_rec631).';' ?>;
+<?php echo 'var d110 = '.json_encode($xy_value110).';'; ?>;
+<?php echo 'var numbs110 = '.json_encode($numbs_rec110).';' ?>;
+<?php echo 'var d224 = '.json_encode($xy_value2241).';'; ?>;
+<?php echo 'var numbs224 = '.json_encode($numbs_rec2241).';' ?>;
+<?php echo 'var d908 = '.json_encode($xy_value908).';'; ?>;
+<?php echo 'var numbs908 = '.json_encode($numbs_rec908).';' ?>;
+<?php echo 'var d411 = '.json_encode($xy_value411).';'; ?>;
+<?php echo 'var numbs411 = '.json_encode($numbs_rec411).';' ?>;
+<?php echo 'var dconn = '.json_encode($xy_valueconn).';'; ?>;
+<?php echo 'var numbsconn = '.json_encode($numbs_recconn).';' ?>;
+<?php echo 'var d89 = '.json_encode($xy_value89).';'; ?>;
+<?php echo 'var numbs89 = '.json_encode($numbs_rec89).';' ?>;
+<?php echo 'var d83 = '.json_encode($xy_value83).';'; ?>;
+<?php echo 'var numbs83 = '.json_encode($numbs_rec83).';' ?>;
+<?php echo 'var d401 = '.json_encode($xy_value401).';'; ?>;
+<?php echo 'var numbs401 = '.json_encode($numbs_rec401).';' ?>;
+<?php echo 'var d610 = '.json_encode($xy_value610).';'; ?>;
+<?php echo 'var numbs610 = '.json_encode($numbs_rec610).';' ?>;
+<?php echo 'var d627 = '.json_encode($xy_value627).';'; ?>;
+<?php echo 'var numbs627 = '.json_encode($numbs_rec627).';' ?>;
+//Костыль. Сработал ли Ajax ?
+
+</script>
+
+<script type="text/javascript" src="/mon/js/wellcharts.js"></script>
+
+<script type="text/javascript">
+<?php echo 'var timetime = '.json_encode($timeshift);?>;
+var go_fresh = true;
+function obnovit_stranicu() {
+  if (timetime<2 && go_fresh){
+  document.location.reload();}
+  }
+setInterval("obnovit_stranicu()", 60*1000);
+</script>
+
+<title></title>
+
+</head>
+
+<body>
+
+
+<!-- <a href="http://128.69.122.27/mon/8484.html"><img src="video.png" class ="monpng"> </a> -->
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s224"><img src="monitor.png" class ="monpng"> </a> АГКМ604-1 <a  class ="paperhref" href="javascript:assa('37.29.98.111');">37.29.98.111</a>(6-ка) <span class="paper" id="well916" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.65');">146.65 RX:</a><span class="paper" id="zyx916tx" >0.0</span>Mbps TX:<span class="paper" id="zyx916rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.113');">19.113 RX:</a><span class="paper" id="modem916tx" >0.0</span>Mbps TX:<span class="paper" id="modem916rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal916-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb916" >0.0</span>
+<br>Mlcache 146.67: <span class="paperb" id="mlcache916" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem916ltx" >0.0</span>MB TX:<span class="paper" id="modem916lrx" >0.0</span>MB 
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.76');">146.76:</a><span class="paper" id="ubi916-1" >0</span> Client:<span class="paper" id="ubi916-1clt" >0</span> Q:<span class="paper" id="q1signal916-1" >&nbsp;</span><span class="paper" id="q1signal916-2" >&nbsp;</span><span class="paper" id="q1signal916-3" >&nbsp;</span><span class="paper" id="q1signal916-4" >&nbsp;</span><span class="paper" id="q1signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb916" >0.0</span>% C:<span class="paper" id="c1signal916-1" >&nbsp;</span><span class="paper" id="c1signal916-2" >&nbsp;</span><span class="paper" id="c1signal916-3" >&nbsp;</span><span class="paper" id="c1signal916-4" >&nbsp;</span><span class="paper" id="c1signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb916" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.77');">146.77:</a><span class="paper" id="ubi916-2" >0</span> Q:<span class="paper" id="q2signal916-1" >&nbsp;</span><span class="paper" id="q2signal916-2" >&nbsp;</span><span class="paper" id="q2signal916-3" >&nbsp;</span><span class="paper" id="q2signal916-4" >&nbsp;</span><span class="paper" id="q2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb916" >0.0</span>% C:<span class="paper" id="c2signal916-1" >&nbsp;</span><span class="paper" id="c2signal916-2" >&nbsp;</span><span class="paper" id="c2signal916-3" >&nbsp;</span><span class="paper" id="c2signal916-4" >&nbsp;</span><span class="paper" id="c2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb916" >0.0</span>%  S:<span class="paper" id="s2signal916-1" >&nbsp;</span><span class="paper" id="s2signal916-2" >&nbsp;</span><span class="paper" id="s2signal916-3" >&nbsp;</span><span class="paper" id="s2signal916-4" >&nbsp;</span><span class="paper" id="s2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb916" >0.0</span>dbi
+<br>Sbor 146.66: <span id="sbor916" >&nbsp;&nbsp;&nbsp;</span> DVR 146.71: <span id="dvr916" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.72:<span id="cam916-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.73:<span id="cam916-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.74:<span id="cam916-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.75:<span id="cam916-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem916lrx").innerHTML=d916[numbs916-1]["mltx"];
+d916[numbs916-1]["mltx"]>0?document.getElementById("modem916lrx").style.backgroundColor="Black":document.getElementById("modem916lrx").style.backgroundColor="red";
+document.getElementById("modem916ltx").innerHTML=d916[numbs916-1]["mlrx"];
+d916[numbs916-1]["mlrx"]>0?document.getElementById("modem916ltx").style.backgroundColor="Maroon":document.getElementById("modem916ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well916").innerHTML=d916[numbs916-1]["value"];
+d916[numbs916-1]["value"]>0?document.getElementById("well916").style.backgroundColor="blue":document.getElementById("well916").style.backgroundColor="red";
+document.getElementById("zyx916rx").innerHTML=d916[numbs916-1]["tx"];
+d916[numbs916-1]["rx"]>0?document.getElementById("zyx916rx").style.backgroundColor="Violet":document.getElementById("zyx916rx").style.backgroundColor="red";
+document.getElementById("zyx916tx").innerHTML=d916[numbs916-1]["rx"];
+d916[numbs916-1]["tx"]>0?document.getElementById("zyx916tx").style.backgroundColor="orange":document.getElementById("zyx916tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem916rx").innerHTML=d916[numbs916-1]["mtx"];
+d916[numbs916-1]["mrx"]>0?document.getElementById("modem916rx").style.backgroundColor="IndianRed":document.getElementById("modem916rx").style.backgroundColor="red";
+document.getElementById("modem916tx").innerHTML=d916[numbs916-1]["mrx"];
+d916[numbs916-1]["mtx"]>0?document.getElementById("modem916tx").style.backgroundColor="teal":document.getElementById("modem916tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb916").innerHTML=d916[numbs916-1]["sigpoz"];
+d916[numbs916-1]["sigpoz"]>0?document.getElementById("sinalnumb916").style.backgroundColor="indigo":document.getElementById("sinalnumb916").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d916[numbs916-1]["sigpoz"]>20?document.getElementById("signal916-5").style.backgroundColor="Green":document.getElementById("signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["sigpoz"]>15?document.getElementById("signal916-4").style.backgroundColor="DarkGreen":document.getElementById("signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["sigpoz"]>10?document.getElementById("signal916-3").style.backgroundColor="Gold":document.getElementById("signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["sigpoz"]>5?document.getElementById("signal916-2").style.backgroundColor="Coral":document.getElementById("signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["sigpoz"]>0?document.getElementById("signal916-1").style.backgroundColor="Red":document.getElementById("signal916-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi916-1").innerHTML=d916[numbs916-1]["ub1"];
+d916[numbs916-1]["ub1"]>0?document.getElementById("ubi916-1").style.backgroundColor="Olive":document.getElementById("ubi916-1").style.backgroundColor="red";
+document.getElementById("ubi916-2").innerHTML=d916[numbs916-1]["ub2"];
+d916[numbs916-1]["ub2"]>0?document.getElementById("ubi916-2").style.backgroundColor="Olive":document.getElementById("ubi916-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi916-1clt").innerHTML=d916[numbs916-1]["ub1sig"];
+d916[numbs916-1]["ub1sig"]>0?document.getElementById("ubi916-1clt").style.backgroundColor="Olive":document.getElementById("ubi916-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d916[numbs916-1]["ub1amq"]>80?document.getElementById("q1signal916-5").style.backgroundColor="Green":document.getElementById("q1signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amq"]>60?document.getElementById("q1signal916-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amq"]>40?document.getElementById("q1signal916-3").style.backgroundColor="Gold":document.getElementById("q1signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amq"]>20?document.getElementById("q1signal916-2").style.backgroundColor="Coral":document.getElementById("q1signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amq"]>0?document.getElementById("q1signal916-1").style.backgroundColor="Red":document.getElementById("q1signal916-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb916").innerHTML=d916[numbs916-1]["ub1amq"];
+d916[numbs916-1]["ub1amq"]>0?document.getElementById("q1sinalnumb916").style.backgroundColor="Olive":document.getElementById("q1sinalnumb916").style.backgroundColor="red";
+//Ubi AP  capacity
+d916[numbs916-1]["ub1amc"]>80?document.getElementById("c1signal916-5").style.backgroundColor="Green":document.getElementById("c1signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amc"]>60?document.getElementById("c1signal916-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amc"]>40?document.getElementById("c1signal916-3").style.backgroundColor="Gold":document.getElementById("c1signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amc"]>20?document.getElementById("c1signal916-2").style.backgroundColor="Coral":document.getElementById("c1signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub1amc"]>0?document.getElementById("c1signal916-1").style.backgroundColor="Red":document.getElementById("c1signal916-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb916").innerHTML=d916[numbs916-1]["ub1amc"];
+d916[numbs916-1]["ub1amc"]>0?document.getElementById("c1sinalnumb916").style.backgroundColor="Olive":document.getElementById("c1sinalnumb916").style.backgroundColor="red";
+
+//Ubi clt  quality
+d916[numbs916-1]["ub2amq"]>80?document.getElementById("q2signal916-5").style.backgroundColor="Green":document.getElementById("q2signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amq"]>60?document.getElementById("q2signal916-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amq"]>40?document.getElementById("q2signal916-3").style.backgroundColor="Gold":document.getElementById("q2signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amq"]>20?document.getElementById("q2signal916-2").style.backgroundColor="Coral":document.getElementById("q2signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amq"]>0?document.getElementById("q2signal916-1").style.backgroundColor="Red":document.getElementById("q2signal916-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb916").innerHTML=d916[numbs916-1]["ub2amq"];
+d916[numbs916-1]["ub2amq"]>0?document.getElementById("q2sinalnumb916").style.backgroundColor="Olive":document.getElementById("q2sinalnumb916").style.backgroundColor="red";
+//Ubi clt  capacity
+d916[numbs916-1]["ub2amc"]>80?document.getElementById("c2signal916-5").style.backgroundColor="Green":document.getElementById("c2signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amc"]>60?document.getElementById("c2signal916-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amc"]>40?document.getElementById("c2signal916-3").style.backgroundColor="Gold":document.getElementById("c2signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amc"]>20?document.getElementById("c2signal916-2").style.backgroundColor="Coral":document.getElementById("c2signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2amc"]>0?document.getElementById("c2signal916-1").style.backgroundColor="Red":document.getElementById("c2signal916-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb916").innerHTML=d916[numbs916-1]["ub2amc"];
+d916[numbs916-1]["ub2amc"]>0?document.getElementById("c2sinalnumb916").style.backgroundColor="Olive":document.getElementById("c2sinalnumb916").style.backgroundColor="red";
+//Ubi clt  signal
+d916[numbs916-1]["ub2sig"]>-65?document.getElementById("s2signal916-5").style.backgroundColor="Green":document.getElementById("s2signal916-5").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2sig"]>-73?document.getElementById("s2signal916-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal916-4").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2sig"]>-81?document.getElementById("s2signal916-3").style.backgroundColor="Gold":document.getElementById("s2signal916-3").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2sig"]>-89?document.getElementById("s2signal916-2").style.backgroundColor="Coral":document.getElementById("s2signal916-2").style.backgroundColor="#e0e0e0";
+d916[numbs916-1]["ub2sig"]>-97?document.getElementById("s2signal916-1").style.backgroundColor="Red":document.getElementById("s2signal916-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb916").innerHTML=d916[numbs916-1]["ub2sig"];
+d916[numbs916-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb916").style.backgroundColor="Olive":document.getElementById("s2sinalnumb916").style.backgroundColor="red";
+
+//Камеры и регистратор
+d916[numbs916-1]["dvr"]>0?document.getElementById("dvr916").style.backgroundColor="limegreen":document.getElementById("dvr916").style.backgroundColor="red";
+d916[numbs916-1]["cam1"]>0?document.getElementById("cam916-1").style.backgroundColor="limegreen":document.getElementById("cam916-1").style.backgroundColor="red";
+d916[numbs916-1]["cam2"]>0?document.getElementById("cam916-2").style.backgroundColor="limegreen":document.getElementById("cam916-2").style.backgroundColor="red";
+d916[numbs916-1]["cam3"]>0?document.getElementById("cam916-3").style.backgroundColor="limegreen":document.getElementById("cam916-3").style.backgroundColor="red";
+d916[numbs916-1]["cam4"]>0?document.getElementById("cam916-4").style.backgroundColor="limegreen":document.getElementById("cam916-4").style.backgroundColor="red";
+d916[numbs916-1]["sbor"]>0?document.getElementById("sbor916").style.backgroundColor="limegreen":document.getElementById("sbor916").style.backgroundColor="red";
+//Mlcache
+if (d916[numbs916-1]["ml"]>1.8)
+{document.getElementById("mlcache916").innerHTML="[ on ]";document.getElementById("mlcache916").style.backgroundColor="DarkGreen";}
+if (d916[numbs916-1]["ml"]<1.8)
+{document.getElementById("mlcache916").innerHTML="[ off ]";document.getElementById("mlcache916").style.backgroundColor="red";}
+</script><div id="chart" class="chart"> </div></div>
+
+<!-- <iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=971846407760990775765167" frameborder="0" allowfullscreen></iframe> -->
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s915"><img src="monitor.png" class ="monpng"> </a> АГКМ934-1 <a class ="paperhref" href="javascript:assa('31.173.139.195');">31.173.139.195</a>(6-ка)  <span class="paper" id="well631" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.225');">146.225 RX:</a><span class="paper" id="zyx631tx" >0.0</span>Mbps TX:<span class="paper" id="zyx631rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.97');">19.97 RX:</a><span class="paper" id="modem631tx" >0.0</span>Mbps TX:<span class="paper" id="modem631rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal631-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal631-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal631-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal631-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb631" >0.0</span>
+<br>Mlcache 146.227: <span class="paperb" id="mlcache631" > [нет связи] </span>  Port_2206 RX:</a><span class="paper" id="modem631ltx" >0.0</span>MB TX:<span class="paper" id="modem631lrx" >0.0</span>MB 
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.236');">146.236:</a><span class="paper" id="ubi631-1" >0</span> Client:<span class="paper" id="ubi631-1clt" >0</span> Q:<span class="paper" id="q1signal631-1" >&nbsp;</span><span class="paper" id="q1signal631-2" >&nbsp;</span><span class="paper" id="q1signal631-3" >&nbsp;</span><span class="paper" id="q1signal631-4" >&nbsp;</span><span class="paper" id="q1signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb631" >0.0</span>% C:<span class="paper" id="c1signal631-1" >&nbsp;</span><span class="paper" id="c1signal631-2" >&nbsp;</span><span class="paper" id="c1signal631-3" >&nbsp;</span><span class="paper" id="c1signal631-4" >&nbsp;</span><span class="paper" id="c1signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb631" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.237');">146.237:</a><span class="paper" id="ubi631-2" >0</span> Q:<span class="paper" id="q2signal631-1" >&nbsp;</span><span class="paper" id="q2signal631-2" >&nbsp;</span><span class="paper" id="q2signal631-3" >&nbsp;</span><span class="paper" id="q2signal631-4" >&nbsp;</span><span class="paper" id="q2signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb631" >0.0</span>% C:<span class="paper" id="c2signal631-1" >&nbsp;</span><span class="paper" id="c2signal631-2" >&nbsp;</span><span class="paper" id="c2signal631-3" >&nbsp;</span><span class="paper" id="c2signal631-4" >&nbsp;</span><span class="paper" id="c2signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb631" >0.0</span>% S:<span class="paper" id="s2signal631-1" >&nbsp;</span><span class="paper" id="s2signal631-2" >&nbsp;</span><span class="paper" id="s2signal631-3" >&nbsp;</span><span class="paper" id="s2signal631-4" >&nbsp;</span><span class="paper" id="s2signal631-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb631" >0.0</span>dbi
+</br></span> Sbor 146.226: <span id="sbor631" >&nbsp;&nbsp;&nbsp;</span> DVR 146.231: <span id="dvr631" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.232:<span id="cam631-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.233:<span id="cam631-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.234:<span id="cam631-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.235:<span id="cam631-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem631lrx").innerHTML=d631[numbs631-1]["mltx"];
+d631[numbs631-1]["mltx"]>0?document.getElementById("modem631lrx").style.backgroundColor="Black":document.getElementById("modem631lrx").style.backgroundColor="red";
+document.getElementById("modem631ltx").innerHTML=d631[numbs631-1]["mlrx"];
+d631[numbs631-1]["mlrx"]>0?document.getElementById("modem631ltx").style.backgroundColor="Maroon":document.getElementById("modem631ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well631").innerHTML=d631[numbs631-1]["value"];
+d631[numbs631-1]["value"]>0?document.getElementById("well631").style.backgroundColor="blue":document.getElementById("well631").style.backgroundColor="red";
+document.getElementById("zyx631rx").innerHTML=d631[numbs631-1]["tx"];
+d631[numbs631-1]["rx"]>0?document.getElementById("zyx631rx").style.backgroundColor="Violet":document.getElementById("zyx631rx").style.backgroundColor="red";
+document.getElementById("zyx631tx").innerHTML=d631[numbs631-1]["rx"];
+d631[numbs631-1]["tx"]>0?document.getElementById("zyx631tx").style.backgroundColor="orange":document.getElementById("zyx631tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem631rx").innerHTML=d631[numbs631-1]["mtx"];
+d631[numbs631-1]["mrx"]>0?document.getElementById("modem631rx").style.backgroundColor="IndianRed":document.getElementById("modem631rx").style.backgroundColor="red";
+document.getElementById("modem631tx").innerHTML=d631[numbs631-1]["mrx"];
+d631[numbs631-1]["mtx"]>0?document.getElementById("modem631tx").style.backgroundColor="teal":document.getElementById("modem631tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb631").innerHTML=d631[numbs631-1]["sigpoz"];
+d631[numbs631-1]["sigpoz"]>0?document.getElementById("sinalnumb631").style.backgroundColor="indigo":document.getElementById("sinalnumb631").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d631[numbs631-1]["sigpoz"]>20?document.getElementById("signal631-5").style.backgroundColor="Green":document.getElementById("signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["sigpoz"]>15?document.getElementById("signal631-4").style.backgroundColor="DarkGreen":document.getElementById("signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["sigpoz"]>10?document.getElementById("signal631-3").style.backgroundColor="Gold":document.getElementById("signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["sigpoz"]>5?document.getElementById("signal631-2").style.backgroundColor="Coral":document.getElementById("signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["sigpoz"]>0?document.getElementById("signal631-1").style.backgroundColor="Red":document.getElementById("signal631-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi631-1").innerHTML=d631[numbs631-1]["ub1"];
+d631[numbs631-1]["ub1"]>0?document.getElementById("ubi631-1").style.backgroundColor="Olive":document.getElementById("ubi631-1").style.backgroundColor="red";
+document.getElementById("ubi631-2").innerHTML=d631[numbs631-1]["ub2"];
+d631[numbs631-1]["ub2"]>0?document.getElementById("ubi631-2").style.backgroundColor="Olive":document.getElementById("ubi631-2").style.backgroundColor="red";
+
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi631-1clt").innerHTML=d631[numbs631-1]["ub1sig"];
+d631[numbs631-1]["ub1sig"]>0?document.getElementById("ubi631-1clt").style.backgroundColor="Olive":document.getElementById("ubi631-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d631[numbs631-1]["ub1amq"]>80?document.getElementById("q1signal631-5").style.backgroundColor="Green":document.getElementById("q1signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amq"]>60?document.getElementById("q1signal631-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amq"]>40?document.getElementById("q1signal631-3").style.backgroundColor="Gold":document.getElementById("q1signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amq"]>20?document.getElementById("q1signal631-2").style.backgroundColor="Coral":document.getElementById("q1signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amq"]>0?document.getElementById("q1signal631-1").style.backgroundColor="Red":document.getElementById("q1signal631-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb631").innerHTML=d631[numbs631-1]["ub1amq"];
+d631[numbs631-1]["ub1amq"]>0?document.getElementById("q1sinalnumb631").style.backgroundColor="Olive":document.getElementById("q1sinalnumb631").style.backgroundColor="red";
+//Ubi AP  capacity
+d631[numbs631-1]["ub1amc"]>80?document.getElementById("c1signal631-5").style.backgroundColor="Green":document.getElementById("c1signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amc"]>60?document.getElementById("c1signal631-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amc"]>40?document.getElementById("c1signal631-3").style.backgroundColor="Gold":document.getElementById("c1signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amc"]>20?document.getElementById("c1signal631-2").style.backgroundColor="Coral":document.getElementById("c1signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub1amc"]>0?document.getElementById("c1signal631-1").style.backgroundColor="Red":document.getElementById("c1signal631-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb631").innerHTML=d631[numbs631-1]["ub1amc"];
+d631[numbs631-1]["ub1amc"]>0?document.getElementById("c1sinalnumb631").style.backgroundColor="Olive":document.getElementById("c1sinalnumb631").style.backgroundColor="red";
+
+//Ubi clt  quality
+d631[numbs631-1]["ub2amq"]>80?document.getElementById("q2signal631-5").style.backgroundColor="Green":document.getElementById("q2signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amq"]>60?document.getElementById("q2signal631-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amq"]>40?document.getElementById("q2signal631-3").style.backgroundColor="Gold":document.getElementById("q2signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amq"]>20?document.getElementById("q2signal631-2").style.backgroundColor="Coral":document.getElementById("q2signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amq"]>0?document.getElementById("q2signal631-1").style.backgroundColor="Red":document.getElementById("q2signal631-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb631").innerHTML=d631[numbs631-1]["ub2amq"];
+d631[numbs631-1]["ub2amq"]>0?document.getElementById("q2sinalnumb631").style.backgroundColor="Olive":document.getElementById("q2sinalnumb631").style.backgroundColor="red";
+//Ubi clt  capacity
+d631[numbs631-1]["ub2amc"]>80?document.getElementById("c2signal631-5").style.backgroundColor="Green":document.getElementById("c2signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amc"]>60?document.getElementById("c2signal631-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amc"]>40?document.getElementById("c2signal631-3").style.backgroundColor="Gold":document.getElementById("c2signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amc"]>20?document.getElementById("c2signal631-2").style.backgroundColor="Coral":document.getElementById("c2signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2amc"]>0?document.getElementById("c2signal631-1").style.backgroundColor="Red":document.getElementById("c2signal631-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb631").innerHTML=d631[numbs631-1]["ub2amc"];
+d631[numbs631-1]["ub2amc"]>0?document.getElementById("c2sinalnumb631").style.backgroundColor="Olive":document.getElementById("c2sinalnumb631").style.backgroundColor="red";
+//Ubi clt  signal
+d631[numbs631-1]["ub2sig"]>-65?document.getElementById("s2signal631-5").style.backgroundColor="Green":document.getElementById("s2signal631-5").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2sig"]>-73?document.getElementById("s2signal631-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal631-4").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2sig"]>-81?document.getElementById("s2signal631-3").style.backgroundColor="Gold":document.getElementById("s2signal631-3").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2sig"]>-89?document.getElementById("s2signal631-2").style.backgroundColor="Coral":document.getElementById("s2signal631-2").style.backgroundColor="#e0e0e0";
+d631[numbs631-1]["ub2sig"]>-97?document.getElementById("s2signal631-1").style.backgroundColor="Red":document.getElementById("s2signal631-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb631").innerHTML=d631[numbs631-1]["ub2sig"];
+d631[numbs631-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb631").style.backgroundColor="Olive":document.getElementById("s2sinalnumb631").style.backgroundColor="red";
+
+
+//Камеры и регистратор
+d631[numbs631-1]["dvr"]>0?document.getElementById("dvr631").style.backgroundColor="limegreen":document.getElementById("dvr631").style.backgroundColor="red";
+d631[numbs631-1]["cam1"]>0?document.getElementById("cam631-1").style.backgroundColor="limegreen":document.getElementById("cam631-1").style.backgroundColor="red";
+d631[numbs631-1]["cam2"]>0?document.getElementById("cam631-2").style.backgroundColor="limegreen":document.getElementById("cam631-2").style.backgroundColor="red";
+d631[numbs631-1]["cam3"]>0?document.getElementById("cam631-3").style.backgroundColor="limegreen":document.getElementById("cam631-3").style.backgroundColor="red";
+d631[numbs631-1]["cam4"]>0?document.getElementById("cam631-4").style.backgroundColor="limegreen":document.getElementById("cam631-4").style.backgroundColor="red";
+d631[numbs631-1]["sbor"]>0?document.getElementById("sbor631").style.backgroundColor="limegreen":document.getElementById("sbor631").style.backgroundColor="red";
+//Mlcache
+if (d631[numbs631-1]["ml"]>1.8)
+{document.getElementById("mlcache631").innerHTML="[ on ]";document.getElementById("mlcache631").style.backgroundColor="DarkGreen";}
+if (d631[numbs631-1]["ml"]<1.8)
+{document.getElementById("mlcache631").innerHTML="[ off ]";document.getElementById("mlcache631").style.backgroundColor="red";}
+</script>
+<div id="chart3" class="chart"></div></div>
+
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s908"><img src="monitor.png"  class ="monpng"></a> АГКМ605-1 <a  class ="paperhref" href="javascript:assa('31.173.139.214');">31.173.139.214</a>(6-ка) <span class="paper" id="well110" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.97');">146.97 RX:</a><span class="paper" id="zyx110tx" >0.0</span>Mbps TX:<span class="paper" id="zyx110rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.241');">19.241 RX:</a><span class="paper" id="modem110tx" >0.0</span>Mbps TX:<span class="paper" id="modem110rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal110-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal110-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal110-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal110-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb110" >0.0</span>
+<br>Mlcache 146.99: <span class="paperb" id="mlcache110" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem110ltx" >0.0</span>MB TX:<span class="paper" id="modem110lrx" >0.0</span>MB 
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.108');">146.108:</a><span class="paper" id="ubi110-1" >0</span> Client:<span class="paper" id="ubi110-1clt" >0</span> Q:<span class="paper" id="q1signal110-1" >&nbsp;</span><span class="paper" id="q1signal110-2" >&nbsp;</span><span class="paper" id="q1signal110-3" >&nbsp;</span><span class="paper" id="q1signal110-4" >&nbsp;</span><span class="paper" id="q1signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb110" >0.0</span>% C:<span class="paper" id="c1signal110-1" >&nbsp;</span><span class="paper" id="c1signal110-2" >&nbsp;</span><span class="paper" id="c1signal110-3" >&nbsp;</span><span class="paper" id="c1signal110-4" >&nbsp;</span><span class="paper" id="c1signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb110" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.109');">146.109:</a><span class="paper" id="ubi110-2" >0</span> Q:<span class="paper" id="q2signal110-1" >&nbsp;</span><span class="paper" id="q2signal110-2" >&nbsp;</span><span class="paper" id="q2signal110-3" >&nbsp;</span><span class="paper" id="q2signal110-4" >&nbsp;</span><span class="paper" id="q2signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb110" >0.0</span>% C:<span class="paper" id="c2signal110-1" >&nbsp;</span><span class="paper" id="c2signal110-2" >&nbsp;</span><span class="paper" id="c2signal110-3" >&nbsp;</span><span class="paper" id="c2signal110-4" >&nbsp;</span><span class="paper" id="c2signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb110" >0.0</span>% S:<span class="paper" id="s2signal110-1" >&nbsp;</span><span class="paper" id="s2signal110-2" >&nbsp;</span><span class="paper" id="s2signal110-3" >&nbsp;</span><span class="paper" id="s2signal110-4" >&nbsp;</span><span class="paper" id="s2signal110-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb110" >0.0</span>dbi
+<br>Sbor 146.98: <span id="sbor110" >&nbsp;&nbsp;&nbsp;</span> DVR 146.103: <span id="dvr110" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.104:<span id="cam110-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.105:<span id="cam110-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.106:<span id="cam110-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.107:<span id="cam110-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem110lrx").innerHTML=d110[numbs110-1]["mltx"];
+d110[numbs110-1]["mltx"]>0?document.getElementById("modem110lrx").style.backgroundColor="Black":document.getElementById("modem110lrx").style.backgroundColor="red";
+document.getElementById("modem110ltx").innerHTML=d110[numbs110-1]["mlrx"];
+d110[numbs110-1]["mlrx"]>0?document.getElementById("modem110ltx").style.backgroundColor="Maroon":document.getElementById("modem110ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well110").innerHTML=d110[numbs110-1]["value"];
+d110[numbs110-1]["value"]>0?document.getElementById("well110").style.backgroundColor="blue":document.getElementById("well110").style.backgroundColor="red";
+document.getElementById("zyx110rx").innerHTML=d110[numbs110-1]["tx"];
+d110[numbs110-1]["rx"]>0?document.getElementById("zyx110rx").style.backgroundColor="Violet":document.getElementById("zyx110rx").style.backgroundColor="red";
+document.getElementById("zyx110tx").innerHTML=d110[numbs110-1]["rx"];
+d110[numbs110-1]["tx"]>0?document.getElementById("zyx110tx").style.backgroundColor="orange":document.getElementById("zyx110tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem110rx").innerHTML=d110[numbs110-1]["mtx"];
+d110[numbs110-1]["mrx"]>0?document.getElementById("modem110rx").style.backgroundColor="IndianRed":document.getElementById("modem110rx").style.backgroundColor="red";
+document.getElementById("modem110tx").innerHTML=d110[numbs110-1]["mrx"];
+d110[numbs110-1]["mtx"]>0?document.getElementById("modem110tx").style.backgroundColor="teal":document.getElementById("modem110tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb110").innerHTML=d110[numbs110-1]["sigpoz"];
+d110[numbs110-1]["sigpoz"]>0?document.getElementById("sinalnumb110").style.backgroundColor="indigo":document.getElementById("sinalnumb110").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d110[numbs110-1]["sigpoz"]>20?document.getElementById("signal110-5").style.backgroundColor="Green":document.getElementById("signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["sigpoz"]>15?document.getElementById("signal110-4").style.backgroundColor="DarkGreen":document.getElementById("signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["sigpoz"]>10?document.getElementById("signal110-3").style.backgroundColor="Gold":document.getElementById("signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["sigpoz"]>5?document.getElementById("signal110-2").style.backgroundColor="Coral":document.getElementById("signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["sigpoz"]>0?document.getElementById("signal110-1").style.backgroundColor="Red":document.getElementById("signal110-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi110-1").innerHTML=d110[numbs110-1]["ub1"];
+d110[numbs110-1]["ub1"]>0?document.getElementById("ubi110-1").style.backgroundColor="Olive":document.getElementById("ubi110-1").style.backgroundColor="red";
+document.getElementById("ubi110-2").innerHTML=d110[numbs110-1]["ub2"];
+d110[numbs110-1]["ub2"]>0?document.getElementById("ubi110-2").style.backgroundColor="Olive":document.getElementById("ubi110-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi110-1clt").innerHTML=d110[numbs110-1]["ub1sig"];
+d110[numbs110-1]["ub1sig"]>0?document.getElementById("ubi110-1clt").style.backgroundColor="Olive":document.getElementById("ubi110-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d110[numbs110-1]["ub1amq"]>80?document.getElementById("q1signal110-5").style.backgroundColor="Green":document.getElementById("q1signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amq"]>60?document.getElementById("q1signal110-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amq"]>40?document.getElementById("q1signal110-3").style.backgroundColor="Gold":document.getElementById("q1signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amq"]>20?document.getElementById("q1signal110-2").style.backgroundColor="Coral":document.getElementById("q1signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amq"]>0?document.getElementById("q1signal110-1").style.backgroundColor="Red":document.getElementById("q1signal110-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb110").innerHTML=d110[numbs110-1]["ub1amq"];
+d110[numbs110-1]["ub1amq"]>0?document.getElementById("q1sinalnumb110").style.backgroundColor="Olive":document.getElementById("q1sinalnumb110").style.backgroundColor="red";
+//Ubi AP  capacity
+d110[numbs110-1]["ub1amc"]>80?document.getElementById("c1signal110-5").style.backgroundColor="Green":document.getElementById("c1signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amc"]>60?document.getElementById("c1signal110-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amc"]>40?document.getElementById("c1signal110-3").style.backgroundColor="Gold":document.getElementById("c1signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amc"]>20?document.getElementById("c1signal110-2").style.backgroundColor="Coral":document.getElementById("c1signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub1amc"]>0?document.getElementById("c1signal110-1").style.backgroundColor="Red":document.getElementById("c1signal110-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb110").innerHTML=d110[numbs110-1]["ub1amc"];
+d110[numbs110-1]["ub1amc"]>0?document.getElementById("c1sinalnumb110").style.backgroundColor="Olive":document.getElementById("c1sinalnumb110").style.backgroundColor="red";
+
+//Ubi clt  quality
+d110[numbs110-1]["ub2amq"]>80?document.getElementById("q2signal110-5").style.backgroundColor="Green":document.getElementById("q2signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amq"]>60?document.getElementById("q2signal110-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amq"]>40?document.getElementById("q2signal110-3").style.backgroundColor="Gold":document.getElementById("q2signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amq"]>20?document.getElementById("q2signal110-2").style.backgroundColor="Coral":document.getElementById("q2signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amq"]>0?document.getElementById("q2signal110-1").style.backgroundColor="Red":document.getElementById("q2signal110-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb110").innerHTML=d110[numbs110-1]["ub2amq"];
+d110[numbs110-1]["ub2amq"]>0?document.getElementById("q2sinalnumb110").style.backgroundColor="Olive":document.getElementById("q2sinalnumb110").style.backgroundColor="red";
+//Ubi clt  capacity
+d110[numbs110-1]["ub2amc"]>80?document.getElementById("c2signal110-5").style.backgroundColor="Green":document.getElementById("c2signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amc"]>60?document.getElementById("c2signal110-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amc"]>40?document.getElementById("c2signal110-3").style.backgroundColor="Gold":document.getElementById("c2signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amc"]>20?document.getElementById("c2signal110-2").style.backgroundColor="Coral":document.getElementById("c2signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2amc"]>0?document.getElementById("c2signal110-1").style.backgroundColor="Red":document.getElementById("c2signal110-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb110").innerHTML=d110[numbs110-1]["ub2amc"];
+d110[numbs110-1]["ub2amc"]>0?document.getElementById("c2sinalnumb110").style.backgroundColor="Olive":document.getElementById("c2sinalnumb110").style.backgroundColor="red";
+//Ubi clt  signal
+d110[numbs110-1]["ub2sig"]>-65?document.getElementById("s2signal110-5").style.backgroundColor="Green":document.getElementById("s2signal110-5").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2sig"]>-73?document.getElementById("s2signal110-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal110-4").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2sig"]>-81?document.getElementById("s2signal110-3").style.backgroundColor="Gold":document.getElementById("s2signal110-3").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2sig"]>-89?document.getElementById("s2signal110-2").style.backgroundColor="Coral":document.getElementById("s2signal110-2").style.backgroundColor="#e0e0e0";
+d110[numbs110-1]["ub2sig"]>-97?document.getElementById("s2signal110-1").style.backgroundColor="Red":document.getElementById("s2signal110-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb110").innerHTML=d110[numbs110-1]["ub2sig"];
+d110[numbs110-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb110").style.backgroundColor="Olive":document.getElementById("s2sinalnumb110").style.backgroundColor="red";
+//Камеры и регистратор
+d110[numbs110-1]["dvr"]>0?document.getElementById("dvr110").style.backgroundColor="limegreen":document.getElementById("dvr110").style.backgroundColor="red";
+d110[numbs110-1]["cam1"]>0?document.getElementById("cam110-1").style.backgroundColor="limegreen":document.getElementById("cam110-1").style.backgroundColor="red";
+d110[numbs110-1]["cam2"]>0?document.getElementById("cam110-2").style.backgroundColor="limegreen":document.getElementById("cam110-2").style.backgroundColor="red";
+d110[numbs110-1]["cam3"]>0?document.getElementById("cam110-3").style.backgroundColor="limegreen":document.getElementById("cam110-3").style.backgroundColor="red";
+d110[numbs110-1]["cam4"]>0?document.getElementById("cam110-4").style.backgroundColor="limegreen":document.getElementById("cam110-4").style.backgroundColor="red";
+d110[numbs110-1]["sbor"]>0?document.getElementById("sbor110").style.backgroundColor="limegreen":document.getElementById("sbor110").style.backgroundColor="red";
+//Mlcache
+if (d110[numbs110-1]["ml"]>1.8)
+{document.getElementById("mlcache110").innerHTML="[ on ]";document.getElementById("mlcache110").style.backgroundColor="DarkGreen";}
+if (d110[numbs110-1]["ml"]<1.8)
+{document.getElementById("mlcache110").innerHTML="[ off ]";document.getElementById("mlcache110").style.backgroundColor="red";}
+</script>
+<div id="chart4" class="chart"></div></div>
+
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s630"><img src="monitor.png" class ="monpng"> </a>АГКМ628-1 <a  class ="paperhref" href="javascript:assa('83.149.18.62');">83.149.18.62</a>(6-ка)  <span class="paper" id="well224" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.193');">146.193 RX:</a><span class="paper" id="zyx224tx" >0.0</span>Mbps TX:<span class="paper" id="zyx224rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.193');">19.193 RX:</a><span class="paper" id="modem224tx" >0.0</span>Mbps TX:<span class="paper" id="modem224rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal224-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb224" >0.0</span>
+<br>Mlcache 146.195: <span class="paperb" id="mlcache224" > [нет связи] </span>  Port_2206 RX:</a><span class="paper" id="modem224ltx" >0.0</span>MB TX:<span class="paper" id="modem224lrx" >0.0</span>MB 
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.204');">146.204:</a><span class="paper" id="ubi224-1" >0</span> Client:<span class="paper" id="ubi224-1clt" >0</span> Q:<span class="paper" id="q1signal224-1" >&nbsp;</span><span class="paper" id="q1signal224-2" >&nbsp;</span><span class="paper" id="q1signal224-3" >&nbsp;</span><span class="paper" id="q1signal224-4" >&nbsp;</span><span class="paper" id="q1signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb224" >0.0</span>% C:<span class="paper" id="c1signal224-1" >&nbsp;</span><span class="paper" id="c1signal224-2" >&nbsp;</span><span class="paper" id="c1signal224-3" >&nbsp;</span><span class="paper" id="c1signal224-4" >&nbsp;</span><span class="paper" id="c1signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb224" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.205');">146.205:</a><span class="paper" id="ubi224-2" >0</span> Q:<span class="paper" id="q2signal224-1" >&nbsp;</span><span class="paper" id="q2signal224-2" >&nbsp;</span><span class="paper" id="q2signal224-3" >&nbsp;</span><span class="paper" id="q2signal224-4" >&nbsp;</span><span class="paper" id="q2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb224" >0.0</span>% C:<span class="paper" id="c2signal224-1" >&nbsp;</span><span class="paper" id="c2signal224-2" >&nbsp;</span><span class="paper" id="c2signal224-3" >&nbsp;</span><span class="paper" id="c2signal224-4" >&nbsp;</span><span class="paper" id="c2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb224" >0.0</span>% S:<span class="paper" id="s2signal224-1" >&nbsp;</span><span class="paper" id="s2signal224-2" >&nbsp;</span><span class="paper" id="s2signal224-3" >&nbsp;</span><span class="paper" id="s2signal224-4" >&nbsp;</span><span class="paper" id="s2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb224" >0.0</span>dbi
+<br>Sbor 146.194: <span id="sbor224" >&nbsp;&nbsp;&nbsp;</span> DVR 146.199: <span id="dvr224" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.200:<span id="cam224-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.201:<span id="cam224-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.202:<span id="cam224-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.203:<span id="cam224-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem224lrx").innerHTML=d224[numbs224-1]["mltx"];
+d224[numbs224-1]["mltx"]>0?document.getElementById("modem224lrx").style.backgroundColor="Black":document.getElementById("modem224lrx").style.backgroundColor="red";
+document.getElementById("modem224ltx").innerHTML=d224[numbs224-1]["mlrx"];
+d224[numbs224-1]["mlrx"]>0?document.getElementById("modem224ltx").style.backgroundColor="Maroon":document.getElementById("modem224ltx").style.backgroundColor="red";
+
+//WAN
+document.getElementById("well224").innerHTML=d224[numbs224-1]["value"];
+d224[numbs224-1]["value"]>0?document.getElementById("well224").style.backgroundColor="blue":document.getElementById("well224").style.backgroundColor="red";
+document.getElementById("zyx224rx").innerHTML=d224[numbs224-1]["tx"];
+d224[numbs224-1]["rx"]>0?document.getElementById("zyx224rx").style.backgroundColor="Violet":document.getElementById("zyx224rx").style.backgroundColor="red";
+document.getElementById("zyx224tx").innerHTML=d224[numbs224-1]["rx"];
+d224[numbs224-1]["tx"]>0?document.getElementById("zyx224tx").style.backgroundColor="orange":document.getElementById("zyx224tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem224rx").innerHTML=d224[numbs224-1]["mtx"];
+d224[numbs224-1]["mrx"]>0?document.getElementById("modem224rx").style.backgroundColor="IndianRed":document.getElementById("modem224rx").style.backgroundColor="red";
+document.getElementById("modem224tx").innerHTML=d224[numbs224-1]["mrx"];
+d224[numbs224-1]["mtx"]>0?document.getElementById("modem224tx").style.backgroundColor="teal":document.getElementById("modem224tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb224").innerHTML=d224[numbs224-1]["sigpoz"];
+d224[numbs224-1]["sigpoz"]>0?document.getElementById("sinalnumb224").style.backgroundColor="indigo":document.getElementById("sinalnumb224").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d224[numbs224-1]["sigpoz"]>20?document.getElementById("signal224-5").style.backgroundColor="Green":document.getElementById("signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["sigpoz"]>15?document.getElementById("signal224-4").style.backgroundColor="DarkGreen":document.getElementById("signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["sigpoz"]>10?document.getElementById("signal224-3").style.backgroundColor="Gold":document.getElementById("signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["sigpoz"]>5?document.getElementById("signal224-2").style.backgroundColor="Coral":document.getElementById("signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["sigpoz"]>0?document.getElementById("signal224-1").style.backgroundColor="Red":document.getElementById("signal224-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi224-1").innerHTML=d224[numbs224-1]["ub1"];
+d224[numbs224-1]["ub1"]>0?document.getElementById("ubi224-1").style.backgroundColor="Olive":document.getElementById("ubi224-1").style.backgroundColor="red";
+document.getElementById("ubi224-2").innerHTML=d224[numbs224-1]["ub2"];
+d224[numbs224-1]["ub2"]>0?document.getElementById("ubi224-2").style.backgroundColor="Olive":document.getElementById("ubi224-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi224-1clt").innerHTML=d224[numbs224-1]["ub1sig"];
+d224[numbs224-1]["ub1sig"]>0?document.getElementById("ubi224-1clt").style.backgroundColor="Olive":document.getElementById("ubi224-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d224[numbs224-1]["ub1amq"]>80?document.getElementById("q1signal224-5").style.backgroundColor="Green":document.getElementById("q1signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amq"]>60?document.getElementById("q1signal224-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amq"]>40?document.getElementById("q1signal224-3").style.backgroundColor="Gold":document.getElementById("q1signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amq"]>20?document.getElementById("q1signal224-2").style.backgroundColor="Coral":document.getElementById("q1signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amq"]>0?document.getElementById("q1signal224-1").style.backgroundColor="Red":document.getElementById("q1signal224-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb224").innerHTML=d224[numbs224-1]["ub1amq"];
+d224[numbs224-1]["ub1amq"]>0?document.getElementById("q1sinalnumb224").style.backgroundColor="Olive":document.getElementById("q1sinalnumb224").style.backgroundColor="red";
+//Ubi AP  capacity
+d224[numbs224-1]["ub1amc"]>80?document.getElementById("c1signal224-5").style.backgroundColor="Green":document.getElementById("c1signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amc"]>60?document.getElementById("c1signal224-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amc"]>40?document.getElementById("c1signal224-3").style.backgroundColor="Gold":document.getElementById("c1signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amc"]>20?document.getElementById("c1signal224-2").style.backgroundColor="Coral":document.getElementById("c1signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub1amc"]>0?document.getElementById("c1signal224-1").style.backgroundColor="Red":document.getElementById("c1signal224-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb224").innerHTML=d224[numbs224-1]["ub1amc"];
+d224[numbs224-1]["ub1amc"]>0?document.getElementById("c1sinalnumb224").style.backgroundColor="Olive":document.getElementById("c1sinalnumb224").style.backgroundColor="red";
+
+//Ubi clt  quality
+d224[numbs224-1]["ub2amq"]>80?document.getElementById("q2signal224-5").style.backgroundColor="Green":document.getElementById("q2signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amq"]>60?document.getElementById("q2signal224-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amq"]>40?document.getElementById("q2signal224-3").style.backgroundColor="Gold":document.getElementById("q2signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amq"]>20?document.getElementById("q2signal224-2").style.backgroundColor="Coral":document.getElementById("q2signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amq"]>0?document.getElementById("q2signal224-1").style.backgroundColor="Red":document.getElementById("q2signal224-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb224").innerHTML=d224[numbs224-1]["ub2amq"];
+d224[numbs224-1]["ub2amq"]>0?document.getElementById("q2sinalnumb224").style.backgroundColor="Olive":document.getElementById("q2sinalnumb224").style.backgroundColor="red";
+//Ubi clt  capacity
+d224[numbs224-1]["ub2amc"]>80?document.getElementById("c2signal224-5").style.backgroundColor="Green":document.getElementById("c2signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amc"]>60?document.getElementById("c2signal224-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amc"]>40?document.getElementById("c2signal224-3").style.backgroundColor="Gold":document.getElementById("c2signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amc"]>20?document.getElementById("c2signal224-2").style.backgroundColor="Coral":document.getElementById("c2signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2amc"]>0?document.getElementById("c2signal224-1").style.backgroundColor="Red":document.getElementById("c2signal224-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb224").innerHTML=d224[numbs224-1]["ub2amc"];
+d224[numbs224-1]["ub2amc"]>0?document.getElementById("c2sinalnumb224").style.backgroundColor="Olive":document.getElementById("c2sinalnumb224").style.backgroundColor="red";
+//Ubi clt  signal
+d224[numbs224-1]["ub2sig"]>-65?document.getElementById("s2signal224-5").style.backgroundColor="Green":document.getElementById("s2signal224-5").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2sig"]>-73?document.getElementById("s2signal224-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal224-4").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2sig"]>-81?document.getElementById("s2signal224-3").style.backgroundColor="Gold":document.getElementById("s2signal224-3").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2sig"]>-89?document.getElementById("s2signal224-2").style.backgroundColor="Coral":document.getElementById("s2signal224-2").style.backgroundColor="#e0e0e0";
+d224[numbs224-1]["ub2sig"]>-97?document.getElementById("s2signal224-1").style.backgroundColor="Red":document.getElementById("s2signal224-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb224").innerHTML=d224[numbs224-1]["ub2sig"];
+d224[numbs224-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb224").style.backgroundColor="Olive":document.getElementById("s2sinalnumb224").style.backgroundColor="red";
+//Камеры и регистратор
+d224[numbs224-1]["dvr"]>0?document.getElementById("dvr224").style.backgroundColor="limegreen":document.getElementById("dvr224").style.backgroundColor="red";
+d224[numbs224-1]["cam1"]>0?document.getElementById("cam224-1").style.backgroundColor="limegreen":document.getElementById("cam224-1").style.backgroundColor="red";
+d224[numbs224-1]["cam2"]>0?document.getElementById("cam224-2").style.backgroundColor="limegreen":document.getElementById("cam224-2").style.backgroundColor="red";
+d224[numbs224-1]["cam3"]>0?document.getElementById("cam224-3").style.backgroundColor="limegreen":document.getElementById("cam224-3").style.backgroundColor="red";
+d224[numbs224-1]["cam4"]>0?document.getElementById("cam224-4").style.backgroundColor="limegreen":document.getElementById("cam224-4").style.backgroundColor="red";
+d224[numbs224-1]["sbor"]>0?document.getElementById("sbor224").style.backgroundColor="limegreen":document.getElementById("sbor224").style.backgroundColor="red";
+//Mlcache
+if (d224[numbs224-1]["ml"]>1.8)
+{document.getElementById("mlcache224").innerHTML="[ on ]";document.getElementById("mlcache224").style.backgroundColor="DarkGreen";}
+if (d224[numbs224-1]["ml"]<1.8)
+{document.getElementById("mlcache224").innerHTML="[ off ]";document.getElementById("mlcache224").style.backgroundColor="red";}
+</script>
+<div id="chart5" class="chart"></div></div>
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s20"><img src="monitor.png"  class ="monpng"> </a>  АГКМ73-1 <a  class ="paperhref" href="javascript:assa('31.173.139.222');">31.173.139.222</a>(Завод) <span class="paper" id="well908" >0</span>
+<br>Poz_br0 <a  class ="paperhref" href="javascript:poz('192.168.146.161');">146.161 RX:</a><span class="paper" id="zyx908tx" >0.0</span>Mbps TX:<span class="paper" id="zyx908rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.129');">19.129 RX:</a><span class="paper" id="modem908tx" >0.0</span>Mbps TX:<span class="paper" id="modem908rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal908-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal908-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal908-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal908-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb908" >0.0</span>
+<br>Mlcache 146.163: <span class="paperb" id="mlcache908" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem908ltx" >0.0</span>MB TX:<span class="paper" id="modem908lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.172');">146.172:</a><span class="paper" id="ubi908-1" >0</span> Client:<span class="paper" id="ubi908-1clt" >0</span> Q:<span class="paper" id="q1signal908-1" >&nbsp;</span><span class="paper" id="q1signal908-2" >&nbsp;</span><span class="paper" id="q1signal908-3" >&nbsp;</span><span class="paper" id="q1signal908-4" >&nbsp;</span><span class="paper" id="q1signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb908" >0.0</span>% C:<span class="paper" id="c1signal908-1" >&nbsp;</span><span class="paper" id="c1signal908-2" >&nbsp;</span><span class="paper" id="c1signal908-3" >&nbsp;</span><span class="paper" id="c1signal908-4" >&nbsp;</span><span class="paper" id="c1signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb908" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.173');">146.173:</a><span class="paper" id="ubi908-2" >0</span> Q:<span class="paper" id="q2signal908-1" >&nbsp;</span><span class="paper" id="q2signal908-2" >&nbsp;</span><span class="paper" id="q2signal908-3" >&nbsp;</span><span class="paper" id="q2signal908-4" >&nbsp;</span><span class="paper" id="q2signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb908" >0.0</span>% C:<span class="paper" id="c2signal908-1" >&nbsp;</span><span class="paper" id="c2signal908-2" >&nbsp;</span><span class="paper" id="c2signal908-3" >&nbsp;</span><span class="paper" id="c2signal908-4" >&nbsp;</span><span class="paper" id="c2signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb908" >0.0</span>% S:<span class="paper" id="s2signal908-1" >&nbsp;</span><span class="paper" id="s2signal908-2" >&nbsp;</span><span class="paper" id="s2signal908-3" >&nbsp;</span><span class="paper" id="s2signal908-4" >&nbsp;</span><span class="paper" id="s2signal908-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb908" >0.0</span>dbi
+<br>Sbor 146.162: <span id="sbor908" >&nbsp;&nbsp;&nbsp;</span> DVR 146.167: <span id="dvr908" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.168:<span id="cam908-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.169:<span id="cam908-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.170:<span id="cam908-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.171:<span id="cam908-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem908lrx").innerHTML=d908[numbs908-1]["mltx"];
+d908[numbs908-1]["mltx"]>0?document.getElementById("modem908lrx").style.backgroundColor="Black":document.getElementById("modem908lrx").style.backgroundColor="red";
+document.getElementById("modem908ltx").innerHTML=d908[numbs908-1]["mlrx"];
+d908[numbs908-1]["mlrx"]>0?document.getElementById("modem908ltx").style.backgroundColor="Maroon":document.getElementById("modem908ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well908").innerHTML=d908[numbs908-1]["value"];
+d908[numbs908-1]["value"]>0?document.getElementById("well908").style.backgroundColor="blue":document.getElementById("well908").style.backgroundColor="red";
+document.getElementById("zyx908rx").innerHTML=d908[numbs908-1]["tx"];
+d908[numbs908-1]["rx"]>0?document.getElementById("zyx908rx").style.backgroundColor="Violet":document.getElementById("zyx908rx").style.backgroundColor="red";
+document.getElementById("zyx908tx").innerHTML=d908[numbs908-1]["rx"];
+d908[numbs908-1]["tx"]>0?document.getElementById("zyx908tx").style.backgroundColor="orange":document.getElementById("zyx908tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem908rx").innerHTML=d908[numbs908-1]["mtx"];
+d908[numbs908-1]["mrx"]>0?document.getElementById("modem908rx").style.backgroundColor="IndianRed":document.getElementById("modem908rx").style.backgroundColor="red";
+document.getElementById("modem908tx").innerHTML=d908[numbs908-1]["mrx"];
+d908[numbs908-1]["mtx"]>0?document.getElementById("modem908tx").style.backgroundColor="teal":document.getElementById("modem908tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb908").innerHTML=d908[numbs908-1]["sigpoz"];
+d908[numbs908-1]["sigpoz"]>0?document.getElementById("sinalnumb908").style.backgroundColor="indigo":document.getElementById("sinalnumb908").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d908[numbs908-1]["sigpoz"]>20?document.getElementById("signal908-5").style.backgroundColor="Green":document.getElementById("signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["sigpoz"]>15?document.getElementById("signal908-4").style.backgroundColor="DarkGreen":document.getElementById("signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["sigpoz"]>10?document.getElementById("signal908-3").style.backgroundColor="Gold":document.getElementById("signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["sigpoz"]>5?document.getElementById("signal908-2").style.backgroundColor="Coral":document.getElementById("signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["sigpoz"]>0?document.getElementById("signal908-1").style.backgroundColor="Red":document.getElementById("signal908-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi908-1").innerHTML=d908[numbs908-1]["ub1"];
+d908[numbs908-1]["ub1"]>0?document.getElementById("ubi908-1").style.backgroundColor="Olive":document.getElementById("ubi908-1").style.backgroundColor="red";
+document.getElementById("ubi908-2").innerHTML=d908[numbs908-1]["ub2"];
+d908[numbs908-1]["ub2"]>0?document.getElementById("ubi908-2").style.backgroundColor="Olive":document.getElementById("ubi908-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi908-1clt").innerHTML=d908[numbs908-1]["ub1sig"];
+d908[numbs908-1]["ub1sig"]>0?document.getElementById("ubi908-1clt").style.backgroundColor="Olive":document.getElementById("ubi908-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d908[numbs908-1]["ub1amq"]>80?document.getElementById("q1signal908-5").style.backgroundColor="Green":document.getElementById("q1signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amq"]>60?document.getElementById("q1signal908-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amq"]>40?document.getElementById("q1signal908-3").style.backgroundColor="Gold":document.getElementById("q1signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amq"]>20?document.getElementById("q1signal908-2").style.backgroundColor="Coral":document.getElementById("q1signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amq"]>0?document.getElementById("q1signal908-1").style.backgroundColor="Red":document.getElementById("q1signal908-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb908").innerHTML=d908[numbs908-1]["ub1amq"];
+d908[numbs908-1]["ub1amq"]>0?document.getElementById("q1sinalnumb908").style.backgroundColor="Olive":document.getElementById("q1sinalnumb908").style.backgroundColor="red";
+//Ubi AP  capacity
+d908[numbs908-1]["ub1amc"]>80?document.getElementById("c1signal908-5").style.backgroundColor="Green":document.getElementById("c1signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amc"]>60?document.getElementById("c1signal908-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amc"]>40?document.getElementById("c1signal908-3").style.backgroundColor="Gold":document.getElementById("c1signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amc"]>20?document.getElementById("c1signal908-2").style.backgroundColor="Coral":document.getElementById("c1signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub1amc"]>0?document.getElementById("c1signal908-1").style.backgroundColor="Red":document.getElementById("c1signal908-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb908").innerHTML=d908[numbs908-1]["ub1amc"];
+d908[numbs908-1]["ub1amc"]>0?document.getElementById("c1sinalnumb908").style.backgroundColor="Olive":document.getElementById("c1sinalnumb908").style.backgroundColor="red";
+
+//Ubi clt  quality
+d908[numbs908-1]["ub2amq"]>80?document.getElementById("q2signal908-5").style.backgroundColor="Green":document.getElementById("q2signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amq"]>60?document.getElementById("q2signal908-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amq"]>40?document.getElementById("q2signal908-3").style.backgroundColor="Gold":document.getElementById("q2signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amq"]>20?document.getElementById("q2signal908-2").style.backgroundColor="Coral":document.getElementById("q2signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amq"]>0?document.getElementById("q2signal908-1").style.backgroundColor="Red":document.getElementById("q2signal908-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb908").innerHTML=d908[numbs908-1]["ub2amq"];
+d908[numbs908-1]["ub2amq"]>0?document.getElementById("q2sinalnumb908").style.backgroundColor="Olive":document.getElementById("q2sinalnumb908").style.backgroundColor="red";
+//Ubi clt  capacity
+d908[numbs908-1]["ub2amc"]>80?document.getElementById("c2signal908-5").style.backgroundColor="Green":document.getElementById("c2signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amc"]>60?document.getElementById("c2signal908-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amc"]>40?document.getElementById("c2signal908-3").style.backgroundColor="Gold":document.getElementById("c2signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amc"]>20?document.getElementById("c2signal908-2").style.backgroundColor="Coral":document.getElementById("c2signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2amc"]>0?document.getElementById("c2signal908-1").style.backgroundColor="Red":document.getElementById("c2signal908-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb908").innerHTML=d908[numbs908-1]["ub2amc"];
+d908[numbs908-1]["ub2amc"]>0?document.getElementById("c2sinalnumb908").style.backgroundColor="Olive":document.getElementById("c2sinalnumb908").style.backgroundColor="red";
+//Ubi clt  signal
+d908[numbs908-1]["ub2sig"]>-65?document.getElementById("s2signal908-5").style.backgroundColor="Green":document.getElementById("s2signal908-5").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2sig"]>-73?document.getElementById("s2signal908-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal908-4").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2sig"]>-81?document.getElementById("s2signal908-3").style.backgroundColor="Gold":document.getElementById("s2signal908-3").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2sig"]>-89?document.getElementById("s2signal908-2").style.backgroundColor="Coral":document.getElementById("s2signal908-2").style.backgroundColor="#e0e0e0";
+d908[numbs908-1]["ub2sig"]>-97?document.getElementById("s2signal908-1").style.backgroundColor="Red":document.getElementById("s2signal908-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb908").innerHTML=d908[numbs908-1]["ub2sig"];
+d908[numbs908-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb908").style.backgroundColor="Olive":document.getElementById("s2sinalnumb908").style.backgroundColor="red";
+//Камеры и регистратор
+d908[numbs908-1]["dvr"]>0?document.getElementById("dvr908").style.backgroundColor="limegreen":document.getElementById("dvr908").style.backgroundColor="red";
+d908[numbs908-1]["cam1"]>0?document.getElementById("cam908-1").style.backgroundColor="limegreen":document.getElementById("cam908-1").style.backgroundColor="red";
+d908[numbs908-1]["cam2"]>0?document.getElementById("cam908-2").style.backgroundColor="limegreen":document.getElementById("cam908-2").style.backgroundColor="red";
+d908[numbs908-1]["cam3"]>0?document.getElementById("cam908-3").style.backgroundColor="limegreen":document.getElementById("cam908-3").style.backgroundColor="red";
+d908[numbs908-1]["cam4"]>0?document.getElementById("cam908-4").style.backgroundColor="limegreen":document.getElementById("cam908-4").style.backgroundColor="red";
+d908[numbs908-1]["sbor"]>0?document.getElementById("sbor908").style.backgroundColor="limegreen":document.getElementById("sbor908").style.backgroundColor="red";
+//Mlcache
+if (d908[numbs908-1]["ml"]>1.8)
+{document.getElementById("mlcache908").innerHTML="[ on ]";document.getElementById("mlcache908").style.backgroundColor="DarkGreen";}
+if (d908[numbs908-1]["ml"]<1.8)
+{document.getElementById("mlcache908").innerHTML="[ off ]";document.getElementById("mlcache908").style.backgroundColor="red";}
+</script>
+<div id="chart6" class="chart"></div></div> 
+
+<!-- <div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s4450"><img src="monitor.png"  class ="monpng"> </a> АГКМ6611-1 <a class ="paperhref" href="javascript:assa('31.173.177.246');">31.173.177.246</a>(6-ка)  <span class="paper" id="well411" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.33');">146.33 RX:</a><span class="paper" id="zyx411tx" >0.0</span>Mbps TX:<span class="paper" id="zyx411rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.209');">19.209 RX:</a><span class="paper" id="modem411tx" >0.0</span>Mbps TX:<span class="paper" id="modem411rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal411-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal411-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal411-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal411-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb411" >0.0</span>
+<br>Mlcache 146.35: <span class="paperb" id="mlcache411" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem411ltx" >0.0</span>MB TX:<span class="paper" id="modem411lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.44');">146.44:</a><span class="paper" id="ubi411-1" >0</span> Client:<span class="paper" id="ubi411-1clt" >0</span> Q:<span class="paper" id="q1signal411-1" >&nbsp;</span><span class="paper" id="q1signal411-2" >&nbsp;</span><span class="paper" id="q1signal411-3" >&nbsp;</span><span class="paper" id="q1signal411-4" >&nbsp;</span><span class="paper" id="q1signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb411" >0.0</span>% C:<span class="paper" id="c1signal411-1" >&nbsp;</span><span class="paper" id="c1signal411-2" >&nbsp;</span><span class="paper" id="c1signal411-3" >&nbsp;</span><span class="paper" id="c1signal411-4" >&nbsp;</span><span class="paper" id="c1signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb411" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.45');">146.45:</a><span class="paper" id="ubi411-2" >0</span> Q:<span class="paper" id="q2signal411-1" >&nbsp;</span><span class="paper" id="q2signal411-2" >&nbsp;</span><span class="paper" id="q2signal411-3" >&nbsp;</span><span class="paper" id="q2signal411-4" >&nbsp;</span><span class="paper" id="q2signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb411" >0.0</span>% C:<span class="paper" id="c2signal411-1" >&nbsp;</span><span class="paper" id="c2signal411-2" >&nbsp;</span><span class="paper" id="c2signal411-3" >&nbsp;</span><span class="paper" id="c2signal411-4" >&nbsp;</span><span class="paper" id="c2signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb411" >0.0</span>% S:<span class="paper" id="s2signal411-1" >&nbsp;</span><span class="paper" id="s2signal411-2" >&nbsp;</span><span class="paper" id="s2signal411-3" >&nbsp;</span><span class="paper" id="s2signal411-4" >&nbsp;</span><span class="paper" id="s2signal411-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb411" >0.0</span>dbi
+<br>Sbor 146.34: <span id="sbor411" >&nbsp;&nbsp;&nbsp;</span> DVR 146.39: <span id="dvr411" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.40:<span id="cam411-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.41:<span id="cam411-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 146.42:<span id="cam411-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.43:<span id="cam411-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem411lrx").innerHTML=d411[numbs411-1]["mltx"];
+d411[numbs411-1]["mltx"]>0?document.getElementById("modem411lrx").style.backgroundColor="Black":document.getElementById("modem411lrx").style.backgroundColor="red";
+document.getElementById("modem411ltx").innerHTML=d411[numbs411-1]["mlrx"];
+d411[numbs411-1]["mlrx"]>0?document.getElementById("modem411ltx").style.backgroundColor="Maroon":document.getElementById("modem411ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well411").innerHTML=d411[numbs411-1]["value"];
+d411[numbs411-1]["value"]>0?document.getElementById("well411").style.backgroundColor="blue":document.getElementById("well411").style.backgroundColor="red";
+document.getElementById("zyx411rx").innerHTML=d411[numbs411-1]["tx"];
+d411[numbs411-1]["rx"]>0?document.getElementById("zyx411rx").style.backgroundColor="Violet":document.getElementById("zyx411rx").style.backgroundColor="red";
+document.getElementById("zyx411tx").innerHTML=d411[numbs411-1]["rx"];
+d411[numbs411-1]["tx"]>0?document.getElementById("zyx411tx").style.backgroundColor="orange":document.getElementById("zyx411tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem411rx").innerHTML=d411[numbs411-1]["mtx"];
+d411[numbs411-1]["mrx"]>0?document.getElementById("modem411rx").style.backgroundColor="IndianRed":document.getElementById("modem411rx").style.backgroundColor="red";
+document.getElementById("modem411tx").innerHTML=d411[numbs411-1]["mrx"];
+d411[numbs411-1]["mtx"]>0?document.getElementById("modem411tx").style.backgroundColor="teal":document.getElementById("modem411tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb411").innerHTML=d411[numbs411-1]["sigpoz"];
+d411[numbs411-1]["sigpoz"]>0?document.getElementById("sinalnumb411").style.backgroundColor="indigo":document.getElementById("sinalnumb411").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d411[numbs411-1]["sigpoz"]>20?document.getElementById("signal411-5").style.backgroundColor="Green":document.getElementById("signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["sigpoz"]>15?document.getElementById("signal411-4").style.backgroundColor="DarkGreen":document.getElementById("signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["sigpoz"]>10?document.getElementById("signal411-3").style.backgroundColor="Gold":document.getElementById("signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["sigpoz"]>5?document.getElementById("signal411-2").style.backgroundColor="Coral":document.getElementById("signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["sigpoz"]>0?document.getElementById("signal411-1").style.backgroundColor="Red":document.getElementById("signal411-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi411-1").innerHTML=d411[numbs411-1]["ub1"];
+d411[numbs411-1]["ub1"]>0?document.getElementById("ubi411-1").style.backgroundColor="Olive":document.getElementById("ubi411-1").style.backgroundColor="red";
+document.getElementById("ubi411-2").innerHTML=d411[numbs411-1]["ub2"];
+d411[numbs411-1]["ub2"]>0?document.getElementById("ubi411-2").style.backgroundColor="Olive":document.getElementById("ubi411-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi411-1clt").innerHTML=d411[numbs411-1]["ub1sig"];
+d411[numbs411-1]["ub1sig"]>0?document.getElementById("ubi411-1clt").style.backgroundColor="Olive":document.getElementById("ubi411-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d411[numbs411-1]["ub1amq"]>80?document.getElementById("q1signal411-5").style.backgroundColor="Green":document.getElementById("q1signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amq"]>60?document.getElementById("q1signal411-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amq"]>40?document.getElementById("q1signal411-3").style.backgroundColor="Gold":document.getElementById("q1signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amq"]>20?document.getElementById("q1signal411-2").style.backgroundColor="Coral":document.getElementById("q1signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amq"]>0?document.getElementById("q1signal411-1").style.backgroundColor="Red":document.getElementById("q1signal411-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb411").innerHTML=d411[numbs411-1]["ub1amq"];
+d411[numbs411-1]["ub1amq"]>0?document.getElementById("q1sinalnumb411").style.backgroundColor="Olive":document.getElementById("q1sinalnumb411").style.backgroundColor="red";
+//Ubi AP  capacity
+d411[numbs411-1]["ub1amc"]>80?document.getElementById("c1signal411-5").style.backgroundColor="Green":document.getElementById("c1signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amc"]>60?document.getElementById("c1signal411-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amc"]>40?document.getElementById("c1signal411-3").style.backgroundColor="Gold":document.getElementById("c1signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amc"]>20?document.getElementById("c1signal411-2").style.backgroundColor="Coral":document.getElementById("c1signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub1amc"]>0?document.getElementById("c1signal411-1").style.backgroundColor="Red":document.getElementById("c1signal411-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb411").innerHTML=d411[numbs411-1]["ub1amc"];
+d411[numbs411-1]["ub1amc"]>0?document.getElementById("c1sinalnumb411").style.backgroundColor="Olive":document.getElementById("c1sinalnumb411").style.backgroundColor="red";
+
+//Ubi clt  quality
+d411[numbs411-1]["ub2amq"]>80?document.getElementById("q2signal411-5").style.backgroundColor="Green":document.getElementById("q2signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amq"]>60?document.getElementById("q2signal411-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amq"]>40?document.getElementById("q2signal411-3").style.backgroundColor="Gold":document.getElementById("q2signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amq"]>20?document.getElementById("q2signal411-2").style.backgroundColor="Coral":document.getElementById("q2signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amq"]>0?document.getElementById("q2signal411-1").style.backgroundColor="Red":document.getElementById("q2signal411-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb411").innerHTML=d411[numbs411-1]["ub2amq"];
+d411[numbs411-1]["ub2amq"]>0?document.getElementById("q2sinalnumb411").style.backgroundColor="Olive":document.getElementById("q2sinalnumb411").style.backgroundColor="red";
+//Ubi clt  capacity
+d411[numbs411-1]["ub2amc"]>80?document.getElementById("c2signal411-5").style.backgroundColor="Green":document.getElementById("c2signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amc"]>60?document.getElementById("c2signal411-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amc"]>40?document.getElementById("c2signal411-3").style.backgroundColor="Gold":document.getElementById("c2signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amc"]>20?document.getElementById("c2signal411-2").style.backgroundColor="Coral":document.getElementById("c2signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2amc"]>0?document.getElementById("c2signal411-1").style.backgroundColor="Red":document.getElementById("c2signal411-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb411").innerHTML=d411[numbs411-1]["ub2amc"];
+d411[numbs411-1]["ub2amc"]>0?document.getElementById("c2sinalnumb411").style.backgroundColor="Olive":document.getElementById("c2sinalnumb411").style.backgroundColor="red";
+//Ubi clt  signal
+d411[numbs411-1]["ub2sig"]>-65?document.getElementById("s2signal411-5").style.backgroundColor="Green":document.getElementById("s2signal411-5").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2sig"]>-73?document.getElementById("s2signal411-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal411-4").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2sig"]>-81?document.getElementById("s2signal411-3").style.backgroundColor="Gold":document.getElementById("s2signal411-3").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2sig"]>-89?document.getElementById("s2signal411-2").style.backgroundColor="Coral":document.getElementById("s2signal411-2").style.backgroundColor="#e0e0e0";
+d411[numbs411-1]["ub2sig"]>-97?document.getElementById("s2signal411-1").style.backgroundColor="Red":document.getElementById("s2signal411-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb411").innerHTML=d411[numbs411-1]["ub2sig"];
+d411[numbs411-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb411").style.backgroundColor="Olive":document.getElementById("s2sinalnumb411").style.backgroundColor="red";
+//Камеры и регистратор
+d411[numbs411-1]["dvr"]>0?document.getElementById("dvr411").style.backgroundColor="limegreen":document.getElementById("dvr411").style.backgroundColor="red";
+d411[numbs411-1]["cam1"]>0?document.getElementById("cam411-1").style.backgroundColor="limegreen":document.getElementById("cam411-1").style.backgroundColor="red";
+d411[numbs411-1]["cam2"]>0?document.getElementById("cam411-2").style.backgroundColor="limegreen":document.getElementById("cam411-2").style.backgroundColor="red";
+d411[numbs411-1]["cam3"]>0?document.getElementById("cam411-3").style.backgroundColor="limegreen":document.getElementById("cam411-3").style.backgroundColor="red";
+d411[numbs411-1]["cam4"]>0?document.getElementById("cam411-4").style.backgroundColor="limegreen":document.getElementById("cam411-4").style.backgroundColor="red";
+d411[numbs411-1]["sbor"]>0?document.getElementById("sbor411").style.backgroundColor="limegreen":document.getElementById("sbor411").style.backgroundColor="red";
+//Mlcache
+if (d411[numbs411-1]["ml"]>1.8)
+{document.getElementById("mlcache411").innerHTML="[ on ]";document.getElementById("mlcache411").style.backgroundColor="DarkGreen";}
+if (d411[numbs411-1]["ml"]<1.8)
+{document.getElementById("mlcache411").innerHTML="[ off ]";document.getElementById("mlcache411").style.backgroundColor="red";}
+</script>
+<div id="chart7" class="chart"></div></div> -->
+
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s629"><img src="monitor.png"  class ="monpng"> </a><!-- <a href="http://hydrofalll.ddns.net/mon/8484.html"><img src="video.png" class ="monpng"> </a>--> АГКМ629-1 <a class ="paperhref" href="javascript:assa('37.29.8.14');">37.29.8.14</a>(6-ка)  <span class="paper" id="well4450" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.17');">146.17 RX:</a><span class="paper" id="zyx4450tx" >0.0</span>Mbps TX:<span class="paper" id="zyx4450rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.177');">19.177 RX:</a><span class="paper" id="modem4450tx" >0.0</span>Mbps TX:<span class="paper" id="modem4450rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal4450-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb4450" >0.0</span>
+<br>Mlcache 146.18: <span class="paperb" id="mlcache4450" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem4450ltx" >0.0</span>MB TX:<span class="paper" id="modem4450lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.24');">146.24:</a><span class="paper" id="ubi4450-1" >0</span> Client:<span class="paper" id="ubi4450-1clt" >0</span> Q:<span class="paper" id="q1signal4450-1" >&nbsp;</span><span class="paper" id="q1signal4450-2" >&nbsp;</span><span class="paper" id="q1signal4450-3" >&nbsp;</span><span class="paper" id="q1signal4450-4" >&nbsp;</span><span class="paper" id="q1signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb4450" >0.0</span>% C:<span class="paper" id="c1signal4450-1" >&nbsp;</span><span class="paper" id="c1signal4450-2" >&nbsp;</span><span class="paper" id="c1signal4450-3" >&nbsp;</span><span class="paper" id="c1signal4450-4" >&nbsp;</span><span class="paper" id="c1signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb4450" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.25');">146.25:</a><span class="paper" id="ubi4450-2" >0</span> Q:<span class="paper" id="q2signal4450-1" >&nbsp;</span><span class="paper" id="q2signal4450-2" >&nbsp;</span><span class="paper" id="q2signal4450-3" >&nbsp;</span><span class="paper" id="q2signal4450-4" >&nbsp;</span><span class="paper" id="q2signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb4450" >0.0</span>% C:<span class="paper" id="c2signal4450-1" >&nbsp;</span><span class="paper" id="c2signal4450-2" >&nbsp;</span><span class="paper" id="c2signal4450-3" >&nbsp;</span><span class="paper" id="c2signal4450-4" >&nbsp;</span><span class="paper" id="c2signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb4450" >0.0</span>% S:<span class="paper" id="s2signal4450-1" >&nbsp;</span><span class="paper" id="s2signal4450-2" >&nbsp;</span><span class="paper" id="s2signal4450-3" >&nbsp;</span><span class="paper" id="s2signal4450-4" >&nbsp;</span><span class="paper" id="s2signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb4450" >0.0</span>dbi
+<br>Sbor 146.19: <span id="sbor4450" >&nbsp;&nbsp;&nbsp;</span> DVR 146.20: <span id="dvr4450" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.26:<span id="cam4450-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.27:<span id="cam4450-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 146.28:<span id="cam4450-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.29:<span id="cam4450-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem4450lrx").innerHTML=d4450[numbs4450-1]["mltx"];
+d4450[numbs4450-1]["mltx"]>0?document.getElementById("modem4450lrx").style.backgroundColor="Black":document.getElementById("modem4450lrx").style.backgroundColor="red";
+document.getElementById("modem4450ltx").innerHTML=d4450[numbs4450-1]["mlrx"];
+d4450[numbs4450-1]["mlrx"]>0?document.getElementById("modem4450ltx").style.backgroundColor="Maroon":document.getElementById("modem4450ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well4450").innerHTML=d4450[numbs4450-1]["value"];
+d4450[numbs4450-1]["value"]>0?document.getElementById("well4450").style.backgroundColor="blue":document.getElementById("well4450").style.backgroundColor="red";
+document.getElementById("zyx4450rx").innerHTML=d4450[numbs4450-1]["tx"];
+d4450[numbs4450-1]["rx"]>0?document.getElementById("zyx4450rx").style.backgroundColor="Violet":document.getElementById("zyx4450rx").style.backgroundColor="red";
+document.getElementById("zyx4450tx").innerHTML=d4450[numbs4450-1]["rx"];
+d4450[numbs4450-1]["tx"]>0?document.getElementById("zyx4450tx").style.backgroundColor="orange":document.getElementById("zyx4450tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem4450rx").innerHTML=d4450[numbs4450-1]["mtx"];
+d4450[numbs4450-1]["mrx"]>0?document.getElementById("modem4450rx").style.backgroundColor="IndianRed":document.getElementById("modem4450rx").style.backgroundColor="red";
+document.getElementById("modem4450tx").innerHTML=d4450[numbs4450-1]["mrx"];
+d4450[numbs4450-1]["mtx"]>0?document.getElementById("modem4450tx").style.backgroundColor="teal":document.getElementById("modem4450tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb4450").innerHTML=d4450[numbs4450-1]["sigpoz"];
+d4450[numbs4450-1]["sigpoz"]>0?document.getElementById("sinalnumb4450").style.backgroundColor="indigo":document.getElementById("sinalnumb4450").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d4450[numbs4450-1]["sigpoz"]>20?document.getElementById("signal4450-5").style.backgroundColor="Green":document.getElementById("signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>15?document.getElementById("signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>10?document.getElementById("signal4450-3").style.backgroundColor="Gold":document.getElementById("signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>5?document.getElementById("signal4450-2").style.backgroundColor="Coral":document.getElementById("signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>0?document.getElementById("signal4450-1").style.backgroundColor="Red":document.getElementById("signal4450-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d4450[numbs4450-1]["ml"]>1.8)
+{document.getElementById("mlcache4450").innerHTML="[ on ]";document.getElementById("mlcache4450").style.backgroundColor="DarkGreen";}
+if (d4450[numbs4450-1]["ml"]<1.8)
+{document.getElementById("mlcache4450").innerHTML="[ off ]";document.getElementById("mlcache4450").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d4450[numbs4450-1]["sbor"]>0?document.getElementById("sbor4450").style.backgroundColor="limegreen":document.getElementById("sbor4450").style.backgroundColor="red";
+d4450[numbs4450-1]["dvr"]>0?document.getElementById("dvr4450").style.backgroundColor="limegreen":document.getElementById("dvr4450").style.backgroundColor="red";
+d4450[numbs4450-1]["cam1"]>0?document.getElementById("cam4450-1").style.backgroundColor="limegreen":document.getElementById("cam4450-1").style.backgroundColor="red";
+d4450[numbs4450-1]["cam2"]>0?document.getElementById("cam4450-2").style.backgroundColor="limegreen":document.getElementById("cam4450-2").style.backgroundColor="red";
+d4450[numbs4450-1]["cam3"]>0?document.getElementById("cam4450-3").style.backgroundColor="limegreen":document.getElementById("cam4450-3").style.backgroundColor="red";
+d4450[numbs4450-1]["cam4"]>0?document.getElementById("cam4450-4").style.backgroundColor="limegreen":document.getElementById("cam4450-4").style.backgroundColor="red";
+//Точки
+//Точки
+document.getElementById("ubi4450-1").innerHTML=d4450[numbs4450-1]["ub1"];
+d4450[numbs4450-1]["ub1"]>0?document.getElementById("ubi4450-1").style.backgroundColor="Olive":document.getElementById("ubi4450-1").style.backgroundColor="red";
+document.getElementById("ubi4450-2").innerHTML=d4450[numbs4450-1]["ub2"];
+d4450[numbs4450-1]["ub2"]>0?document.getElementById("ubi4450-2").style.backgroundColor="Olive":document.getElementById("ubi4450-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi4450-1clt").innerHTML=d4450[numbs4450-1]["ub1sig"];
+d4450[numbs4450-1]["ub1sig"]>0?document.getElementById("ubi4450-1clt").style.backgroundColor="Olive":document.getElementById("ubi4450-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d4450[numbs4450-1]["ub1amq"]>80?document.getElementById("q1signal4450-5").style.backgroundColor="Green":document.getElementById("q1signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amq"]>60?document.getElementById("q1signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amq"]>40?document.getElementById("q1signal4450-3").style.backgroundColor="Gold":document.getElementById("q1signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amq"]>20?document.getElementById("q1signal4450-2").style.backgroundColor="Coral":document.getElementById("q1signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amq"]>0?document.getElementById("q1signal4450-1").style.backgroundColor="Red":document.getElementById("q1signal4450-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb4450").innerHTML=d4450[numbs4450-1]["ub1amq"];
+d4450[numbs4450-1]["ub1amq"]>0?document.getElementById("q1sinalnumb4450").style.backgroundColor="Olive":document.getElementById("q1sinalnumb4450").style.backgroundColor="red";
+//Ubi AP  capacity
+d4450[numbs4450-1]["ub1amc"]>80?document.getElementById("c1signal4450-5").style.backgroundColor="Green":document.getElementById("c1signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amc"]>60?document.getElementById("c1signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amc"]>40?document.getElementById("c1signal4450-3").style.backgroundColor="Gold":document.getElementById("c1signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amc"]>20?document.getElementById("c1signal4450-2").style.backgroundColor="Coral":document.getElementById("c1signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub1amc"]>0?document.getElementById("c1signal4450-1").style.backgroundColor="Red":document.getElementById("c1signal4450-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb4450").innerHTML=d4450[numbs4450-1]["ub1amc"];
+d4450[numbs4450-1]["ub1amc"]>0?document.getElementById("c1sinalnumb4450").style.backgroundColor="Olive":document.getElementById("c1sinalnumb4450").style.backgroundColor="red";
+
+//Ubi clt  quality
+d4450[numbs4450-1]["ub2amq"]>80?document.getElementById("q2signal4450-5").style.backgroundColor="Green":document.getElementById("q2signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amq"]>60?document.getElementById("q2signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amq"]>40?document.getElementById("q2signal4450-3").style.backgroundColor="Gold":document.getElementById("q2signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amq"]>20?document.getElementById("q2signal4450-2").style.backgroundColor="Coral":document.getElementById("q2signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amq"]>0?document.getElementById("q2signal4450-1").style.backgroundColor="Red":document.getElementById("q2signal4450-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb4450").innerHTML=d4450[numbs4450-1]["ub2amq"];
+d4450[numbs4450-1]["ub2amq"]>0?document.getElementById("q2sinalnumb4450").style.backgroundColor="Olive":document.getElementById("q2sinalnumb4450").style.backgroundColor="red";
+//Ubi clt  capacity
+d4450[numbs4450-1]["ub2amc"]>80?document.getElementById("c2signal4450-5").style.backgroundColor="Green":document.getElementById("c2signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amc"]>60?document.getElementById("c2signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amc"]>40?document.getElementById("c2signal4450-3").style.backgroundColor="Gold":document.getElementById("c2signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amc"]>20?document.getElementById("c2signal4450-2").style.backgroundColor="Coral":document.getElementById("c2signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2amc"]>0?document.getElementById("c2signal4450-1").style.backgroundColor="Red":document.getElementById("c2signal4450-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb4450").innerHTML=d4450[numbs4450-1]["ub2amc"];
+d4450[numbs4450-1]["ub2amc"]>0?document.getElementById("c2sinalnumb4450").style.backgroundColor="Olive":document.getElementById("c2sinalnumb4450").style.backgroundColor="red";
+//Ubi clt  signal
+d4450[numbs4450-1]["ub2sig"]>-65?document.getElementById("s2signal4450-5").style.backgroundColor="Green":document.getElementById("s2signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2sig"]>-73?document.getElementById("s2signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2sig"]>-81?document.getElementById("s2signal4450-3").style.backgroundColor="Gold":document.getElementById("s2signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2sig"]>-89?document.getElementById("s2signal4450-2").style.backgroundColor="Coral":document.getElementById("s2signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["ub2sig"]>-97?document.getElementById("s2signal4450-1").style.backgroundColor="Red":document.getElementById("s2signal4450-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb4450").innerHTML=d4450[numbs4450-1]["ub2sig"];
+d4450[numbs4450-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb4450").style.backgroundColor="Olive":document.getElementById("s2sinalnumb4450").style.backgroundColor="red";
+</script>
+<div id="chart2" class="chart"></div></div>
+
+<!-- <div class="megaleg">
+<div class="leg22sm"><a href="svg/index.php?well=s629"><img src="monitor.png"  class ="monpng"> </a>  АГКМ629-1 <a class ="paperhref" href="javascript:assa('37.29.8.14');">37.29.8.14</a>(6-ка) <span class="paper" id="well4450" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.17');">146.17 RX:</a><span class="paper" id="zyx4450tx" >0.0</span>Mbps TX:<span class="paper" id="zyx4450rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.177');">19.177 RX:</a><span class="paper" id="modem4450tx" >0.0</span>Mbps TX:<span class="paper" id="modem4450rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal4450-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal4450-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb4450" >0.0</span>
+<br>Mlcache 146.18: <span class="paperb" id="mlcache4450" > [нет связи] </span> Sbor 146.19: <span id="sbor4450" >&nbsp;&nbsp;&nbsp;</span><br>DVR_analog 146.24: <span id="dvr4450" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 :<span id="cam4450-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 :<span id="cam4450-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 :<span id="cam4450-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 :<span id="cam4450-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//WAN
+document.getElementById("well4450").innerHTML=d4450[numbs4450-1]["value"];
+d4450[numbs4450-1]["value"]>0?document.getElementById("well4450").style.backgroundColor="blue":document.getElementById("well4450").style.backgroundColor="red";
+document.getElementById("zyx4450rx").innerHTML=d4450[numbs4450-1]["tx"];
+d4450[numbs4450-1]["rx"]>0?document.getElementById("zyx4450rx").style.backgroundColor="Violet":document.getElementById("zyx4450rx").style.backgroundColor="red";
+document.getElementById("zyx4450tx").innerHTML=d4450[numbs4450-1]["rx"];
+d4450[numbs4450-1]["tx"]>0?document.getElementById("zyx4450tx").style.backgroundColor="orange":document.getElementById("zyx4450tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem4450rx").innerHTML=d4450[numbs4450-1]["mtx"];
+d4450[numbs4450-1]["mrx"]>0?document.getElementById("modem4450rx").style.backgroundColor="IndianRed":document.getElementById("modem4450rx").style.backgroundColor="red";
+document.getElementById("modem4450tx").innerHTML=d4450[numbs4450-1]["mrx"];
+d4450[numbs4450-1]["mtx"]>0?document.getElementById("modem4450tx").style.backgroundColor="teal":document.getElementById("modem4450tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb4450").innerHTML=d4450[numbs4450-1]["sigpoz"];
+d4450[numbs4450-1]["sigpoz"]>0?document.getElementById("sinalnumb4450").style.backgroundColor="indigo":document.getElementById("sinalnumb4450").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d4450[numbs4450-1]["sigpoz"]>20?document.getElementById("signal4450-5").style.backgroundColor="Green":document.getElementById("signal4450-5").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>15?document.getElementById("signal4450-4").style.backgroundColor="DarkGreen":document.getElementById("signal4450-4").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>10?document.getElementById("signal4450-3").style.backgroundColor="Gold":document.getElementById("signal4450-3").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>5?document.getElementById("signal4450-2").style.backgroundColor="Coral":document.getElementById("signal4450-2").style.backgroundColor="#e0e0e0";
+d4450[numbs4450-1]["sigpoz"]>0?document.getElementById("signal4450-1").style.backgroundColor="Red":document.getElementById("signal4450-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d4450[numbs4450-1]["ml"]>1.8)
+{document.getElementById("mlcache4450").innerHTML="[ on ]";document.getElementById("mlcache4450").style.backgroundColor="DarkGreen";}
+if (d4450[numbs4450-1]["ml"]<1.8)
+{document.getElementById("mlcache4450").innerHTML="[ off ]";document.getElementById("mlcache4450").style.backgroundColor="red";}
+//Камеры и регистратор
+d4450[numbs4450-1]["dvr"]>0?document.getElementById("dvr4450").style.backgroundColor="limegreen":document.getElementById("dvr4450").style.backgroundColor="red";
+d4450[numbs4450-1]["sbor"]>0?document.getElementById("sbor4450").style.backgroundColor="limegreen":document.getElementById("sbor4450").style.backgroundColor="red";
+d4450[numbs4450-1]["cam1"]>0?document.getElementById("cam4450-1").style.backgroundColor="limegreen":document.getElementById("cam4450-1").style.backgroundColor="red";
+d4450[numbs4450-1]["cam2"]>0?document.getElementById("cam4450-2").style.backgroundColor="limegreen":document.getElementById("cam4450-2").style.backgroundColor="red";
+d4450[numbs4450-1]["cam3"]>0?document.getElementById("cam4450-3").style.backgroundColor="limegreen":document.getElementById("cam4450-3").style.backgroundColor="red";
+d4450[numbs4450-1]["cam4"]>0?document.getElementById("cam4450-4").style.backgroundColor="limegreen":document.getElementById("cam4450-4").style.backgroundColor="red";
+
+</script>
+<div id="chart2" class="chart"></div></div> -->
+
+<!--  <div class="megaleg">
+<div class="leg22sm"><a href="svg/index.php?well=s89"><img src="monitor.png"  class ="monpng"> </a> АГКМ96-1 <a class ="paperhref" href="javascript:assa('37.29.103.214');">37.29.103.214</a>(Комс.)  <span class="paper" id="well89" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.49');">146.49 RX:</a><span class="paper" id="zyx89tx" >0.0</span>Mbps TX:<span class="paper" id="zyx89rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.161');">19.161 RX:</a><span class="paper" id="modem89tx" >0.0</span>Mbps TX:<span class="paper" id="modem89rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal89-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb89" >0.0</span>
+<br>Mlcache 146.51: <span class="paperb" id="mlcache89" > [нет связи] </span> Sbor 146.50: <span id="sbor89" >&nbsp;&nbsp;&nbsp;</span><br>DVR_analog 146.53: <span id="dvr89" >&nbsp;&nbsp;&nbsp;</span>
+<br>Ubi_ap_kung 146.53:<span class="paper" id="ubi89-1" >0</span> Ubi_client_bur 146.53:<span class="paper" id="ubi89-2" >0</span>
+<br>Cam1 :<span id="cam89-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 :<span id="cam89-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 :<span id="cam89-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 :<span id="cam89-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//WAN
+document.getElementById("well89").innerHTML=d89[numbs89-1]["value"];
+d89[numbs89-1]["value"]>0?document.getElementById("well89").style.backgroundColor="blue":document.getElementById("well89").style.backgroundColor="red";
+document.getElementById("zyx89rx").innerHTML=d89[numbs89-1]["tx"];
+d89[numbs89-1]["rx"]>0?document.getElementById("zyx89rx").style.backgroundColor="Violet":document.getElementById("zyx89rx").style.backgroundColor="red";
+document.getElementById("zyx89tx").innerHTML=d89[numbs89-1]["rx"];
+d89[numbs89-1]["tx"]>0?document.getElementById("zyx89tx").style.backgroundColor="orange":document.getElementById("zyx89tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem89rx").innerHTML=d89[numbs89-1]["mtx"];
+d89[numbs89-1]["mrx"]>0?document.getElementById("modem89rx").style.backgroundColor="IndianRed":document.getElementById("modem89rx").style.backgroundColor="red";
+document.getElementById("modem89tx").innerHTML=d89[numbs89-1]["mrx"];
+d89[numbs89-1]["mtx"]>0?document.getElementById("modem89tx").style.backgroundColor="teal":document.getElementById("modem89tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb89").innerHTML=d89[numbs89-1]["sigpoz"];
+d89[numbs89-1]["sigpoz"]>0?document.getElementById("sinalnumb89").style.backgroundColor="indigo":document.getElementById("sinalnumb89").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d89[numbs89-1]["sigpoz"]>20?document.getElementById("signal89-5").style.backgroundColor="Green":document.getElementById("signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>15?document.getElementById("signal89-4").style.backgroundColor="DarkGreen":document.getElementById("signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>10?document.getElementById("signal89-3").style.backgroundColor="Gold":document.getElementById("signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>5?document.getElementById("signal89-2").style.backgroundColor="Coral":document.getElementById("signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>0?document.getElementById("signal89-1").style.backgroundColor="Red":document.getElementById("signal89-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d89[numbs89-1]["ml"]>1.8)
+{document.getElementById("mlcache89").innerHTML="[ on ]";document.getElementById("mlcache89").style.backgroundColor="DarkGreen";}
+if (d89[numbs89-1]["ml"]<1.8)
+{document.getElementById("mlcache89").innerHTML="[ off ]";document.getElementById("mlcache89").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d89[numbs89-1]["sbor"]>0?document.getElementById("sbor89").style.backgroundColor="limegreen":document.getElementById("sbor89").style.backgroundColor="red";
+d89[numbs89-1]["dvr"]>0?document.getElementById("dvr89").style.backgroundColor="limegreen":document.getElementById("dvr89").style.backgroundColor="red";
+d89[numbs89-1]["cam1"]>0?document.getElementById("cam89-1").style.backgroundColor="limegreen":document.getElementById("cam89-1").style.backgroundColor="red";
+d89[numbs89-1]["cam2"]>0?document.getElementById("cam89-2").style.backgroundColor="limegreen":document.getElementById("cam89-2").style.backgroundColor="red";
+d89[numbs89-1]["cam3"]>0?document.getElementById("cam89-3").style.backgroundColor="limegreen":document.getElementById("cam89-3").style.backgroundColor="red";
+d89[numbs89-1]["cam4"]>0?document.getElementById("cam89-4").style.backgroundColor="limegreen":document.getElementById("cam89-4").style.backgroundColor="red";
+//Точки
+//document.getElementById("ubi89-1").innerHTML=d89[numbs89-1]["ub1"];
+//d89[numbs89-1]["ub1"]>0?document.getElementById("ubi89-1").style.backgroundColor="Olive":document.getElementById("ubi89-1").style.backgroundColor="red";
+//document.getElementById("ubi89-2").innerHTML=d89[numbs89-1]["ub2"];
+//d89[numbs89-1]["ub2"]>0?document.getElementById("ubi89-2").style.backgroundColor="Olive":document.getElementById("ubi89-2").style.backgroundColor="red";
+</script>
+<div id="chart9" class="chart"></div></div> -->
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s110"><img src="monitor.png"  class ="monpng"> </a> АГКМ99-1 <a class ="paperhref" href="javascript:assa('37.29.103.214');">37.29.103.214</a>(Завод)  <span class="paper" id="well89" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.147.65');">147.65 RX:</a><span class="paper" id="zyx89tx" >0.0</span>Mbps TX:<span class="paper" id="zyx89rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.161');">19.161 RX:</a><span class="paper" id="modem89tx" >0.0</span>Mbps TX:<span class="paper" id="modem89rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal89-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb89" >0.0</span>
+<br>Mlcache 147.67: <span class="paperb" id="mlcache89" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem89ltx" >0.0</span>MB TX:<span class="paper" id="modem89lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.147.76');">147.76:</a><span class="paper" id="ubi89-1" >0</span> Client:<span class="paper" id="ubi89-1clt" >0</span> Q:<span class="paper" id="q1signal89-1" >&nbsp;</span><span class="paper" id="q1signal89-2" >&nbsp;</span><span class="paper" id="q1signal89-3" >&nbsp;</span><span class="paper" id="q1signal89-4" >&nbsp;</span><span class="paper" id="q1signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb89" >0.0</span>% C:<span class="paper" id="c1signal89-1" >&nbsp;</span><span class="paper" id="c1signal89-2" >&nbsp;</span><span class="paper" id="c1signal89-3" >&nbsp;</span><span class="paper" id="c1signal89-4" >&nbsp;</span><span class="paper" id="c1signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb89" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.147.77');">147.77:</a><span class="paper" id="ubi89-2" >0</span> Q:<span class="paper" id="q2signal89-1" >&nbsp;</span><span class="paper" id="q2signal89-2" >&nbsp;</span><span class="paper" id="q2signal89-3" >&nbsp;</span><span class="paper" id="q2signal89-4" >&nbsp;</span><span class="paper" id="q2signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb89" >0.0</span>% C:<span class="paper" id="c2signal89-1" >&nbsp;</span><span class="paper" id="c2signal89-2" >&nbsp;</span><span class="paper" id="c2signal89-3" >&nbsp;</span><span class="paper" id="c2signal89-4" >&nbsp;</span><span class="paper" id="c2signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb89" >0.0</span>% S:<span class="paper" id="s2signal89-1" >&nbsp;</span><span class="paper" id="s2signal89-2" >&nbsp;</span><span class="paper" id="s2signal89-3" >&nbsp;</span><span class="paper" id="s2signal89-4" >&nbsp;</span><span class="paper" id="s2signal89-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb89" >0.0</span>dbi
+<br>Sbor 147.66: <span id="sbor89" >&nbsp;&nbsp;&nbsp;</span> DVR 147.71: <span id="dvr89" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 147.72:<span id="cam89-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 147.73:<span id="cam89-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 147.74:<span id="cam89-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 147.75:<span id="cam89-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem89lrx").innerHTML=d89[numbs89-1]["mltx"];
+d89[numbs89-1]["mltx"]>0?document.getElementById("modem89lrx").style.backgroundColor="Black":document.getElementById("modem89lrx").style.backgroundColor="red";
+document.getElementById("modem89ltx").innerHTML=d89[numbs89-1]["mlrx"];
+d89[numbs89-1]["mlrx"]>0?document.getElementById("modem89ltx").style.backgroundColor="Maroon":document.getElementById("modem89ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well89").innerHTML=d89[numbs89-1]["value"];
+d89[numbs89-1]["value"]>0?document.getElementById("well89").style.backgroundColor="blue":document.getElementById("well89").style.backgroundColor="red";
+document.getElementById("zyx89rx").innerHTML=d89[numbs89-1]["tx"];
+d89[numbs89-1]["rx"]>0?document.getElementById("zyx89rx").style.backgroundColor="Violet":document.getElementById("zyx89rx").style.backgroundColor="red";
+document.getElementById("zyx89tx").innerHTML=d89[numbs89-1]["rx"];
+d89[numbs89-1]["tx"]>0?document.getElementById("zyx89tx").style.backgroundColor="orange":document.getElementById("zyx89tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem89rx").innerHTML=d89[numbs89-1]["mtx"];
+d89[numbs89-1]["mrx"]>0?document.getElementById("modem89rx").style.backgroundColor="IndianRed":document.getElementById("modem89rx").style.backgroundColor="red";
+document.getElementById("modem89tx").innerHTML=d89[numbs89-1]["mrx"];
+d89[numbs89-1]["mtx"]>0?document.getElementById("modem89tx").style.backgroundColor="teal":document.getElementById("modem89tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb89").innerHTML=d89[numbs89-1]["sigpoz"];
+d89[numbs89-1]["sigpoz"]>0?document.getElementById("sinalnumb89").style.backgroundColor="indigo":document.getElementById("sinalnumb89").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d89[numbs89-1]["sigpoz"]>20?document.getElementById("signal89-5").style.backgroundColor="Green":document.getElementById("signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>15?document.getElementById("signal89-4").style.backgroundColor="DarkGreen":document.getElementById("signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>10?document.getElementById("signal89-3").style.backgroundColor="Gold":document.getElementById("signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>5?document.getElementById("signal89-2").style.backgroundColor="Coral":document.getElementById("signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["sigpoz"]>0?document.getElementById("signal89-1").style.backgroundColor="Red":document.getElementById("signal89-1").style.backgroundColor="#e0e0e0";
+//Точки
+document.getElementById("ubi89-1").innerHTML=d89[numbs89-1]["ub1"];
+d89[numbs89-1]["ub1"]>0?document.getElementById("ubi89-1").style.backgroundColor="Olive":document.getElementById("ubi89-1").style.backgroundColor="red";
+document.getElementById("ubi89-2").innerHTML=d89[numbs89-1]["ub2"];
+d89[numbs89-1]["ub2"]>0?document.getElementById("ubi89-2").style.backgroundColor="Olive":document.getElementById("ubi89-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi89-1clt").innerHTML=d89[numbs89-1]["ub1sig"];
+d89[numbs89-1]["ub1sig"]>0?document.getElementById("ubi89-1clt").style.backgroundColor="Olive":document.getElementById("ubi89-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d89[numbs89-1]["ub1amq"]>80?document.getElementById("q1signal89-5").style.backgroundColor="Green":document.getElementById("q1signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amq"]>60?document.getElementById("q1signal89-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amq"]>40?document.getElementById("q1signal89-3").style.backgroundColor="Gold":document.getElementById("q1signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amq"]>20?document.getElementById("q1signal89-2").style.backgroundColor="Coral":document.getElementById("q1signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amq"]>0?document.getElementById("q1signal89-1").style.backgroundColor="Red":document.getElementById("q1signal89-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb89").innerHTML=d89[numbs89-1]["ub1amq"];
+d89[numbs89-1]["ub1amq"]>0?document.getElementById("q1sinalnumb89").style.backgroundColor="Olive":document.getElementById("q1sinalnumb89").style.backgroundColor="red";
+//Ubi AP  capacity
+d89[numbs89-1]["ub1amc"]>80?document.getElementById("c1signal89-5").style.backgroundColor="Green":document.getElementById("c1signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amc"]>60?document.getElementById("c1signal89-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amc"]>40?document.getElementById("c1signal89-3").style.backgroundColor="Gold":document.getElementById("c1signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amc"]>20?document.getElementById("c1signal89-2").style.backgroundColor="Coral":document.getElementById("c1signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub1amc"]>0?document.getElementById("c1signal89-1").style.backgroundColor="Red":document.getElementById("c1signal89-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb89").innerHTML=d89[numbs89-1]["ub1amc"];
+d89[numbs89-1]["ub1amc"]>0?document.getElementById("c1sinalnumb89").style.backgroundColor="Olive":document.getElementById("c1sinalnumb89").style.backgroundColor="red";
+
+//Ubi clt  quality
+d89[numbs89-1]["ub2amq"]>80?document.getElementById("q2signal89-5").style.backgroundColor="Green":document.getElementById("q2signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amq"]>60?document.getElementById("q2signal89-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amq"]>40?document.getElementById("q2signal89-3").style.backgroundColor="Gold":document.getElementById("q2signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amq"]>20?document.getElementById("q2signal89-2").style.backgroundColor="Coral":document.getElementById("q2signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amq"]>0?document.getElementById("q2signal89-1").style.backgroundColor="Red":document.getElementById("q2signal89-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb89").innerHTML=d89[numbs89-1]["ub2amq"];
+d89[numbs89-1]["ub2amq"]>0?document.getElementById("q2sinalnumb89").style.backgroundColor="Olive":document.getElementById("q2sinalnumb89").style.backgroundColor="red";
+//Ubi clt  capacity
+d89[numbs89-1]["ub2amc"]>80?document.getElementById("c2signal89-5").style.backgroundColor="Green":document.getElementById("c2signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amc"]>60?document.getElementById("c2signal89-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amc"]>40?document.getElementById("c2signal89-3").style.backgroundColor="Gold":document.getElementById("c2signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amc"]>20?document.getElementById("c2signal89-2").style.backgroundColor="Coral":document.getElementById("c2signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2amc"]>0?document.getElementById("c2signal89-1").style.backgroundColor="Red":document.getElementById("c2signal89-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb89").innerHTML=d89[numbs89-1]["ub2amc"];
+d89[numbs89-1]["ub2amc"]>0?document.getElementById("c2sinalnumb89").style.backgroundColor="Olive":document.getElementById("c2sinalnumb89").style.backgroundColor="red";
+//Ubi clt  signal
+d89[numbs89-1]["ub2sig"]>-65?document.getElementById("s2signal89-5").style.backgroundColor="Green":document.getElementById("s2signal89-5").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2sig"]>-73?document.getElementById("s2signal89-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal89-4").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2sig"]>-81?document.getElementById("s2signal89-3").style.backgroundColor="Gold":document.getElementById("s2signal89-3").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2sig"]>-89?document.getElementById("s2signal89-2").style.backgroundColor="Coral":document.getElementById("s2signal89-2").style.backgroundColor="#e0e0e0";
+d89[numbs89-1]["ub2sig"]>-97?document.getElementById("s2signal89-1").style.backgroundColor="Red":document.getElementById("s2signal89-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb89").innerHTML=d89[numbs89-1]["ub2sig"];
+d89[numbs89-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb89").style.backgroundColor="Olive":document.getElementById("s2sinalnumb89").style.backgroundColor="red";
+//Камеры и регистратор
+d89[numbs89-1]["dvr"]>0?document.getElementById("dvr89").style.backgroundColor="limegreen":document.getElementById("dvr89").style.backgroundColor="red";
+d89[numbs89-1]["cam1"]>0?document.getElementById("cam89-1").style.backgroundColor="limegreen":document.getElementById("cam89-1").style.backgroundColor="red";
+d89[numbs89-1]["cam2"]>0?document.getElementById("cam89-2").style.backgroundColor="limegreen":document.getElementById("cam89-2").style.backgroundColor="red";
+d89[numbs89-1]["cam3"]>0?document.getElementById("cam89-3").style.backgroundColor="limegreen":document.getElementById("cam89-3").style.backgroundColor="red";
+d89[numbs89-1]["cam4"]>0?document.getElementById("cam89-4").style.backgroundColor="limegreen":document.getElementById("cam89-4").style.backgroundColor="red";
+d89[numbs89-1]["sbor"]>0?document.getElementById("sbor89").style.backgroundColor="limegreen":document.getElementById("sbor89").style.backgroundColor="red";
+//Mlcache
+if (d89[numbs89-1]["ml"]>1.8)
+{document.getElementById("mlcache89").innerHTML="[ on ]";document.getElementById("mlcache89").style.backgroundColor="DarkGreen";}
+if (d89[numbs89-1]["ml"]<1.8)
+{document.getElementById("mlcache89").innerHTML="[ off ]";document.getElementById("mlcache89").style.backgroundColor="red";}
+</script>
+<div id="chart9" class="chart"></div></div>
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s83"><img src="monitor.png"  class ="monpng"> </a> АГКМ83-1 <a class ="paperhref" href="javascript:assa('31.173.139.134');">31.173.139.134</a>(Завод)  <span class="paper" id="well83" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.129');">146.129 RX:</a><span class="paper" id="zyx83tx" >0.0</span>Mbps TX:<span class="paper" id="zyx83rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.145');">19.145 RX:</a><span class="paper" id="modem83tx" >0.0</span>Mbps TX:<span class="paper" id="modem83rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal83-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal83-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal83-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal83-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb83" >0.0</span>
+<br>Mlcache 146.131: <span class="paperb" id="mlcache83" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem83ltx" >0.0</span>MB TX:<span class="paper" id="modem83lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.140');">146.140:</a><span class="paper" id="ubi83-1" >0</span> Client:<span class="paper" id="ubi83-1clt" >0</span> Q:<span class="paper" id="q1signal83-1" >&nbsp;</span><span class="paper" id="q1signal83-2" >&nbsp;</span><span class="paper" id="q1signal83-3" >&nbsp;</span><span class="paper" id="q1signal83-4" >&nbsp;</span><span class="paper" id="q1signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb83" >0.0</span>% C:<span class="paper" id="c1signal83-1" >&nbsp;</span><span class="paper" id="c1signal83-2" >&nbsp;</span><span class="paper" id="c1signal83-3" >&nbsp;</span><span class="paper" id="c1signal83-4" >&nbsp;</span><span class="paper" id="c1signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb83" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.141');">146.141:</a><span class="paper" id="ubi83-2" >0</span> Q:<span class="paper" id="q2signal83-1" >&nbsp;</span><span class="paper" id="q2signal83-2" >&nbsp;</span><span class="paper" id="q2signal83-3" >&nbsp;</span><span class="paper" id="q2signal83-4" >&nbsp;</span><span class="paper" id="q2signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb83" >0.0</span>% C:<span class="paper" id="c2signal83-1" >&nbsp;</span><span class="paper" id="c2signal83-2" >&nbsp;</span><span class="paper" id="c2signal83-3" >&nbsp;</span><span class="paper" id="c2signal83-4" >&nbsp;</span><span class="paper" id="c2signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb83" >0.0</span>% S:<span class="paper" id="s2signal83-1" >&nbsp;</span><span class="paper" id="s2signal83-2" >&nbsp;</span><span class="paper" id="s2signal83-3" >&nbsp;</span><span class="paper" id="s2signal83-4" >&nbsp;</span><span class="paper" id="s2signal83-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb83" >0.0</span>dbi
+<br>Sbor 146.130: <span id="sbor83" >&nbsp;&nbsp;&nbsp;</span> DVR 146.135: <span id="dvr83" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.136:<span id="cam83-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.137:<span id="cam83-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 146.138:<span id="cam83-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.139:<span id="cam83-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem83lrx").innerHTML=d83[numbs83-1]["mltx"];
+d83[numbs83-1]["mltx"]>0?document.getElementById("modem83lrx").style.backgroundColor="Black":document.getElementById("modem83lrx").style.backgroundColor="red";
+document.getElementById("modem83ltx").innerHTML=d83[numbs83-1]["mlrx"];
+d83[numbs83-1]["mlrx"]>0?document.getElementById("modem83ltx").style.backgroundColor="Maroon":document.getElementById("modem83ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well83").innerHTML=d83[numbs83-1]["value"];
+d83[numbs83-1]["value"]>0?document.getElementById("well83").style.backgroundColor="blue":document.getElementById("well83").style.backgroundColor="red";
+document.getElementById("zyx83rx").innerHTML=d83[numbs83-1]["tx"];
+d83[numbs83-1]["rx"]>0?document.getElementById("zyx83rx").style.backgroundColor="Violet":document.getElementById("zyx83rx").style.backgroundColor="red";
+document.getElementById("zyx83tx").innerHTML=d83[numbs83-1]["rx"];
+d83[numbs83-1]["tx"]>0?document.getElementById("zyx83tx").style.backgroundColor="orange":document.getElementById("zyx83tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem83rx").innerHTML=d83[numbs83-1]["mtx"];
+d83[numbs83-1]["mrx"]>0?document.getElementById("modem83rx").style.backgroundColor="IndianRed":document.getElementById("modem83rx").style.backgroundColor="red";
+document.getElementById("modem83tx").innerHTML=d83[numbs83-1]["mrx"];
+d83[numbs83-1]["mtx"]>0?document.getElementById("modem83tx").style.backgroundColor="teal":document.getElementById("modem83tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb83").innerHTML=d83[numbs83-1]["sigpoz"];
+d83[numbs83-1]["sigpoz"]>0?document.getElementById("sinalnumb83").style.backgroundColor="indigo":document.getElementById("sinalnumb83").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d83[numbs83-1]["sigpoz"]>20?document.getElementById("signal83-5").style.backgroundColor="Green":document.getElementById("signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["sigpoz"]>15?document.getElementById("signal83-4").style.backgroundColor="DarkGreen":document.getElementById("signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["sigpoz"]>10?document.getElementById("signal83-3").style.backgroundColor="Gold":document.getElementById("signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["sigpoz"]>5?document.getElementById("signal83-2").style.backgroundColor="Coral":document.getElementById("signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["sigpoz"]>0?document.getElementById("signal83-1").style.backgroundColor="Red":document.getElementById("signal83-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d83[numbs83-1]["ml"]>1.8)
+{document.getElementById("mlcache83").innerHTML="[ on ]";document.getElementById("mlcache83").style.backgroundColor="DarkGreen";}
+if (d83[numbs83-1]["ml"]<1.8)
+{document.getElementById("mlcache83").innerHTML="[ off ]";document.getElementById("mlcache83").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d83[numbs83-1]["sbor"]>0?document.getElementById("sbor83").style.backgroundColor="limegreen":document.getElementById("sbor83").style.backgroundColor="red";
+d83[numbs83-1]["dvr"]>0?document.getElementById("dvr83").style.backgroundColor="limegreen":document.getElementById("dvr83").style.backgroundColor="red";
+d83[numbs83-1]["cam1"]>0?document.getElementById("cam83-1").style.backgroundColor="limegreen":document.getElementById("cam83-1").style.backgroundColor="red";
+d83[numbs83-1]["cam2"]>0?document.getElementById("cam83-2").style.backgroundColor="limegreen":document.getElementById("cam83-2").style.backgroundColor="red";
+d83[numbs83-1]["cam3"]>0?document.getElementById("cam83-3").style.backgroundColor="limegreen":document.getElementById("cam83-3").style.backgroundColor="red";
+d83[numbs83-1]["cam4"]>0?document.getElementById("cam83-4").style.backgroundColor="limegreen":document.getElementById("cam83-4").style.backgroundColor="red";
+//Точки
+//Точки
+document.getElementById("ubi83-1").innerHTML=d83[numbs83-1]["ub1"];
+d83[numbs83-1]["ub1"]>0?document.getElementById("ubi83-1").style.backgroundColor="Olive":document.getElementById("ubi83-1").style.backgroundColor="red";
+document.getElementById("ubi83-2").innerHTML=d83[numbs83-1]["ub2"];
+d83[numbs83-1]["ub2"]>0?document.getElementById("ubi83-2").style.backgroundColor="Olive":document.getElementById("ubi83-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi83-1clt").innerHTML=d83[numbs83-1]["ub1sig"];
+d83[numbs83-1]["ub1sig"]>0?document.getElementById("ubi83-1clt").style.backgroundColor="Olive":document.getElementById("ubi83-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d83[numbs83-1]["ub1amq"]>80?document.getElementById("q1signal83-5").style.backgroundColor="Green":document.getElementById("q1signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amq"]>60?document.getElementById("q1signal83-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amq"]>40?document.getElementById("q1signal83-3").style.backgroundColor="Gold":document.getElementById("q1signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amq"]>20?document.getElementById("q1signal83-2").style.backgroundColor="Coral":document.getElementById("q1signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amq"]>0?document.getElementById("q1signal83-1").style.backgroundColor="Red":document.getElementById("q1signal83-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb83").innerHTML=d83[numbs83-1]["ub1amq"];
+d83[numbs83-1]["ub1amq"]>0?document.getElementById("q1sinalnumb83").style.backgroundColor="Olive":document.getElementById("q1sinalnumb83").style.backgroundColor="red";
+//Ubi AP  capacity
+d83[numbs83-1]["ub1amc"]>80?document.getElementById("c1signal83-5").style.backgroundColor="Green":document.getElementById("c1signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amc"]>60?document.getElementById("c1signal83-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amc"]>40?document.getElementById("c1signal83-3").style.backgroundColor="Gold":document.getElementById("c1signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amc"]>20?document.getElementById("c1signal83-2").style.backgroundColor="Coral":document.getElementById("c1signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub1amc"]>0?document.getElementById("c1signal83-1").style.backgroundColor="Red":document.getElementById("c1signal83-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb83").innerHTML=d83[numbs83-1]["ub1amc"];
+d83[numbs83-1]["ub1amc"]>0?document.getElementById("c1sinalnumb83").style.backgroundColor="Olive":document.getElementById("c1sinalnumb83").style.backgroundColor="red";
+
+//Ubi clt  quality
+d83[numbs83-1]["ub2amq"]>80?document.getElementById("q2signal83-5").style.backgroundColor="Green":document.getElementById("q2signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amq"]>60?document.getElementById("q2signal83-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amq"]>40?document.getElementById("q2signal83-3").style.backgroundColor="Gold":document.getElementById("q2signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amq"]>20?document.getElementById("q2signal83-2").style.backgroundColor="Coral":document.getElementById("q2signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amq"]>0?document.getElementById("q2signal83-1").style.backgroundColor="Red":document.getElementById("q2signal83-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb83").innerHTML=d83[numbs83-1]["ub2amq"];
+d83[numbs83-1]["ub2amq"]>0?document.getElementById("q2sinalnumb83").style.backgroundColor="Olive":document.getElementById("q2sinalnumb83").style.backgroundColor="red";
+//Ubi clt  capacity
+d83[numbs83-1]["ub2amc"]>80?document.getElementById("c2signal83-5").style.backgroundColor="Green":document.getElementById("c2signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amc"]>60?document.getElementById("c2signal83-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amc"]>40?document.getElementById("c2signal83-3").style.backgroundColor="Gold":document.getElementById("c2signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amc"]>20?document.getElementById("c2signal83-2").style.backgroundColor="Coral":document.getElementById("c2signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2amc"]>0?document.getElementById("c2signal83-1").style.backgroundColor="Red":document.getElementById("c2signal83-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb83").innerHTML=d83[numbs83-1]["ub2amc"];
+d83[numbs83-1]["ub2amc"]>0?document.getElementById("c2sinalnumb83").style.backgroundColor="Olive":document.getElementById("c2sinalnumb83").style.backgroundColor="red";
+//Ubi clt  signal
+d83[numbs83-1]["ub2sig"]>-65?document.getElementById("s2signal83-5").style.backgroundColor="Green":document.getElementById("s2signal83-5").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2sig"]>-73?document.getElementById("s2signal83-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal83-4").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2sig"]>-81?document.getElementById("s2signal83-3").style.backgroundColor="Gold":document.getElementById("s2signal83-3").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2sig"]>-89?document.getElementById("s2signal83-2").style.backgroundColor="Coral":document.getElementById("s2signal83-2").style.backgroundColor="#e0e0e0";
+d83[numbs83-1]["ub2sig"]>-97?document.getElementById("s2signal83-1").style.backgroundColor="Red":document.getElementById("s2signal83-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb83").innerHTML=d83[numbs83-1]["ub2sig"];
+d83[numbs83-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb83").style.backgroundColor="Olive":document.getElementById("s2sinalnumb83").style.backgroundColor="red";
+</script>
+<div id="chart10" class="chart"></div></div>
+
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s401"><img src="monitor.png"  class ="monpng"> </a> АГКМ406-1 <a class ="paperhref" href="javascript:assa('31.173.139.129');">31.173.139.129</a>(Завод)  <span class="paper" id="well401" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.146.1');">146.1 RX:</a><span class="paper" id="zyx401tx" >0.0</span>Mbps TX:<span class="paper" id="zyx401rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.225');">19.225 RX:</a><span class="paper" id="modem401tx" >0.0</span>Mbps TX:<span class="paper" id="modem401rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal401-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb401" >0.0</span>
+<br>Mlcache 146.3: <span class="paperb" id="mlcache401" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem401ltx" >0.0</span>MB TX:<span class="paper" id="modem401lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.12');">146.12:</a><span class="paper" id="ubi401-1" >0</span> Client:<span class="paper" id="ubi401-1clt" >0</span> Q:<span class="paper" id="q1signal401-1" >&nbsp;</span><span class="paper" id="q1signal401-2" >&nbsp;</span><span class="paper" id="q1signal401-3" >&nbsp;</span><span class="paper" id="q1signal401-4" >&nbsp;</span><span class="paper" id="q1signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb401" >0.0</span>% C:<span class="paper" id="c1signal401-1" >&nbsp;</span><span class="paper" id="c1signal401-2" >&nbsp;</span><span class="paper" id="c1signal401-3" >&nbsp;</span><span class="paper" id="c1signal401-4" >&nbsp;</span><span class="paper" id="c1signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb401" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.13');">146.13:</a><span class="paper" id="ubi401-2" >0</span> Q:<span class="paper" id="q2signal401-1" >&nbsp;</span><span class="paper" id="q2signal401-2" >&nbsp;</span><span class="paper" id="q2signal401-3" >&nbsp;</span><span class="paper" id="q2signal401-4" >&nbsp;</span><span class="paper" id="q2signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb401" >0.0</span>% C:<span class="paper" id="c2signal401-1" >&nbsp;</span><span class="paper" id="c2signal401-2" >&nbsp;</span><span class="paper" id="c2signal401-3" >&nbsp;</span><span class="paper" id="c2signal401-4" >&nbsp;</span><span class="paper" id="c2signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb401" >0.0</span>% S:<span class="paper" id="s2signal401-1" >&nbsp;</span><span class="paper" id="s2signal401-2" >&nbsp;</span><span class="paper" id="s2signal401-3" >&nbsp;</span><span class="paper" id="s2signal401-4" >&nbsp;</span><span class="paper" id="s2signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb401" >0.0</span>dbi
+<br>Sbor 146.2: <span id="sbor401" >&nbsp;&nbsp;&nbsp;</span> DVR 146.7: <span id="dvr401" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 146.8:<span id="cam401-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 146.9:<span id="cam401-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 146.10:<span id="cam401-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 146.11:<span id="cam401-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem401lrx").innerHTML=d401[numbs401-1]["mltx"];
+d401[numbs401-1]["mltx"]>0?document.getElementById("modem401lrx").style.backgroundColor="Black":document.getElementById("modem401lrx").style.backgroundColor="red";
+document.getElementById("modem401ltx").innerHTML=d401[numbs401-1]["mlrx"];
+d401[numbs401-1]["mlrx"]>0?document.getElementById("modem401ltx").style.backgroundColor="Maroon":document.getElementById("modem401ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well401").innerHTML=d401[numbs401-1]["value"];
+d401[numbs401-1]["value"]>0?document.getElementById("well401").style.backgroundColor="blue":document.getElementById("well401").style.backgroundColor="red";
+document.getElementById("zyx401rx").innerHTML=d401[numbs401-1]["tx"];
+d401[numbs401-1]["rx"]>0?document.getElementById("zyx401rx").style.backgroundColor="Violet":document.getElementById("zyx401rx").style.backgroundColor="red";
+document.getElementById("zyx401tx").innerHTML=d401[numbs401-1]["rx"];
+d401[numbs401-1]["tx"]>0?document.getElementById("zyx401tx").style.backgroundColor="orange":document.getElementById("zyx401tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem401rx").innerHTML=d401[numbs401-1]["mtx"];
+d401[numbs401-1]["mrx"]>0?document.getElementById("modem401rx").style.backgroundColor="IndianRed":document.getElementById("modem401rx").style.backgroundColor="red";
+document.getElementById("modem401tx").innerHTML=d401[numbs401-1]["mrx"];
+d401[numbs401-1]["mtx"]>0?document.getElementById("modem401tx").style.backgroundColor="teal":document.getElementById("modem401tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb401").innerHTML=d401[numbs401-1]["sigpoz"];
+d401[numbs401-1]["sigpoz"]>0?document.getElementById("sinalnumb401").style.backgroundColor="indigo":document.getElementById("sinalnumb401").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d401[numbs401-1]["sigpoz"]>20?document.getElementById("signal401-5").style.backgroundColor="Green":document.getElementById("signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>15?document.getElementById("signal401-4").style.backgroundColor="DarkGreen":document.getElementById("signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>10?document.getElementById("signal401-3").style.backgroundColor="Gold":document.getElementById("signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>5?document.getElementById("signal401-2").style.backgroundColor="Coral":document.getElementById("signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>0?document.getElementById("signal401-1").style.backgroundColor="Red":document.getElementById("signal401-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d401[numbs401-1]["ml"]>1.8)
+{document.getElementById("mlcache401").innerHTML="[ on ]";document.getElementById("mlcache401").style.backgroundColor="DarkGreen";}
+if (d401[numbs401-1]["ml"]<1.8)
+{document.getElementById("mlcache401").innerHTML="[ off ]";document.getElementById("mlcache401").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d401[numbs401-1]["sbor"]>0?document.getElementById("sbor401").style.backgroundColor="limegreen":document.getElementById("sbor401").style.backgroundColor="red";
+d401[numbs401-1]["dvr"]>0?document.getElementById("dvr401").style.backgroundColor="limegreen":document.getElementById("dvr401").style.backgroundColor="red";
+d401[numbs401-1]["cam1"]>0?document.getElementById("cam401-1").style.backgroundColor="limegreen":document.getElementById("cam401-1").style.backgroundColor="red";
+d401[numbs401-1]["cam2"]>0?document.getElementById("cam401-2").style.backgroundColor="limegreen":document.getElementById("cam401-2").style.backgroundColor="red";
+d401[numbs401-1]["cam3"]>0?document.getElementById("cam401-3").style.backgroundColor="limegreen":document.getElementById("cam401-3").style.backgroundColor="red";
+d401[numbs401-1]["cam4"]>0?document.getElementById("cam401-4").style.backgroundColor="limegreen":document.getElementById("cam401-4").style.backgroundColor="red";
+//Точки
+//Точки
+document.getElementById("ubi401-1").innerHTML=d401[numbs401-1]["ub1"];
+d401[numbs401-1]["ub1"]>0?document.getElementById("ubi401-1").style.backgroundColor="Olive":document.getElementById("ubi401-1").style.backgroundColor="red";
+document.getElementById("ubi401-2").innerHTML=d401[numbs401-1]["ub2"];
+d401[numbs401-1]["ub2"]>0?document.getElementById("ubi401-2").style.backgroundColor="Olive":document.getElementById("ubi401-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi401-1clt").innerHTML=d401[numbs401-1]["ub1sig"];
+d401[numbs401-1]["ub1sig"]>0?document.getElementById("ubi401-1clt").style.backgroundColor="Olive":document.getElementById("ubi401-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d401[numbs401-1]["ub1amq"]>80?document.getElementById("q1signal401-5").style.backgroundColor="Green":document.getElementById("q1signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amq"]>60?document.getElementById("q1signal401-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amq"]>40?document.getElementById("q1signal401-3").style.backgroundColor="Gold":document.getElementById("q1signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amq"]>20?document.getElementById("q1signal401-2").style.backgroundColor="Coral":document.getElementById("q1signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amq"]>0?document.getElementById("q1signal401-1").style.backgroundColor="Red":document.getElementById("q1signal401-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb401").innerHTML=d401[numbs401-1]["ub1amq"];
+d401[numbs401-1]["ub1amq"]>0?document.getElementById("q1sinalnumb401").style.backgroundColor="Olive":document.getElementById("q1sinalnumb401").style.backgroundColor="red";
+//Ubi AP  capacity
+d401[numbs401-1]["ub1amc"]>80?document.getElementById("c1signal401-5").style.backgroundColor="Green":document.getElementById("c1signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amc"]>60?document.getElementById("c1signal401-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amc"]>40?document.getElementById("c1signal401-3").style.backgroundColor="Gold":document.getElementById("c1signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amc"]>20?document.getElementById("c1signal401-2").style.backgroundColor="Coral":document.getElementById("c1signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub1amc"]>0?document.getElementById("c1signal401-1").style.backgroundColor="Red":document.getElementById("c1signal401-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb401").innerHTML=d401[numbs401-1]["ub1amc"];
+d401[numbs401-1]["ub1amc"]>0?document.getElementById("c1sinalnumb401").style.backgroundColor="Olive":document.getElementById("c1sinalnumb401").style.backgroundColor="red";
+
+//Ubi clt  quality
+d401[numbs401-1]["ub2amq"]>80?document.getElementById("q2signal401-5").style.backgroundColor="Green":document.getElementById("q2signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amq"]>60?document.getElementById("q2signal401-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amq"]>40?document.getElementById("q2signal401-3").style.backgroundColor="Gold":document.getElementById("q2signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amq"]>20?document.getElementById("q2signal401-2").style.backgroundColor="Coral":document.getElementById("q2signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amq"]>0?document.getElementById("q2signal401-1").style.backgroundColor="Red":document.getElementById("q2signal401-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb401").innerHTML=d401[numbs401-1]["ub2amq"];
+d401[numbs401-1]["ub2amq"]>0?document.getElementById("q2sinalnumb401").style.backgroundColor="Olive":document.getElementById("q2sinalnumb401").style.backgroundColor="red";
+//Ubi clt  capacity
+d401[numbs401-1]["ub2amc"]>80?document.getElementById("c2signal401-5").style.backgroundColor="Green":document.getElementById("c2signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amc"]>60?document.getElementById("c2signal401-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amc"]>40?document.getElementById("c2signal401-3").style.backgroundColor="Gold":document.getElementById("c2signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amc"]>20?document.getElementById("c2signal401-2").style.backgroundColor="Coral":document.getElementById("c2signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2amc"]>0?document.getElementById("c2signal401-1").style.backgroundColor="Red":document.getElementById("c2signal401-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb401").innerHTML=d401[numbs401-1]["ub2amc"];
+d401[numbs401-1]["ub2amc"]>0?document.getElementById("c2sinalnumb401").style.backgroundColor="Olive":document.getElementById("c2sinalnumb401").style.backgroundColor="red";
+//Ubi clt  signal
+d401[numbs401-1]["ub2sig"]>-65?document.getElementById("s2signal401-5").style.backgroundColor="Green":document.getElementById("s2signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2sig"]>-73?document.getElementById("s2signal401-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2sig"]>-81?document.getElementById("s2signal401-3").style.backgroundColor="Gold":document.getElementById("s2signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2sig"]>-89?document.getElementById("s2signal401-2").style.backgroundColor="Coral":document.getElementById("s2signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["ub2sig"]>-97?document.getElementById("s2signal401-1").style.backgroundColor="Red":document.getElementById("s2signal401-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb401").innerHTML=d401[numbs401-1]["ub2sig"];
+d401[numbs401-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb401").style.backgroundColor="Olive":document.getElementById("s2sinalnumb401").style.backgroundColor="red";
+</script>
+<div id="chart11" class="chart"></div></div>
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s610"><img src="monitor.png"  class ="monpng"> </a> АГКМ610-1 <a class ="paperhref" href="javascript:assa('37.29.14.187');">37.29.14.187</a>(6-ка)  <span class="paper" id="well610" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.147.1');">147.1 RX:</a><span class="paper" id="zyx610tx" >0.0</span>Mbps TX:<span class="paper" id="zyx610rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.2');">19.2 RX:</a><span class="paper" id="modem610tx" >0.0</span>Mbps TX:<span class="paper" id="modem610rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal610-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal610-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal610-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal610-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb610" >0.0</span>
+<br>Mlcache 147.3: <span class="paperb" id="mlcache610" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem610ltx" >0.0</span>MB TX:<span class="paper" id="modem610lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.147.12');">147.12:</a><span class="paper" id="ubi610-1" >0</span> Client:<span class="paper" id="ubi610-1clt" >0</span> Q:<span class="paper" id="q1signal610-1" >&nbsp;</span><span class="paper" id="q1signal610-2" >&nbsp;</span><span class="paper" id="q1signal610-3" >&nbsp;</span><span class="paper" id="q1signal610-4" >&nbsp;</span><span class="paper" id="q1signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb610" >0.0</span>% C:<span class="paper" id="c1signal610-1" >&nbsp;</span><span class="paper" id="c1signal610-2" >&nbsp;</span><span class="paper" id="c1signal610-3" >&nbsp;</span><span class="paper" id="c1signal610-4" >&nbsp;</span><span class="paper" id="c1signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb610" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.147.13');">147.13:</a><span class="paper" id="ubi610-2" >0</span> Q:<span class="paper" id="q2signal610-1" >&nbsp;</span><span class="paper" id="q2signal610-2" >&nbsp;</span><span class="paper" id="q2signal610-3" >&nbsp;</span><span class="paper" id="q2signal610-4" >&nbsp;</span><span class="paper" id="q2signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb610" >0.0</span>% C:<span class="paper" id="c2signal610-1" >&nbsp;</span><span class="paper" id="c2signal610-2" >&nbsp;</span><span class="paper" id="c2signal610-3" >&nbsp;</span><span class="paper" id="c2signal610-4" >&nbsp;</span><span class="paper" id="c2signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb610" >0.0</span>% S:<span class="paper" id="s2signal610-1" >&nbsp;</span><span class="paper" id="s2signal610-2" >&nbsp;</span><span class="paper" id="s2signal610-3" >&nbsp;</span><span class="paper" id="s2signal610-4" >&nbsp;</span><span class="paper" id="s2signal610-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb610" >0.0</span>dbi
+<br>Sbor 147.2: <span id="sbor610" >&nbsp;&nbsp;&nbsp;</span> DVR 147.7: <span id="dvr610" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 147.8:<span id="cam610-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 147.9:<span id="cam610-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 147.10:<span id="cam610-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 147.11:<span id="cam610-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem610lrx").innerHTML=d610[numbs610-1]["mltx"];
+d610[numbs610-1]["mltx"]>0?document.getElementById("modem610lrx").style.backgroundColor="Black":document.getElementById("modem610lrx").style.backgroundColor="red";
+document.getElementById("modem610ltx").innerHTML=d610[numbs610-1]["mlrx"];
+d610[numbs610-1]["mlrx"]>0?document.getElementById("modem610ltx").style.backgroundColor="Maroon":document.getElementById("modem610ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well610").innerHTML=d610[numbs610-1]["value"];
+d610[numbs610-1]["value"]>0?document.getElementById("well610").style.backgroundColor="blue":document.getElementById("well610").style.backgroundColor="red";
+document.getElementById("zyx610rx").innerHTML=d610[numbs610-1]["tx"];
+d610[numbs610-1]["rx"]>0?document.getElementById("zyx610rx").style.backgroundColor="Violet":document.getElementById("zyx610rx").style.backgroundColor="red";
+document.getElementById("zyx610tx").innerHTML=d610[numbs610-1]["rx"];
+d610[numbs610-1]["tx"]>0?document.getElementById("zyx610tx").style.backgroundColor="orange":document.getElementById("zyx610tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem610rx").innerHTML=d610[numbs610-1]["mtx"];
+d610[numbs610-1]["mrx"]>0?document.getElementById("modem610rx").style.backgroundColor="IndianRed":document.getElementById("modem610rx").style.backgroundColor="red";
+document.getElementById("modem610tx").innerHTML=d610[numbs610-1]["mrx"];
+d610[numbs610-1]["mtx"]>0?document.getElementById("modem610tx").style.backgroundColor="teal":document.getElementById("modem610tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb610").innerHTML=d610[numbs610-1]["sigpoz"];
+d610[numbs610-1]["sigpoz"]>0?document.getElementById("sinalnumb610").style.backgroundColor="indigo":document.getElementById("sinalnumb610").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d610[numbs610-1]["sigpoz"]>20?document.getElementById("signal610-5").style.backgroundColor="Green":document.getElementById("signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["sigpoz"]>15?document.getElementById("signal610-4").style.backgroundColor="DarkGreen":document.getElementById("signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["sigpoz"]>10?document.getElementById("signal610-3").style.backgroundColor="Gold":document.getElementById("signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["sigpoz"]>5?document.getElementById("signal610-2").style.backgroundColor="Coral":document.getElementById("signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["sigpoz"]>0?document.getElementById("signal610-1").style.backgroundColor="Red":document.getElementById("signal610-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d610[numbs610-1]["ml"]>1.8)
+{document.getElementById("mlcache610").innerHTML="[ on ]";document.getElementById("mlcache610").style.backgroundColor="DarkGreen";}
+if (d610[numbs610-1]["ml"]<1.8)
+{document.getElementById("mlcache610").innerHTML="[ off ]";document.getElementById("mlcache610").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d610[numbs610-1]["sbor"]>0?document.getElementById("sbor610").style.backgroundColor="limegreen":document.getElementById("sbor610").style.backgroundColor="red";
+d610[numbs610-1]["dvr"]>0?document.getElementById("dvr610").style.backgroundColor="limegreen":document.getElementById("dvr610").style.backgroundColor="red";
+d610[numbs610-1]["cam1"]>0?document.getElementById("cam610-1").style.backgroundColor="limegreen":document.getElementById("cam610-1").style.backgroundColor="red";
+d610[numbs610-1]["cam2"]>0?document.getElementById("cam610-2").style.backgroundColor="limegreen":document.getElementById("cam610-2").style.backgroundColor="red";
+d610[numbs610-1]["cam3"]>0?document.getElementById("cam610-3").style.backgroundColor="limegreen":document.getElementById("cam610-3").style.backgroundColor="red";
+d610[numbs610-1]["cam4"]>0?document.getElementById("cam610-4").style.backgroundColor="limegreen":document.getElementById("cam610-4").style.backgroundColor="red";
+//Точки
+//Точки
+document.getElementById("ubi610-1").innerHTML=d610[numbs610-1]["ub1"];
+d610[numbs610-1]["ub1"]>0?document.getElementById("ubi610-1").style.backgroundColor="Olive":document.getElementById("ubi610-1").style.backgroundColor="red";
+document.getElementById("ubi610-2").innerHTML=d610[numbs610-1]["ub2"];
+d610[numbs610-1]["ub2"]>0?document.getElementById("ubi610-2").style.backgroundColor="Olive":document.getElementById("ubi610-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi610-1clt").innerHTML=d610[numbs610-1]["ub1sig"];
+d610[numbs610-1]["ub1sig"]>0?document.getElementById("ubi610-1clt").style.backgroundColor="Olive":document.getElementById("ubi610-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d610[numbs610-1]["ub1amq"]>80?document.getElementById("q1signal610-5").style.backgroundColor="Green":document.getElementById("q1signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amq"]>60?document.getElementById("q1signal610-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amq"]>40?document.getElementById("q1signal610-3").style.backgroundColor="Gold":document.getElementById("q1signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amq"]>20?document.getElementById("q1signal610-2").style.backgroundColor="Coral":document.getElementById("q1signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amq"]>0?document.getElementById("q1signal610-1").style.backgroundColor="Red":document.getElementById("q1signal610-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb610").innerHTML=d610[numbs610-1]["ub1amq"];
+d610[numbs610-1]["ub1amq"]>0?document.getElementById("q1sinalnumb610").style.backgroundColor="Olive":document.getElementById("q1sinalnumb610").style.backgroundColor="red";
+//Ubi AP  capacity
+d610[numbs610-1]["ub1amc"]>80?document.getElementById("c1signal610-5").style.backgroundColor="Green":document.getElementById("c1signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amc"]>60?document.getElementById("c1signal610-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amc"]>40?document.getElementById("c1signal610-3").style.backgroundColor="Gold":document.getElementById("c1signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amc"]>20?document.getElementById("c1signal610-2").style.backgroundColor="Coral":document.getElementById("c1signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub1amc"]>0?document.getElementById("c1signal610-1").style.backgroundColor="Red":document.getElementById("c1signal610-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb610").innerHTML=d610[numbs610-1]["ub1amc"];
+d610[numbs610-1]["ub1amc"]>0?document.getElementById("c1sinalnumb610").style.backgroundColor="Olive":document.getElementById("c1sinalnumb610").style.backgroundColor="red";
+
+//Ubi clt  quality
+d610[numbs610-1]["ub2amq"]>80?document.getElementById("q2signal610-5").style.backgroundColor="Green":document.getElementById("q2signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amq"]>60?document.getElementById("q2signal610-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amq"]>40?document.getElementById("q2signal610-3").style.backgroundColor="Gold":document.getElementById("q2signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amq"]>20?document.getElementById("q2signal610-2").style.backgroundColor="Coral":document.getElementById("q2signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amq"]>0?document.getElementById("q2signal610-1").style.backgroundColor="Red":document.getElementById("q2signal610-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb610").innerHTML=d610[numbs610-1]["ub2amq"];
+d610[numbs610-1]["ub2amq"]>0?document.getElementById("q2sinalnumb610").style.backgroundColor="Olive":document.getElementById("q2sinalnumb610").style.backgroundColor="red";
+//Ubi clt  capacity
+d610[numbs610-1]["ub2amc"]>80?document.getElementById("c2signal610-5").style.backgroundColor="Green":document.getElementById("c2signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amc"]>60?document.getElementById("c2signal610-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amc"]>40?document.getElementById("c2signal610-3").style.backgroundColor="Gold":document.getElementById("c2signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amc"]>20?document.getElementById("c2signal610-2").style.backgroundColor="Coral":document.getElementById("c2signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2amc"]>0?document.getElementById("c2signal610-1").style.backgroundColor="Red":document.getElementById("c2signal610-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb610").innerHTML=d610[numbs610-1]["ub2amc"];
+d610[numbs610-1]["ub2amc"]>0?document.getElementById("c2sinalnumb610").style.backgroundColor="Olive":document.getElementById("c2sinalnumb610").style.backgroundColor="red";
+//Ubi clt  signal
+d610[numbs610-1]["ub2sig"]>-65?document.getElementById("s2signal610-5").style.backgroundColor="Green":document.getElementById("s2signal610-5").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2sig"]>-73?document.getElementById("s2signal610-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal610-4").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2sig"]>-81?document.getElementById("s2signal610-3").style.backgroundColor="Gold":document.getElementById("s2signal610-3").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2sig"]>-89?document.getElementById("s2signal610-2").style.backgroundColor="Coral":document.getElementById("s2signal610-2").style.backgroundColor="#e0e0e0";
+d610[numbs610-1]["ub2sig"]>-97?document.getElementById("s2signal610-1").style.backgroundColor="Red":document.getElementById("s2signal610-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb610").innerHTML=d610[numbs610-1]["ub2sig"];
+d610[numbs610-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb610").style.backgroundColor="Olive":document.getElementById("s2sinalnumb610").style.backgroundColor="red";
+</script>
+<div id="chart12" class="chart"></div></div>
+
+<div class="megaleg">
+<div class="leg22"><a href="svg/index.php?well=s627"><img src="monitor.png"  class ="monpng"> </a> АГКМ627-1 <a class ="paperhref" href="javascript:assa('37.29.14.185');">37.29.14.185</a>(6-ка)  <span class="paper" id="well627" >0</span>
+<br>Zyxel <a  class ="paperhref" href="javascript:zyx('192.168.147.33');">147.33 RX:</a><span class="paper" id="zyx627tx" >0.0</span>Mbps TX:<span class="paper" id="zyx627rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.2');">? RX:</a><span class="paper" id="modem627tx" >0.0</span>Mbps TX:<span class="paper" id="modem627rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal627-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal627-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal627-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal627-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb627" >0.0</span>
+<br>Mlcache 147.35: <span class="paperb" id="mlcache627" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem627ltx" >0.0</span>MB TX:<span class="paper" id="modem627lrx" >0.0</span>MB
+<br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.147.44');">147.44:</a><span class="paper" id="ubi627-1" >0</span> Client:<span class="paper" id="ubi627-1clt" >0</span> Q:<span class="paper" id="q1signal627-1" >&nbsp;</span><span class="paper" id="q1signal627-2" >&nbsp;</span><span class="paper" id="q1signal627-3" >&nbsp;</span><span class="paper" id="q1signal627-4" >&nbsp;</span><span class="paper" id="q1signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb627" >0.0</span>% C:<span class="paper" id="c1signal627-1" >&nbsp;</span><span class="paper" id="c1signal627-2" >&nbsp;</span><span class="paper" id="c1signal627-3" >&nbsp;</span><span class="paper" id="c1signal627-4" >&nbsp;</span><span class="paper" id="c1signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb627" >0.0</span>%
+<br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.147.45');">147.45:</a><span class="paper" id="ubi627-2" >0</span> Q:<span class="paper" id="q2signal627-1" >&nbsp;</span><span class="paper" id="q2signal627-2" >&nbsp;</span><span class="paper" id="q2signal627-3" >&nbsp;</span><span class="paper" id="q2signal627-4" >&nbsp;</span><span class="paper" id="q2signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb627" >0.0</span>% C:<span class="paper" id="c2signal627-1" >&nbsp;</span><span class="paper" id="c2signal627-2" >&nbsp;</span><span class="paper" id="c2signal627-3" >&nbsp;</span><span class="paper" id="c2signal627-4" >&nbsp;</span><span class="paper" id="c2signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb627" >0.0</span>% S:<span class="paper" id="s2signal627-1" >&nbsp;</span><span class="paper" id="s2signal627-2" >&nbsp;</span><span class="paper" id="s2signal627-3" >&nbsp;</span><span class="paper" id="s2signal627-4" >&nbsp;</span><span class="paper" id="s2signal627-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb627" >0.0</span>dbi
+<br>Sbor 147.34: <span id="sbor627" >&nbsp;&nbsp;&nbsp;</span> DVR 147.39: <span id="dvr627" >&nbsp;&nbsp;&nbsp;</span>
+<br>Cam1 147.40:<span id="cam627-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 147.41:<span id="cam627-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 147.42:<span id="cam627-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 147.43:<span id="cam627-4" >&nbsp;&nbsp;&nbsp;</span>
+</div>
+<script type="text/javascript">
+//Zyxel Port 2206
+document.getElementById("modem627lrx").innerHTML=d627[numbs627-1]["mltx"];
+d627[numbs627-1]["mltx"]>0?document.getElementById("modem627lrx").style.backgroundColor="Black":document.getElementById("modem627lrx").style.backgroundColor="red";
+document.getElementById("modem627ltx").innerHTML=d627[numbs627-1]["mlrx"];
+d627[numbs627-1]["mlrx"]>0?document.getElementById("modem627ltx").style.backgroundColor="Maroon":document.getElementById("modem627ltx").style.backgroundColor="red";
+//WAN
+document.getElementById("well627").innerHTML=d627[numbs627-1]["value"];
+d627[numbs627-1]["value"]>0?document.getElementById("well627").style.backgroundColor="blue":document.getElementById("well627").style.backgroundColor="red";
+document.getElementById("zyx627rx").innerHTML=d627[numbs627-1]["tx"];
+d627[numbs627-1]["rx"]>0?document.getElementById("zyx627rx").style.backgroundColor="Violet":document.getElementById("zyx627rx").style.backgroundColor="red";
+document.getElementById("zyx627tx").innerHTML=d627[numbs627-1]["rx"];
+d627[numbs627-1]["tx"]>0?document.getElementById("zyx627tx").style.backgroundColor="orange":document.getElementById("zyx627tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem627rx").innerHTML=d627[numbs627-1]["mtx"];
+d627[numbs627-1]["mrx"]>0?document.getElementById("modem627rx").style.backgroundColor="IndianRed":document.getElementById("modem627rx").style.backgroundColor="red";
+document.getElementById("modem627tx").innerHTML=d627[numbs627-1]["mrx"];
+d627[numbs627-1]["mtx"]>0?document.getElementById("modem627tx").style.backgroundColor="teal":document.getElementById("modem627tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb627").innerHTML=d627[numbs627-1]["sigpoz"];
+d627[numbs627-1]["sigpoz"]>0?document.getElementById("sinalnumb627").style.backgroundColor="indigo":document.getElementById("sinalnumb627").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d627[numbs627-1]["sigpoz"]>20?document.getElementById("signal627-5").style.backgroundColor="Green":document.getElementById("signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["sigpoz"]>15?document.getElementById("signal627-4").style.backgroundColor="DarkGreen":document.getElementById("signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["sigpoz"]>10?document.getElementById("signal627-3").style.backgroundColor="Gold":document.getElementById("signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["sigpoz"]>5?document.getElementById("signal627-2").style.backgroundColor="Coral":document.getElementById("signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["sigpoz"]>0?document.getElementById("signal627-1").style.backgroundColor="Red":document.getElementById("signal627-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d627[numbs627-1]["ml"]>1.8)
+{document.getElementById("mlcache627").innerHTML="[ on ]";document.getElementById("mlcache627").style.backgroundColor="DarkGreen";}
+if (d627[numbs627-1]["ml"]<1.8)
+{document.getElementById("mlcache627").innerHTML="[ off ]";document.getElementById("mlcache627").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d627[numbs627-1]["sbor"]>0?document.getElementById("sbor627").style.backgroundColor="limegreen":document.getElementById("sbor627").style.backgroundColor="red";
+d627[numbs627-1]["dvr"]>0?document.getElementById("dvr627").style.backgroundColor="limegreen":document.getElementById("dvr627").style.backgroundColor="red";
+d627[numbs627-1]["cam1"]>0?document.getElementById("cam627-1").style.backgroundColor="limegreen":document.getElementById("cam627-1").style.backgroundColor="red";
+d627[numbs627-1]["cam2"]>0?document.getElementById("cam627-2").style.backgroundColor="limegreen":document.getElementById("cam627-2").style.backgroundColor="red";
+d627[numbs627-1]["cam3"]>0?document.getElementById("cam627-3").style.backgroundColor="limegreen":document.getElementById("cam627-3").style.backgroundColor="red";
+d627[numbs627-1]["cam4"]>0?document.getElementById("cam627-4").style.backgroundColor="limegreen":document.getElementById("cam627-4").style.backgroundColor="red";
+//Точки
+//Точки
+document.getElementById("ubi627-1").innerHTML=d627[numbs627-1]["ub1"];
+d627[numbs627-1]["ub1"]>0?document.getElementById("ubi627-1").style.backgroundColor="Olive":document.getElementById("ubi627-1").style.backgroundColor="red";
+document.getElementById("ubi627-2").innerHTML=d627[numbs627-1]["ub2"];
+d627[numbs627-1]["ub2"]>0?document.getElementById("ubi627-2").style.backgroundColor="Olive":document.getElementById("ubi627-2").style.backgroundColor="red";
+//Ubi AP Клиенты Ubi AP
+document.getElementById("ubi627-1clt").innerHTML=d627[numbs627-1]["ub1sig"];
+d627[numbs627-1]["ub1sig"]>0?document.getElementById("ubi627-1clt").style.backgroundColor="Olive":document.getElementById("ubi627-1clt").style.backgroundColor="red";
+//Ubi AP  quality
+d627[numbs627-1]["ub1amq"]>80?document.getElementById("q1signal627-5").style.backgroundColor="Green":document.getElementById("q1signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amq"]>60?document.getElementById("q1signal627-4").style.backgroundColor="DarkGreen":document.getElementById("q1signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amq"]>40?document.getElementById("q1signal627-3").style.backgroundColor="Gold":document.getElementById("q1signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amq"]>20?document.getElementById("q1signal627-2").style.backgroundColor="Coral":document.getElementById("q1signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amq"]>0?document.getElementById("q1signal627-1").style.backgroundColor="Red":document.getElementById("q1signal627-1").style.backgroundColor="#e0e0e0";
+//Ubi AP quality
+document.getElementById("q1sinalnumb627").innerHTML=d627[numbs627-1]["ub1amq"];
+d627[numbs627-1]["ub1amq"]>0?document.getElementById("q1sinalnumb627").style.backgroundColor="Olive":document.getElementById("q1sinalnumb627").style.backgroundColor="red";
+//Ubi AP  capacity
+d627[numbs627-1]["ub1amc"]>80?document.getElementById("c1signal627-5").style.backgroundColor="Green":document.getElementById("c1signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amc"]>60?document.getElementById("c1signal627-4").style.backgroundColor="DarkGreen":document.getElementById("c1signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amc"]>40?document.getElementById("c1signal627-3").style.backgroundColor="Gold":document.getElementById("c1signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amc"]>20?document.getElementById("c1signal627-2").style.backgroundColor="Coral":document.getElementById("c1signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub1amc"]>0?document.getElementById("c1signal627-1").style.backgroundColor="Red":document.getElementById("c1signal627-1").style.backgroundColor="#e0e0e0";
+//Ubi AP capacity
+document.getElementById("c1sinalnumb627").innerHTML=d627[numbs627-1]["ub1amc"];
+d627[numbs627-1]["ub1amc"]>0?document.getElementById("c1sinalnumb627").style.backgroundColor="Olive":document.getElementById("c1sinalnumb627").style.backgroundColor="red";
+
+//Ubi clt  quality
+d627[numbs627-1]["ub2amq"]>80?document.getElementById("q2signal627-5").style.backgroundColor="Green":document.getElementById("q2signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amq"]>60?document.getElementById("q2signal627-4").style.backgroundColor="DarkGreen":document.getElementById("q2signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amq"]>40?document.getElementById("q2signal627-3").style.backgroundColor="Gold":document.getElementById("q2signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amq"]>20?document.getElementById("q2signal627-2").style.backgroundColor="Coral":document.getElementById("q2signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amq"]>0?document.getElementById("q2signal627-1").style.backgroundColor="Red":document.getElementById("q2signal627-1").style.backgroundColor="#e0e0e0";
+//Ubi clt quality
+document.getElementById("q2sinalnumb627").innerHTML=d627[numbs627-1]["ub2amq"];
+d627[numbs627-1]["ub2amq"]>0?document.getElementById("q2sinalnumb627").style.backgroundColor="Olive":document.getElementById("q2sinalnumb627").style.backgroundColor="red";
+//Ubi clt  capacity
+d627[numbs627-1]["ub2amc"]>80?document.getElementById("c2signal627-5").style.backgroundColor="Green":document.getElementById("c2signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amc"]>60?document.getElementById("c2signal627-4").style.backgroundColor="DarkGreen":document.getElementById("c2signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amc"]>40?document.getElementById("c2signal627-3").style.backgroundColor="Gold":document.getElementById("c2signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amc"]>20?document.getElementById("c2signal627-2").style.backgroundColor="Coral":document.getElementById("c2signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2amc"]>0?document.getElementById("c2signal627-1").style.backgroundColor="Red":document.getElementById("c2signal627-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("c2sinalnumb627").innerHTML=d627[numbs627-1]["ub2amc"];
+d627[numbs627-1]["ub2amc"]>0?document.getElementById("c2sinalnumb627").style.backgroundColor="Olive":document.getElementById("c2sinalnumb627").style.backgroundColor="red";
+//Ubi clt  signal
+d627[numbs627-1]["ub2sig"]>-65?document.getElementById("s2signal627-5").style.backgroundColor="Green":document.getElementById("s2signal627-5").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2sig"]>-73?document.getElementById("s2signal627-4").style.backgroundColor="DarkGreen":document.getElementById("s2signal627-4").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2sig"]>-81?document.getElementById("s2signal627-3").style.backgroundColor="Gold":document.getElementById("s2signal627-3").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2sig"]>-89?document.getElementById("s2signal627-2").style.backgroundColor="Coral":document.getElementById("s2signal627-2").style.backgroundColor="#e0e0e0";
+d627[numbs627-1]["ub2sig"]>-97?document.getElementById("s2signal627-1").style.backgroundColor="Red":document.getElementById("s2signal627-1").style.backgroundColor="#e0e0e0";
+//Ubi clt capacity
+document.getElementById("s2sinalnumb627").innerHTML=d627[numbs627-1]["ub2sig"];
+d627[numbs627-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb627").style.backgroundColor="Olive":document.getElementById("s2sinalnumb627").style.backgroundColor="red";
+</script>
+<div id="chart13" class="chart"></div></div>
+
+<!-- <div class="megaleg">
+<div class="leg22sm"><a href="svg/index.php?well=s110"><img src="monitor.png"  class ="monpng"> </a> АГКМ401-1 <a class ="paperhref" href="javascript:assa('31.173.139.129');">31.173.139.129</a>(Завод)  <span class="paper" id="well401" >0</span>
+<br>Poz_br0 <a  class ="paperhref" href="javascript:poz('192.168.146.1');">146.1 RX:</a><span class="paper" id="zyx401tx" >0.0</span>Mbps TX:<span class="paper" id="zyx401rx" >0.0</span>Mbps 
+<br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.225');">19.225 RX:</a><span class="paper" id="modem401tx" >0.0</span>Mbps TX:<span class="paper" id="modem401rx" >0.0</span>Mbps 
+Csq:<span class="paper" id="signal401-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal401-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb401" >0.0</span>
+<br>Mlcache 146.3: <span class="paperb" id="mlcache401" > [нет связи] </span> Sbor 146.2: <span id="sbor401" >&nbsp;&nbsp;&nbsp;</span><br>DVR_analog 146.7: <span id="dvr401" >&nbsp;&nbsp;&nbsp;</span>
+<!--<br>Ubi_ap_kung 146.53:<span class="paper" id="ubi401-1" >0</span> Ubi_client_bur 146.53:<span class="paper" id="ubi401-2" >0</span>
+<br>Cam1 :<span id="cam401-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 :<span id="cam401-2" >&nbsp;&nbsp;&nbsp;</span>Cam3 :<span id="cam401-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 :<span id="cam401-4" >&nbsp;&nbsp;&nbsp;</span>
+</div> -->
+<!-- <script type="text/javascript">
+//WAN
+document.getElementById("well401").innerHTML=d401[numbs401-1]["value"];
+d401[numbs401-1]["value"]>0?document.getElementById("well401").style.backgroundColor="blue":document.getElementById("well401").style.backgroundColor="red";
+document.getElementById("zyx401rx").innerHTML=d401[numbs401-1]["tx"];
+d401[numbs401-1]["rx"]>0?document.getElementById("zyx401rx").style.backgroundColor="Violet":document.getElementById("zyx401rx").style.backgroundColor="red";
+document.getElementById("zyx401tx").innerHTML=d401[numbs401-1]["rx"];
+d401[numbs401-1]["tx"]>0?document.getElementById("zyx401tx").style.backgroundColor="orange":document.getElementById("zyx401tx").style.backgroundColor="red";
+//Modem
+document.getElementById("modem401rx").innerHTML=d401[numbs401-1]["mtx"];
+d401[numbs401-1]["mrx"]>0?document.getElementById("modem401rx").style.backgroundColor="IndianRed":document.getElementById("modem401rx").style.backgroundColor="red";
+document.getElementById("modem401tx").innerHTML=d401[numbs401-1]["mrx"];
+d401[numbs401-1]["mtx"]>0?document.getElementById("modem401tx").style.backgroundColor="teal":document.getElementById("modem401tx").style.backgroundColor="red";
+//Уровень сигнала
+document.getElementById("sinalnumb401").innerHTML=d401[numbs401-1]["sigpoz"];
+d401[numbs401-1]["sigpoz"]>0?document.getElementById("sinalnumb401").style.backgroundColor="indigo":document.getElementById("sinalnumb401").style.backgroundColor="red";
+//Уровень сигнала индикатор
+d401[numbs401-1]["sigpoz"]>20?document.getElementById("signal401-5").style.backgroundColor="Green":document.getElementById("signal401-5").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>15?document.getElementById("signal401-4").style.backgroundColor="DarkGreen":document.getElementById("signal401-4").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>10?document.getElementById("signal401-3").style.backgroundColor="Gold":document.getElementById("signal401-3").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>5?document.getElementById("signal401-2").style.backgroundColor="Coral":document.getElementById("signal401-2").style.backgroundColor="#e0e0e0";
+d401[numbs401-1]["sigpoz"]>0?document.getElementById("signal401-1").style.backgroundColor="Red":document.getElementById("signal401-1").style.backgroundColor="#e0e0e0";
+//Mlcache
+if (d401[numbs401-1]["ml"]>1.8)
+{document.getElementById("mlcache401").innerHTML="[ on ]";document.getElementById("mlcache401").style.backgroundColor="DarkGreen";}
+if (d401[numbs401-1]["ml"]<1.8)
+{document.getElementById("mlcache401").innerHTML="[ off ]";document.getElementById("mlcache401").style.backgroundColor="red";}
+//Камеры регистратор сборщик
+d401[numbs401-1]["sbor"]>0?document.getElementById("sbor401").style.backgroundColor="limegreen":document.getElementById("sbor401").style.backgroundColor="red";
+d401[numbs401-1]["dvr"]>0?document.getElementById("dvr401").style.backgroundColor="limegreen":document.getElementById("dvr401").style.backgroundColor="red";
+d401[numbs401-1]["cam1"]>0?document.getElementById("cam401-1").style.backgroundColor="limegreen":document.getElementById("cam401-1").style.backgroundColor="red";
+d401[numbs401-1]["cam2"]>0?document.getElementById("cam401-2").style.backgroundColor="limegreen":document.getElementById("cam401-2").style.backgroundColor="red";
+d401[numbs401-1]["cam3"]>0?document.getElementById("cam401-3").style.backgroundColor="limegreen":document.getElementById("cam401-3").style.backgroundColor="red";
+d401[numbs401-1]["cam4"]>0?document.getElementById("cam401-4").style.backgroundColor="limegreen":document.getElementById("cam401-4").style.backgroundColor="red";
+//Точки
+//document.getElementById("ubi401-1").innerHTML=d401[numbs401-1]["ub1"];
+//d401[numbs401-1]["ub1"]>0?document.getElementById("ubi401-1").style.backgroundColor="Olive":document.getElementById("ubi401-1").style.backgroundColor="red";
+//document.getElementById("ubi401-2").innerHTML=d401[numbs401-1]["ub2"];
+//d401[numbs401-1]["ub2"]>0?document.getElementById("ubi401-2").style.backgroundColor="Olive":document.getElementById("ubi401-2").style.backgroundColor="red";
+</script> -->
+<!-- <div id="chart11" class="chart"></div></div> -->
+
+<div class="megaleg" >
+<div id="leg3" class="leg22sm" ><span id="p150" class="paper"> </span><br><br>8.8.8.8  <span id="p29"  class="paper">0.0</span> <span id="p151"> </span><br>Техноком 62.220.55.149 <span id="p30" class="paper" >0.0</span><br><span id="p148">  </span>Мегафон 31.173.187.210 <span id="p147"  class="paper">0.0</span><span id="p149"> </span><br>Msk 80.247.113.226  <span id="p31"  class="paper">0.0</span><br><span id="p152"> </span>УМ 213.80.235.178 <span id="p32"  class="paper">0.0</span>
+</div>
+<script type="text/javascript">
+//var utcSeconds = d908[numbs908-1]["date"];
+//var d = new Date(0);
+//d.setUTCSeconds(utcSeconds);
+//document.getElementById("p33").innerHTML=d;
+
+document.getElementById("p29").innerHTML=dconn[numbsconn-1]["p8888"];
+dconn[numbsconn-1]["p8888"]>0?document.getElementById("p29").style.backgroundColor="DarkGreen":document.getElementById("p29").style.backgroundColor="red";
+document.getElementById("p30").innerHTML=dconn[numbsconn-1]["p6222055149"];
+dconn[numbsconn-1]["p6222055149"]>0?document.getElementById("p30").style.backgroundColor="Violet":document.getElementById("p30").style.backgroundColor="red";
+document.getElementById("p31").innerHTML=dconn[numbsconn-1]["p8084114180"];
+dconn[numbsconn-1]["p8084114180"]>0?document.getElementById("p31").style.backgroundColor="orange":document.getElementById("p31").style.backgroundColor="red";
+document.getElementById("p32").innerHTML=dconn[numbsconn-1]["p192168773"];
+dconn[numbsconn-1]["p192168773"]>0?document.getElementById("p32").style.backgroundColor="blue":document.getElementById("p32").style.backgroundColor="red";
+document.getElementById("p147").innerHTML=dconn[numbsconn-1]["p31173187210"];
+dconn[numbsconn-1]["p31173187210"]>0?document.getElementById("p147").style.backgroundColor="Purple":document.getElementById("p147").style.backgroundColor="red";
+</script>
+<div id="chart8" class="chart"></div></div>
+
+<div id="leg22">
+
+<?php
+echo "  Сейчас на сайте: <b>".sizeof(file($base))."</b>";
+?>
+<span>       </span><a href="videoreg.php"><img src="camera.png"   class ="monpng"></a><a href="videoreg.php"><img src="expand.png"   class ="monpng"></a>
+</div>
+</body>
+</html>
