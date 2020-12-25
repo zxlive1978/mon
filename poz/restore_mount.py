@@ -114,7 +114,8 @@ t544.join(30)
 if t544.is_alive(): t544.terminate()
 
 #938 Обработчик
-t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+# (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/d/-=DATA=-/STORE/"""])
 t20.start()
 t20.join(30)
 if t20.is_alive(): t20.terminate()
