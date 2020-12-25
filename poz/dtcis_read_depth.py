@@ -742,6 +742,13 @@ t4450.join(180)
 if t4450.is_alive(): t4450.terminate()
 
 
+#938 (Обработчик)
+t4450 = Process(target=read_well, args=["/mnt/20o","s4450depth"])
+t4450.start()
+t4450.join(180)
+if t4450.is_alive(): t4450.terminate()
+
+
 
 
 # #934
