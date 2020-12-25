@@ -47,12 +47,13 @@ def read_well(sbor,table):
 				f1_lst=open(full_path_lst,'rb')
 				f1_lst.seek(cur_lst_disp)
 				lst_data=f1_lst.read(21)
+				lst_format="=lflllc"
+				cur_lst_disp_addr,cur_key_value,time_dos,numb_rec,true_numb_rec,flag = unpack(lst_format, lst_data)
 				#print len(lst_data)
 			finally:
 				a=0
 				# f1_lst.close()
-			lst_format="=lflllc"
-			cur_lst_disp_addr,cur_key_value,time_dos,numb_rec,true_numb_rec,flag = unpack(lst_format, lst_data)
+			
 
 			#print cur_lst_disp_addr,numb_rec
 
@@ -684,7 +685,7 @@ def read_well(sbor,table):
 t544 = Process(target=read_well, args=["/mnt/544","s544d"])
 t544 = Process(target=read_well, args=["","s544d"])
 t544.start()
-t544.join()
+t544.join(60)
 if t544.is_alive(): t544.terminate()
 
 # #6611
