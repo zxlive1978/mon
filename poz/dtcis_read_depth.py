@@ -11,7 +11,7 @@ import threading
 
 import time
 from multiprocessing import Process
-
+import shutil
 
 def read_well(sbor,table):
 	#print os.listdir(sbor)
@@ -29,21 +29,21 @@ def read_well(sbor,table):
 		print 
 		try:
 			shutil.copy(sbor+'/'+cur_time, path_to_work)
-		except:
-			print "Unable to copy file. %s"
+		except IOError, e:
+			print "Unable to copy file. %s"% e
 
 		cur_lst=cur_time.replace('dep','lst')
 		cur_lst_size=getsize(join(sbor, cur_lst))
 		cur_time_size=getsize(join(sbor, cur_time))
 		try:
 			shutil.copy(sbor+'/'+cur_lst, path_to_work)
-		except:
-			print "Unable to copy file. %s"
+		except IOError, e:
+			print "Unable to copy file. %s"% e
 
 		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
 		i=0
-		cur_lst_disp=0
-		cur_rec=-21
+		cur_lst_disp=-21
+		cur_rec=0
 		while i < (cur_lst_size/21):
 			
 			cur_rec=i
