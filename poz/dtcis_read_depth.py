@@ -61,15 +61,19 @@ def read_well(sbor,table):
 				f1_time=open(full_path_time,'rb')
 				f1_time.seek(cur_lst_disp_addr)
 				time_head_data=f1_time.read(10)
-				#print time_head_data
-			finally:
-				f1_time.close()
-
-			time_head_format="=lHHBB"
-			try:
+				time_head_format="=lHHBB"
 				time_numb_rec,numb_well,len_rec,numb_key_param,numbs_params = unpack(time_head_format, time_head_data)
+				#print time_head_data
+			except:
+				f1_time.close()
 			finally:
 				a=0
+
+			
+			# try:
+				
+			# finally:
+			# 	a=0
 			#print len_rec,numbs_params
 
 			#чтение  dep записи len_rec байт в time
