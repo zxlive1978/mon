@@ -50,6 +50,8 @@ def read_well(sbor,table):
 				lst_format="=lflllc"
 				cur_lst_disp_addr,cur_key_value,time_dos,numb_rec,true_numb_rec,flag = unpack(lst_format, lst_data)
 				#print len(lst_data)
+			except:
+				a=0
 			finally:
 				a=0
 				# f1_lst.close()
