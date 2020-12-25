@@ -34,9 +34,8 @@ def read_well(sbor,table):
 		# 		  cur_time=name
 		#cur_time=''		 
 		#print name
-		print 
 		try:
-			shutil.copy(sbor+'/'+cur_time, path_to_work, table+".dep")
+			shutil.copy(sbor+'/'+cur_time, path_to_work+"/"+table+".dep")
 		except IOError, e:
 			print "Unable to copy file. %s"% e
 		
@@ -45,7 +44,7 @@ def read_well(sbor,table):
 		cur_lst_size=getsize(join(sbor, cur_lst))
 		cur_time_size=getsize(join(sbor, cur_time))
 		try:
-			shutil.copy(sbor+'/'+cur_lst, path_to_work)
+			shutil.copy(sbor+'/'+cur_lst, pathpath_to_work+"/"+table+".lst")
 		except IOError, e:
 			print "Unable to copy file. %s"% e
 
