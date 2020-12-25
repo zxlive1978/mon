@@ -30,7 +30,7 @@ def read_well(sbor,table):
 		cur_time_size=getsize(join(sbor, cur_time))
 
 		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
-		for number in range((cur_lst_size) -1):
+		for number in range((cur_lst_size/21) -1):
 			cur_rec=number
 			#print cur_rec
 			cur_lst_disp =number*21
