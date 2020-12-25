@@ -17,7 +17,8 @@ def read_well(sbor,table):
 	#print os.listdir(sbor)
 	# try:
 		file_ext='*.dep'
-		cur_time='Store.dep'
+		cur_time='STORE.dep'
+		path_to_work ="/var/www/html/mon/poz/"
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
 		# 		SizeFile = getsize(join(root, name))
@@ -25,6 +26,12 @@ def read_well(sbor,table):
 		# 		  cur_time=name
 		#cur_time=''		 
 		#print name
+		print join(sbor, cur_lst)
+		try:
+			shutil.copy(join(sbor, cur_lst), path_to_work)
+		except:
+			print "Unable to copy file. %s"
+
 		cur_lst=cur_time.replace('dep','lst')
 		cur_lst_size=getsize(join(sbor, cur_lst))
 		cur_time_size=getsize(join(sbor, cur_lst))
@@ -41,7 +48,7 @@ def read_well(sbor,table):
 			# print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
-			full_path_lst=sbor+'/'+cur_lst
+			full_path_lst=cur_lst
 			lst_data=''
 			try:
 				f1_lst=open(full_path_lst,'rb')
@@ -60,7 +67,7 @@ def read_well(sbor,table):
 			#print cur_lst_disp_addr,numb_rec
 
 			#чтение заголовка dep записи 10 байт в time
-			full_path_time=sbor+'/'+cur_time
+			full_path_time=cur_time
 			time_head_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
@@ -82,7 +89,7 @@ def read_well(sbor,table):
 			#print len_rec,numbs_params
 
 			#чтение  dep записи len_rec байт в time
-			full_path_time=sbor+'/'+cur_time
+			full_path_time=cur_time
 			time_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
