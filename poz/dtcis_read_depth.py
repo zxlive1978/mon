@@ -17,7 +17,7 @@ def read_well(sbor,table):
 	#print os.listdir(sbor)
 	# try:
 		file_ext='*.dep'
-		cur_time='STORE.dep'
+		cur_time='store.dep'
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
 		# 		SizeFile = getsize(join(root, name))
@@ -26,19 +26,19 @@ def read_well(sbor,table):
 		#cur_time=''		 
 		#print name
 		cur_lst=cur_time.replace('dep','lst')
-		cur_lst_size=getsize(cur_lst)
-		cur_time_size=getsize(cur_time)
+		cur_lst_size=getsize(join(sbor, cur_lst))
+		cur_time_size=getsize(join(sbor, cur_lst))
 
-		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
+		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
 		i=0
 		cur_lst_disp=0
 		cur_rec=-21
 		while i < (cur_lst_size/21):
 			
 			cur_rec=i
-			print cur_rec
+			# print cur_rec
 			cur_lst_disp =cur_lst_disp+21
-			print cur_lst_disp
+			# print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
 			full_path_lst=sbor+''+cur_lst
@@ -685,7 +685,7 @@ def read_well(sbor,table):
 #544
 #read_well("/mnt/104","s110")
 t544 = Process(target=read_well, args=["/mnt/544","s544d"])
-t544 = Process(target=read_well, args=["","s544d"])
+# t544 = Process(target=read_well, args=["","s544d"])
 t544.start()
 t544.join(60)
 if t544.is_alive(): t544.terminate()
