@@ -30,10 +30,12 @@ def read_well(sbor,table):
 		cur_time_size=getsize(join(sbor, cur_time))
 
 		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
-		for number in range((cur_lst_size/21) -1):
-			cur_rec=number
+		i=0
+		while i < (cur_lst_size/21):
+			
+			cur_rec=i
 			#print cur_rec
-			cur_lst_disp =number*21
+			cur_lst_disp =i
 			print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
@@ -64,8 +66,10 @@ def read_well(sbor,table):
 				f1_time.close()
 
 			time_head_format="=lHHBB"
-			time_numb_rec,numb_well,len_rec,numb_key_param,numbs_params = unpack(time_head_format, time_head_data)
-
+			try:
+				time_numb_rec,numb_well,len_rec,numb_key_param,numbs_params = unpack(time_head_format, time_head_data)
+			finally:
+				a=0
 			#print len_rec,numbs_params
 
 			#чтение  dep записи len_rec байт в time
