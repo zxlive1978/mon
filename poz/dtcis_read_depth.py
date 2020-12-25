@@ -36,7 +36,7 @@ def read_well(sbor,table):
 		#print name
 		print 
 		try:
-			shutil.copy(sbor+'/'+cur_time, path_to_work, dst =table)
+			shutil.copy(sbor+'/'+cur_time, path_to_work, table+".dep")
 		except IOError, e:
 			print "Unable to copy file. %s"% e
 		
