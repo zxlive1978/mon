@@ -41,12 +41,12 @@ def read_well(sbor,table):
 			print "Unable to copy file. %s"% e
 
 		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
-		i=0
+		ii=0
 		cur_lst_disp=-21
 		cur_rec=0
-		while i < (cur_lst_size/21):
+		while ii < (cur_lst_size/21):
 			
-			cur_rec=i
+			cur_rec=ii
 			# print cur_rec
 			cur_lst_disp =cur_lst_disp+21
 			# print cur_lst_disp
@@ -674,6 +674,7 @@ def read_well(sbor,table):
 				cursor.execute(sql)
 				db.commit()
 				db.close()
+				ii=ii+1
 			except:
 				a=0
 			finally:
