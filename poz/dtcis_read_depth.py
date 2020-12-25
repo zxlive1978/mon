@@ -17,7 +17,7 @@ def read_well(sbor,table):
 	#print os.listdir(sbor)
 	# try:
 		file_ext='*.dep'
-		cur_time='store.dep'
+		cur_time='Store.dep'
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
 		# 		SizeFile = getsize(join(root, name))
