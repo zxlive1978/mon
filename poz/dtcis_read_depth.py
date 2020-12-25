@@ -681,7 +681,7 @@ def read_well(sbor,table):
 				db_name=table
 				db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 				cursor = db.cursor()
-				sql = "TRUNCATE "+db_name+"temp"
+				sql = "TRUNCATE "+db_name+"_all"
 				cursor.execute(sql)
 				db.commit()
 				
@@ -695,7 +695,7 @@ def read_well(sbor,table):
 				# INSERT INTO TABLE1 (Col1, Col2)
 				# SELECT Col1, COl2  FROM  Table2
 
-				sql = "INSERT INTO "+db_name+"temp"+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM"+db_name
+				sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM"+db_name
 				cursor.execute(sql)
 				db.commit()
 
@@ -717,7 +717,7 @@ def read_well(sbor,table):
 
 
 #544
-t544 = Process(target=read_well, args=["/mnt/544","s544depth"])
+t544 = Process(target=read_well, args=["/mnt/4450","s544depth"])
 t544.start()
 t544.join(180)
 if t544.is_alive(): t544.terminate()
