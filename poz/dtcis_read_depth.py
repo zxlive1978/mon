@@ -41,7 +41,7 @@ def read_well(sbor,table):
 			# print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
-			full_path_lst=sbor+''+cur_lst
+			full_path_lst=sbor+'/'+cur_lst
 			lst_data=''
 			try:
 				f1_lst=open(full_path_lst,'rb')
@@ -60,7 +60,7 @@ def read_well(sbor,table):
 			#print cur_lst_disp_addr,numb_rec
 
 			#чтение заголовка dep записи 10 байт в time
-			full_path_time=sbor+''+cur_time
+			full_path_time=sbor+'/'+cur_time
 			time_head_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
@@ -82,7 +82,7 @@ def read_well(sbor,table):
 			#print len_rec,numbs_params
 
 			#чтение  dep записи len_rec байт в time
-			full_path_time=sbor+''+cur_time
+			full_path_time=sbor+'/'+cur_time
 			time_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
