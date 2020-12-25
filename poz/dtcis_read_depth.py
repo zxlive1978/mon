@@ -17,7 +17,7 @@ def read_well(sbor,table):
 	#print os.listdir(sbor)
 	# try:
 		file_ext='*.dep'
-		cur_time='store.dep'
+		cur_time='STORE.dep'
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
 		# 		SizeFile = getsize(join(root, name))
@@ -26,20 +26,22 @@ def read_well(sbor,table):
 		#cur_time=''		 
 		#print name
 		cur_lst=cur_time.replace('dep','lst')
-		cur_lst_size=getsize(join(sbor, cur_lst))
-		cur_time_size=getsize(join(sbor, cur_time))
+		cur_lst_size=getsize(cur_lst)
+		cur_time_size=getsize(cur_time)
 
 		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
 		i=0
-		while i < (cur_lst_size/21):
+		cur_lst_disp=0
+		cur_rec=-21
+		while i < (cur_lst_size/21 -1):
 			
 			cur_rec=i
-			#print cur_rec
+			print cur_rec
 			cur_lst_disp =cur_lst_disp+21
 			print cur_lst_disp
 
 			#чтение последней lst записи 21 байт
-			full_path_lst=sbor+'/'+cur_lst
+			full_path_lst=sbor+''+cur_lst
 			lst_data=''
 			try:
 				f1_lst=open(full_path_lst,'rb')
@@ -55,7 +57,7 @@ def read_well(sbor,table):
 			#print cur_lst_disp_addr,numb_rec
 
 			#чтение заголовка dep записи 10 байт в time
-			full_path_time=sbor+'/'+cur_time
+			full_path_time=sbor+''+cur_time
 			time_head_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
@@ -77,7 +79,7 @@ def read_well(sbor,table):
 			#print len_rec,numbs_params
 
 			#чтение  dep записи len_rec байт в time
-			full_path_time=sbor+'/'+cur_time
+			full_path_time=sbor+''+cur_time
 			time_data=''
 			try:
 				f1_time=open(full_path_time,'rb')
@@ -680,8 +682,9 @@ def read_well(sbor,table):
 #544
 #read_well("/mnt/104","s110")
 t544 = Process(target=read_well, args=["/mnt/544","s544d"])
+t544 = Process(target=read_well, args=["","s544d"])
 t544.start()
-t544.join(30)
+t544.join()
 if t544.is_alive(): t544.terminate()
 
 # #6611
