@@ -153,510 +153,515 @@ def read_well(sbor,table):
 				
 			# print a
 			# f1_sprav.close()
-			sprv =[['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4]
-			,['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['l' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['c' ,12],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f',4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['i' ,2],['i' ,2],['i' ,2],['i' ,2],
-			['i' ,2],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,32],
-			['c' ,9],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,31],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['i' ,2],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,10],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f',4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
-			['f' ,4],['f' ,4],['c' ,20]]
-			#print sprv[1][0]
-			i=0
-			#начало подзаголовка данных без главного заголовка
-			subhead_data_adr = 10
-			next_sub_head = 0
+			try:
+				sprv =[['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4]
+				,['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['l' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['c' ,12],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f',4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['i' ,2],['i' ,2],['i' ,2],['i' ,2],
+				['i' ,2],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,32],
+				['c' ,9],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,31],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['i' ,2],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['i' ,2],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['c' ,10],['l' ,4],['l' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f',4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],['f' ,4],
+				['f' ,4],['f' ,4],['c' ,20]]
+				#print sprv[1][0]
+				i=0
+				#начало подзаголовка данных без главного заголовка
+				subhead_data_adr = 10
+				next_sub_head = 0
 
 
 
 
 
 
-			numb_pa=unpack('B', time_data[i+next_sub_head+10:i+next_sub_head+11])
-			#print numb_pa
+				numb_pa=unpack('B', time_data[i+next_sub_head+10:i+next_sub_head+11])
+				#print numb_pa
 
-			numb_pa=unpack('f', time_data[i+next_sub_head+12:i+next_sub_head+16])
-			#print numb_pa
+				numb_pa=unpack('f', time_data[i+next_sub_head+12:i+next_sub_head+16])
+				#print numb_pa
 
-			Wkp,Wdol,Mpot,Npot,Pbx,Qbx,Talblok,C1C5,C1,Xn1,Xn2,Potok,Tbix,V1,V2,V3,V4,Vdol,Vobj,Zaboj,Instr,Vinstr,Vrema = -2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000
-			#print Wkp
-			cur_type=''
-			cur_size=0
-			while i<numbs_params:
-				#ID параметра
-				numb_par = unpack('B', time_data[subhead_data_adr+next_sub_head+1:subhead_data_adr+next_sub_head+2])
-				#Тип параметра
-				type_par =sprv[numb_par[0]][0]
-				#Размер параметра
-				size_par =sprv[numb_par[0]][1]
-				#print numb_par, type_par,size_par
-				if numb_par[0]==0:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Wkp = result
-				if numb_par[0]==1:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Wdol = result
-				if numb_par[0]==5:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Mpot = result
-				if numb_par[0]==4:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Npot = result
-				if numb_par[0]==2:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Pbx = result
-				if numb_par[0]==31:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Qbx = result
-				if numb_par[0]==12:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Talblok = result
-				if numb_par[0]==152:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					C1C5 = result
-				if numb_par[0]==16:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					C1 = result
-				if numb_par[0]==13:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Xn1 = result
-				if numb_par[0]==14:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Xn2 = result
-				if numb_par[0]==15:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Potok = result
-				if numb_par[0]==9:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Tbix = result
-				if numb_par[0]==44:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					V1 = result
-				if numb_par[0]==45:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					V2 = result
-				if numb_par[0]==46:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					V3 = result
-				if numb_par[0]==47:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					V4 = result
-				if numb_par[0]==49:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Vdol = result
-				if numb_par[0]==51:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Vobj = result
-				if numb_par[0]==53:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Zaboj = result
-				if numb_par[0]==54:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Instr = result
-				if numb_par[0]==191:
-					if type_par=='f':
-						cur_type='f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Vinstr = result
-				if numb_par[0]==52:
-					if type_par=='f':
-						cur_type='=f'
-						cur_size=size_par
-					if type_par=='i':
-						cur_type='=h'
-						cur_size=size_par
-					if type_par=='c':
-						cur_type='=s'
-						cur_size=size_par
-					if type_par=='l':
-						cur_type='=l'
-						cur_size=size_par
-					
-					value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
-					if type_par=='f':
-						result=round(value[0],2)
-					else: result= value[0]
-					Vrema = result - 18000 - 10800-3600 #3600 1 час
-					
-				next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
-				i=i+1
-			db_name=table
-			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-			cursor = db.cursor()
-			
+				Wkp,Wdol,Mpot,Npot,Pbx,Qbx,Talblok,C1C5,C1,Xn1,Xn2,Potok,Tbix,V1,V2,V3,V4,Vdol,Vobj,Zaboj,Instr,Vinstr,Vrema = -2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000
+				#print Wkp
+				cur_type=''
+				cur_size=0
+				while i<numbs_params:
+					#ID параметра
+					numb_par = unpack('B', time_data[subhead_data_adr+next_sub_head+1:subhead_data_adr+next_sub_head+2])
+					#Тип параметра
+					type_par =sprv[numb_par[0]][0]
+					#Размер параметра
+					size_par =sprv[numb_par[0]][1]
+					#print numb_par, type_par,size_par
+					if numb_par[0]==0:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Wkp = result
+					if numb_par[0]==1:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Wdol = result
+					if numb_par[0]==5:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Mpot = result
+					if numb_par[0]==4:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Npot = result
+					if numb_par[0]==2:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Pbx = result
+					if numb_par[0]==31:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Qbx = result
+					if numb_par[0]==12:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Talblok = result
+					if numb_par[0]==152:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						C1C5 = result
+					if numb_par[0]==16:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						C1 = result
+					if numb_par[0]==13:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Xn1 = result
+					if numb_par[0]==14:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Xn2 = result
+					if numb_par[0]==15:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Potok = result
+					if numb_par[0]==9:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Tbix = result
+					if numb_par[0]==44:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						V1 = result
+					if numb_par[0]==45:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						V2 = result
+					if numb_par[0]==46:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						V3 = result
+					if numb_par[0]==47:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						V4 = result
+					if numb_par[0]==49:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Vdol = result
+					if numb_par[0]==51:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Vobj = result
+					if numb_par[0]==53:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Zaboj = result
+					if numb_par[0]==54:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Instr = result
+					if numb_par[0]==191:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Vinstr = result
+					if numb_par[0]==52:
+						if type_par=='f':
+							cur_type='=f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='=h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='=s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='=l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Vrema = result - 18000 - 10800-3600 #3600 1 час
+						
+					next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
+					i=i+1
+				db_name=table
+				db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+				cursor = db.cursor()
+				
 
-			# i will assume the below scenario ,
+				# i will assume the below scenario ,
 
-			# 1- you need to insert in table1 all data from table 2 use this one
+				# 1- you need to insert in table1 all data from table 2 use this one
 
-			# INSERT INTO TABLE1 (Col1, Col2)
-			# SELECT Col1, COl2  FROM  Table2
+				# INSERT INTO TABLE1 (Col1, Col2)
+				# SELECT Col1, COl2  FROM  Table2
 
-			sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
-			cursor.execute(sql)
-			db.commit()
-			db.close()
+				sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
+				cursor.execute(sql)
+				db.commit()
+				db.close()
+			except:
+				a=0
+			finally:
+				a=0
 		#print db_name
 	# except:
 	# 	return
