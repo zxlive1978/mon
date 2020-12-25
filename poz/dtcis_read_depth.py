@@ -33,7 +33,7 @@ def read_well(sbor,table):
 		i=0
 		cur_lst_disp=0
 		cur_rec=-21
-		while i < (cur_lst_size/21 -1):
+		while i < (cur_lst_size/21):
 			
 			cur_rec=i
 			print cur_rec
