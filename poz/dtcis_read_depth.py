@@ -695,9 +695,7 @@ def read_well(sbor,table):
 
 
 #544
-#read_well("/mnt/104","s110")
-t544 = Process(target=read_well, args=["/mnt/4450","s544d"])
-# t544 = Process(target=read_well, args=["","s544d"])
+t544 = Process(target=read_well, args=["/mnt/544","s544d"])
 t544.start()
 t544.join(180)
 if t544.is_alive(): t544.terminate()
