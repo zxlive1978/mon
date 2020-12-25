@@ -26,15 +26,18 @@ def read_well(sbor,table):
 		# 		  cur_time=name
 		#cur_time=''		 
 		#print name
-		print join(sbor, cur_lst)
 		try:
-			shutil.copy(join(sbor, cur_lst), path_to_work)
+			shutil.copy(join(sbor, cur_time), path_to_work)
 		except:
 			print "Unable to copy file. %s"
 
 		cur_lst=cur_time.replace('dep','lst')
 		cur_lst_size=getsize(join(sbor, cur_lst))
-		cur_time_size=getsize(join(sbor, cur_lst))
+		cur_time_size=getsize(join(sbor, cur_time))
+		try:
+			shutil.copy(join(sbor, cur_lst), path_to_work)
+		except:
+			print "Unable to copy file. %s"
 
 		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
 		i=0
