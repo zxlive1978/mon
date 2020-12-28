@@ -55,7 +55,9 @@ def read_well(sbor,table):
 		
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
-		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
+		
+		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
+		
 		ii=0
 		cur_lst_disp=-21
 		cur_rec=0
