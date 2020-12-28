@@ -726,33 +726,33 @@ def read_well(sbor,table):
 #544
 t544 = Process(target=read_well, args=["/mnt/4450","s544depth"])
 t544.start()
-t544.join(180)
+t544.join(300)
 if t544.is_alive(): t544.terminate()
 
 #9917
 t630 = Process(target=read_well, args=["/mnt/630","s630depth"])
 t630.start()
-t630.join(180)
+t630.join(300)
 if t630.is_alive(): t630.terminate()
 
 #632
 t631 = Process(target=read_well, args=["/mnt/631","s629depth"])
 t631.start()
-t631.join(180)
+t631.join(300)
 if t631.is_alive(): t631.terminate()
 
 
 #71
 t4450 = Process(target=read_well, args=["/mnt/4450","s4450depth"])
 t4450.start()
-t4450.join(180)
+t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
 
 
 #938 (Обработчик)
 t4450 = Process(target=read_well, args=["/mnt/20o","s20depth"])
 t4450.start()
-t4450.join(180)
+t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
 
 
