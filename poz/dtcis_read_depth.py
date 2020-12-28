@@ -712,6 +712,14 @@ def read_well(sbor,table):
 
 		sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM "+db_name
 		cursor.execute(sql)
+
+		# INSERT INTO Employee.tbl_TestMerge 
+		# (EmpNumber,EmpName)
+		# VALUES (2,'LKM')
+		# ON DUPLICATE KEY UPDATE 
+		# EmpNumber=VALUES(EmpNumber),EmpName=VALUES(EmpName);
+
+
 		db.commit()
 
 
