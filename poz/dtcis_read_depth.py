@@ -65,7 +65,7 @@ def read_well(sbor,table):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
-		
+
 		while ii < (cur_lst_size/21):
 			
 			cur_rec=ii
@@ -683,13 +683,14 @@ def read_well(sbor,table):
 				
 				sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
 				cursor.execute(sql)
+				db.commit()
 				ii=ii+1
 			
 			except:
 				a=0
 			finally:
 				a=0
-			db.commit()
+			
 			db.close()
 			
 			db_name=table
