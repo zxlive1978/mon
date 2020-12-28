@@ -34,24 +34,24 @@ def read_well(sbor,table):
 		# 		  cur_time=name
 		#cur_time=''		 
 		#print name
-		cur_lst=cur_time.replace('dep','lst')
+		cur_lst=cur_time.replace('.dep','.lst')
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
 
-		try:
-			shutil.copy(sbor+'/'+cur_time, path_to_work+"/"+table+".dep")
-		except IOError, e:
-			print "Unable to copy file. %s"% e
+		# try:
+		# 	shutil.copy(sbor+'/'+cur_time, path_to_work+"/"+table+".dep")
+		# except IOError, e:
+		# 	print "Unable to copy file. %s"% e
 		
 		
 		
-		try:
-			shutil.copy(sbor+'/'+cur_lst, path_to_work+"/"+table+".lst")
-		except IOError, e:
-			print "Unable to copy file. %s"% e
+		# try:
+		# 	shutil.copy(sbor+'/'+cur_lst, path_to_work+"/"+table+".lst")
+		# except IOError, e:
+		# 	print "Unable to copy file. %s"% e
 
 		cur_time=""+table+".dep"
-		cur_lst=cur_time.replace('dep','lst')
+		cur_lst=cur_time.replace('.dep','.lst')
 		
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
@@ -723,17 +723,17 @@ def read_well(sbor,table):
 # if t110.is_alive(): t110.terminate()
 
 
-#544
-t544 = Process(target=read_well, args=["/mnt/4450","s544depth"])
-t544.start()
-t544.join(180)
-if t544.is_alive(): t544.terminate()
+# #544
+# t544 = Process(target=read_well, args=["/mnt/4450","s544depth"])
+# t544.start()
+# t544.join(180)
+# if t544.is_alive(): t544.terminate()
 
-#9917
-t630 = Process(target=read_well, args=["/mnt/630","s630depth"])
-t630.start()
-t630.join(180)
-if t630.is_alive(): t630.terminate()
+# #9917
+# t630 = Process(target=read_well, args=["/mnt/630","s630depth"])
+# t630.start()
+# t630.join(180)
+# if t630.is_alive(): t630.terminate()
 
 #632
 t631 = Process(target=read_well, args=["/mnt/631","s629depth"])
@@ -742,18 +742,18 @@ t631.join(180)
 if t631.is_alive(): t631.terminate()
 
 
-#71
-t4450 = Process(target=read_well, args=["/mnt/4450","s4450depth"])
-t4450.start()
-t4450.join(180)
-if t4450.is_alive(): t4450.terminate()
+# #71
+# t4450 = Process(target=read_well, args=["/mnt/4450","s4450depth"])
+# t4450.start()
+# t4450.join(180)
+# if t4450.is_alive(): t4450.terminate()
 
 
-#938 (Обработчик)
-t4450 = Process(target=read_well, args=["/mnt/20o","s20depth"])
-t4450.start()
-t4450.join(180)
-if t4450.is_alive(): t4450.terminate()
+# #938 (Обработчик)
+# t4450 = Process(target=read_well, args=["/mnt/20o","s20depth"])
+# t4450.start()
+# t4450.join(180)
+# if t4450.is_alive(): t4450.terminate()
 
 
 
