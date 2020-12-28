@@ -34,7 +34,7 @@ def read_well(sbor,table):
 		# 		  cur_time=name
 		#cur_time=''		 
 		#print name
-		cur_lst=cur_time.replace('dep','lst')
+		cur_lst=cur_time.replace('.dep','.lst')
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
 
@@ -51,7 +51,7 @@ def read_well(sbor,table):
 			print "Unable to copy file. %s"% e
 
 		cur_time=""+table+".dep"
-		cur_lst=cur_time.replace('dep','lst')
+		cur_lst=cur_time.replace('.dep','.lst')
 		
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
