@@ -691,31 +691,31 @@ def read_well(sbor,table):
 			finally:
 				a=0
 			
-			db.close()
-			
-			db_name=table
-			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-			cursor = db.cursor()
-			sql = "TRUNCATE "+db_name+"_all"
-			cursor.execute(sql)
-			db.commit()
-			
-			cursor = db.cursor()
-			
+		db.close()
+		
+		db_name=table
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		cursor = db.cursor()
+		sql = "TRUNCATE "+db_name+"_all"
+		cursor.execute(sql)
+		db.commit()
+		
+		cursor = db.cursor()
+		
 
-			# i will assume the below scenario ,
+		# i will assume the below scenario ,
 
-			# 1- you need to insert in table1 all data from table 2 use this one
+		# 1- you need to insert in table1 all data from table 2 use this one
 
-			# INSERT INTO TABLE1 (Col1, Col2)
-			# SELECT Col1, COl2  FROM  Table2
+		# INSERT INTO TABLE1 (Col1, Col2)
+		# SELECT Col1, COl2  FROM  Table2
 
-			sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM "+db_name
-			cursor.execute(sql)
-			db.commit()
+		sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM "+db_name
+		cursor.execute(sql)
+		db.commit()
 
 
-			db.close()
+		db.close()
 		#print db_name
 	# except:
 	# 	return
