@@ -694,11 +694,11 @@ def read_well(sbor,table):
 		db.close()
 		
 		
-		# sql = "TRUNCATE "+db_name+"_all"
-		# cursor.execute(sql)
-		# db.commit()
+		sql = "TRUNCATE "+db_name+"_all"
+		cursor.execute(sql)
+		db.commit()
 		
-		# cursor = db.cursor()
+		cursor = db.cursor()
 		
 
 		# i will assume the below scenario ,
@@ -712,8 +712,7 @@ def read_well(sbor,table):
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
 
-		# sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM "+db_name
-		sql = "UPDATE "+db_name+"_all  SELECT * "+" FROM "+db_name
+		sql = "INSERT INTO "+db_name+"_all  "+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) SELECT Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr FROM "+db_name
 		cursor.execute(sql)
 		db.commit()
 
