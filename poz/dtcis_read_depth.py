@@ -50,7 +50,7 @@ def read_well(sbor,table):
 		except IOError, e:
 			print "Unable to copy file. %s"% e
 
-		cur_time=""+table+".dep"
+		cur_time=path_to_work+table+".dep"
 		cur_lst=cur_time.replace('.dep','.lst')
 		
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
