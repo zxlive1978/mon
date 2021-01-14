@@ -57,7 +57,7 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
 			# tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
 		# else:
 			# tx,rx=zyxel.speed_zyxel(ip_poz,"5188",int(c))
-		tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
+		tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "95.182.120.47")
 		mlrx,mltx=zyxel_sngs_port2206.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
         if (luch):
             luchtx,luchrx = zyxel_wan_all_luch.speed_zyxel(ip_poz,"5188",int(c))

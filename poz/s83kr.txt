@@ -34,9 +34,9 @@ object TChartContext
     object TPrintLabel
       Left = 90
       Top = 6
-      Right = 101
+      Right = 121
       Bottom = 12
-      Caption = #1050#1056#1057
+      Caption = #1051#1080#1082#1074#1080#1076#1072#1094#1080#1103
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -248,7 +248,7 @@ object TChartContext
       SrcID = 'GST'
       Max = 5.000000000000000000
       Caption = #1050#1088#1091#1090#1103#1097#1080#1081' '#1084#1086#1084#1077#1085#1090' '#1085#1072' '#1088#1086#1090'.'
-      Units = #1090'*'#1084
+      Units = #1090#1089'*'#1084
       Color = 38218
       ShowSubLabels = False
       Flags = []

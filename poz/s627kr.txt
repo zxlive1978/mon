@@ -5,8 +5,8 @@ object TChartContext
   Bottom = 0
   MainID = 0
   FormName = #1044#1080#1072#1075#1088#1072#1084#1084#1072' '#1089' '#1087#1088#1080#1074#1103#1079#1082#1086#1081' '#1087#1086' '#1074#1088#1077#1084#1077#1085#1080
-  Min = 43882.834670405090000000
-  Max = 43883.834143877310000000
+  Min = 44207.834421469910000000
+  Max = 44208.835400162040000000
   Scale = 0.004901960784313725
   Step = 0.041666666666666660
   IsDateTime = True
@@ -36,7 +36,7 @@ object TChartContext
       Top = 5
       Right = 131
       Bottom = 10
-      Caption = '21.02.20 20:01 - 22.02.20 20:01'
+      Caption = '11.01.21 20:01 - 12.01.21 20:02'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clBlue
       Font.Height = -13
@@ -121,7 +121,7 @@ object TChartContext
     Left = 14
     Top = 10
     Right = 58
-    Bottom = 284
+    Bottom = 285
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -249,12 +249,972 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
+    object TCommentSeries
+      Left = 19
+      Top = -2571
+      Right = 44
+      Bottom = -2561
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44194.840277777780000000
+      Comment = #1054#1055
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -2367
+      Right = 44
+      Bottom = -2357
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44195.840277777780000000
+      Comment = #1054#1055
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -1959
+      Right = 44
+      Bottom = -1949
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44197.840277777780000000
+      Comment = #1054#1055
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -1641
+      Right = 45
+      Bottom = -1631
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44199.397291666670000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -1756
+      Right = 45
+      Bottom = -1746
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.834791666670000000
+      Comment = #1054#1055
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -1551
+      Right = 44
+      Bottom = -1541
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44199.837106481480000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -1534
+      Right = 44
+      Bottom = -1524
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44199.920439814810000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 17
+      Top = -1348
+      Right = 47
+      Bottom = -1338
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.835104166670000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 17
+      Top = -1143
+      Right = 47
+      Bottom = -1133
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44201.840775462970000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -973
+      Right = 45
+      Bottom = -963
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.674108796290000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -961
+      Right = 45
+      Bottom = -951
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.729664351850000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -950
+      Right = 44
+      Bottom = -940
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.784722222220000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -940
+      Right = 44
+      Bottom = -930
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.835011574080000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -930
+      Right = 44
+      Bottom = -920
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.881944444450000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -919
+      Right = 44
+      Bottom = -909
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.937500000000000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -912
+      Right = 44
+      Bottom = -902
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.972222222220000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -902
+      Right = 44
+      Bottom = -892
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.020833333340000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -889
+      Right = 44
+      Bottom = -879
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.085011574080000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -872
+      Right = 44
+      Bottom = -862
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.168344907400000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -869
+      Right = 44
+      Bottom = -859
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.180555555550000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -861
+      Right = 44
+      Bottom = -851
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.222222222220000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -858
+      Right = 44
+      Bottom = -848
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.236111111110000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -844
+      Right = 44
+      Bottom = -834
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.305555555550000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -918
+      Right = 49
+      Bottom = -908
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.944444444450000000
+      Comment = #1055#1057'2;2666'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -903
+      Right = 49
+      Bottom = -893
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.013888888890000000
+      Comment = #1055#1057'5;2668.5'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -871
+      Right = 49
+      Bottom = -861
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.173611111110000000
+      Comment = #1055#1057'4;2786'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -859
+      Right = 49
+      Bottom = -849
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.229166666660000000
+      Comment = #1055#1057'2;2786'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -821
+      Right = 44
+      Bottom = -811
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.418344907400000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -834
+      Right = 44
+      Bottom = -824
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.354456018520000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -770
+      Right = 44
+      Bottom = -760
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.668344907400000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -753
+      Right = 44
+      Bottom = -743
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.751678240740000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -736
+      Right = 44
+      Bottom = -726
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.834826388890000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -706
+      Right = 44
+      Bottom = -696
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.979166666660000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -628
+      Right = 49
+      Bottom = -618
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.364687500000000000
+      Comment = #1055#1057'6; 2670'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -614
+      Right = 44
+      Bottom = -604
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.430659722220000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -600
+      Right = 44
+      Bottom = -590
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.501493055560000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -594
+      Right = 44
+      Bottom = -584
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.529270833340000000
+      Comment = #1053
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -585
+      Right = 44
+      Bottom = -575
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.574409722220000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -582
+      Right = 44
+      Bottom = -572
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.591770833340000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -563
+      Right = 44
+      Bottom = -553
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.680659722220000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -551
+      Right = 44
+      Bottom = -541
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.739687500000000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -544
+      Right = 44
+      Bottom = -534
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.777777777780000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -530
+      Right = 44
+      Bottom = -520
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.841793981480000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -505
+      Right = 44
+      Bottom = -495
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.966793981480000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -502
+      Right = 44
+      Bottom = -492
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.979166666660000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -490
+      Right = 44
+      Bottom = -480
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.041666666660000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -483
+      Right = 44
+      Bottom = -473
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.076388888890000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -478
+      Right = 44
+      Bottom = -468
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.097222222220000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -464
+      Right = 44
+      Bottom = -454
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.166666666660000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -403
+      Right = 44
+      Bottom = -393
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.466793981480000000
+      Comment = #1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -380
+      Right = 44
+      Bottom = -370
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.577905092590000000
+      Comment = #1055#1054#1044
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -369
+      Right = 44
+      Bottom = -359
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.633460648150000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -343
+      Right = 44
+      Bottom = -333
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.758460648150000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -328
+      Right = 44
+      Bottom = -318
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.835046296300000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -278
+      Right = 44
+      Bottom = -268
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.078101851850000000
+      Comment = #1056#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -226
+      Right = 44
+      Bottom = -216
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.335046296300000000
+      Comment = #1057#1055#1048
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -216
+      Right = 44
+      Bottom = -206
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.383657407410000000
+      Comment = #1055#1058
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -192
+      Right = 44
+      Bottom = -182
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.501712962960000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = -124
+      Right = 44
+      Bottom = -114
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.834305555550000000
+      Comment = #1055#1047#1056
+      Align = 1
+    end
+    object TCommentSeries
+      Left = 19
+      Top = 80
+      Right = 44
+      Bottom = 90
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44207.834421296300000000
+      Comment = #1054#1055
+      Align = 1
+    end
   end
   object TPrintField
     Left = 58
     Top = 10
     Right = 101
-    Bottom = 284
+    Bottom = 285
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -277,7 +1237,7 @@ object TChartContext
       SGID = '300'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 200.000000000000000000
+      Max = 300.000000000000000000
       Caption = #1044#1072#1074#1083#1077#1085' '#1074' '#1084#1072#1085#1080#1092#1086#1083#1100#1076#1077
       Units = #1082#1075'/'#1089#1084'2'
       Color = clRed
@@ -391,7 +1351,7 @@ object TChartContext
       SGID = '302'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 100.000000000000000000
+      Max = 300.000000000000000000
       Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1074' '#1047#1058#1056
       ShortName = #1044#1072#1074#1083'. '#1084#1077#1078#1082#1086#1083'.'
       Units = #1082#1075'/'#1089#1084'2'
@@ -411,7 +1371,7 @@ object TChartContext
       SGID = '301'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 50.000000000000000000
+      Max = 400.000000000000000000
       Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1094#1077#1084'-'#1085#1080#1103
       ShortName = #1044#1072#1074#1083'. '#1094#1077#1084#1077#1085#1090#1080#1088'.'
       Units = #1082#1075'/'#1089#1084'2'
@@ -421,12 +1381,825 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
+    object TCommentSeries
+      Left = 60
+      Top = -2571
+      Right = 100
+      Bottom = -2561
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44194.840277777780000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' ' +
+        #1080#1079' '#1079#1072#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=9 '#1083', '#1089' '#1080#1085#1090' 0.7 '#1083'/'#1095'; '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074 +
+        #1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=18 '#1083', '#1089' '#1080#1085#1090' 1.3 '#1083'/'#1095'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -2453
+      Right = 93
+      Bottom = -2443
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44195.417349537030000000
+      Comment = #1057'1=0.343 % '#1072#1073#1089'.; '#1057#1091#1084#1084#1072' '#1057'1-5=0.372 %'#1072#1073#1089'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -2428
+      Right = 100
+      Bottom = -2418
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44195.542349537030000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' ' +
+        #1080#1079' '#1079#1072#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=29 '#1083', '#1089' '#1080#1085#1090' 3.6 '#1083'/'#1095'; '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086 +
+        #1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=32 '#1083', '#1089' '#1080#1085#1090' 4 '#1083'/'#1095'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -2367
+      Right = 100
+      Bottom = -2357
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44195.840277777780000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' ' +
+        #1080#1079' '#1079#1072#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=72 '#1083', '#1089' '#1080#1085#1090' 3 '#1083'/'#1095'; '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086 +
+        #1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=39 '#1083', '#1089' '#1080#1085#1090' 1.6 '#1083'/'#1095'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1959
+      Right = 100
+      Bottom = -1949
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44197.840277777780000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' ' +
+        #1080#1079' '#1079#1072#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=7 '#1083', '#1089' '#1080#1085#1090' 0.3 '#1083'/'#1095'; '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074 +
+        #1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=13 '#1083', '#1089' '#1080#1085#1090' 0.5 '#1083'/'#1095'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1841
+      Right = 100
+      Bottom = -1831
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.416666666660000000
+      Comment = #1057'1=0.104 % '#1072#1073#1089'.; '#1057#1091#1084#1084#1072' '#1057'1-5=0.105 %'#1072#1073#1089'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1849
+      Right = 100
+      Bottom = -1839
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.376250000000000000
+      Comment = #1055#1088#1086#1084#1099#1074#1082#1072' '#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103' '#1085#1072' '#1075#1083' 2762 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1798
+      Right = 100
+      Bottom = -1788
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.626250000000000000
+      Comment = #1055#1088#1086#1084#1099#1074#1082#1072' '#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103' '#1085#1072' '#1075#1083' 2822 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1807
+      Right = 100
+      Bottom = -1797
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.584583333340000000
+      Comment = #1057#1087#1091#1089#1082' '#1080#1085#1089#1090#1088#1091#1084#1077#1085#1090#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1773
+      Right = 100
+      Bottom = -1763
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.751250000000000000
+      Comment = 
+        #1055#1086#1076#1075#1086#1090#1086#1074#1080#1090#1077#1083#1100#1085#1099#1077' '#1088#1072#1073#1086#1090#1099' '#1082' '#1091#1089#1090#1072#1085#1086#1074#1082#1077' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1084#1086#1089#1090#1072'. '#1053#1072#1073#1083#1102#1076#1077#1085#1080#1077 +
+        ' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -1756
+      Right = 99
+      Bottom = -1746
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.834791666670000000
+      Comment = 
+        #1055#1086#1076#1075#1086#1090#1086#1074#1080#1090#1077#1083#1100#1085#1099#1077' '#1088#1072#1073#1086#1090#1099' '#1082' '#1091#1089#1090#1072#1085#1086#1074#1082#1077' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1084#1086#1089#1090#1072'. '#1053#1072#1073#1083#1102#1076#1077#1085#1080#1077 +
+        ' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1079#1072#1090#1088#1091#1073#1085 +
+        #1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=49 '#1083#1080#1090#1088#1086#1074', '#1089' '#1080#1085#1090#1077#1085#1089#1080#1074#1085#1086#1089#1090#1100#1102' 3.5 '#1083'/'#1095'; '#1087#1077#1088#1077#1083#1080 +
+        #1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' '#1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=28 '#1083#1080#1090#1088#1086#1074', '#1089' '#1080#1085 +
+        #1090#1077#1085#1089#1080#1074#1085#1086#1089#1090#1100#1102' 2 '#1083'/'#1095'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1446
+      Right = 93
+      Bottom = -1436
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.354166666660000000
+      Comment = #1054#1090#1073#1080#1074#1082#1072' '#1072#1075#1088#1077#1075#1072#1090#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1547
+      Right = 100
+      Bottom = -1537
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44199.861111111110000000
+      Comment = 
+        #1055#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1082' '#1087#1086#1101#1090#1072#1087#1085#1086#1084#1091' '#1089#1086#1079#1076#1072#1085#1080#1102' '#1080#1079#1073#1099#1090#1086#1095#1085#1086#1075#1086' '#1076#1072#1074#1083#1077#1085#1080#1103'. '#1054#1087#1088#1077#1089#1089#1086#1074#1082 +
+        #1072' '#1083#1080#1085#1080#1080'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -1531
+      Right = 100
+      Bottom = -1521
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44199.937500000000000000
+      Comment = 
+        #1055#1086#1101#1090#1072#1087#1085#1086#1077' '#1089#1086#1079#1076#1072#1085#1080#1077' '#1080#1079#1073#1099#1090#1086#1095#1085#1086#1075#1086' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1076#1086' '#1085#1072#1095#1072#1083#1072' '#1087#1088#1080#1077#1084#1080#1089#1090#1086#1089#1090#1080' (' +
+        #1087#1086' 50 '#1082#1075#1089'/'#1089#1084'2 '#1085#1077' '#1087#1088#1080#1074#1099#1096#1072#1103' 300 '#1082#1075#1089'/'#1089#1084'2). '#1055#1086' '#1089#1086#1075#1083#1086#1089#1086#1074#1072#1085#1080#1102' '#1091#1074#1077#1083#1077#1095#1077#1085 +
+        #1080#1077' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1076#1086' 320 '#1082#1075#1089'/'#1089#1084'2 '#1074' 23:00; '#1076#1086' 330 '#1082#1075#1089'/'#1089#1084'2 '#1074' 1:00; '#1076#1086' 33' +
+        '0 '#1082#1075#1089'/'#1089#1084'2 '#1074' 3:30 .'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1492
+      Right = 93
+      Bottom = -1482
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.128773148150000000
+      Comment = #1054#1047#1062
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1364
+      Right = 93
+      Bottom = -1354
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.753773148150000000
+      Comment = #1056#1090#1088'=329  '#1082#1075#1089'/'#1089#1084'2, '#1056#1079#1090#1088'=329 '#1082#1075#1089'/'#1089#1084'2'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1348
+      Right = 93
+      Bottom = -1338
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.835104166670000000
+      Comment = #1054#1047#1062
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1339
+      Right = 93
+      Bottom = -1329
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44200.876770833330000000
+      Comment = 
+        '20:00 '#1056#1090#1088'=329  '#1082#1075#1089'/'#1089#1084'2, '#1056#1079#1090#1088'=329 '#1082#1075#1089'/'#1089#1084'2; '#1085#1072' 05:00 '#1056#1090#1088'=326  '#1082#1075#1089'/' +
+        #1089#1084'2, '#1056#1079#1090#1088'=326 '#1082#1075#1089'/'#1089#1084'2; '#1085#1072' 08:00 '#1056#1090#1088'=323  '#1082#1075#1089'/'#1089#1084'2, '#1056#1079#1090#1088'=323 '#1082#1075#1089'/'#1089 +
+        #1084'2; '#1085#1072' 20:00 '#1056#1090#1088'=317  '#1082#1075#1089'/'#1089#1084'2, '#1056#1079#1090#1088'=317 '#1082#1075#1089'/'#1089#1084'2'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 61
+      Top = -1007
+      Right = 96
+      Bottom = -997
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.507442129630000000
+      Comment = #1057#1090#1088#1072#1074#1083#1080#1074#1072#1085#1080#1077' '#1080#1079#1073#1099#1090#1086#1095#1085#1086#1075#1086' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1089' 311 '#1082#1075#1089'/'#1089#1084'2 '#1076#1086' 0 '#1082#1075#1089'/'#1089#1084'2.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -1143
+      Right = 93
+      Bottom = -1133
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44201.840775462970000000
+      Comment = #1054#1047#1062
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -983
+      Right = 99
+      Bottom = -973
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.625497685190000000
+      Comment = #1055#1086#1076#1075#1086#1090#1086#1074#1080#1090#1077#1083#1100#1085#1099#1077' '#1088#1072#1073#1086#1090#1099' '#1082' '#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1086#1081' '#1087#1088#1086#1084#1099#1074#1082#1077'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -973
+      Right = 99
+      Bottom = -963
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.674108796290000000
+      Comment = #1054#1090#1089#1091#1090#1089#1090#1074#1080#1077' '#1056#1074#1093' '#1089#1074#1103#1079#1072#1085#1086' '#1089' '#1085#1077#1080#1089#1087#1088#1072#1074#1085#1086#1089#1090#1100#1102' '#1088#1072#1079#1076#1085#1083#1080#1090#1077#1083#1103' '#1089#1088#1077#1076
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -949
+      Right = 93
+      Bottom = -939
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.792164351850000000
+      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1088#1086#1084#1099#1074#1082#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -846
+      Right = 100
+      Bottom = -836
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.293344907400000000
+      Comment = 
+        #1055#1086#1076#1075#1086#1090#1086#1074#1080#1090#1077#1083#1100#1085#1099#1077' '#1088#1072#1073#1086#1090#1099' '#1082' '#1086#1087#1088#1077#1089#1089#1086#1074#1082#1077'. '#1054#1087#1088#1077#1089#1089#1086#1074#1082#1072' '#1086#1073#1089#1072#1076#1085#1086#1081' '#1082#1086#1083#1086#1085#1085 +
+        #1099' '#1085#1072' 313 '#1082#1075#1089'/'#1089#1084'2.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -940
+      Right = 100
+      Bottom = -930
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.835011574080000000
+      Comment = 
+        #1054#1087#1088#1077#1076#1077#1083#1077#1085#1080#1077' '#1082#1088#1086#1074#1083#1080' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1084#1086#1089#1090#1072' '#1089' '#1091#1095#1072#1089#1090#1080#1077#1084' '#1084#1072#1089#1090#1077#1088#1072' '#1087#1086' '#1089#1083#1086#1078#1085#1099 +
+        #1084' '#1088#1072#1073#1086#1090#1072#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -770
+      Right = 93
+      Bottom = -760
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.668344907400000000
+      Comment = #1054#1073#1089#1083#1091#1078#1080#1074#1072#1085#1080#1077' '#1042#1057#1055'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -732
+      Right = 93
+      Bottom = -722
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.854166666660000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -719
+      Right = 93
+      Bottom = -709
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.916666666660000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -624
+      Right = 102
+      Bottom = -614
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.383437500000000000
+      Comment = #1057#1087#1091#1089#1082' '#1060#1044'-138 '#1089' '#1087#1088#1086#1084#1099#1074#1082#1086#1081' '#1080' '#1074#1088#1072#1097#1077#1085#1080#1077#1084' '#1074' '#1080#1085#1090'-'#1083#1077' 2759-2787 '#1084
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -600
+      Right = 102
+      Bottom = -590
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.501493055560000000
+      Comment = #1056#1072#1079#1073#1091#1088#1080#1074#1072#1085#1080#1077' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1089#1090#1072#1082#1072#1085#1072' 2787-2816 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -586
+      Right = 102
+      Bottom = -576
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.569548611110000000
+      Comment = #1056#1072#1079#1073#1091#1088#1080#1074#1072#1085#1080#1077' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1089#1090#1072#1082#1072#1085#1072' 2816-2822 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -549
+      Right = 100
+      Bottom = -539
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.751493055560000000
+      Comment = 
+        #1054#1087#1088#1077#1089#1089#1086#1074#1082#1072' '#1082#1086#1083#1086#1085#1099'. '#1055#1088#1080' '#1076#1086#1089#1090#1080#1078#1077#1085#1080#1080' 243 '#1082#1075#1089'/'#1089#1084'2 '#1079#1072#1092#1080#1089#1080#1088#1086#1074#1072#1085#1085#1086' '#1076#1072#1074#1083 +
+        #1077#1085#1080#1077' '#1085#1072#1095#1072#1083#1072' '#1087#1086#1075#1083#1086#1097#1077#1085#1080#1103'. '#1054#1073#1098#1077#1084' 600 '#1083'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -530
+      Right = 93
+      Bottom = -520
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.841793981480000000
+      Comment = #1059#1058#1047'. '#1042#1099#1073#1088#1086#1089'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -528
+      Right = 100
+      Bottom = -518
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.854166666660000000
+      Comment = #1057#1090#1088#1072#1074#1083#1080#1074#1072#1085#1080#1077' '#1080#1079#1073#1099#1090#1086#1095#1085#1086#1075#1086' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1089' 223 '#1082#1075#1089'/'#1089#1084'2 '#1076#1086' 0 '#1082#1075#1089'/'#1089#1084'2.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -502
+      Right = 93
+      Bottom = -492
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.979166666660000000
+      Comment = #1055#1047#1056' '#1082' '#1086#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1077'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -488
+      Right = 93
+      Bottom = -478
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.050127314820000000
+      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -481
+      Right = 100
+      Bottom = -471
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.083333333340000000
+      Comment = #1055#1047#1056' '#1082' '#1087#1088#1086#1084#1099#1074#1082#1077'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -403
+      Right = 93
+      Bottom = -393
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.466793981480000000
+      Comment = #1056#1077#1084#1086#1085#1090' '#1042#1057#1055'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -369
+      Right = 93
+      Bottom = -359
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.633460648150000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050' 178.79-0 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -359
+      Right = 98
+      Bottom = -349
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.682071759260000000
+      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050' '#1074' '#1080#1085#1090#1077#1088#1074#1072#1083#1077' 0-211.24 '#1084'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -278
+      Right = 93
+      Bottom = -268
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.078101851850000000
+      Comment = #1056#1077#1084#1086#1085#1090' '#1042#1057#1055'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -185
+      Right = 93
+      Bottom = -175
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.536435185180000000
+      Comment = #1055#1077#1088#1077#1074#1086#1076' '#1089#1082#1074#1072#1078#1080#1085#1099' '#1085#1072' '#1090#1077#1093#1085#1080#1095#1077#1089#1082#1091#1102' '#1074#1086#1076#1091'.'
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 59
+      Top = -192
+      Right = 101
+      Bottom = -182
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.501712962960000000
+      Comment = #1055#1047#1056' '#1082' '#1087#1077#1088#1077#1074#1086#1076#1091' '#1089#1082#1074'. '#1085#1072' '#1074#1086#1076#1091'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -166
+      Right = 93
+      Bottom = -156
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.626712962960000000
+      Comment = #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 63
+      Top = -123
+      Right = 93
+      Bottom = -113
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44206.840277777780000000
+      Comment = #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = 80
+      Right = 100
+      Bottom = 90
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44207.834421296300000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = 139
+      Right = 100
+      Bottom = 149
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44208.126087962960000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '#1047#1072#1092#1080#1082#1089#1080#1088#1086#1074#1072#1085' '#1087#1077#1088#1077#1083#1080#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072' ' +
+        #1080#1079' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1074' V=10 '#1083#1080#1090#1088#1072', '#1089' '#1080#1085#1090#1077#1085#1089#1080#1074#1085#1086#1089#1090#1100#1102' 0.83 '#1083'/'#1095
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = 241
+      Right = 100
+      Bottom = 251
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44208.626087962960000000
+      Comment = 
+        #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1086#1085#1085#1099#1081' '#1087#1088#1086#1089#1090#1086#1081' '#1087#1086' '#1074#1080#1085#1077' '#1087#1086#1076#1088#1103#1076#1095#1080#1082#1072'  "'#1040#1089#1090#1088#1072#1093#1072#1085#1100#1073#1091#1088#1077#1085#1080#1077'". ' +
+        #1053#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081'. '
+      Align = 2
+    end
   end
   object TPrintField
     Left = 143
     Top = 10
     Right = 186
-    Bottom = 284
+    Bottom = 285
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -449,7 +2222,7 @@ object TChartContext
       SGID = '711'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 60.000000000000000000
+      Max = 70.000000000000000000
       Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 1'
       Units = #1084'3'
       Color = clRed
@@ -487,7 +2260,7 @@ object TChartContext
       SGID = '712'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 60.000000000000000000
+      Max = 70.000000000000000000
       Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 2'
       Units = #1084'3'
       Color = 9774336
@@ -611,12 +2384,188 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
+    object TCommentSeries
+      Left = 148
+      Top = -2215
+      Right = 178
+      Bottom = -2205
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44196.584340277780000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088#1072#1089#1090#1074#1086#1088#1072
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -966
+      Right = 178
+      Bottom = -956
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.708831018520000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088'-'#1088#1072' '#1074' V7'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 144
+      Top = -973
+      Right = 186
+      Bottom = -963
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.674108796290000000
+      Comment = '1.43-105-2.0-'#1087#1083'-9.0-43/62'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 143
+      Top = -949
+      Right = 185
+      Bottom = -939
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44202.792164351850000000
+      Comment = #1089#1073#1088#1086#1089' '#1074' '#1072#1084#1073#1072#1088' '#1073#1091#1092#1077#1088#1085#1072#1103' '#1078#1080#1076#1082#1086#1089#1090#1100'+'#1074#1086#1076#1072'+'#1073#1080#1086#1082#1089#1072#1085' 5 '#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -814
+      Right = 178
+      Bottom = -804
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.451678240740000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -825
+      Right = 178
+      Bottom = -815
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.397511574080000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' V'#1076#1086#1083
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 143
+      Top = -881
+      Right = 186
+      Bottom = -871
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.124594907410000000
+      Comment = #1089#1073#1088#1086#1089' '#1074' '#1072#1084#1073#1072#1088' '#1094#1077#1084#1077#1085#1090'+'#1073#1091#1088#1086#1074#1086#1081' '#1088#1072#1089#1090#1074#1086#1088' 3.5 '#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 144
+      Top = -872
+      Right = 186
+      Bottom = -862
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.168344907400000000
+      Comment = #1089#1073#1088#1086#1089' '#1074' '#1072#1084#1073#1072#1088' '#1094#1077#1084#1077#1085#1090'+'#1073#1091#1088#1086#1074#1086#1081' '#1088#1072#1089#1090#1074#1086#1088' 1 '#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -727
+      Right = 178
+      Bottom = -717
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.876493055560000000
+      Comment = 'V'#1088#1072#1089'=7,8 '#1084'3 V'#1092#1072#1082'=8.1 '#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -625
+      Right = 178
+      Bottom = -615
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44204.376493055560000000
+      Comment = 'V'#1088#1072#1089'=8,9 '#1084'3 V'#1092#1072#1082'=8.8 '#1084'3'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 148
+      Top = -464
+      Right = 178
+      Bottom = -454
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.166666666660000000
+      Comment = #1047#1072#1082#1072#1095#1082#1072' V'#1076#1086#1083
+      Align = 2
+    end
   end
   object TPrintField
     Left = 1
     Top = 10
     Right = 14
-    Bottom = 284
+    Bottom = 285
     Caption = '    '#1042#1088#1077#1084#1103
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -652,7 +2601,7 @@ object TChartContext
     Left = 186
     Top = 10
     Right = 199
-    Bottom = 284
+    Bottom = 285
     Caption = #1043#1083#1091#1073#1080#1085#1072
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -688,15 +2637,15 @@ object TChartContext
   end
   object TPrintFooter
     Left = 0
-    Top = 284
+    Top = 285
     Right = 0
-    Bottom = 284
+    Bottom = 285
   end
   object TPrintField
     Left = 101
     Top = 10
     Right = 143
-    Bottom = 284
+    Bottom = 285
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -779,7 +2728,7 @@ object TChartContext
       SGID = '1003'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 40.000000000000000000
+      Max = 100.000000000000000000
       Caption = #1056#1072#1089#1093#1086#1076' '#1085#1072' '#1074#1099#1093#1086#1076#1077
       ShortName = #1056#1072#1089#1093'. '#1085#1072' '#1074#1099#1093'.'
       Units = #1083'/c'
@@ -839,7 +2788,7 @@ object TChartContext
       SGID = '900'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 50.000000000000000000
+      Max = 100.000000000000000000
       Caption = #1058#1077#1084#1087#1077#1088#1072#1090#1091#1088#1072' '#1074#1099#1093
       ShortName = #1058#1077#1084#1087#1077#1088'. '#1085#1072' '#1074#1099#1093'.'
       Units = #176#1057
@@ -848,6 +2797,70 @@ object TChartContext
       Flags = []
       PenWidth = 0
       PenStyle = psSolid
+    end
+    object TCommentSeries
+      Left = 106
+      Top = -1790
+      Right = 136
+      Bottom = -1780
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44198.667916666670000000
+      Comment = '1.43-100-2.0-'#1087#1083'-9.0-41/60'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 106
+      Top = -706
+      Right = 136
+      Bottom = -696
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44203.979166666660000000
+      Comment = #1056#1077#1081#1089' '#8470' 141 '#1060#1044'-138'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 102
+      Top = -356
+      Right = 142
+      Bottom = -346
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.695960648150000000
+      Comment = ' '#1042#1086#1088#1086#1085#1082#1072' 108/74.22 - 0.16 '#1084', '#1053#1050#1058' 88.9/74.22 - 210.63 '#1084
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 106
+      Top = -359
+      Right = 136
+      Bottom = -349
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44205.682071759260000000
+      Comment = #1056#1077#1081#1089' '#8470'142'
+      Align = 2
     end
   end
 end

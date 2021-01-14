@@ -59,6 +59,10 @@ clear_well("s627", "Vrema")
 #605
 clear_well("s610", "Vrema")
 
+#544
+clear_well("s544", "Vrema")
+
+
 #Inet kontora moskva 77.3
 clear_well("pconnect", "date")
 #ping 630
