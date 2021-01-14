@@ -678,6 +678,27 @@ def read_well(sbor,table):
 						else: result= value[0]
 						Vrema = result - 18000 - 10800-3600 #3600 1 час
 						
+						if numb_par[0]==191:
+						if type_par=='f':
+							cur_type='f'
+							cur_size=size_par
+						if type_par=='i':
+							cur_type='h'
+							cur_size=size_par
+						if type_par=='c':
+							cur_type='s'
+							cur_size=size_par
+						if type_par=='l':
+							cur_type='l'
+							cur_size=size_par
+						
+						value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+						if type_par=='f':
+							result=round(value[0],2)
+						else: result= value[0]
+						Vinstr = result
+
+
 					next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
 					i=i+1
 				
@@ -829,3 +850,17 @@ if t4450.is_alive(): t4450.terminate()
 	#	54; 'Глубина долота'  Instr
 	#	191; 'Мех.скорость'	Vinstr
 	#	52; 'Время сбора данных' Vrema	
+
+23; 'ДМК'
+22; 'Скорость бурения'
+135; 'Ходов насоса 3'
+48; 'Объем емкости 5'
+236; 'Объем емкости 6'
+17; 'С2'
+18; 'С3'
+20; 'С4'
+21; 'С5'
+176; 'Кальцит'
+196; 'Доломит'
+155; 'Минерализация на вх'
+156; 'Минерализация на вых'
