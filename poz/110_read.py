@@ -51,6 +51,26 @@ def read_well(host,table):
 	Instr=-100.0
 	Vrema=-100
 	Vinstr=-100.0
+	Dmk=-100.0
+	Vbur=-100.0
+	Xn3=-100.0
+	V5=-100.0
+	V6=-100.0
+	C2=-100.0
+	C3=-100.0
+	C4=-100.0
+	C5=-100.0
+	Kalcid=-100.0
+	Dolomit=-100.0
+	C1sh=-100.0
+	C2sh=-100.0
+	C3sh=-100.0
+	C4sh=-100.0
+	C5sh=-100.0
+	C1C5sh=-100.0
+	Minbx=-100.0
+	Minbix=-100.0
+
 
 	try:
 		# Create a TCP/IP socket
@@ -148,6 +168,26 @@ def read_well(host,table):
 			if (numb1[0]==101): Zaboj=round(val1[0],2)
 			if (numb1[0]==115): Instr=round(val1[0],2)
 			if (numb1[0]==104): Vinstr=round(val1[0],2)
+			if (numb1[0]==107): Dmk=round(val1[0],2)
+			if (numb1[0]==106): Vbur=round(val1[0],2)
+			if (numb1[0]==52): Xn3=round(val1[0],2)
+			if (numb1[0]==717): V5=round(val1[0],2)
+			if (numb1[0]==718): V6=round(val1[0],2)
+			if (numb1[0]==1602): C2=round(val1[0],2)
+			if (numb1[0]==1603): C3=round(val1[0],2)
+			if (numb1[0]==1604): C4=round(val1[0],2)
+			if (numb1[0]==1605): C5=round(val1[0],2)
+			####
+			Kalcid=-100.0
+			Dolomit=-100.0
+			C1sh=-100.0
+			C2sh=-100.0
+			C3sh=-100.0
+			C4sh=-100.0
+			C5sh=-100.0
+			C1C5sh=-100.0
+			Minbx=-100.0
+			Minbix=-100.0
 		data_time=unpack(data_format,data[3:11])
 		dt =round((data_time[0] - 25569) * 86400) - 14400
 		Vrema=dt
@@ -164,7 +204,8 @@ def read_well(host,table):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
-		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
+		# sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
+		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
 		cursor.execute(sql)
 		db.commit()
 		db.close()
