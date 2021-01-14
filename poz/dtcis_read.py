@@ -180,7 +180,7 @@ def read_well(sbor,table):
 		numb_pa=unpack('f', time_data[i+next_sub_head+12:i+next_sub_head+16])
 		#print numb_pa
 
-		Wkp,Wdol,Mpot,Npot,Pbx,Qbx,Talblok,C1C5,C1,Xn1,Xn2,Potok,Tbix,V1,V2,V3,V4,Vdol,Vobj,Zaboj,Instr,Vinstr,Vrema = -2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000
+		Wkp,Wdol,Mpot,Npot,Pbx,Qbx,Talblok,C1C5,C1,Xn1,Xn2,Potok,Tbix,V1,V2,V3,V4,Vdol,Vobj,Zaboj,Instr,Vinstr,Vrema,Dmk,Vbur,Xn3,V5,V6,C2,C3,C4,C5,Kalcid,Dolomit,C1sh,C2sh,C3sh,C4sh,C5sh,C1C5sh,Minbx,Minbix = -2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000,-2147480000
 		#print Wkp
 		cur_type=''
 		cur_size=0
@@ -610,6 +610,388 @@ def read_well(sbor,table):
 					result=round(value[0],2)
 				else: result= value[0]
 				Vinstr = result
+
+# # # # # # # # # # # # # # # # 
+			if numb_par[0]==23:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Dmk = result
+
+			if numb_par[0]==22:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Vbur = result
+
+			if numb_par[0]==135:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Xn3 = result
+
+			if numb_par[0]==48:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				V5 = result
+
+			if numb_par[0]==236:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				V6 = result
+
+			if numb_par[0]==17:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C2 = result
+
+			if numb_par[0]==18:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C3 = result
+
+			if numb_par[0]==20:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C4 = result
+
+			if numb_par[0]==21:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C5 = result
+
+			if numb_par[0]==176:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Kalcid = result
+
+			if numb_par[0]==196:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Dolomit = result
+
+			if numb_par[0]==216:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C1sh = result
+
+			if numb_par[0]==217:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C2sh = result
+
+			if numb_par[0]==218:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C3sh = result
+
+			if numb_par[0]==219:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C4sh = result
+
+			if numb_par[0]==220:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C5sh = result
+
+			if numb_par[0]==222:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				C1C5sh = result
+
+			if numb_par[0]==155:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Minbx = result
+
+			if numb_par[0]==156:
+				if type_par=='f':
+					cur_type='f'
+					cur_size=size_par
+				if type_par=='i':
+					cur_type='h'
+					cur_size=size_par
+				if type_par=='c':
+					cur_type='s'
+					cur_size=size_par
+				if type_par=='l':
+					cur_type='l'
+					cur_size=size_par
+				
+				value = unpack(cur_type, time_data[subhead_data_adr+next_sub_head+2:subhead_data_adr+next_sub_head+2+cur_size])
+				if type_par=='f':
+					result=round(value[0],2)
+				else: result= value[0]
+				Minbix = result
+
 			if numb_par[0]==52:
 				if type_par=='f':
 					cur_type='=f'
@@ -635,7 +1017,7 @@ def read_well(sbor,table):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
-		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+")"
+		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
 		cursor.execute(sql)
 		db.commit()
 		db.close()
