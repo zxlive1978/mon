@@ -1175,7 +1175,7 @@ if t4450.is_alive(): t4450.terminate()
 
 #542
 #read_well("/mnt/915","s915")
-t915 = Process(target=read_well, args=["/mnt/915","s915"])
+t915 = Process(target=read_well, args=["/mnt/915","s915depth"])
 t915.start()
 t915.join(300)
 if t915.is_alive(): t915.terminate()
