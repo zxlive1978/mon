@@ -302,7 +302,7 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 # db.commit()
 # db.close()
 
-# threadLock = threading.Lock()
+#  threadLock = threading.Lock()
 
 												#zux/poz,?
                                                  #poz_type,name_well,ip_well,        ip_poz,         ip_obrab,         name_base,    ippoz_modem,     ip_signal,           ip_dvr,            ip_cam1,         ip_cam2,         ip_cam3,          ip_cam4,          ip_ub1,           ip_ub2,           ip_sbor     AnalogDVR    Luch
