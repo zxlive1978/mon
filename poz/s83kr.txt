@@ -5,8 +5,8 @@ object TChartContext
   Bottom = 0
   MainID = 0
   FormName = #1044#1080#1072#1075#1088#1072#1084#1084#1072' '#1089' '#1087#1088#1080#1074#1103#1079#1082#1086#1081' '#1087#1086' '#1074#1088#1077#1084#1077#1085#1080
-  Min = 44137.834843657410000000
-  Max = 44138.834859571760000000
+  Min = 44228.834812638890000000
+  Max = 44229.834812233800000000
   Scale = 0.004901960784313725
   Step = 0.041666666666666660
   IsDateTime = True
@@ -64,7 +64,7 @@ object TChartContext
       Top = 13
       Right = 151
       Bottom = 18
-      Caption = '02.11.20 20:02 - 03.11.20 20:02'
+      Caption = '01.02.21 20:02 - 02.02.21 20:02'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clBlue
       Font.Height = -15
@@ -185,7 +185,7 @@ object TChartContext
     Left = 12
     Top = 24
     Right = 56
-    Bottom = 283
+    Bottom = 282
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -246,7 +246,7 @@ object TChartContext
       SGID = '1300'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 5.000000000000000000
+      Max = 2.000000000000000000
       Caption = #1050#1088#1091#1090#1103#1097#1080#1081' '#1084#1086#1084#1077#1085#1090' '#1085#1072' '#1088#1086#1090'.'
       Units = #1090#1089'*'#1084
       Color = 38218
@@ -298,7 +298,7 @@ object TChartContext
     Left = 56
     Top = 24
     Right = 102
-    Bottom = 283
+    Bottom = 282
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -340,7 +340,7 @@ object TChartContext
       SGID = '1001'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 40.000000000000000000
+      Max = 20.000000000000000000
       Caption = #1056#1072#1089#1093#1086#1076' '#1085#1072' '#1074#1093#1086#1076#1077
       Units = #1083'/c'
       Color = 48992
@@ -397,7 +397,7 @@ object TChartContext
       SGID = '103'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 40.000000000000000000
+      Max = 30.000000000000000000
       Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1090#1072#1083#1100#1073#1083#1086#1082#1072
       Units = #1084'.'
       Color = 16728064
@@ -450,7 +450,7 @@ object TChartContext
     Left = 102
     Top = 24
     Right = 144
-    Bottom = 283
+    Bottom = 282
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -492,7 +492,7 @@ object TChartContext
       SGID = '1003'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 50.000000000000000000
+      Max = 20.000000000000000000
       Caption = #1055#1086#1090#1086#1082' '#1085#1072' '#1074#1099#1093#1086#1076#1077
       Units = '%'
       Color = 38218
@@ -605,7 +605,7 @@ object TChartContext
     Left = 144
     Top = 24
     Right = 188
-    Bottom = 283
+    Bottom = 282
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -760,7 +760,7 @@ object TChartContext
     Left = 0
     Top = 24
     Right = 12
-    Bottom = 283
+    Bottom = 282
     Caption = '    '#1042#1088#1077#1084#1103
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -796,7 +796,7 @@ object TChartContext
     Left = 188
     Top = 24
     Right = 200
-    Bottom = 283
+    Bottom = 282
     Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103' '
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
