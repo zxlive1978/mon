@@ -5,8 +5,8 @@ object TChartContext
   Bottom = 0
   MainID = 0
   FormName = #1044#1080#1072#1075#1088#1072#1084#1084#1072' '#1089' '#1087#1088#1080#1074#1103#1079#1082#1086#1081' '#1087#1086' '#1074#1088#1077#1084#1077#1085#1080
-  Min = 44251.834633738430000000
-  Max = 44252.834243611110000000
+  Min = 44250.840007314820000000
+  Max = 44251.342092731480000000
   Scale = 0.004901960784313725
   Step = 0.041666666666666660
   IsDateTime = True
@@ -36,7 +36,7 @@ object TChartContext
       Top = 5
       Right = 131
       Bottom = 10
-      Caption = '24.02.21 20:01 - 25.02.21 20:01'
+      Caption = '23.02.21 20:09 - 24.02.21 8:12'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clBlue
       Font.Height = -13
@@ -121,7 +121,7 @@ object TChartContext
     Left = 14
     Top = 10
     Right = 58
-    Bottom = 284
+    Bottom = 183
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -249,124 +249,12 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
-    object TCommentSeries
-      Left = 19
-      Top = -123
-      Right = 44
-      Bottom = -113
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.840000000000000000
-      Comment = #1055#1047#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 19
-      Top = -116
-      Right = 44
-      Bottom = -106
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.875000000000000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 19
-      Top = -106
-      Right = 44
-      Bottom = -96
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.923333333330000000
-      Comment = #1055#1047#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 19
-      Top = -76
-      Right = 44
-      Bottom = -66
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.069444444450000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 14
-      Top = 80
-      Right = 54
-      Bottom = 90
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.834629629630000000
-      Comment = #1055#1047#1056
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 19
-      Top = 148
-      Right = 49
-      Bottom = 158
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44252.167962962970000000
-      Comment = #1057#1055#1048
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 19
-      Top = 261
-      Right = 44
-      Bottom = 271
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44252.722222222220000000
-      Comment = #1055#1058
-      Align = 1
-    end
   end
   object TPrintField
     Left = 58
     Top = 10
     Right = 101
-    Bottom = 284
+    Bottom = 183
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -533,159 +421,12 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
-    object TCommentSeries
-      Left = 60
-      Top = -123
-      Right = 99
-      Bottom = -113
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.840000000000000000
-      Comment = #1059#1087#1083#1086#1090#1085#1077#1085#1080#1077' '#1085#1072' '#1087#1072#1082#1077#1088'..'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -106
-      Right = 99
-      Bottom = -96
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.923333333330000000
-      Comment = 
-        #1059#1087#1083#1086#1090#1085#1077#1085#1080#1077' '#1085#1072' '#1087#1072#1082#1077#1088': '#1089#1086#1079#1076#1072#1085#1080#1077' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1074' '#1090#1088#1091#1073#1085#1086#1084' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1077' 35' +
-        ' '#1082#1075#1089'/'#1089#1084'2., '#1087#1088#1080' '#1089#1085#1080#1078#1077#1085#1080#1080' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1076#1086' 26 '#1082#1075#1089'/'#1089#1084'2 '#1087#1086#1076#1082#1072#1095#1082#1080' 11 '#1088#1072#1079' '#1076 +
-        #1086' 40 '#1082#1075#1089'/'#1089#1084'2., '#1074#1099#1076#1077#1088#1078#1082#1072' 15 '#1084#1080#1085#1091#1090'-'#1075#1077#1088#1084#1077#1090#1080#1095#1085#1086'.'
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 63
-      Top = -18
-      Right = 93
-      Bottom = -8
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.354166666660000000
-      Comment = #1054#1090#1086#1075#1088#1077#1074' '#1087#1085#1077#1074#1084#1072#1090#1080#1082#1080'. '
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 63
-      Top = 13
-      Right = 93
-      Bottom = 23
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.506944444450000000
-      Comment = #1054#1090#1086#1075#1088#1077#1074' '#1087#1085#1077#1074#1084#1072#1090#1080#1082#1080'. '
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 63
-      Top = 22
-      Right = 93
-      Bottom = 32
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.548333333330000000
-      Comment = #1054#1090#1086#1075#1088#1077#1074' '#1087#1085#1077#1074#1084#1072#1090#1080#1082#1080'. '
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 58
-      Top = 80
-      Right = 100
-      Bottom = 90
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.834629629630000000
-      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 58
-      Top = 105
-      Right = 100
-      Bottom = 115
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.959629629630000000
-      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 63
-      Top = 139
-      Right = 93
-      Bottom = 149
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44252.126296296290000000
-      Comment = #1054#1090#1086#1075#1088#1077#1074' '#1087#1085#1077#1074#1084#1072#1090#1080#1082#1080'. '
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 63
-      Top = 271
-      Right = 93
-      Bottom = 281
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44252.770833333340000000
-      Comment = ' '#1057'1=0.062 %'#1072#1073#1089'., '#1057#1091#1084#1084#1072' '#1057'1-5=0.063 %'#1072#1073#1089
-      Align = 2
-    end
   end
   object TPrintField
     Left = 143
     Top = 10
     Right = 186
-    Bottom = 284
+    Bottom = 183
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -870,44 +611,12 @@ object TChartContext
       PenWidth = 0
       PenStyle = psSolid
     end
-    object TCommentSeries
-      Left = 148
-      Top = -114
-      Right = 178
-      Bottom = -104
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44250.881666666670000000
-      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 148
-      Top = 20
-      Right = 178
-      Bottom = 30
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.541666666660000000
-      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1074' '#1076#1086#1083#1080#1074
-      Align = 2
-    end
   end
   object TPrintField
     Left = 1
     Top = 10
     Right = 14
-    Bottom = 284
+    Bottom = 183
     Caption = '    '#1042#1088#1077#1084#1103
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -943,7 +652,7 @@ object TChartContext
     Left = 186
     Top = 10
     Right = 199
-    Bottom = 284
+    Bottom = 183
     Caption = #1043#1083#1091#1073#1080#1085#1072
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -979,15 +688,15 @@ object TChartContext
   end
   object TPrintFooter
     Left = 0
-    Top = 284
+    Top = 183
     Right = 0
-    Bottom = 284
+    Bottom = 183
   end
   object TPrintField
     Left = 101
     Top = 10
     Right = 143
-    Bottom = 284
+    Bottom = 183
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -1139,38 +848,6 @@ object TChartContext
       Flags = []
       PenWidth = 0
       PenStyle = psSolid
-    end
-    object TCommentSeries
-      Left = 102
-      Top = 80
-      Right = 142
-      Bottom = 90
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44251.834629629630000000
-      Comment = #1056#1077#1081#1089' '#8470'155 '#1042#1086#1088#1086#1085#1082#1072' D=108'#1084#1084'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 106
-      Top = 250
-      Right = 141
-      Bottom = 260
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44252.667962962970000000
-      Comment = 'V'#1088#1072#1089'=10.9 '#1084'3 V'#1092#1072#1082'=11 '#1084'3'
-      Align = 2
     end
   end
 end
