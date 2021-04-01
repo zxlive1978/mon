@@ -1010,7 +1010,7 @@ def read_well(sbor,table):
 				if type_par=='f':
 					result=round(value[0],2)
 				else: result= value[0]
-				Vrema = result - 18000 - 10800-3600 #3600 1 час
+				Vrema = result - 18000 - 10800 #-3600 #3600 1 час
 				
 			next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
 			i=i+1
