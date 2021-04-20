@@ -67,7 +67,7 @@ def read_well(sbor,table):
 	# #mdb файл в csv! только комментарии
 	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
 		
-	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'messageData' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
+	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
 	print "Скопировано"
 	
 	
@@ -149,16 +149,16 @@ def read_well(sbor,table):
 		#Если зашифровано
 		else:
 				finish_comment = "Encrypted"
-		left =int(round(float(cur_rec[18])*100))
-		#Поиск
-		db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		cursor = db.cursor()
-		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
-		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-		cursor.execute(sql)
-		data =  cursor.fetchall()
-		#print data
+		# left =int(round(float(cur_rec[18])*100))
+		# #Поиск
+		# db_name=table
+		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# cursor = db.cursor()
+		# sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+		# #sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+		# cursor.execute(sql)
+		# data =  cursor.fetchall()
+		# #print data
 		
         
         #выгрузка в базу
