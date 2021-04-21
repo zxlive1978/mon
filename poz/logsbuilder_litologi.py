@@ -89,6 +89,10 @@ def read_well(sbor,table):
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec
 
+
+
+
+
 	# for cur_rec in data:
 	# 	cur_rec=cur_rec.split('%%%')
 	# 	cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
