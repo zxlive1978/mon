@@ -82,10 +82,10 @@ def read_well(sbor,table):
 	lst_data=f1_lst.read(curSizecsv)
 	f1_lst.close()
 	records_data = lst_data.split("$$$")
-	data =records_data[:(len(records_data)-1)]
+	data1 =records_data[:(len(records_data)-1)]
 	# print records_data
 	i=0
-	for cur_rec in data:
+	for cur_rec in data1:
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec
 
