@@ -90,7 +90,7 @@ def read_well(sbor,table):
 		print cur_rec
 
 
-# --------------------
+	# --------------------
 	# geologyInterval 0параметр:1432-номер интервала, 6параметр:12-начало интервала, 7параметр: 15-конец интервала
 	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
@@ -109,6 +109,27 @@ def read_well(sbor,table):
 	for cur_rec in data2:
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec[0]+' '+cur_rec[6]+' '+cur_rec[7]
+
+	
+	# --------------------
+	# geologyInterval2lithology 0параметр:1432-номер интервала, 1параметр:Sand-название породы
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
+
+	print (curSizecsv)
+	
+	f1_lst=open(path_to_work+"geologyInterval2lithology.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data3 =records_data[:(len(records_data)-1)]
+	# print records_data
+	i=0
+	for cur_rec in data3:
+		cur_rec=cur_rec.split('%%%')
+		print cur_rec[0]+' '+cur_rec[1]
 
 
 
