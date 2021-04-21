@@ -112,10 +112,10 @@ def read_well(sbor,table):
 
 	
 	# --------------------
-	# geologyInterval2lithology 0параметр:1432-номер интервала, 1параметр:Sand-название породы
+	# geologyInterval2lithology 0параметр:1432-номер интервала, 1параметр:номер(uid) записи породы в lihology
 	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
-	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
+	curSizecsv=getsize(""+path_to_work+"geologyInterval2lithology.csv")
 
 	print (curSizecsv)
 	
@@ -130,6 +130,7 @@ def read_well(sbor,table):
 	for cur_rec in data3:
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec[0]+' '+cur_rec[1]
+		break
 
 
 
