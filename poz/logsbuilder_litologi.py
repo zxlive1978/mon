@@ -74,13 +74,10 @@ def read_well(sbor,table):
 
     print "Скопировано"
 	
-	
 	curSizecsv=getsize(""+path_to_work+"WELLSITEDBlitologi.csv")
-
-	print (curSizecsv)
-	
-	f1_lst=open(path_to_work+"WELLSITEDBlitologi.csv",'rb')
-	f1_lst.seek(0)
+    print (curSizecsv)
+    f1_lst=open(path_to_work+"WELLSITEDBlitologi.csv",'rb')
+    f1_lst.seek(0)
 	lst_data=f1_lst.read(curSizecsv)
 	f1_lst.close()
 	records_data = lst_data.split("$$$")
