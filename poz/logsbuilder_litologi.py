@@ -70,7 +70,7 @@ def read_well(sbor,table):
 	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
 	
 	# --------------------
-	# mudLog2geologyInterval 1параметр:3-литология 4-шламограмма, 2параметр 1432-номер интервала
+	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
 	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
@@ -90,6 +90,25 @@ def read_well(sbor,table):
 		print cur_rec
 
 
+# --------------------
+	# geologyInterval 0параметр:1432-номер интервала, 6параметр:12-начало интервала, 7параметр: 15-конец интервала
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
+
+	print (curSizecsv)
+	
+	f1_lst=open(path_to_work+"geologyInterval.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data2 =records_data[:(len(records_data)-1)]
+	# print records_data
+	i=0
+	for cur_rec in data2:
+		cur_rec=cur_rec.split('%%%')
+		print cur_rec
 
 
 
