@@ -68,16 +68,16 @@ def read_well(sbor,table):
 	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
 		
 	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)
 	
 	print "Скопировано"
 	
 	
-	curSizecsv=getsize(""+path_to_work+"WELLSITEDBlitologi.csv")
+	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 
 	print (curSizecsv)
 	
-	f1_lst=open(path_to_work+"WELLSITEDBlitologi.csv",'rb')
+	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
 	lst_data=f1_lst.read(curSizecsv)
 	f1_lst.close()
