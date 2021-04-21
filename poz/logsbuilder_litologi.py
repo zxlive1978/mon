@@ -45,7 +45,7 @@ def float_to_datetime(fl):
     return datetime.fromtimestamp(fl)
 
 def read_well(sbor,table):
-	path_to_work ="/var/www/html/mon/poz/"
+    path_to_work ="/var/www/html/mon/poz/"
 	#print os.listdir(sbor)
 	#try:
 	# file='WELLSITEDB.gz'
@@ -68,11 +68,11 @@ def read_well(sbor,table):
 	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
 		
 	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
-    print "a"+path_to_work+"b"
+    print ("a"+path_to_work+"b")
     print "mdb-export "+path_to_work+"'WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv"
     subprocess.call("mdb-export "+path_to_work+"'WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
-    
-	print "Скопировано"
+
+    print "Скопировано"
 	
 	
 	curSizecsv=getsize(""+path_to_work+"WELLSITEDBlitologi.csv")
