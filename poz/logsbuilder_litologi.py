@@ -133,7 +133,8 @@ def read_well(sbor,table):
 		
 
 	# --------------------
-	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology, 1параметр:номер(uid) записи породы в lihology
+	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology,5параметр:порядок следования пород 1.2.3.,6параметр: код породы из справочника 178-Аргиллит
+	# 7параметр: содержание в процентах 0.8
 	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"lithology.csv")
@@ -150,7 +151,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec[0]+' '+cur_rec[5]
+		print cur_rec[0]+' '+cur_rec[5]+' '+cur_rec[6]+' '+cur_rec[7]
 		
 
 
