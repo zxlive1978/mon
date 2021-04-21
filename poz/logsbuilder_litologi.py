@@ -150,7 +150,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec[0]+' '+cur_rec[1]
+		print cur_rec[0]+' '+cur_rec[5]
 		break
 
 
