@@ -69,8 +69,9 @@ def read_well(sbor,table):
 		
 	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
 	
-	
+	# --------------------
 	# mudLog2geologyInterval 1параметр:3-литология 4-шламограмма, 2параметр 1432-номер интервала
+	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 
