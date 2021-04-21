@@ -45,7 +45,7 @@ def float_to_datetime(fl):
     return datetime.fromtimestamp(fl)
 
 def read_well(sbor,table):
-    path_to_work ="/var/www/html/mon/poz/"
+	path_to_work ="/var/www/html/mon/poz/"
 	#print os.listdir(sbor)
 	#try:
 	# file='WELLSITEDB.gz'
@@ -67,17 +67,18 @@ def read_well(sbor,table):
 	# #mdb файл в csv! только комментарии
 	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
 		
-	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
-    print ("a"+path_to_work+"b")
-    print "mdb-export "+path_to_work+"'WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv"
-    subprocess.call("mdb-export "+path_to_work+"'WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
-
-    print "Скопировано"
+	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
+	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog' > "+path_to_work+"WELLSITEDBlitologi.csv ", shell=True)
+	
+	print "Скопировано"
+	
 	
 	curSizecsv=getsize(""+path_to_work+"WELLSITEDBlitologi.csv")
-    print (curSizecsv)
-    f1_lst=open(path_to_work+"WELLSITEDBlitologi.csv",'rb')
-    f1_lst.seek(0)
+
+	print (curSizecsv)
+	
+	f1_lst=open(path_to_work+"WELLSITEDBlitologi.csv",'rb')
+	f1_lst.seek(0)
 	lst_data=f1_lst.read(curSizecsv)
 	f1_lst.close()
 	records_data = lst_data.split("$$$")
@@ -150,16 +151,16 @@ def read_well(sbor,table):
 	# 	#Если зашифровано
 	# 	else:
 	# 			finish_comment = "Encrypted"
-	# 	# left =int(round(float(cur_rec[18])*100))
-	# 	# #Поиск
-	# 	# db_name=table
-	# 	# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-	# 	# cursor = db.cursor()
-	# 	# sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
-	# 	# #sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-	# 	# cursor.execute(sql)
-	# 	# data =  cursor.fetchall()
-	# 	# #print data
+	# 	left =int(round(float(cur_rec[18])*100))
+	# 	#Поиск
+	# 	db_name=table
+	# 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	# 	cursor = db.cursor()
+	# 	sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+	# 	#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+	# 	cursor.execute(sql)
+	# 	data =  cursor.fetchall()
+	# 	#print data
 		
         
     #     #выгрузка в базу
