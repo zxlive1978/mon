@@ -130,7 +130,7 @@ def read_well(sbor,table):
 	for cur_rec in data3:
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec[0]+' '+cur_rec[1]
-		break
+		
 
 	# --------------------
 	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology, 1параметр:номер(uid) записи породы в lihology
@@ -151,7 +151,7 @@ def read_well(sbor,table):
 	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
 		print cur_rec[0]+' '+cur_rec[5]
-		break
+		
 
 
 	# for cur_rec in data:
