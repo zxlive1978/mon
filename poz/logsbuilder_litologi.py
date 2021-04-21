@@ -108,7 +108,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data2:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec
+		print cur_rec[0]
 
 
 
