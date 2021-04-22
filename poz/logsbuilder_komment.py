@@ -57,8 +57,7 @@ def read_well(sbor,table):
 	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
 	
 	try:
-		subprocess.run(['os.remove('+path_to_work+'WELLSITEDB)'], check = True)
-		# os.remove(path_to_work+"WELLSITEDB)")
+		subprocess.call(['os.remove('+path_to_work+'WELLSITEDB)'], check = True)
 		shutil.copy(full_path_skf, path_to_work)
 	except IOError, e:
 		print "Unable to copy file. %s" % e
