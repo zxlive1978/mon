@@ -168,7 +168,7 @@ def read_well(sbor,table):
 							if (type_lith[1]==interval[0]):
 								print ('id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+
 								' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+
-								' top:'+str(round(float(interval[6]),2))+' bot:'+str(round(float(interval[7]),2))+' type:'+type_lith[0])
+								' top:'+str(round(float(interval[6]),2))+' bot:'+str(round(float(interval[7]),2))+' type:'+type_lith[0]+ ' uid:'+type_lith[1])
 
 
 		
