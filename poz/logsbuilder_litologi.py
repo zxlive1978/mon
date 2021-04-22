@@ -158,7 +158,7 @@ def read_well(sbor,table):
 		for geolog in data3:
 			geolog=geolog.split('%%%')
 			if (cur_rec[0] == geolog[1]):
-				print cur_rec[0]+' '+cur_rec[5]+' '+cur_rec[6]+' '+cur_rec[7]
+				print 'id:'+cur_rec[0]+' item order:'+cur_rec[5]+' codelith'+cur_rec[6]+' %:'+cur_rec[7] + '  geology:'
 
 
 		
