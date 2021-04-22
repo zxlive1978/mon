@@ -123,7 +123,7 @@ def read_well(sbor,table):
 						for type_lith in data1:
 							type_lith=type_lith.split('%%%')
 							if (type_lith[1]==interval[0]):
-								sql = "INSERT INTO "+db_name+"lith "+"(type, top, bot, code, proc, numb) VALUE ("+str(type_lith[0])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
+								sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(type_lith[0])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
 								cursor.execute(sql)
 								db.commit()
 
