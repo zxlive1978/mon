@@ -135,7 +135,7 @@ def read_well(sbor,table):
 
 	db.close()
 		
-	db_name=table
+
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
 
@@ -145,7 +145,6 @@ def read_well(sbor,table):
 	db.commit()
 	db.close()
 
-	db_name=table
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
 	sql = "TRUNCATE "+db_name
