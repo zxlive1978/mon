@@ -46,6 +46,7 @@ def float_to_datetime(fl):
 
 def read_well(sbor,table):
 	path_to_work ="/var/www/html/mon/poz/"
+	
 	#print os.listdir(sbor)
 	#try:
 	file='WELLSITEDB.gz'
@@ -56,6 +57,7 @@ def read_well(sbor,table):
 	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
 	
 	try:
+		os.remove(path_to_work+"WELLSITEDB")
 		shutil.copy(full_path_skf, path_to_work)
 	except IOError, e:
 		print "Unable to copy file. %s" % e
@@ -63,111 +65,227 @@ def read_well(sbor,table):
 	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
 	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB.gz > "+path_to_work+"WELLSITEDB", shell=True)
 	print "Распаковано"
-	#mdb файл в csv! только комментарии
-	#if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
-		
-	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
-	print "Скопировано"
-	
-	
-	curSizecsv=getsize(""+path_to_work+"WELLSITEDB.csv")
 
-	print (curSizecsv)
+	# # --------------------------------------------------
+	# # Чтение Комментарии Logsbuilder (сейчас закомментированы!!!)
+	# #---------------------------------------------------
 	
-	f1_lst=open(path_to_work+"WELLSITEDB.csv",'rb')
+	# #mdb файл в csv! только комментарии
+	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
+	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
+	# print "Скопировано"
+	
+	
+	# curSizecsv=getsize(""+path_to_work+"WELLSITEDB.csv")
+
+	# print (curSizecsv)
+	
+	# f1_lst=open(path_to_work+"WELLSITEDB.csv",'rb')
+	# f1_lst.seek(0)
+	# lst_data=f1_lst.read(curSizecsv)
+	# f1_lst.close()
+	# records_data = lst_data.split("$$$")
+	# data =records_data[:(len(records_data)-1)]
+	# #print records_data
+	# i=0
+	# #f = open('out.txt', 'w')
+	# #sys.stdout = f
+	# for cur_rec in data:
+	# 	cur_rec=cur_rec.split('%%%')
+	# 	cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
+		
+	# 	#Текущее время комментария
+	# 	time_cur=str(cur_rec[6])
+	# 	print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
+	# 	#test_time ="01/28/18 02:55:00"
+	# 	#print len(cur_par)
+	# 	time_tuple = time.strptime(time_cur[1:17], "%m/%d/%y %H:%M:%S")
+	# 	dtt = datetime.fromtimestamp(mktime(time_tuple))
+	# 	cur_unix_time = datetime_to_float(dtt)
+	# 	#Сдвиг
+	# 	shift_hours= 14400
+	# 	cur_unix_time-=shift_hours
+	# 	# Комментарии с текущей даты
+	# 	begin_time = 1528269694 # 6 June 2018 г., 07:21:34
+	# 	#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
+	# 	#Типы По времени 2, По глубине, Геолог
+	# 	type_cmt_time=int(str(cur_rec[5]))
+	# 	if (cur_unix_time >= begin_time and len(cur_par)>= 30):
+		
+	# 		#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
+	# 		#cur_txt_comment = str(cur_rec[15]).split("</Text>")
+	# 		#comment_line = cur_rec[15].decode('cp866')
+	# 		#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
+	# 		deltxt=cur_par[30][17:]
+	# 		#deltxt ="gjjkjklj/jkjks/Tklk;"
+			
+	# 		#deltxt = re.split(r'/T', deltxt)
+			
+	# 		#print unichr(struct.unpack('>i',chr(deltxt[0][2:4].encode("hex"))))
+	# 		#Длина комментария 2 byte символ
+	# 		cmt_txt_len=abs(len(deltxt)/2)*2
+	# 		#cmt_txt_len=8
+	# 		#Финальный текст комментария
+	# 		finish_comment='';
+	# 		#print abs(cmt_txt_len /2)*2
+	# 		j=0
+	# 		while j<cmt_txt_len:
+	# 			codchr = deltxt[j:j+2]
+	# 			finish_comment+=unichr(int(struct.unpack("<H", codchr)[0]))
+	# 			j+=2
+	# 		'''
+	# 		codchr = deltxt[0][0:2]
+	# 		print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
+	# 		codchr = deltxt[0][2:4]
+	# 		print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
+	# 		'''
+	# 		#print int(struct.unpack("h", codchr[0]))
+	# 		#codchr=struct.pack('>H',deltxt[0][0:2])
+			
+			
+	# 		#print deltxt[0][0:2].encode("hex") #,int(deltxt[0][0:2].encode("hex")), len (deltxt[0])
+	# 		#print deltxt[0][2:4].encode("hex")
+			
+			
+	# 		#print unicode(deltxt[0])
+	# 		finish_comment = re.split(r"</T", finish_comment)
+	# 		#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
+	# 		#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
+	# 	#Если зашифровано
+	# 	else:
+	# 			finish_comment = "Encrypted"
+	# 	left =int(round(float(cur_rec[18])*100))
+	# 	#Поиск
+	# 	db_name=table
+	# 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	# 	cursor = db.cursor()
+	# 	sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+	# 	#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+	# 	cursor.execute(sql)
+	# 	data =  cursor.fetchall()
+	# 	#print data
+	# 	if len(data) == 0:
+	# 		#Вставка
+	# 		db_name=table
+	# 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	# 		cursor = db.cursor()
+	# 		sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
+	# 		cursor.execute(sql)
+	# 		db.commit()
+	# 	i+=1
+	# 	db.close()
+
+
+	# -------------------------
+	# ЛИТОЛОГИЯ и ШЛАМОГРАММА
+	# ---------------------------------------------
+
+	table=table[:len(table)-2]
+	# --------------------
+	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
+	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
 	lst_data=f1_lst.read(curSizecsv)
 	f1_lst.close()
 	records_data = lst_data.split("$$$")
-	data =records_data[:(len(records_data)-1)]
-	#print records_data
-	i=0
-	#f = open('out.txt', 'w')
-	#sys.stdout = f
-	for cur_rec in data:
+	data1 =records_data[:(len(records_data)-1)]
+	
+	# --------------------
+	# geologyInterval 0параметр:1432-номер интервала, 6параметр:12-начало интервала, 7параметр: 15-конец интервала
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
+	f1_lst=open(path_to_work+"geologyInterval.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data2 =records_data[:(len(records_data)-1)]
+	
+	
+	# --------------------
+	# geologyInterval2lithology 0параметр:1432-номер интервала, 1параметр:номер(uid) записи породы в lihology
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"geologyInterval2lithology.csv")
+	f1_lst=open(path_to_work+"geologyInterval2lithology.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data3 =records_data[:(len(records_data)-1)]
+		
+
+	# --------------------
+	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology,5параметр:порядок следования пород 1.2.3.,6параметр: код породы из справочника 178-Аргиллит
+	# 7параметр: содержание породы(пропласток) в процентах 0.8
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
+	curSizecsv=getsize(""+path_to_work+"lithology.csv")
+	f1_lst=open(path_to_work+"lithology.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data4 =records_data[:(len(records_data)-1)]
+
+	db_name=table+'lith'
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "TRUNCATE "+db_name
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	db_name=table+'lith'
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+
+
+	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
-		cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
+		#сколько пород в пропластке
+		for geolog in data3:
+			geolog=geolog.split('%%%')
+			if (cur_rec[0] == geolog[1]):
+				for interval in data2:
+					interval=interval.split('%%%')
+					if (geolog[0]==interval[0]):
+						for type_lith in data1:
+							type_lith=type_lith.split('%%%')
+							if (type_lith[1]==interval[0]):
+								sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(type_lith[0])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
+								cursor.execute(sql)
+								db.commit()
+
+
+								print ('id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+
+								' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+
+								' top:'+str(round(float(interval[6]),2))+' bot:'+str(round(float(interval[7]),2))+' type:'+type_lith[0]+ ' uid:'+type_lith[1])
+
+
+	db.close()
 		
-		#Текущее время комментария
-		time_cur=str(cur_rec[6])
-		print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
-		#test_time ="01/28/18 02:55:00"
-		#print len(cur_par)
-		time_tuple = time.strptime(time_cur[1:17], "%m/%d/%y %H:%M:%S")
-		dtt = datetime.fromtimestamp(mktime(time_tuple))
-		cur_unix_time = datetime_to_float(dtt)
-		#Сдвиг
-		shift_hours= 14400
-		cur_unix_time-=shift_hours
-		# Комментарии с текущей даты
-		begin_time = 1528269694 # 6 June 2018 г., 07:21:34
-		#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
-		#Типы По времени 2, По глубине, Геолог
-		type_cmt_time=int(str(cur_rec[5]))
-		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
-		
-			#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
-			#cur_txt_comment = str(cur_rec[15]).split("</Text>")
-			#comment_line = cur_rec[15].decode('cp866')
-			#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
-			deltxt=cur_par[30][17:]
-			#deltxt ="gjjkjklj/jkjks/Tklk;"
-			
-			#deltxt = re.split(r'/T', deltxt)
-			
-			#print unichr(struct.unpack('>i',chr(deltxt[0][2:4].encode("hex"))))
-			#Длина комментария 2 byte символ
-			cmt_txt_len=abs(len(deltxt)/2)*2
-			#cmt_txt_len=8
-			#Финальный текст комментария
-			finish_comment='';
-			#print abs(cmt_txt_len /2)*2
-			j=0
-			while j<cmt_txt_len:
-				codchr = deltxt[j:j+2]
-				finish_comment+=unichr(int(struct.unpack("<H", codchr)[0]))
-				j+=2
-			'''
-			codchr = deltxt[0][0:2]
-			print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
-			codchr = deltxt[0][2:4]
-			print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
-			'''
-			#print int(struct.unpack("h", codchr[0]))
-			#codchr=struct.pack('>H',deltxt[0][0:2])
-			
-			
-			#print deltxt[0][0:2].encode("hex") #,int(deltxt[0][0:2].encode("hex")), len (deltxt[0])
-			#print deltxt[0][2:4].encode("hex")
-			
-			
-			#print unicode(deltxt[0])
-			finish_comment = re.split(r"</T", finish_comment)
-			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
-			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
-		#Если зашифровано
-		else:
-				finish_comment = "Encrypted"
-		left =int(round(float(cur_rec[18])*100))
-		#Поиск
-		db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		cursor = db.cursor()
-		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
-		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-		cursor.execute(sql)
-		data =  cursor.fetchall()
-		#print data
-		if len(data) == 0:
-			#Вставка
-			db_name=table
-			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-			cursor = db.cursor()
-			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
-			cursor.execute(sql)
-			db.commit()
-		i+=1
-		db.close()
+
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+
+
+	sql = "RENAME TABLE "+db_name+ " TO tmp_table, " +db_name+"_all TO "+ db_name+ ", tmp_table TO "+db_name+"_all;"
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "TRUNCATE "+db_name
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
 	
 	
 
