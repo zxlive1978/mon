@@ -310,20 +310,20 @@ if t4450.is_alive(): t4450.terminate()
 t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
 t41450.start()
 t41450.join(10)
-if t44150.is_alive(): t44150.terminate()
+if t41450.is_alive(): t41450.terminate()
 
 #9917
 t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
 t11450.start()
 t11450.join(10)
-if t14150.is_alive(): t14150.terminate()
+if t11450.is_alive(): t11450.terminate()
 
 
 #938
 t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
 t21450.start()
 t21450.join(10)
-if t24150.is_alive(): t24150.terminate()
+if t21450.is_alive(): t21450.terminate()
 
 
 
@@ -331,7 +331,7 @@ if t24150.is_alive(): t24150.terminate()
 t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
 t31450.start()
 t31450.join(10)
-if t23150.is_alive(): t23150.terminate()
+if t31450.is_alive(): t31450.terminate()
 
 # #104
 # t20 = Process(target=read_well, args=["/mnt/104o/Archive","s110kr"])
