@@ -161,8 +161,8 @@ def read_well(sbor,table):
 				for interval in data2:
 					if (geolog[0]==interval[0]):
 						for type_lith in data1:
-							if (type_lith[0]==interval[0]):
-								print 'id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+' top:'+interval[6]+' bot:'+interval[7]
+							if (type_lith[1]==interval[0]):
+								print 'id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+' top:'+interval[6]+' bot:'+interval[7]+' type:'+type_lith[0]
 
 
 		
