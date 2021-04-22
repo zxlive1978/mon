@@ -47,6 +47,8 @@ def float_to_datetime(fl):
 def read_well(sbor,table):
 	path_to_work ="/var/www/html/mon/poz/"
 	
+
+	table=table[:len(table)-2]
 	# --------------------
 	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
 	# --------------------
@@ -252,7 +254,7 @@ def read_well(sbor,table):
 
 
 #544
-t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544"])
+t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
 t629.start()
 t629.join(360)
 if t629.is_alive(): t629.terminate()

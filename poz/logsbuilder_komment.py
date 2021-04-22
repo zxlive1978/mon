@@ -60,7 +60,6 @@ def read_well(sbor,table):
 	except IOError, e:
 		print "Unable to copy file. %s" % e
 			
-			
 	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
 	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB.gz > "+path_to_work+"WELLSITEDB", shell=True)
 	print "Распаковано"
