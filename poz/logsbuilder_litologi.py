@@ -114,8 +114,6 @@ def read_well(sbor,table):
 	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
 		#сколько пород в пропластке
-		how_order =0
-		order =0
 		for geolog in data3:
 			geolog=geolog.split('%%%')
 			if (cur_rec[0] == geolog[1]):
