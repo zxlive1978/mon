@@ -98,6 +98,19 @@ def read_well(sbor,table):
 	records_data = lst_data.split("$$$")
 	data4 =records_data[:(len(records_data)-1)]
 
+	db_name=table+'lith'
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "TRUNCATE "+db_name
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	db_name=table+'lith'
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+
+
 	for cur_rec in data4:
 		cur_rec=cur_rec.split('%%%')
 		#сколько пород в пропластке
@@ -112,11 +125,35 @@ def read_well(sbor,table):
 						for type_lith in data1:
 							type_lith=type_lith.split('%%%')
 							if (type_lith[1]==interval[0]):
+								sql = "INSERT INTO "+db_name+"lith "+"(type, top, bot, code, proc, numb) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
+								cursor.execute(sql)
+								db.commit()
 
-								
+
 								print ('id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+
 								' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+
 								' top:'+str(round(float(interval[6]),2))+' bot:'+str(round(float(interval[7]),2))+' type:'+type_lith[0]+ ' uid:'+type_lith[1])
+
+
+	db.close()
+		
+	db_name=table
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+
+
+	sql = "RENAME TABLE "+db_name+ " TO tmp_table, " +db_name+"_all TO "+ db_name+ ", tmp_table TO "+db_name+"_all;"
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	db_name=table
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "TRUNCATE "+db_name
+	cursor.execute(sql)
+	db.commit()
+	db.close()
 
 
 		
