@@ -85,8 +85,8 @@ def read_well(sbor,table):
 	data1 =records_data[:(len(records_data)-1)]
 	# print records_data
 	i=0
-	for cur_rec in data1:
-		cur_rec=cur_rec.split('%%%')
+	# for cur_rec in data1:
+	# 	cur_rec=cur_rec.split('%%%')
 		# print cur_rec
 
 
@@ -106,8 +106,8 @@ def read_well(sbor,table):
 	data2 =records_data[:(len(records_data)-1)]
 	# print records_data
 	i=0
-	for cur_rec in data2:
-		cur_rec=cur_rec.split('%%%')
+	# for cur_rec in data2:
+	# 	cur_rec=cur_rec.split('%%%')
 		# print cur_rec[0]+' '+cur_rec[6]+' '+cur_rec[7]
 
 	
@@ -127,8 +127,8 @@ def read_well(sbor,table):
 	data3 =records_data[:(len(records_data)-1)]
 	# print records_data
 	i=0
-	for cur_rec in data3:
-		cur_rec=cur_rec.split('%%%')
+	# for cur_rec in data3:
+	# 	cur_rec=cur_rec.split('%%%')
 		# print cur_rec[0]+' '+cur_rec[1]
 		
 
@@ -160,7 +160,9 @@ def read_well(sbor,table):
 			if (cur_rec[0] == geolog[1]):
 				for interval in data2:
 					if (geolog[0]==interval[0]):
-						print 'id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+' top:'+interval[6]+' bot:'+interval[7]
+						for type_lith in data1:
+							if (type_lith[0]==interval[0]):
+								print 'id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+' %:'+str(round(float(cur_rec[7]),2)) + '  geology:'+ geolog[1]+' top:'+interval[6]+' bot:'+interval[7]
 
 
 		
