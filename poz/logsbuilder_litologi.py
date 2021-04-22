@@ -75,7 +75,7 @@ def read_well(sbor,table):
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 
-	print (curSizecsv)
+	# print (curSizecsv)
 	
 	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -87,7 +87,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data1:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec
+		# print cur_rec
 
 
 	# --------------------
@@ -96,7 +96,7 @@ def read_well(sbor,table):
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
 
-	print (curSizecsv)
+	# print (curSizecsv)
 	
 	f1_lst=open(path_to_work+"geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -108,7 +108,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data2:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec[0]+' '+cur_rec[6]+' '+cur_rec[7]
+		# print cur_rec[0]+' '+cur_rec[6]+' '+cur_rec[7]
 
 	
 	# --------------------
@@ -117,7 +117,7 @@ def read_well(sbor,table):
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"geologyInterval2lithology.csv")
 
-	print (curSizecsv)
+	# print (curSizecsv)
 	
 	f1_lst=open(path_to_work+"geologyInterval2lithology.csv",'rb')
 	f1_lst.seek(0)
@@ -129,7 +129,7 @@ def read_well(sbor,table):
 	i=0
 	for cur_rec in data3:
 		cur_rec=cur_rec.split('%%%')
-		print cur_rec[0]+' '+cur_rec[1]
+		# print cur_rec[0]+' '+cur_rec[1]
 		
 
 	# --------------------
@@ -139,7 +139,7 @@ def read_well(sbor,table):
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"lithology.csv")
 
-	print (curSizecsv)
+	# print (curSizecsv)
 	
 	f1_lst=open(path_to_work+"lithology.csv",'rb')
 	f1_lst.seek(0)
