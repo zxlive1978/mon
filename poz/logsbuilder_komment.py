@@ -55,7 +55,8 @@ def read_well(sbor,table):
 	#копирование файла с обработчика с папки c:\Program files\Common files\Ps Shared\WELLSITEDB.zip
 	#который заархивирован с помощью Reciever на той стороне
 	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
-	
+	pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
+	print pathtocopy
 	try:
 		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
 		shutil.copy(full_path_skf, path_to_work+table+'.gz')
