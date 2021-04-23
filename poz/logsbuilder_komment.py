@@ -326,12 +326,16 @@ if t11450.is_alive(): t11450.terminate()
 # t21450.join(10)
 # if t21450.is_alive(): t21450.terminate()
 
-
+#542 Обработчик
+t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
+t629.start()
+t629.join(100)
+if t629.is_alive(): t629.terminate()
 
 #632
 t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
 t31450.start()
-t31450.join(10)
+t31450.join(100)
 if t31450.is_alive(): t31450.terminate()
 
 # ------------------------------------------------------------------------
