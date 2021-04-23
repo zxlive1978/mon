@@ -182,8 +182,21 @@ def read_well(sbor,table):
 	# ---------------------------------------------
 
 	table_lith=table[:len(table)-2]+'lith'
+
 	# --------------------
-	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
+	# mudLog 9параметр:1-литология  или  0-шламограмма, 
+	# --------------------
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'mudLog' > "+path_to_work+"mudLog.csv ", shell=True)
+	curSizecsv=getsize(""+path_to_work+"mudLog.csv")
+	f1_lst=open(path_to_work+"mudLog.csv",'rb')
+	f1_lst.seek(0)
+	lst_data=f1_lst.read(curSizecsv)
+	f1_lst.close()
+	records_data = lst_data.split("$$$")
+	data0 =records_data[:(len(records_data)-1)]
+
+	# --------------------
+	# mudLog2geologyInterval 0параметр:38-uid литология  или  39-шламограмма из mudLog, 1параметр 1432-номер интервала
 	# --------------------
 	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
@@ -258,9 +271,12 @@ def read_well(sbor,table):
 						for type_lith in data1:
 							type_lith=type_lith.split('%%%')
 							if (type_lith[1]==interval[0]):
-								sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(type_lith[0])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
-								cursor.execute(sql)
-								db.commit()
+								for lith in data0:
+									lith=lith.split('%%%')
+									if (lith[0]==type_lith[0]):
+										sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(lith[9])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
+										cursor.execute(sql)
+										db.commit()
 
 
 								# print ('id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+
