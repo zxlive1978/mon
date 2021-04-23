@@ -59,7 +59,7 @@ def read_well(sbor,table):
 	print pathtocopy
 	try:
 		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
-		shutil.copy(full_path_skf, path_to_work+table+'.gz')
+		shutil.copy(full_path_skf, pathtocopy)
 	except IOError, e:
 		print "Unable to copy file. %s" % e
 			
