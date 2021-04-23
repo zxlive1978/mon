@@ -73,7 +73,7 @@ def read_well(sbor,table):
 	
 	# #mdb файл в csv! только комментарии
 	# #if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
-	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
+	# subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
 	# print "Скопировано"
 	
 	
@@ -185,7 +185,7 @@ def read_well(sbor,table):
 	# --------------------
 	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
