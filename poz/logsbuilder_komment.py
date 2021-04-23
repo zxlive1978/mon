@@ -57,11 +57,11 @@ def read_well(sbor,table):
 	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
 	pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
 	print pathtocopy
-	try:
-		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
-		shutil.copy(full_path_skf, pathtocopy)
-	except IOError, e:
-		print "Unable to copy file. %s" % e
+	# try:
+	# 	# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
+	# 	shutil.copy(full_path_skf, pathtocopy)
+	# except IOError, e:
+	# 	print "Unable to copy file. %s" % e
 			
 	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
 	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
