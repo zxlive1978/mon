@@ -316,7 +316,7 @@ def read_well(sbor,table):
 #9917
 t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
 t11450.start()
-t11450.join(10)
+t11450.join(100)
 if t11450.is_alive(): t11450.terminate()
 
 
