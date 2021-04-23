@@ -58,12 +58,12 @@ def read_well(sbor,table):
 	
 	try:
 		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
-		shutil.copy(full_path_skf, path_to_work)
+		shutil.copy(full_path_skf, path_to_work+table+'.gz')
 	except IOError, e:
 		print "Unable to copy file. %s" % e
 			
 	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
-	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB.gz > "+path_to_work+"WELLSITEDB", shell=True)
+	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
 	print "Распаковано"
 
 	# # --------------------------------------------------
@@ -180,11 +180,11 @@ def read_well(sbor,table):
 	# ЛИТОЛОГИЯ и ШЛАМОГРАММА
 	# ---------------------------------------------
 
-	table=table[:len(table)-2]
+	table_lith=table[:len(table)-2]+'lith'
 	# --------------------
 	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -196,7 +196,7 @@ def read_well(sbor,table):
 	# --------------------
 	# geologyInterval 0параметр:1432-номер интервала, 6параметр:12-начало интервала, 7параметр: 15-конец интервала
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
 	f1_lst=open(path_to_work+"geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -209,7 +209,7 @@ def read_well(sbor,table):
 	# --------------------
 	# geologyInterval2lithology 0параметр:1432-номер интервала, 1параметр:номер(uid) записи породы в lihology
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'geologyInterval2lithology' > "+path_to_work+"geologyInterval2lithology.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"geologyInterval2lithology.csv")
 	f1_lst=open(path_to_work+"geologyInterval2lithology.csv",'rb')
 	f1_lst.seek(0)
@@ -223,7 +223,7 @@ def read_well(sbor,table):
 	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology,5параметр:порядок следования пород 1.2.3.,6параметр: код породы из справочника 178-Аргиллит
 	# 7параметр: содержание породы(пропласток) в процентах 0.8
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
 	curSizecsv=getsize(""+path_to_work+"lithology.csv")
 	f1_lst=open(path_to_work+"lithology.csv",'rb')
 	f1_lst.seek(0)
@@ -232,7 +232,7 @@ def read_well(sbor,table):
 	records_data = lst_data.split("$$$")
 	data4 =records_data[:(len(records_data)-1)]
 
-	db_name=table+'lith'
+	db_name=table_lith
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
 	sql = "TRUNCATE "+db_name
@@ -240,7 +240,7 @@ def read_well(sbor,table):
 	db.commit()
 	db.close()
 
-	db_name=table+'lith'
+	db_name=table_lith
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
 
