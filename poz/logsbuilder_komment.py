@@ -185,7 +185,7 @@ def read_well(sbor,table):
 	# --------------------
 	# mudLog2geologyInterval 0параметр:3-литология 4-шламограмма, 1параметр 1432-номер интервала
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'mudLog2geologyInterval' > "+path_to_work+"mudLog2geologyInterval.csv ", shell=True)
 	curSizecsv=getsize(""+path_to_work+"mudLog2geologyInterval.csv")
 	f1_lst=open(path_to_work+"mudLog2geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -197,7 +197,7 @@ def read_well(sbor,table):
 	# --------------------
 	# geologyInterval 0параметр:1432-номер интервала, 6параметр:12-начало интервала, 7параметр: 15-конец интервала
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'geologyInterval' > "+path_to_work+"geologyInterval.csv ", shell=True)
 	curSizecsv=getsize(""+path_to_work+"geologyInterval.csv")
 	f1_lst=open(path_to_work+"geologyInterval.csv",'rb')
 	f1_lst.seek(0)
@@ -224,7 +224,7 @@ def read_well(sbor,table):
 	# lithology 0параметр:номер(uid) записи породы из geologyInterval2lithology,5параметр:порядок следования пород 1.2.3.,6параметр: код породы из справочника 178-Аргиллит
 	# 7параметр: содержание породы(пропласток) в процентах 0.8
 	# --------------------
-	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)	
+	subprocess.call("mdb-export -H  -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'lithology' > "+path_to_work+"lithology.csv ", shell=True)
 	curSizecsv=getsize(""+path_to_work+"lithology.csv")
 	f1_lst=open(path_to_work+"lithology.csv",'rb')
 	f1_lst.seek(0)
