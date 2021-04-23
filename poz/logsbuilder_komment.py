@@ -294,24 +294,24 @@ def read_well(sbor,table):
 #Комментарии Logsbuilder
 
 
-#544
-t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
-t629.start()
-t629.join(360)
-if t629.is_alive(): t629.terminate()
+# #544
+# t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
+# t629.start()
+# t629.join(360)
+# if t629.is_alive(): t629.terminate()
 
 
-#71
-t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
-t4450.start()
-t4450.join(10)
-if t4450.is_alive(): t4450.terminate()
+# #71
+# t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
+# t4450.start()
+# t4450.join(10)
+# if t4450.is_alive(): t4450.terminate()
 
-#610
-t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
-t41450.start()
-t41450.join(10)
-if t41450.is_alive(): t41450.terminate()
+# #610
+# t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
+# t41450.start()
+# t41450.join(10)
+# if t41450.is_alive(): t41450.terminate()
 
 #9917
 t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
@@ -320,20 +320,21 @@ t11450.join(10)
 if t11450.is_alive(): t11450.terminate()
 
 
-#938
-t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-t21450.start()
-t21450.join(10)
-if t21450.is_alive(): t21450.terminate()
+# #938
+# t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+# t21450.start()
+# t21450.join(10)
+# if t21450.is_alive(): t21450.terminate()
 
 
 
-#632
-t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
-t31450.start()
-t31450.join(10)
-if t31450.is_alive(): t31450.terminate()
+# #632
+# t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
+# t31450.start()
+# t31450.join(10)
+# if t31450.is_alive(): t31450.terminate()
 
+# ------------------------------------------------------------------------
 # #104
 # t20 = Process(target=read_well, args=["/mnt/104o/Archive","s110kr"])
 # t20.start()
