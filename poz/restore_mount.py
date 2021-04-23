@@ -129,7 +129,7 @@ t631.join(30)
 if t631.is_alive(): t631.terminate()
 
 #632 Обработчик
-t629 = Process(target=read_well, args=["/mnt/631o","629o","/""/192.168.146.18/c$/Program Files/Common Files/PS Shared/Database/"""])
+t629 = Process(target=read_well, args=["/mnt/629o","629o","/""/192.168.146.18/c$/Program Files/Common Files/PS Shared/Database/"""])
 t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
@@ -185,18 +185,18 @@ if t104.is_alive(): t104.terminate()
 
 
 
-#934
+#542
 #threading.Thread(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"]).start()
 t631 = Process(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"])
 t631.start()
 t631.join(30)
 if t631.is_alive(): t631.terminate()
 
-#934 Обработчик
-#t629 = Process(target=read_well, args=["/mnt/915o","915o","/""/192.168.146.227/c$/Program Files/Common Files/PS Shared/Database/"""])
-#t629.start()
-#t629.join(30)
-#if t629.is_alive(): t629.terminate()
+#542 Обработчик
+t629 = Process(target=read_well, args=["/mnt/915o","915o","/""/192.168.146.227/c$/Program Files/Common Files/PS Shared/Database/"""])
+t629.start()
+t629.join(30)
+if t629.is_alive(): t629.terminate()
 
 
 
