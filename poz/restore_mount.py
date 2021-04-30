@@ -46,7 +46,7 @@ def read_well(sbor,table,share_path):
 	
 	
 #Потоки Времянка
-#406
+#449 406
 #threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
 t110 = Process(target=read_well, args=["/mnt/104","s401","//192.168.146.2/d/PetroServices/Database/Online/Store"])
 t110.start()
