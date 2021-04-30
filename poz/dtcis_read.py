@@ -1028,7 +1028,7 @@ def read_well(sbor,table):
 	
 #threading.TIMEOUT_MAX=5
 #Потоки
-#406
+#449 406
 #read_well("/mnt/104","s110")
 t110 = Process(target=read_well, args=["/mnt/104","s401"])
 t110.start()
