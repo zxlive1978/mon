@@ -5,8 +5,8 @@ object TChartContext
   Bottom = 0
   MainID = 0
   FormName = #1044#1080#1072#1075#1088#1072#1084#1084#1072' '#1089' '#1087#1088#1080#1074#1103#1079#1082#1086#1081' '#1087#1086' '#1074#1088#1077#1084#1077#1085#1080
-  Min = 44228.834812638890000000
-  Max = 44229.834812233800000000
+  Min = 44305.834493356480000000
+  Max = 44306.834618541670000000
   Scale = 0.004901960784313725
   Step = 0.041666666666666660
   IsDateTime = True
@@ -64,7 +64,7 @@ object TChartContext
       Top = 13
       Right = 151
       Bottom = 18
-      Caption = '01.02.21 20:02 - 02.02.21 20:02'
+      Caption = '19.04.21 20:01 - 20.04.21 20:01'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clBlue
       Font.Height = -15
@@ -185,7 +185,7 @@ object TChartContext
     Left = 12
     Top = 24
     Right = 56
-    Bottom = 282
+    Bottom = 283
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -298,7 +298,7 @@ object TChartContext
     Left = 56
     Top = 24
     Right = 102
-    Bottom = 282
+    Bottom = 283
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -450,7 +450,7 @@ object TChartContext
     Left = 102
     Top = 24
     Right = 144
-    Bottom = 282
+    Bottom = 283
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -605,7 +605,7 @@ object TChartContext
     Left = 144
     Top = 24
     Right = 188
-    Bottom = 282
+    Bottom = 283
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -760,7 +760,7 @@ object TChartContext
     Left = 0
     Top = 24
     Right = 12
-    Bottom = 282
+    Bottom = 283
     Caption = '    '#1042#1088#1077#1084#1103
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -796,7 +796,7 @@ object TChartContext
     Left = 188
     Top = 24
     Right = 200
-    Bottom = 282
+    Bottom = 283
     Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103' '
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
