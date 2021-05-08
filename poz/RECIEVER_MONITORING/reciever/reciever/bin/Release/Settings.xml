@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings>
-    <source_path />
-    <destination_path />
-    <current_time_name />
+    <source_path>C:\</source_path>
+    <destination_path>
+    </destination_path>
+    <current_time_name>
+    </current_time_name>
     <wr_time>False</wr_time>
     <loading_store>False</loading_store>
     <wr_store>False</wr_store>
