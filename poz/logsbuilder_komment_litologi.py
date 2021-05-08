@@ -358,7 +358,7 @@ if t31450.is_alive(): t31450.terminate()
 # 449 # 104
 t20 = Process(target=read_well, args=["/mnt/104o/Archive","s401kr"])
 t20.start()
-t20.join(100)
+t20.join(300)
 if t20.is_alive(): t20.terminate()
 
 # #629
