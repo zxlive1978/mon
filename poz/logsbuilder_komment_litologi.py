@@ -274,9 +274,10 @@ def read_well(sbor,table):
 								for lith in data0:
 									lith=lith.split('%%%')
 									if (lith[0]==type_lith[0]):
-										sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(lith[9])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
-										cursor.execute(sql)
-										db.commit()
+										if (round(float(cur_rec[7]),2)!=0):
+											sql = "INSERT INTO "+db_name+"(type, top, bot, code, proc, numb) VALUE ("+str(lith[9])+","+str(round(float(interval[6]),2))+","+str(round(float(interval[7]),2))+","+str(cur_rec[6])+","+str(round(float(cur_rec[7]),2))+","+str(cur_rec[5])+")"	
+											cursor.execute(sql)
+											db.commit()
 
 
 								# print ('id:'+cur_rec[0]+' order:'+cur_rec[5]+' lith:'+cur_rec[6]+
