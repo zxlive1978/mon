@@ -199,7 +199,7 @@ t96.start()
 t96.join(30)
 if t96.is_alive(): t96.terminate()
 
-#107 99 Обработчик c:
+#107 99 Обработчик c: /Users/User/Desktop/Суточные сводки №107 скв/май2021 Сводка ген.директору_скв107 20.05.21.xlsx
 t96 = Process(target=read_well, args=["/mnt/96oc","96","/""/192.168.147.67/C$"""])
 t96.start()
 t96.join(30)
