@@ -5,6 +5,10 @@ import pdfkit
 def pozreboot(host,port,delay,reset_vpn_host):
 	# try:
 		# unoconv -f html -e PageRange=1 542.xlsx
+		# wget --quiet https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
+    	# tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
+    	# cp wkhtmltox/bin/wk* /usr/local/bin/ && \
+    	# rm -rf wkhtmltox
 		# pdfkit.from_url('http://google.com', 'out.pdf')
 		pdfkit.from_file(host, '542pdf.pdf')
 		# pdfkit.from_string('Hello!', 'out.pdf')
