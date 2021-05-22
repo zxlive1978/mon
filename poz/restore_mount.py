@@ -220,7 +220,7 @@ t104.join(30)
 if t104.is_alive(): t104.terminate()
 
 #406 Обработчик c:
-t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/c$"""])
+t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/D$"""])
 t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
