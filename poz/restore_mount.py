@@ -127,8 +127,8 @@ t20.start()
 t20.join(30)
 if t20.is_alive(): t20.terminate()
 
-#938 Обработчик c:
-# (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+#938 Обработчик c: /Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору
+# (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
 t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c$"""])
 t20.start()
 t20.join(30)
