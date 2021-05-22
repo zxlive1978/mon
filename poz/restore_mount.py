@@ -160,11 +160,18 @@ t547.start()
 t547.join(30)
 if t547.is_alive(): t547.terminate()
 
-#84
+#828 84
 t3 = Process(target=read_well, args=["/mnt/3","3","/""/192.168.146.67/C$/Program Files/GeoSketch/Forms/"""])
 t3.start()
 t3.join(30)
 if t3.is_alive(): t3.terminate()
+
+#828 84 c:
+t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/C$"""])
+t3.start()
+t3.join(30)
+if t3.is_alive(): t3.terminate()
+
 
 #99
 t96 = Process(target=read_well, args=["/mnt/96","96","/""/192.168.147.67/C$/Program Files/GeoSketch/Forms/"""])
