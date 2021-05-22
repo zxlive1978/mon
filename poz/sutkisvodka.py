@@ -4,6 +4,7 @@ import sys
 import pdfkit
 def pozreboot(host,port,delay,reset_vpn_host):
 	try:
+		# unoconv -f html -e PageRange=1 542.xlsx
 		pdfkit.from_url('http://google.com', 'out.pdf')
 		pdfkit.from_file('test.html', 'out.pdf')
 		pdfkit.from_string('Hello!', 'out.pdf')
