@@ -186,8 +186,8 @@ t3.start()
 t3.join(30)
 if t3.is_alive(): t3.terminate()
 
-#828 84 c:
-t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/D$/АРХИВ/Архив скв.604/суточные сводки скв.604/"""])
+#828 84 /АРХИВ/Архив скв.604/суточные сводки скв.604/
+t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/D$"""])
 t3.start()
 t3.join(30)
 if t3.is_alive(): t3.terminate()
@@ -244,7 +244,7 @@ t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
 
-#542 Обработчик c:
+#542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору
 t629 = Process(target=read_well, args=["/mnt/915oc","915o","/""/192.168.146.227/c$"""])
 t629.start()
 t629.join(30)
