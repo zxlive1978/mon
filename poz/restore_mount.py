@@ -127,7 +127,7 @@ t20.start()
 t20.join(30)
 if t20.is_alive(): t20.terminate()
 
-#938 Обработчик c: /Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору
+#938 Обработчик c: /Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору СКВ 938 Сводка директору за 01.05.2021.xlsx
 # (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
 t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c$"""])
 t20.start()
@@ -148,7 +148,7 @@ t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
 
-#632 Обработчик c:
+#632 Обработчик c: c/Users/User/Desktop/Сводки в контору скв. 632/2021/Май/Генералу СКВ №632 09.05.2021.xlsx
 t629 = Process(target=read_well, args=["/mnt/629oc","629oc","/""/192.168.146.18/c$"""])
 t629.start()
 t629.join(30)
@@ -244,7 +244,7 @@ t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
 
-#542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору
+#542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору Скв № 542 09.05.2021.xlsx
 t629 = Process(target=read_well, args=["/mnt/915oc","915o","/""/192.168.146.227/c$"""])
 t629.start()
 t629.join(30)
