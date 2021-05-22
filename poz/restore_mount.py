@@ -135,7 +135,7 @@ t629.join(30)
 if t629.is_alive(): t629.terminate()
 
 #632 Обработчик c:
-t629 = Process(target=read_well, args=["/mnt/629oc","629oc","/""/192.168.146.18/c$/"""])
+t629 = Process(target=read_well, args=["/mnt/629oc","629oc","/""/192.168.146.18/c$"""])
 t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
