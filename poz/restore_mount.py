@@ -187,7 +187,7 @@ t3.join(30)
 if t3.is_alive(): t3.terminate()
 
 #828 84 c:
-t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/C$"""])
+t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/D$/АРХИВ/Архив скв.604/суточные сводки скв.604/"""])
 t3.start()
 t3.join(30)
 if t3.is_alive(): t3.terminate()
