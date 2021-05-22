@@ -67,6 +67,13 @@ t544.start()
 t544.join(30)
 if t544.is_alive(): t544.terminate()
 
+#544 Обработчик c:
+#threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
+t544 = Process(target=read_well, args=["/mnt/544oc","s544o","/""/192.168.147.131/c$"""])
+t544.start()
+t544.join(30)
+if t544.is_alive(): t544.terminate()
+
 
 
 #71 Сборщик
@@ -116,6 +123,13 @@ if t544.is_alive(): t544.terminate()
 #938 Обработчик
 # (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
 t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/d/-=DATA=-/STORE/"""])
+t20.start()
+t20.join(30)
+if t20.is_alive(): t20.terminate()
+
+#938 Обработчик c:
+# (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c$"""])
 t20.start()
 t20.join(30)
 if t20.is_alive(): t20.terminate()
@@ -173,11 +187,18 @@ t3.join(30)
 if t3.is_alive(): t3.terminate()
 
 
-#99
+#107 99 Обработчик
 t96 = Process(target=read_well, args=["/mnt/96","96","/""/192.168.147.67/C$/Program Files/GeoSketch/Forms/"""])
 t96.start()
 t96.join(30)
 if t96.is_alive(): t96.terminate()
+
+#107 99 Обработчик c:
+t96 = Process(target=read_well, args=["/mnt/96oc","96","/""/192.168.147.67/C$"""])
+t96.start()
+t96.join(30)
+if t96.is_alive(): t96.terminate()
+
 
 #627 Обработчик
 t627 = Process(target=read_well, args=["/mnt/627o","627","/""/192.168.147.35/C$/Program Files/GeoSketch/Forms/"""])
@@ -188,6 +209,12 @@ if t627.is_alive(): t627.terminate()
 
 #406 Обработчик
 t104 = Process(target=read_well, args=["/mnt/104o","104o","/""/192.168.146.3/c$/Program Files/Common Files/PS Shared/Database/"""])
+t104.start()
+t104.join(30)
+if t104.is_alive(): t104.terminate()
+
+#406 Обработчик c:
+t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/c$"""])
 t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
