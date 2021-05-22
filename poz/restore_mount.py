@@ -168,8 +168,14 @@ t928.start()
 t928.join(30)
 if t928.is_alive(): t928.terminate()
 
-#83
+#222 83 Обработчик
 t547 = Process(target=read_well, args=["/mnt/83","k83","//192.168.146.131/C/Program Files/GeoSketch/Forms"])
+t547.start()
+t547.join(30)
+if t547.is_alive(): t547.terminate()
+
+#222 83 Обработчик с:
+t547 = Process(target=read_well, args=["/mnt/83","k83","//192.168.146.131/C$"])
 t547.start()
 t547.join(30)
 if t547.is_alive(): t547.terminate()
