@@ -24,18 +24,24 @@ def read_well(share,shablon,dirr,skv):
 			for name in files:
 				SizeFile = getsize(join(root, name))
 				if fnmatch.fnmatch(name, shablon):
-				  find_files+=[name]
-				  print (name)
+					statbuf = os.stat(name)
+					if ((statbuf.st_mtime>(time.time()-86400))):
+						print("Modification time: {}".format(statbuf.st_mtime))
+						names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+						shutil.copy(name, names)
+						subprocess.call('unoconv -f html -e PageRange=1 '+name+ '" '+dirr, shell=True)
 				 
     	
 		
-		for fil in find_files:
-			statbuf = os.stat(fil)
-			if ((statbuf.st_mtime>(time.time()-86400))):
-				print("Modification time: {}".format(statbuf.st_mtime))
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-				shutil.copy(fil, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
+		# for fil in find_files:
+		# 	statbuf = os.stat(fil)
+		# 	if ((statbuf.st_mtime>(time.time()-86400))):
+		# 		print("Modification time: {}".format(statbuf.st_mtime))
+		# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+		# 		shutil.copy(fil, names)
+		# 		subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
+
+
 			# print (datetime.utcnow())
 			# print (time.time())
 			
