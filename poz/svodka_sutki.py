@@ -15,8 +15,19 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		path = sorted(Path(share).glob(shablon))
 		filles=list(map(str, path))
+		find_files = []
+    	
+		cur_time=''
+		for root, dirs, files in os.walk(share, topdown=False):
+			for name in files:
+				SizeFile = getsize(join(root, name))
+				if fnmatch.fnmatch(name, shablon):
+				  find_files+=[name]
+				  print (name)
+				 
+    	
 		
-		for fil in filles:
+		for fil in find_files:
 			statbuf = os.stat(fil)
 			if ((statbuf.st_mtime>(time.time()-86400*2))):
 				print("Modification time: {}".format(statbuf.st_mtime))
