@@ -22,7 +22,7 @@ def read_well(share,shablon,dirr,skv):
 		cur_time=''
 		for root, dirs, files in os.walk(share, topdown=False):
 			for name in files:
-				SizeFile = getsize(join(root, name))
+				print (name)
 				if fnmatch.fnmatch(name, shablon):
 					statbuf = os.stat(name)
 					if ((statbuf.st_mtime>(time.time()-86400))):
