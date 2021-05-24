@@ -10,6 +10,7 @@ import shutil
 import subprocess
 from time import mktime
 from datetime import datetime
+import fnmatch
 
 def read_well(share,shablon,dirr,skv):
 	# try:
@@ -17,8 +18,8 @@ def read_well(share,shablon,dirr,skv):
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 
 		for file in os.listdir(dirr):
-    		if fnmatch.fnmatch(file, shablon):
-        		print(file)
+			if fnmatch.fnmatch(file, shablon):
+				print(file)
 		path = sorted(Path(dirr).glob(shablon))
 		filles=list(map(str, path))
 		for fil in filles:
@@ -52,7 +53,7 @@ def read_well(share,shablon,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 938
-t201 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/"','"СКВ 938 Сводка директору за *.xlsx"','"/var/www/html/mon/poz/svodka"','"938"'])
+t201 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/"','"СКВ 938 Сводка директору за *.xlsx"',"/var/www/html/mon/poz/svodka",'"938"'])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
