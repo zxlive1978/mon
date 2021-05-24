@@ -7,6 +7,8 @@ from pathlib import Path
 from multiprocessing import Process
 import shutil
 import subprocess
+from time import mktime
+from datetime import datetime
 
 def read_well(share,shablon,dirr):
 	# try:
@@ -15,7 +17,7 @@ def read_well(share,shablon,dirr):
 		
 		for fil in filles:
 			statbuf = os.stat(fil)
-			print("Modification time: {}".format(statbuf.st_mtime))
+			print("Modification time: {}".format(time.strptime(statbuf.st_mtime, "%m/%d/%y %H:%M:%S"))
 			
 			# print (fil)
 			# subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
