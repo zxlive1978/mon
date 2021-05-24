@@ -23,7 +23,7 @@ def read_well(share,shablon,dirr,skv):
 				print("Modification time: {}".format(statbuf.st_mtime))
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 				shutil.copy(fil, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
+				subprocess.call('unoconv -f html -e PageRange=1 '+dirr, shell=True)
 			# print (datetime.utcnow())
 			# print (time.time())
 			
