@@ -20,7 +20,7 @@ def read_well(share,shablon,dirr,skv):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
 						print(name)
-						subprocess.call('cd dirr && unoconv -f html -e PageRange=1 "'+'/'+name+'"', shell=True)
+						subprocess.call('cd '+dirr+' && unoconv -f html -e PageRange=1 "'+'/'+name+'"', shell=True)
 
 			# path = sorted(Path(dirr).glob(shablon))
 		# filles=list(map(str, path))
