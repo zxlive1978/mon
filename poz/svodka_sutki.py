@@ -15,15 +15,19 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
+
+		for file in os.listdir(dirr):
+    		if fnmatch.fnmatch(file, shablon):
+        		print(file)
 		path = sorted(Path(dirr).glob(shablon))
 		filles=list(map(str, path))
 		for fil in filles:
 			# statbuf = os.stat(fil)
 			# if ((statbuf.st_mtime>(time.time()-86400))):
-			# 	print("Modification time: {}".format(statbuf.st_mtime))
+			print("Modification time: {}".format(statbuf.st_mtime))
 				# names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 				# shutil.copy(fil, names)
-			subprocess.call('unoconv -f html -e PageRange=1 '+dirr+'/'+fil, shell=True)
+			subprocess.call('unoconv -f html -e PageRange=1 '+fil, shell=True)
 			
 			
 			
@@ -48,7 +52,7 @@ def read_well(share,shablon,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 938
-t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka","938"])
+t201 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/"','"СКВ 938 Сводка директору за *.xlsx"','"/var/www/html/mon/poz/svodka"','"938"'])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
