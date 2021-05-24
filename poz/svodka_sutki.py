@@ -15,21 +15,19 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		path = sorted(Path(share).glob(shablon))
 		filles=list(map(str, path))
+		shutil.copy(share+'*.*', dirr)
 		
-		
-		for fil in filles:
-			statbuf = os.stat(fil)
-			if ((statbuf.st_mtime>(time.time()-86400))):
-				print("Modification time: {}".format(statbuf.st_mtime))
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-				shutil.copy(fil, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+dirr, shell=True)
-			# print (datetime.utcnow())
-			# print (time.time())
+		# for fil in filles:
+		# 	statbuf = os.stat(fil)
+		# 	if ((statbuf.st_mtime>(time.time()-86400))):
+		# 		print("Modification time: {}".format(statbuf.st_mtime))
+		# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+		# 		shutil.copy(fil, names)
+		# 		subprocess.call('unoconv -f html -e PageRange=1 '+dirr, shell=True)
 			
-			# print (fil)
-			# subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
-			# shutil.copy(fil, dirr)
+			
+			
+			
 	# except:
 		print ("неудача")
 		exit
