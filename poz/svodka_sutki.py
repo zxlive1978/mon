@@ -29,7 +29,7 @@ def read_well(share,shablon,dirr,skv):
 		
 		for fil in find_files:
 			statbuf = os.stat(fil)
-			if ((statbuf.st_mtime>(time.time()-86400*2))):
+			if ((statbuf.st_mtime>(time.time()-86400))):
 				print("Modification time: {}".format(statbuf.st_mtime))
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 				shutil.copy(fil, names)
