@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-
+import time
 import os
 import sys
 from pathlib import Path
@@ -17,8 +17,7 @@ def read_well(share,shablon,dirr):
 		
 		for fil in filles:
 			statbuf = os.stat(fil)
-			print("Modification time: {}".format(time.strptime(statbuf.st_mtime, "%m/%d/%y %H:%M:%S"))
-			
+			print("Modification time: {}".format(time.strptime(statbuf.st_mtime, "%m/%d/%y %H:%M:%S")))
 			# print (fil)
 			# subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
 			# shutil.copy(fil, dirr)
