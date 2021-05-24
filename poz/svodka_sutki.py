@@ -15,7 +15,7 @@ import fnmatch
 def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
 		
-		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
+		subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 		for root, dirs, files in os.walk(dirr, topdown=False):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
