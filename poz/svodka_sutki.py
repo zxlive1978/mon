@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import os
 import sys
 from pathlib import Path
 from multiprocessing import Process
@@ -11,10 +12,14 @@ def read_well(share,shablon,dirr):
 	# try:
 		path = sorted(Path(share).glob(shablon))
 		filles=list(map(str, path))
+		
 		for fil in filles:
-			print (fil)
-			subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
-			shutil.copy(fil, dirr)
+			statbuf = os.stat(fil)
+			print("Modification time: {}".format(statbuf.st_mtime))
+			
+			# print (fil)
+			# subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
+			# shutil.copy(fil, dirr)
 	# except:
 		print ("неудача")
 		# unoconv -f html -e PageRange=1 542.xlsx
