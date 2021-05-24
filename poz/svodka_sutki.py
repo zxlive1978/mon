@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
 import sys
+from pathlib import Path
+from multiprocessing import Process
+import shutil
+import subprocess
+
 def pozread_well(share,shablon,dirr):
 	try:
 		a=0
