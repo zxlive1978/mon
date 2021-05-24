@@ -122,12 +122,19 @@ if t544.is_alive(): t544.terminate()
 
 #938 Обработчик
 # (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
-t20 = Process(target=read_well, args=["/mnt/20o","k20","/""/192.168.146.163/d/-=DATA=-/STORE/"""])
+t20 = Process(target=read_well, args=["/mnt/20","k20","/""/192.168.146.163/d/-=DATA=-/STORE/"""])
 t20.start()
 t20.join(30)
 if t20.is_alive(): t20.terminate()
 
-#938 Обработчик c: /Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору СКВ 938 Сводка директору за 01.05.2021.xlsx
+#938 Обработчик "
+# (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+t20 = Process(target=read_well, args=["/mnt/20o","k20o","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
+t20.start()
+t20.join(30)
+if t20.is_alive(): t20.terminate()
+
+#938 Обработчик c: /Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору СКВ 938/ "Сводка директору за 01.05.2021.xlsx"
 # (Logs Builder) t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c/Program Files/Common Files/PS Shared/Database/"""])
 t20 = Process(target=read_well, args=["/mnt/20oc","k20","/""/192.168.146.163/c$"""])
 t20.start()
@@ -148,7 +155,7 @@ t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
 
-#632 Обработчик c: c/Users/User/Desktop/Сводки в контору скв. 632/2021/Май/Генералу СКВ №632 09.05.2021.xlsx
+#632 Обработчик c: c/Users/User/Desktop/Сводки в контору скв. 632/2021/Май/Генералу/ "СКВ №632 09.05.2021.xlsx"
 t629 = Process(target=read_well, args=["/mnt/629oc","629oc","/""/192.168.146.18/c$"""])
 t629.start()
 t629.join(30)
@@ -174,7 +181,7 @@ t547.start()
 t547.join(30)
 if t547.is_alive(): t547.terminate()
 
-#222 83 Обработчик с: /Users/User/Desktop/Сводки в контору/2021 скв 222/Май/Сводка директору Скв 222 Пл АГКМ Сводка ГД за 01.05.2021г.xlsx
+#222 83 Обработчик с: /Users/User/Desktop/Сводки в контору/2021 скв 222/Май/Сводка директору Скв 222 Пл АГКМ/ "Сводка ГД за 01.05.2021г.xlsx"
 t547 = Process(target=read_well, args=["/mnt/83oc","k83","//192.168.146.131/C$"])
 t547.start()
 t547.join(30)
@@ -186,7 +193,7 @@ t3.start()
 t3.join(30)
 if t3.is_alive(): t3.terminate()
 
-#828 84 /АРХИВ/Архив скв.604/суточные сводки скв.604/
+#828 84 /АРХИВ/Архив скв.604/суточные сводки скв.604/ 
 t3 = Process(target=read_well, args=["/mnt/3oc","3","/""/192.168.146.67/D$"""])
 t3.start()
 t3.join(30)
@@ -199,7 +206,7 @@ t96.start()
 t96.join(30)
 if t96.is_alive(): t96.terminate()
 
-#107 99 Обработчик c: /Users/User/Desktop/Суточные сводки №107 скв/май2021 Сводка ген.директору_скв107 20.05.21.xlsx
+#107 99 Обработчик c: /Users/User/Desktop/Суточные сводки №107 скв/май2021/ "Сводка ген.директору_скв107 20.05.21.xlsx"
 t96 = Process(target=read_well, args=["/mnt/96oc","96","/""/192.168.147.67/C$"""])
 t96.start()
 t96.join(30)
@@ -219,7 +226,7 @@ t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
 
-#449 406 Обработчик c: D:\СНГС №14\АРХИВЫ СКВАЖИН\Архив скв.№449\Сводки скв.№449
+#449 406 Обработчик c: /СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/ "СКВ №449 01.05.2021.xlsx"
 t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/d$"""])
 t104.start()
 t104.join(30)
