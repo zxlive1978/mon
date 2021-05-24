@@ -10,8 +10,10 @@ import subprocess
 def read_well(share,shablon,dirr):
 	# try:
 		path = sorted(Path(share).glob(shablon))
-		print ()
-		for fil in list(map(str, path)):
+		filles=list(map(str, path))
+		for fil in filles:
+			print (fil)
+			subprocess.call("cp "+fil+" "+dirr, shell=True)
 			shutil.copy(fil, dirr)
 	# except:
 		print ("неудача")
@@ -34,5 +36,5 @@ def read_well(share,shablon,dirr):
 # 938
 t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/","СКВ 938 Сводка директору за *.xlsx","svodka"])
 t201.start()
-t201.join(300)
+t201.join(1000)
 if t201.is_alive(): t201.terminate()
