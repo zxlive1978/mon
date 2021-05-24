@@ -16,19 +16,20 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
-
-		for file in os.listdir(dirr):
-			if fnmatch.fnmatch(file, shablon):
-				print(file)
-		path = sorted(Path(dirr).glob(shablon))
-		filles=list(map(str, path))
-		for fil in filles:
-			# statbuf = os.stat(fil)
-			# if ((statbuf.st_mtime>(time.time()-86400))):
-			print("Modification time: {}".format(statbuf.st_mtime))
-				# names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-				# shutil.copy(fil, names)
-			subprocess.call('unoconv -f html -e PageRange=1 '+fil, shell=True)
+		for root, dirs, files in os.walk(dirr, topdown=False):
+				for name in files:
+					print(name)
+					if fnmatch.fnmatch(name, shablon):
+						print(name)
+			# path = sorted(Path(dirr).glob(shablon))
+		# filles=list(map(str, path))
+		# for fil in filles:
+		# 	# statbuf = os.stat(fil)
+		# 	# if ((statbuf.st_mtime>(time.time()-86400))):
+		# 	print("Modification time: {}".format(statbuf.st_mtime))
+		# 		# names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+		# 		# shutil.copy(fil, names)
+		# 	subprocess.call('unoconv -f html -e PageRange=1 '+fil, shell=True)
 			
 			
 			
