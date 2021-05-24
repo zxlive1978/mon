@@ -19,8 +19,8 @@ def read_well(share,shablon,dirr,skv):
 		for root, dirs, files in os.walk(dirr, topdown=False):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
-						print(name[-15:]+skv)
-						subprocess.call('cd '+dirr+' && unoconv -f html -e PageRange=1 """'+name[10:]+'"""', shell=True)
+						print(name[-15:-5]+skv+'.xlsx')
+						subprocess.call('cd '+dirr+'&& mv' +name+' '+name[-15:-5]+skv+'.xlsx'+' && unoconv -f html -e PageRange=1 """'+name[10:]+'"""', shell=True)
 
 			# path = sorted(Path(dirr).glob(shablon))
 		# filles=list(map(str, path))
