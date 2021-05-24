@@ -174,7 +174,7 @@ t547.start()
 t547.join(30)
 if t547.is_alive(): t547.terminate()
 
-#222 83 Обработчик с:
+#222 83 Обработчик с: /Users/User/Desktop/Сводки в контору/2021 скв 222/Май/Сводка директору Скв 222 Пл АГКМ Сводка ГД за 01.05.2021г.xlsx
 t547 = Process(target=read_well, args=["/mnt/83oc","k83","//192.168.146.131/C$"])
 t547.start()
 t547.join(30)
@@ -219,8 +219,8 @@ t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
 
-#449 406 Обработчик c:
-t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/c$"""])
+#449 406 Обработчик c: D:\СНГС №14\АРХИВЫ СКВАЖИН\Архив скв.№449\Сводки скв.№449
+t104 = Process(target=read_well, args=["/mnt/104oc","104o","/""/192.168.146.3/d$"""])
 t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
