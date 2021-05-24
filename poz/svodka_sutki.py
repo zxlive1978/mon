@@ -15,7 +15,7 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		path = sorted(Path(share).glob(shablon))
 		filles=list(map(str, path))
-		shutil.copy(share+'*.*', dirr)
+		shutil.copy(share, dirr)
 		
 		# for fil in filles:
 		# 	statbuf = os.stat(fil)
