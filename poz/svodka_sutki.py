@@ -2,16 +2,20 @@
 
 import sys
 def pozread_well(share,shablon,dirr):
-	# try:
+	try:
+		a=0
+		#
+	except:
+		print ("неудача")
 		# unoconv -f html -e PageRange=1 542.xlsx
 		# wget --quiet https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     	# tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     	# cp wkhtmltox/bin/wk* /usr/local/bin/ && \
     	# rm -rf wkhtmltox
 		# pdfkit.from_url('http://google.com', 'out.pdf')
-		pdfkit.from_file(host, '542pdf.pdf')
+		# pdfkit.from_file(host, '542pdf.pdf')
 		# pdfkit.from_string('Hello!', 'out.pdf')
-	# except:
+	
 	# 	print(reset_vpn_host + ": Error!")
 # c=5	
 # r,t=speed("192.168.146.49","5188",int(c))
