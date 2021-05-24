@@ -20,7 +20,7 @@ def read_well(share,shablon,dirr,skv):
 			statbuf = os.stat(fil)
 			if ((statbuf.st_mtime>(time.time()-86400*2))):
 				print("Modification time: {}".format(statbuf.st_mtime))
-				shutil.copy(fil, dirr+'/'+skv+'_'+statbuf.st_mtime+'.xlsx')
+				shutil.copy(fil, dirr+'/'+skv+'_'+str(statbuf.st_mtime)+'.xlsx')
 			# print (datetime.utcnow())
 			# print (time.time())
 			
