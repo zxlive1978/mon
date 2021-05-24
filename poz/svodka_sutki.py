@@ -20,7 +20,7 @@ def read_well(share,shablon,dirr,skv, lastdir):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
 						print(name[-15:-5]+skv+'.xlsx')
-						subprocess.call('cd '+dirr+lastdir+'&& ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
+						subprocess.call('cd "'+dirr+lastdir+'" s&& ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
 
 			# path = sorted(Path(dirr).glob(shablon))
 		# filles=list(map(str, path))
