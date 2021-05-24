@@ -2,9 +2,7 @@
 # coding: utf-8
 
 import time
-from os.path import join, getsize
 import os
-import fnmatch
 import sys
 from pathlib import Path
 from multiprocessing import Process
@@ -17,31 +15,15 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		path = sorted(Path(share).glob(shablon))
 		filles=list(map(str, path))
-		find_files = []
-    	
-		cur_time=''
-		for root, dirs, files in os.walk(share, topdown=False):
-			for name in files:
-				print (name)
-				if fnmatch.fnmatch(name, shablon):
-					statbuf = os.stat(name)
-					if ((statbuf.st_mtime>(time.time()-86400))):
-						print("Modification time: {}".format(statbuf.st_mtime))
-						names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-						shutil.copy(name, names)
-						subprocess.call('unoconv -f html -e PageRange=1 '+name+ '" '+dirr, shell=True)
-				 
-    	
 		
-		# for fil in find_files:
-		# 	statbuf = os.stat(fil)
-		# 	if ((statbuf.st_mtime>(time.time()-86400))):
-		# 		print("Modification time: {}".format(statbuf.st_mtime))
-		# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-		# 		shutil.copy(fil, names)
-		# 		subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
-
-
+		
+		for fil in filles:
+			statbuf = os.stat(fil)
+			if ((statbuf.st_mtime>(time.time()-86400))):
+				print("Modification time: {}".format(statbuf.st_mtime))
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+				shutil.copy(fil, names)
+				subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
 			# print (datetime.utcnow())
 			# print (time.time())
 			
@@ -68,7 +50,7 @@ def read_well(share,shablon,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 938
-t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka","938"])
+t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору СКВ 938/","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka","938"])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
