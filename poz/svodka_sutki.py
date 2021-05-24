@@ -15,7 +15,7 @@ def read_well(share,shablon,dirr,skv):
 	# try:
 		# path = sorted(Path(share).glob(shablon))
 		# filles=list(map(str, path))
-		subprocess.call('cp -R '+share+' '+dirr, shell=True)
+		subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 		
 		# for fil in filles:
 		# 	statbuf = os.stat(fil)
