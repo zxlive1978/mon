@@ -20,7 +20,9 @@ def read_well(share,shablon,dirr,skv):
 			statbuf = os.stat(fil)
 			if ((statbuf.st_mtime>(time.time()-86400*2))):
 				print("Modification time: {}".format(statbuf.st_mtime))
-				shutil.copy(fil, dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx')
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+				shutil.copy(fil, names)
+				subprocess.call('unoconv -f html -e PageRange=1 '+fil+ '" '+dirr, shell=True)
 			# print (datetime.utcnow())
 			# print (time.time())
 			
