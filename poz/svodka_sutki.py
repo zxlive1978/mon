@@ -7,7 +7,7 @@ from multiprocessing import Process
 import shutil
 import subprocess
 
-def pozread_well(share,shablon,dirr):
+def read_well(share,shablon,dirr):
 	try:
 		path = sorted(Path('.').glob(share+shablon))
 		print (str(path))
