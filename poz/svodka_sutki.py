@@ -29,6 +29,7 @@ def read_well(share,shablon,dirr,skv):
 			# shutil.copy(fil, dirr)
 	# except:
 		print ("неудача")
+		exit
 		# unoconv -f html -e PageRange=1 542.xlsx
 		# wget --quiet https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     	# tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
@@ -46,7 +47,7 @@ def read_well(share,shablon,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 938
-t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka","938"])
+t201 = Process(target=read_well, args=["/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka","938"])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
