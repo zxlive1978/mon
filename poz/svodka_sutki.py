@@ -19,6 +19,8 @@ def read_well(share,shablon,dirr):
 		for fil in filles:
 			statbuf = os.stat(fil)
 			print("Modification time: {}".format(statbuf.st_mtime))
+			# print (datetime.utcnow())
+			print (time.time())
 			
 			# print (fil)
 			# subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
