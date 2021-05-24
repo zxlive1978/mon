@@ -13,7 +13,7 @@ def read_well(share,shablon,dirr):
 		filles=list(map(str, path))
 		for fil in filles:
 			print (fil)
-			subprocess.call("cp "+fil+" "+dirr, shell=True)
+			subprocess.call('cp "'+fil+ '" '+dirr, shell=True)
 			shutil.copy(fil, dirr)
 	# except:
 		print ("неудача")
