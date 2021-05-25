@@ -60,7 +60,7 @@ def read_well(share,shablon,dirr,skv, lastdir):
 # if t201.is_alive(): t201.terminate()
 
 # 449
-t201 = Process(target=read_well, args=["""/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/""","СКВ №449 *xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449', '/Май 21/'])
+t201 = Process(target=read_well, args=["""/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/""","СКВ №449 *.xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449', '/Май 21/'])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
