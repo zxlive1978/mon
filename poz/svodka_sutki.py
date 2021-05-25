@@ -18,6 +18,8 @@ def read_well(share,shablon,dirr,skv, lastdir):
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 		for root, dirs, files in os.walk(share, topdown=False):
 				for name in files:
+					print(share)
+					print(name)
 					if fnmatch.fnmatch(name, shablon):
 						statbuf = os.stat(share+name)
 						if ((statbuf.st_mtime>(time.time()-86400))):
