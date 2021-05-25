@@ -14,20 +14,24 @@ import fnmatch
 
 def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
+	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
+	output = subprocess.check_output(['ls', '-d', '*/'])
+	print (output)
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
-		for root, dirs, files in os.walk(share, topdown=False):
-				for name in files:
-					print(share)
-					print(name)
-					# if fnmatch.fnmatch(name, shablon):
-					# 	statbuf = os.stat(share+name)
-					# 	if ((statbuf.st_mtime>(time.time()-86400))):
-					# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-					# 		shutil.copy(share+name, names)
-					# 		subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
+		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
+		# for root, dirs, files in os.walk(share, topdown=False):
+		# 		for name in files:
+		# 			print(share)
+		# 			print(name)
+		# 			if fnmatch.fnmatch(name, shablon):
+		# 				statbuf = os.stat(share+name)
+		# 				if ((statbuf.st_mtime>(time.time()-86400))):
+		# 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+		# 					shutil.copy(share+name, names)
+		# 					subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
 
-							# subprocess.call('cd "'+dirr+lastdir+'" && ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
+		# 					subprocess.call('cd "'+dirr+lastdir+'" && ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
 
 			# path = sorted(Path(dirr).glob(shablon))
 		# filles=list(map(str, path))
