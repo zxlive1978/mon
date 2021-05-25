@@ -19,6 +19,7 @@ def read_well(share,shablon,dirr,skv, lastdir):
 		for root, dirs, files in os.walk(share, topdown=False):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
+						statbuf = os.stat(name)
 						if ((statbuf.st_mtime>(time.time()-86400))):
 							names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 							shutil.copy(name, names)
