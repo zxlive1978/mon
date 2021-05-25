@@ -16,10 +16,15 @@ def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
 		
 		subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
-		for root, dirs, files in os.walk(dirr, topdown=False):
+		for root, dirs, files in os.walk(share, topdown=False):
 				for name in files:
 					if fnmatch.fnmatch(name, shablon):
-						subprocess.call('cd "'+dirr+lastdir+'" && ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
+						if ((statbuf.st_mtime>(time.time()-86400))):
+							names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+							shutil.copy(name, names)
+							subprocess.call('unoconv -f html -e PageRange=1 '+name, shell=True)
+
+							# subprocess.call('cd "'+dirr+lastdir+'" && ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
 
 			# path = sorted(Path(dirr).glob(shablon))
 		# filles=list(map(str, path))
