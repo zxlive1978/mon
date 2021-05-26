@@ -220,7 +220,7 @@ t627.join(30)
 if t627.is_alive(): t627.terminate()
 
 
-#449 406 Обработчик
+#449 406  Обработчик
 t104 = Process(target=read_well, args=["/mnt/104o","104o","/""/192.168.146.3/c$/Program Files/Common Files/PS Shared/Database/"""])
 t104.start()
 t104.join(30)
