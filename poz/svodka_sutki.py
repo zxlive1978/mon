@@ -13,21 +13,21 @@ from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
-	# try:
+	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
-	output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
-	for a in output.split("\n"):
-		
-		if (a.find(shablon1)>0) and (a.find(shablon2)>0):
-			print(a)
-			# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-			statbuf = os.stat(a)
-			if ((statbuf.st_mtime>(time.time()-86400*10))):
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-				shutil.copy(a, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
-				subprocess.call('rm '+'"'+names+'"', shell=True)
+		output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
+		for a in output.split("\n"):
+			
+			if (a.find(shablon1)>0) and (a.find(shablon2)>0):
+				print(a)
+				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+				statbuf = os.stat(a)
+				if ((statbuf.st_mtime>(time.time()-86400*10))):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+					shutil.copy(a, names)
+					subprocess.call('unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
+					subprocess.call('rm '+'"'+names+'"', shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
@@ -65,10 +65,10 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			
 			
 			
-			
-	# except:
+		exit
+	except:
 		# print ("неудача")
-	exit
+		exit
 		# unoconv -f html -e PageRange=1 542.xlsx
 		# wget --quiet https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     	# tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
@@ -86,17 +86,11 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 938
-# t201 = Process(target=read_well, args=["""/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/Май 2021/Сводки директору/""","СКВ 938 Сводка директору за *.xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938', '/Сводки директору/'])
-# t201.start()
-# t201.join(1000)
-# if t201.is_alive(): t201.terminate()
+t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Сводка директору за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
+t203.start()
+t203.join(1000)
+if t203.is_alive(): t203.terminate()
 
-
-# # 449
-# t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/"',"СКВ №449 *.xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449', '/Май 21/'])
-# t201.start()
-# t201.join(1000)
-# if t201.is_alive(): t201.terminate()
 # 449
 t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ №449", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
 t201.start()
