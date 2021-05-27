@@ -16,7 +16,7 @@ def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
-	output = subprocess.check_output("find " +share +" -print"+share, stderr=subprocess.STDOUT, shell=True)
+	output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 	print(output)
 
 	# for a in output.split("\n\n"):
