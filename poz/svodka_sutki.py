@@ -15,7 +15,7 @@ import fnmatch
 def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
-	output = subprocess.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
+	output = subprocess.run(["ls", "-R", "/dev/null"], capture_output=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 	print (output)
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
