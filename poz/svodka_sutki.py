@@ -20,8 +20,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	# print(output)
 	for a in output.split("\n"):
 		print(a)
-		print(shablon1)
-		print(shablon2)
+		print(a.find(shablon1))
+		print(a.find(shablon2)
 		if a.find(shablon1)>0 and (a.find(shablon2)>0):
 			print(a)
 
