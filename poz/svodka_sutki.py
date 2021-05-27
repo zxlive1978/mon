@@ -116,10 +116,18 @@ if t205.is_alive(): t205.terminate()
 
 # ------------------------------------------------------------------------
 # 107
-t205 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"Сводка ген.директору ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
-t205.start()
-t205.join(1000)
-if t205.is_alive(): t205.terminate()
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"Сводка ген.директору ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t206.start()
+t206.join(1000)
+if t206.is_alive(): t206.terminate()
+
+# ------------------------------------------------------------------------
+# 222
+t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Сводка ГД за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
+t207.start()
+t207.join(1000)
+if t207.is_alive(): t207.terminate()
+
 
 
 
