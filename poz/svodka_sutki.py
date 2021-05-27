@@ -84,6 +84,21 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 # print r,t
 # pozreboot(sys.argv[1],"5188", 10,sys.argv[1])
 
+
+# 828
+t202 = Process(target=read_well, args=['"/mnt/3oc/АРХИВ/Архив скв.604/суточные сводки скв.604/"',"СКВ 828 Пл АГКМ сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-828'])
+t202.start()
+t202.join(1000)
+if t202.is_alive(): t202.terminate()
+
+
+#542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору Скв № 542 09.05.2021.xlsx
+t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Сводки 542/"',"СКВ 542 Пл АГКМ Сводка", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-542'])
+t204.start()
+t204.join(1000)
+if t204.is_alive(): t204.terminate()
+
+
 # ------------------------------------------------------------------------
 # 938
 t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Сводка директору за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
@@ -97,4 +112,3 @@ t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
 
-/mnt/3oc/АРХИВ/Архив скв.604/суточные сводки скв.604/
