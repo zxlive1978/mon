@@ -17,8 +17,11 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 	output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
-	print(output)
+	# print(output)
 	for a in output.split("\n"):
+		print(a)
+		print(shablon1)
+		print(shablon2)
 		if a.find(shablon1)>0 and (a.find(shablon2)>0):
 			print(a)
 
