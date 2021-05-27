@@ -106,6 +106,23 @@ t203.start()
 t203.join(1000)
 if t203.is_alive(): t203.terminate()
 
+
+# ------------------------------------------------------------------------
+# 632
+t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ №632 ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
+t205.start()
+t205.join(1000)
+if t205.is_alive(): t205.terminate()
+
+# ------------------------------------------------------------------------
+# 107
+t205 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"Сводка ген.директору ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t205.start()
+t205.join(1000)
+if t205.is_alive(): t205.terminate()
+
+
+
 # 449
 t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ №449", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
 t201.start()
