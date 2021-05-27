@@ -17,13 +17,16 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 	output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
-	# print(output)
 	for a in output.split("\n"):
-		print(a)
-		print(a.find(shablon1))
-		print(a.find(shablon2))
+		
 		if (a.find(shablon1)>0) and (a.find(shablon2)>0):
 			print(a)
+			# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+			statbuf = os.stat(a)
+			if ((statbuf.st_mtime>(time.time()-86400))):
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+				shutil.copy(share+a, names)
+				subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
@@ -94,7 +97,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 # t201.join(1000)
 # if t201.is_alive(): t201.terminate()
 # 449
-t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ №449", "*.xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
+t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ №449", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
