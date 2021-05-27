@@ -23,7 +23,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400*10))):
+				if ((statbuf.st_mtime>(time.time()-86400))):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 					shutil.copy(a, names)
 					subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
