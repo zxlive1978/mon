@@ -18,10 +18,11 @@ def read_well(share,shablon,dirr,skv, lastdir):
 	output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 	for a in output.split("\n\n"):
 		odnadir=a.split("\n")
-		# dir1=[0]
+		dir1=''
 		for i in odnadir:
 			if i.find(":")>0:
-				print ('Директория',i)
+				dir=i
+				print (u"".format(i))
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
