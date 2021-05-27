@@ -16,7 +16,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
-		output = subprocess.check_output("find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
+		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			
 			if (a.find(shablon1)>0) and (a.find(shablon2)>0):
@@ -26,8 +26,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				if ((statbuf.st_mtime>(time.time()-86400*10))):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 					shutil.copy(a, names)
-					subprocess.call('unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
-					subprocess.call('rm '+'"'+names+'"', shell=True)
+					subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
+					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
