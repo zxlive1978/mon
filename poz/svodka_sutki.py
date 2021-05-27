@@ -26,7 +26,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			if ((statbuf.st_mtime>(time.time()-86400*10))):
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
 				shutil.copy(a, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
+				subprocess.call('unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
