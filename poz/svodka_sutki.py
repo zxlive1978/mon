@@ -15,14 +15,18 @@ import fnmatch
 def read_well(share,shablon,dirr,skv, lastdir):
 	# try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
-	output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
-	for a in output.split("\n\n"):
-		odnadir=a.split("\n")
-		dir1=''
-		for i in odnadir:
-			if i.find(":")>0:
-				dir=i
-				print (u"".format(i))
+	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
+	output = subprocess.check_output("find " +share +" -print"+share, stderr=subprocess.STDOUT, shell=True)
+	print(output)
+
+	# for a in output.split("\n\n"):
+	# 	odnadir=a.split("\n")
+	# 	dir1=odnadir[0]
+	# 	namefile=''
+	# 	for i in odnadir:
+	# 		if i.find(":")<0:
+	# 			namefile=i
+	# 			print (u"".format(dir+namefile))
 		
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
 		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
