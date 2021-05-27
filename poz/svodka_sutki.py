@@ -21,12 +21,13 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		
 		if (a.find(shablon1)>0) and (a.find(shablon2)>0):
 			print(a)
-			# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-			statbuf = os.stat(a)
-			if ((statbuf.st_mtime>(time.time()-86400*10))):
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-				shutil.copy(share+a, names)
-				subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
+			# # subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+			# statbuf = os.stat(a)
+			# if ((statbuf.st_mtime>(time.time()-86400*10))):
+			# names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
+			shutil.copy(a, dirr)
+	
+	# subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
