@@ -28,9 +28,16 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
-			print(a)
+			#png
+			if (a.find('png')>0 and (((a.find(month_now)>0) and (a.find(day_now)) or (a.find(month_now1)>0) and (a.find(day_now1))))):
+				statbuf = os.stat(a)
+				if ((statbuf.st_mtime>(time.time()-86400))):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
+					shutil.copy(a, names)
+
+			# xlsx
 			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (((a.find(month_now)>0) and (a.find(day_now)) or (a.find(month_now1)>0) and (a.find(day_now1))))):
-				print(a)
+				# print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
 				if ((statbuf.st_mtime>(time.time()-86400))):
