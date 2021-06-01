@@ -15,7 +15,7 @@ import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
 	dt_now =time.time()-86400 # date.today()
-	print(dt_now)
+	print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
 	day_now = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
