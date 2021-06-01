@@ -13,7 +13,7 @@ from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
-	dt_now = datetime.datetime.now()
+	dt_now = datetime.now()
 	month_now = str(dt_now)[5:6]
 	day_now = str(dt_now)[8:9]
 	print (month_now,' ',day_now)
