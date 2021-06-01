@@ -132,7 +132,7 @@ if t207.is_alive(): t207.terminate()
 
 
 # 449
-t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ №449", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
+t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
 t201.start()
 t201.join(1000)
 if t201.is_alive(): t201.terminate()
