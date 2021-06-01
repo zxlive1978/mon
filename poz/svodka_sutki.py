@@ -15,17 +15,17 @@ import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
 	dt_now = date.today()
-	print(dt_now)
-	month_now = str(dt_now)
-	day_now = str(dt_now)
-	print (month_now[0:6],' ',day_now[8:9])
+	# print(dt_now)
+	month_now = str(dt_now)[5:7]
+	day_now = str(dt_now)[8:10]
+	# print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			
-			if (a.find(shablon1)>0) and (a.find(shablon2)>0):
+			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now))):
 				print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
