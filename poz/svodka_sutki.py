@@ -9,7 +9,8 @@ from multiprocessing import Process
 import shutil
 import subprocess
 from time import mktime
-from datetime import datetime,date
+from datetime import date
+from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
