@@ -13,6 +13,10 @@ from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
+	dt_now = datetime.datetime.now()
+	month_now = str(dt_now)[5:6]
+	day_now = str(dt_now)[8:9]
+	print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
