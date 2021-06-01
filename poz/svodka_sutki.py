@@ -101,7 +101,7 @@ if t204.is_alive(): t204.terminate()
 
 # ------------------------------------------------------------------------
 # 938
-t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Сводка директору за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
+t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
 t203.start()
 t203.join(1000)
 if t203.is_alive(): t203.terminate()
