@@ -9,13 +9,14 @@ from multiprocessing import Process
 import shutil
 import subprocess
 from time import mktime
-from datetime import datetime
+from datetime import datetime,date
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
-	dt_now = datetime.now()
-	month_now = str(dt_now)[5:6]
-	day_now = str(dt_now)[8:9]
+	dt_now = date.today()
+	print(dt_now)
+	month_now = dt_now[5:6]
+	day_now = dt_now[8:9]
 	print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
