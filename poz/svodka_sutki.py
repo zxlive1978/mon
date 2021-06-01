@@ -18,6 +18,10 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	#print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
 	day_now = str(dt_now)[8:10]
+	dt_now =datetime.utcfromtimestamp(time.time()) # date.today()
+	#print(datetime.utcfromtimestamp(dt_now))
+	month_now1 = str(dt_now)[5:7]
+	day_now1 = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
@@ -25,7 +29,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			print(a)
-			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now))):
+			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (((a.find(month_now)>0) and (a.find(day_now)) or (a.find(month_now1)>0) and (a.find(day_now1))))):
 				print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
