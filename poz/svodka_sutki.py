@@ -116,7 +116,7 @@ if t205.is_alive(): t205.terminate()
 
 # ------------------------------------------------------------------------
 # 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"Сводка ген.директору ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
 t206.start()
 t206.join(1000)
 if t206.is_alive(): t206.terminate()
