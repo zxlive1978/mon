@@ -16,8 +16,8 @@ import fnmatch
 def read_well(share,shablon1,shablon2,dirr,skv):
 	dt_now = date.today()
 	print(dt_now)
-	month_now = dt_now[5:6]
-	day_now = dt_now[8:9]
+	month_now = str(dt_now)
+	day_now = str(dt_now)
 	print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
