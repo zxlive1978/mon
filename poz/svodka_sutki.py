@@ -36,7 +36,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
 				print(a)
 				print(names)
-				shutil.copy('"'+a+'"', '"'+names+'"')
+				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+				# shutil.copy('"'+a+'"', '"'+names+'"')
 
 		# xlsx
 		if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
@@ -45,7 +46,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			statbuf = os.stat(a)
 			if ((statbuf.st_mtime>(time.time()-86400))):
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.xlsx'
-				shutil.copy(a, names)
+				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 				subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
 				subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
