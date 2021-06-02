@@ -23,32 +23,32 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	# month_now1 = str(dt_now)[5:7]
 	# day_now1 = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
-	# try:
+	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
-	output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
-	for a in output.split("\n"):
-		# print(a)
-		#png
-		if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
-			statbuf = os.stat(a)
-			if ((statbuf.st_mtime>(time.time()-86400))):
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
-				print(a)
-				print(names)
-				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-				# shutil.copy('"'+a+'"', '"'+names+'"')
-
-		# xlsx
-		if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
+		for a in output.split("\n"):
 			# print(a)
-			# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-			statbuf = os.stat(a)
-			if ((statbuf.st_mtime>(time.time()-86400))):
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.xlsx'
-				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-				subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
-				subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
+			#png
+			if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+				statbuf = os.stat(a)
+				if ((statbuf.st_mtime>(time.time()-86400))):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
+					print(a)
+					print(names)
+					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+					# shutil.copy('"'+a+'"', '"'+names+'"')
+
+			# xlsx
+			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+				# print(a)
+				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+				statbuf = os.stat(a)
+				if ((statbuf.st_mtime>(time.time()-86400))):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.xlsx'
+					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+					subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
+					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
@@ -86,8 +86,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			
 			
 			
-		# exit
-	# except:
+		exit
+	except:
 		# print ("неудача")
 		exit
 		# unoconv -f html -e PageRange=1 542.xlsx
@@ -143,6 +143,8 @@ t207.start()
 # 449
 t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
 t201.start()
+
+
 t201.join()
 if t201.is_alive(): t201.terminate()
 
