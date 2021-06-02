@@ -20,8 +20,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	day_now = str(dt_now)[8:10]
 	dt_now =datetime.utcfromtimestamp(time.time()) # date.today()
 	#print(datetime.utcfromtimestamp(dt_now))
-	month_now1 = str(dt_now)[5:7]
-	day_now1 = str(dt_now)[8:10]
+	# month_now1 = str(dt_now)[5:7]
+	# day_now1 = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
@@ -30,14 +30,14 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		for a in output.split("\n"):
 			print(a)
 			#png
-			if (a.find('png')>0 and (((a.find(month_now)>0) and (a.find(day_now)>0)) or ((a.find(month_now1)>0) and (a.find(day_now1)>0)))):
+			if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 				statbuf = os.stat(a)
 				if ((statbuf.st_mtime>(time.time()-86400))):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
 					shutil.copy(a, names)
 
 			# xlsx
-			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (((a.find(month_now)>0) and (a.find(day_now)>0) or (a.find(month_now1)>0) and (a.find(day_now1)>0)))):
+			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 				# print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
