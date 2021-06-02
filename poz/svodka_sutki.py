@@ -106,46 +106,34 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 # 828
 t202 = Process(target=read_well, args=['"/mnt/3oc/АРХИВ/Архив скв.604/суточные сводки скв.604/"',"СКВ 828 Пл АГКМ сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-828'])
 t202.start()
-t202.join()
-if t202.is_alive(): t202.terminate()
+
+
 
 
 #542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору Скв № 542 09.05.2021.xlsx
 t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Сводки 542/"',"СКВ 542 Пл АГКМ Сводка", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-542'])
 t204.start()
-t204.join()
-if t204.is_alive(): t204.terminate()
-
 
 # ------------------------------------------------------------------------
 # 938
 t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
 t203.start()
-t203.join()
-if t203.is_alive(): t203.terminate()
 
 
 # ------------------------------------------------------------------------
 # 632
 t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
 t205.start()
-t205.join()
-if t205.is_alive(): t205.terminate()
 
 # ------------------------------------------------------------------------
 # 107
 t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
 t206.start()
-t206.join()
-if t206.is_alive(): t206.terminate()
 
 # ------------------------------------------------------------------------
 # 222
 t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Скв 222 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
 t207.start()
-t207.join()
-if t207.is_alive(): t207.terminate()
-
 
 
 
@@ -154,4 +142,22 @@ t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ 
 t201.start()
 t201.join()
 if t201.is_alive(): t201.terminate()
+
+t202.join()
+if t202.is_alive(): t202.terminate()
+
+t204.join()
+if t204.is_alive(): t204.terminate()
+
+t203.join()
+if t203.is_alive(): t203.terminate()
+
+t205.join()
+if t205.is_alive(): t205.terminate()
+
+t206.join()
+if t206.is_alive(): t206.terminate()
+
+t207.join()
+if t207.is_alive(): t207.terminate()
 
