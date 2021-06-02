@@ -146,23 +146,30 @@ t201.start()
 
 
 t201.join(1000)
+t202.join(1000)
+t204.join(1000)
+t203.join(1000)
+t205.join(1000)
+t206.join(1000)
+t207.join(1000)
+
 if t201.is_alive(): t201.terminate()
 
-t202.join(1000)
+
 if t202.is_alive(): t202.terminate()
 
-t204.join(1000)
+
 if t204.is_alive(): t204.terminate()
 
-t203.join(1000)
+
 if t203.is_alive(): t203.terminate()
 
-t205.join(1000)
+
 if t205.is_alive(): t205.terminate()
 
-t206.join(1000)
+
 if t206.is_alive(): t206.terminate()
 
-t207.join(1000)
+
 if t207.is_alive(): t207.terminate()
 
