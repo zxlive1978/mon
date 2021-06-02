@@ -36,7 +36,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
 				print(a)
 				print(names)
-				shutil.copy(a, names)
+				shutil.copy('"'+a+'"', '"'+names+'"')
 
 		# xlsx
 		if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
