@@ -26,6 +26,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 	try:
 	# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 	#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
+		# -iname без регистра
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			# print(a)
@@ -113,36 +114,36 @@ t202.start()
 
 
 
-#542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору Скв № 542 09.05.2021.xlsx
-t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Сводки 542/"',"СКВ 542 Пл АГКМ Сводка", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-542'])
+#542 Обработчик c: /mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/ bk.LAS Prof.LAS rk.LAS
+t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
 t204.start()
 
-# ------------------------------------------------------------------------
-# 938
-t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
-t203.start()
+# # ------------------------------------------------------------------------
+# # 938
+# t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
+# t203.start()
 
 
-# ------------------------------------------------------------------------
-# 632
-t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
-t205.start()
+# # ------------------------------------------------------------------------
+# # 632
+# t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
+# t205.start()
 
-# ------------------------------------------------------------------------
-# 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
-t206.start()
+# # ------------------------------------------------------------------------
+# # 107
+# t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+# t206.start()
 
-# ------------------------------------------------------------------------
-# 222
-t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Скв 222 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
-t207.start()
+# # ------------------------------------------------------------------------
+# # 222
+# t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Скв 222 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
+# t207.start()
 
 
 
-# 449
-t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
-t201.start()
+# # 449
+# t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
+# t201.start()
 
 
 t201.join(1000)
