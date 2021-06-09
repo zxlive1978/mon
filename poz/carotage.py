@@ -106,8 +106,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 # pozreboot(sys.argv[1],"5188", 10,sys.argv[1])
 
 
-# 828
-t202 = Process(target=read_well, args=['"/mnt/3oc/АРХИВ/Архив скв.604/суточные сводки скв.604/"',"СКВ 828 Пл АГКМ сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-828'])
+# 828 /АРХИВ/Архив скв.828/ pts. lm.las
+t202 = Process(target=read_well, args=['"/mnt/3oc//АРХИВ/Архив скв.828/"',"СКВ 828 Пл АГКМ сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-828'])
 t202.start()
 
 
