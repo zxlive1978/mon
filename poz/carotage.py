@@ -98,7 +98,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-					subprocess.call('/usr/bin/unoconv -f TXT -e PageRange=1 '+'"'+names+'"', shell=True)
+					subprocess.call('/usr/bin/unoconv -f txt -e PageRange=1 '+'"'+names+'"', shell=True)
 					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 			# if (b.find('.DOC')>0 ):
