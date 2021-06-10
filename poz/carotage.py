@@ -155,7 +155,6 @@ t205.join(1000)
 # t206.join(1000)
 t207.join(1000)
 
-# if t201.is_alive(): t201.terminate()
 
 
 if t202.is_alive(): t202.terminate()
@@ -174,4 +173,6 @@ if t205.is_alive(): t205.terminate()
 
 
 if t207.is_alive(): t207.terminate()
+
+# if t201.is_alive(): t201.terminate()
 
