@@ -81,6 +81,23 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+
+			if (b.find('.DOC')>0 ):
+				print(a)
+				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+				statbuf = os.stat(a)
+				# if ((statbuf.st_mtime>(time.time()-86400))):
+				carot=''
+				if (b.find('ИНК')>0):
+					carot='INC'
+				if (b.find('INC')>0):
+					carot='INC'
+
+				
+				if (carot!=''):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
+					
+					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 				
 					# subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
 					# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
