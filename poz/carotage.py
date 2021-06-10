@@ -29,7 +29,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		# -iname без регистра
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
-			b=a.upper()
+			b=a.decode('utf-8').upper()
 			# print(a)
 			#png
 			# if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
@@ -44,7 +44,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			# LAS
 			# if (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 			if (a.find(shablon2)>0 ):
-				print(a)
+				print(b)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
 				# if ((statbuf.st_mtime>(time.time()-86400))):
@@ -65,7 +65,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
-			if (b.find('ИНКЛ')>0 ):
+			if (b.find('.TXT')>0 or b.find('.DOC')>0):
 				print(b)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
