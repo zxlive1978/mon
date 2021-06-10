@@ -129,10 +129,10 @@ t203.start()
 t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Мониторинг/"',"СКВ 632 АГКМ сводка ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-632'])
 t205.start()
 
-# # ------------------------------------------------------------------------
-# # 107
-# t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
-# t206.start()
+# ------------------------------------------------------------------------
+# 107
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t206.start()
 
 # # ------------------------------------------------------------------------
 # # 222
