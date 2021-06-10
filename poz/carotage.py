@@ -118,10 +118,10 @@ t202.start()
 t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
 t204.start()
 
-# # ------------------------------------------------------------------------
-# # 938
-# t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
-# t203.start()
+# ------------------------------------------------------------------------
+# 938
+t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-938'])
+t203.start()
 
 
 # # ------------------------------------------------------------------------
