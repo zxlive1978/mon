@@ -132,8 +132,8 @@ t205.start()
 
 # 1------------------------------------------------------------------------
 # 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
-t206.start()
+# t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+# t206.start()
 
 # ------------------------------------------------------------------------
 # 222 /mnt/83oc/Users/User/Desktop
@@ -143,19 +143,19 @@ t207.start()
 
 
 # 1-------------449
-t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
-t201.start()
+# t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
+# t201.start()
 
 
-t201.join(1000)
+# t201.join(1000)
 t202.join(1000)
 t204.join(1000)
 t203.join(1000)
 t205.join(1000)
-t206.join(1000)
+# t206.join(1000)
 t207.join(1000)
 
-if t201.is_alive(): t201.terminate()
+# if t201.is_alive(): t201.terminate()
 
 
 if t202.is_alive(): t202.terminate()
@@ -170,7 +170,7 @@ if t203.is_alive(): t203.terminate()
 if t205.is_alive(): t205.terminate()
 
 
-if t206.is_alive(): t206.terminate()
+# if t206.is_alive(): t206.terminate()
 
 
 if t207.is_alive(): t207.terminate()
