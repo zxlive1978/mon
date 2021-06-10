@@ -124,10 +124,10 @@ t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводк
 t203.start()
 
 
-# # ------------------------------------------------------------------------
-# # 632
-# t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
-# t205.start()
+# ------------------------------------------------------------------------
+# 632
+t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Мониторинг/"',"СКВ 632 АГКМ сводка ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-632'])
+t205.start()
 
 # # ------------------------------------------------------------------------
 # # 107
