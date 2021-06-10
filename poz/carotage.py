@@ -31,25 +31,26 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		for a in output.split("\n"):
 			# print(a)
 			#png
-			if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
-				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400))):
-					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
-					print(a)
-					print(names)
-					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-					# shutil.copy('"'+a+'"', '"'+names+'"')
+			# if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+			# 	statbuf = os.stat(a)
+			# 	if ((statbuf.st_mtime>(time.time()-86400))):
+			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
+			# 		print(a)
+			# 		print(names)
+			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+			# 		# shutil.copy('"'+a+'"', '"'+names+'"')
 
-			# xlsx
-			if (a.find(shablon1)>0) and (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+			# LAS
+			if (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 				# print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400))):
-					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.xlsx'
-					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-					subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
-					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
+				# if ((statbuf.st_mtime>(time.time()-86400))):
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.LAS'
+				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+				
+					# subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
+					# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 	# for a in output.split("\n\n"):
 	# 	odnadir=a.split("\n")
@@ -134,16 +135,16 @@ t205.start()
 t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
 t206.start()
 
-# 1------------------------------------------------------------------------
-# 222
-t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Скв 222 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
+# ------------------------------------------------------------------------
+# 222 /mnt/83oc/Users/User/Desktop
+t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
 t207.start()
 
 
 
-# # 449
-# t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
-# t201.start()
+# 1-------------449
+t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
+t201.start()
 
 
 t201.join(1000)
