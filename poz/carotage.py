@@ -29,6 +29,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		# -iname без регистра
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
+			a=a.upper()
 			# print(a)
 			#png
 			# if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
@@ -41,12 +42,27 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			# 		# shutil.copy('"'+a+'"', '"'+names+'"')
 
 			# LAS
-			if (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+			# if (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
+			if (a.find(shablon2)>0 ):
 				# print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
 				# if ((statbuf.st_mtime>(time.time()-86400))):
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.LAS'
+				carot=''
+				if (a.find('PTS')>0):
+					carot='PTS'
+				if (a.find('BK')>0):
+					carot='BK'
+				if (a.find('LM')>0):
+					carot='LM'
+				if (a.find('PROF')>0):
+					carot='PROF'
+				if (a.find('RK')>0):
+					carot='RK'
+				
+				
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
+				
 				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 				
 					# subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
