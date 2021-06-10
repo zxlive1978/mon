@@ -65,7 +65,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
-			if (b.find('.TXT')>0):
+			if (b.find('.TXT')>0  or b.find(u'ИНКЛ')>0 or  (b.find('INC')>0)):
 				print(b)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
@@ -81,7 +81,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
-			if (b.find('.DOC')>0):
+			if (b.find('.DOC')>0 or b.find(u'ИНКЛ')>0 or  (b.find('INC')>0)):
 				print(b)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
