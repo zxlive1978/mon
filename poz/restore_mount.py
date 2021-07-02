@@ -169,11 +169,18 @@ if t629.is_alive(): t629.terminate()
 # t20.join(30)
 # if t20.is_alive(): t20.terminate()
 
-# # 908
-t928 = Process(target=read_well, args=["/mnt/908o","k908","//192.168.146.99/C/Program Files/GeoSketch/Forms"])
+# # Саратов комментарии Обработчик 908
+t928 = Process(target=read_well, args=["/mnt/908o","k908","//192.168.146.99/C/Program Files/Common Files/PS Shared/Database/"])
 t928.start()
 t928.join(30)
 if t928.is_alive(): t928.terminate()
+
+#Саратов сводки или глубинка Обработчик 908 Обработчик c: /mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/ "СКВ №449 01.05.2021.xlsx"
+t104 = Process(target=read_well, args=["/mnt/908oc","908o","/""/192.168.146.99/d$"""])
+t104.start()
+t104.join(30)
+if t104.is_alive(): t104.terminate()
+
 
 #222 83 Обработчик
 t547 = Process(target=read_well, args=["/mnt/83","k83","//192.168.146.131/C/Program Files/GeoSketch/Forms"])
