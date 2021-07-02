@@ -1178,6 +1178,13 @@ t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
 
 
+#Саратов (Обработчик)
+t4450 = Process(target=read_well, args=["/mnt/908o","s908depth"])
+t4450.start()
+t4450.join(300)
+if t4450.is_alive(): t4450.terminate()
+
+
 
 
 #542

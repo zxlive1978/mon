@@ -369,6 +369,12 @@ t201.start()
 t201.join(300)
 if t201.is_alive(): t201.terminate()
 
+# 938
+t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
+t201.start()
+t201.join(300)
+if t201.is_alive(): t201.terminate()
+
 # #629
 # t629 = Process(target=read_well, args=["/mnt/631o/Archive","s629kr"])
 # t629.start()
