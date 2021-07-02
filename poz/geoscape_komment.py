@@ -166,11 +166,11 @@ t928.start()
 t928.join(10)
 if t928.is_alive(): t928.terminate()
 
-#908
-t547 = Process(target=read_well, args=["/mnt/908o","s908kr"])
-t547.start()
-t547.join(10)
-if t547.is_alive(): t547.terminate()
+#Саратов 908 
+# t547 = Process(target=read_well, args=["/mnt/908o","s908kr"])
+# t547.start()
+# t547.join(10)
+# if t547.is_alive(): t547.terminate()
 
 #84
 t3 = Process(target=read_well, args=["/mnt/3","s224kr"])
