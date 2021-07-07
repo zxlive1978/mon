@@ -1180,7 +1180,7 @@ def read_well(nametime, table, start, stop):
 
 
 #Саратов (Обработчик)
-t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3]])
+t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4]])
 t4450.start()
 t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
