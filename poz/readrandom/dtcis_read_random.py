@@ -28,6 +28,7 @@ def read_well(nametime, table, start, stop):
 		file_ext='*.dep'
 		cur_time=nametime
 		path_to_work = os.getcwd()
+		sbor = path_to_work
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
 		# 		SizeFile = getsize(join(root, name))
