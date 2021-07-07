@@ -85,7 +85,7 @@ def read_well(nametime, table, start, stop):
 				lst_data=f1_lst.read(21)
 				lst_format="=lflllc"
 				cur_lst_disp_addr,cur_key_value,time_dos,numb_rec,true_numb_rec,flag = unpack(lst_format, lst_data)
-				print len(lst_data)
+				# print len(lst_data)
 			except:
 				a=0
 			finally:
