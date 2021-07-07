@@ -17,13 +17,13 @@ import shutil
 def read_well(nametime, table, start, stop):
 	#print os.listdir(sbor)
 	# try:
-		db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		cursor = db.cursor()
-		sql = "TRUNCATE "+db_name
-		cursor.execute(sql)
-		db.commit()
-		db.close()
+		# db_name=table
+		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# cursor = db.cursor()
+		# sql = "TRUNCATE "+db_name
+		# cursor.execute(sql)
+		# db.commit()
+		# db.close()
 
 		file_ext='*.dep'
 		cur_time=nametime
@@ -40,17 +40,17 @@ def read_well(nametime, table, start, stop):
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
 
-		try:
-			shutil.copy(sbor+'/'+cur_time, path_to_work+"/"+table+".dep")
-		except IOError, e:
-			print "Unable to copy file. %s"% e
+		# try:
+		# 	shutil.copy(sbor+'/'+cur_time, path_to_work+"/"+table+".dep")
+		# except IOError, e:
+		# 	print "Unable to copy file. %s"% e
 		
 		
 		
-		try:
-			shutil.copy(sbor+'/'+cur_lst, path_to_work+"/"+table+".lst")
-		except IOError, e:
-			print "Unable to copy file. %s"% e
+		# try:
+		# 	shutil.copy(sbor+'/'+cur_lst, path_to_work+"/"+table+".lst")
+		# except IOError, e:
+		# 	print "Unable to copy file. %s"% e
 
 		cur_time=path_to_work+table+".dep"
 		cur_lst=cur_time.replace('.dep','.lst')
