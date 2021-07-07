@@ -52,13 +52,14 @@ def read_well(nametime, table, start, stop):
 		# except IOError, e:
 		# 	print "Unable to copy file. %s"% e
 
-		cur_time=path_to_work+''+nametime+".dep"
+		cur_time=path_to_work+'/'+nametime
+		# print (cur_time,cur_lst)
 		cur_lst=cur_time.replace('.dep','.lst')
 		
 		cur_lst_size=getsize(join(path_to_work, cur_lst))
 		cur_time_size=getsize(join(path_to_work, cur_time))
 		
-		# print (cur_lst, cur_lst_size, cur_time,cur_time_size)
+		print (cur_lst, cur_lst_size, cur_time,cur_time_size)
 		
 		ii=0
 		cur_lst_disp=-21
