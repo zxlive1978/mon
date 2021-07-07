@@ -72,7 +72,7 @@ def read_well(nametime, table, start, stop):
 		while ii < (cur_lst_size/21):
 			
 			cur_rec=ii
-			# print cur_rec
+			print cur_rec
 			cur_lst_disp =cur_lst_disp+21
 			# print cur_lst_disp
 
