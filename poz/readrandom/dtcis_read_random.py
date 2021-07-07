@@ -72,7 +72,7 @@ def read_well(nametime, table, start, stop):
 		while ii < (cur_lst_size/21):
 			
 			cur_rec=ii
-			print cur_rec
+			# print cur_rec
 			cur_lst_disp =cur_lst_disp+21
 			# print cur_lst_disp
 
@@ -93,7 +93,7 @@ def read_well(nametime, table, start, stop):
 				# f1_lst.close()
 			
 
-			print cur_lst_disp_addr,numb_rec
+			# print cur_lst_disp_addr,numb_rec
 
 			#чтение заголовка dep записи 10 байт в time
 			full_path_time=cur_time
@@ -132,7 +132,7 @@ def read_well(nametime, table, start, stop):
 			# time_numb_rec,numb_well,len_rec,numb_key_param,numbs_params = unpack(time_head_format, time_data)
 
 
-			print len(time_data),len_rec
+			# print len(time_data),len_rec
 
 
 			#print numbs_params
