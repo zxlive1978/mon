@@ -14,6 +14,8 @@ import time
 from multiprocessing import Process
 import shutil
 
+import datetime
+
 def read_well(nametime, table, start, stop):
 	#print os.listdir(sbor)
 	# try:
@@ -24,6 +26,10 @@ def read_well(nametime, table, start, stop):
 		# cursor.execute(sql)
 		# db.commit()
 		# db.close()
+		# temp = '07/12/2017 13:30'
+		dtstart = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
+		print (dtstart)
+
 
 		file_ext='*.dep'
 		cur_time=nametime
@@ -1072,6 +1078,7 @@ def read_well(nametime, table, start, stop):
 				i=i+1
 			
 			if (int(Vrema))>int(start) and (int(Vrema))>int(stop):
+				
 				print (Vrema, start)
 				
 				
