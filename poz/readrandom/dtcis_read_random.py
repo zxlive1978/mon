@@ -1075,7 +1075,7 @@ def read_well(nametime, table, start, stop):
 					if type_par=='f':
 						result=round(value[0],2)
 					else: result= value[0]
-					Vrema = result - disp_time #3600 1 час
+					Vrema = result - disp_time # 3600 1 час
 					
 					
 
