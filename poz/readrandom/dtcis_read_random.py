@@ -28,10 +28,14 @@ def read_well(nametime, table, start, stop):
 		# db.commit()
 		# db.close()
 		#  temp = '07/12/2017 13:30'
-		
-		dtstart = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
-		timestamp = (dt - datetime(1970, 1, 1)).total_seconds()
-		print (timestamp)
+		disp_time = 18000 + 10800 + 3600
+		dt = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
+		start = (dt - datetime(1970, 1, 1)).total_seconds() -disp_time
+		print (start)
+
+		dt = datetime.strptime(stop, '%H:%M:%S-%d/%m/%Y')
+		stop = (dt - datetime(1970, 1, 1)).total_seconds() -disp_time
+		print (stop)
 
 
 		file_ext='*.dep'
@@ -1071,7 +1075,7 @@ def read_well(nametime, table, start, stop):
 					if type_par=='f':
 						result=round(value[0],2)
 					else: result= value[0]
-					Vrema = result - 18000 - 10800-3600 #3600 1 час
+					Vrema = result - disp_time #3600 1 час
 					
 					
 
@@ -1080,7 +1084,7 @@ def read_well(nametime, table, start, stop):
 				next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
 				i=i+1
 			
-			if (int(Vrema))>int(start) and (int(Vrema))>int(stop):
+			# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 				
 				print (Vrema, start)
 				
