@@ -14,7 +14,7 @@ import time
 from multiprocessing import Process
 import shutil
 
-import datetime
+from datetime import datetime
 
 def read_well(nametime, table, start, stop):
 	#print os.listdir(sbor)
