@@ -15,6 +15,7 @@ from multiprocessing import Process
 import shutil
 
 from datetime import datetime
+from datetime import timezone
 
 def read_well(nametime, table, start, stop):
 	#print os.listdir(sbor)
@@ -27,8 +28,10 @@ def read_well(nametime, table, start, stop):
 		# db.commit()
 		# db.close()
 		#  temp = '07/12/2017 13:30'
+		
 		dtstart = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
-		print (dtstart)
+		timestamp = (dt - datetime(1970, 1, 1)).total_seconds()
+		print (timestamp)
 
 
 		file_ext='*.dep'
