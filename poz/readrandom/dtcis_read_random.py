@@ -1071,7 +1071,7 @@ def read_well(nametime, table, start, stop):
 				next_sub_head = next_sub_head + sprv[numb_par[0]][1]+2
 				i=i+1
 			
-			if (int(Vrema))>int(start):
+			if (int(Vrema))>int(start) and (int(Vrema))>int(stop):
 				print (Vrema, start)
 				
 				
