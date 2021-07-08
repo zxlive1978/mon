@@ -18,16 +18,7 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop):
-	#print os.listdir(sbor)
-	# try:
-		# db_name=table
-		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# cursor = db.cursor()
-		# sql = "TRUNCATE "+db_name
-		# cursor.execute(sql)
-		# db.commit()
-		# db.close()
-		#  temp = '07/12/2017 13:30'
+	
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
 		start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
