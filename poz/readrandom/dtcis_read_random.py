@@ -26,7 +26,7 @@ def read_well(nametime, table, start, stop):
 		# cursor.execute(sql)
 		# db.commit()
 		# db.close()
-		# temp = '07/12/2017 13:30'
+		#  temp = '07/12/2017 13:30'
 		dtstart = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
 		print (dtstart)
 
