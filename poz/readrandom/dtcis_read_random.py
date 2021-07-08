@@ -31,11 +31,11 @@ def read_well(nametime, table, start, stop):
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
 		start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
-		print (start)
+		# print (start)
 
 		dt = datetime.strptime(stop, '%H:%M:%S-%d/%m/%Y')
 		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
-		print (stop)
+		# print (stop)
 
 
 		file_ext='*.dep'
