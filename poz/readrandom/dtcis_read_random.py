@@ -28,7 +28,7 @@ def read_well(nametime, table, start, stop):
 		# db.commit()
 		# db.close()
 		#  temp = '07/12/2017 13:30'
-		disp_time = 
+		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%d/%m/%Y')
 		start = (dt - datetime(1970, 1, 1)).total_seconds() -disp_time
 		print (start)
