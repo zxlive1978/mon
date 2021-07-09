@@ -94,7 +94,7 @@ if t544.is_alive(): t544.terminate()
 
 #1РФ Обработчик d
 #threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
-t544 = Process(target=read_well, args=["/mnt/4450o","s4450o","/""/192.168.146.35/d$"""])
+t544 = Process(target=read_well, args=["/mnt/4450oc","s4450oc","/""/192.168.146.35/d$"""])
 t544.start()
 t544.join(30)
 if t544.is_alive(): t544.terminate()
