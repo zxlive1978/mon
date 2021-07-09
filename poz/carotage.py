@@ -31,7 +31,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		for a in output.split("\n"):
 			b=a.decode('utf-8').upper()
 			# print(a)
-			#p ng
+			#p  ng
 			# if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 			# 	statbuf = os.stat(a)
 			# 	if ((statbuf.st_mtime>(time.time()-86400))):
