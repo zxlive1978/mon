@@ -31,7 +31,7 @@ def clear_well(table,coldate):
 		a=0
 
 #908
-clear_well("s908", "Vrema")
+# clear_well("s908", "Vrema")
 #547
 clear_well("s110", "Vrema")
 #224
@@ -91,6 +91,8 @@ clear_well("p1921681471", "date")
 clear_well("p19216814733", "date")
 #ping 
 clear_well("p19216814697", "date")
+#ping 
+clear_well("p3729899", "date") 	
 #alarm
 clear_well("a3729814", "data")
 
