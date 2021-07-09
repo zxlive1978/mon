@@ -145,6 +145,13 @@ t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ 
 t201.start()
 
 
+
+# 1РФ
+t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-1РФ'])
+t200.start()
+
+
+t200.join(1000)
 t201.join(1000)
 t202.join(1000)
 t204.join(1000)
@@ -152,6 +159,8 @@ t203.join(1000)
 t205.join(1000)
 t206.join(1000)
 t207.join(1000)
+
+if t200.is_alive(): t200.terminate()
 
 if t201.is_alive(): t201.terminate()
 
