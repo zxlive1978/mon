@@ -18,6 +18,7 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop, whathdo):
+	print ('dsadsd')
 
 
 def readd_well(nametime, table, start, stop, whathdo):
