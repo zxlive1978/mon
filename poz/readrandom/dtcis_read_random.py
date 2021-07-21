@@ -29,7 +29,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		cur_arch=nametime.replace('.zip','.dep')
 		os.remove(cur_arch)
 	except IOError, e:
-		print (e)
+		a=1
 
 
 
