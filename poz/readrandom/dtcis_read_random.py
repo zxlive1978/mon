@@ -22,9 +22,9 @@ def read_well(nametime, table, start, stop, whathdo):
 		nametime="/var/www/html/mon/poz/readrandom/"+nametime
 		# print ('suck')
 		# распаковка архива
-		zipFile = zipfile.ZipFile(nametime, 'r')
-		zipFile.extractall()
-		zipFile.close()
+		# zipFile = zipfile.ZipFile(nametime, 'r')
+		# zipFile.extractall()
+		# zipFile.close()
 		
 		# удаление dep lst
 		# cur_arch=nametime.replace('.zip','.lst')
