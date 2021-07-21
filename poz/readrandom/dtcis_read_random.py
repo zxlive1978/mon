@@ -20,7 +20,7 @@ from datetime import datetime
 
 def read_well(nametime, table, start, stop, whathdo):
 		# вывод
-		print ('dsaddsd')
+		# print ('dsaddsd')
 		# распаковка архива
 		zipFile = zipfile.ZipFile(nametime, 'r')
 		zipFile.extractall()
