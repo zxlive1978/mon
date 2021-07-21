@@ -19,7 +19,6 @@ from datetime import datetime
 
 def read_well(nametime, table, start, stop, whathdo):
 	print ('dsadsd')
-	sys.exit(8)
 
 
 def readd_well(nametime, table, start, stop, whathdo):
