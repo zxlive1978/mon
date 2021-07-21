@@ -22,9 +22,9 @@ def read_well(nametime, table, start, stop, whathdo):
 		nametime="/var/www/html/mon/poz/readrandom/"+nametime
 		# print ('suck')
 		# распаковка архива
-		# zipFile = zipfile.ZipFile(nametime, 'r')
-		# zipFile.extractall()
-		# zipFile.close()
+		zipFile = zipfile.ZipFile(nametime, 'r')
+		zipFile.extractall()
+		zipFile.close()
 		
 		# удаление dep lst
 		# cur_arch=nametime.replace('.zip','.lst')
@@ -1227,12 +1227,12 @@ def readdd_well(nametime, table, start, stop, whathdo):
 
 
 #Саратов (Обработчик)
-t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
-t4450.start()
-t4450.join(300)
-if t4450.is_alive(): t4450.terminate()
+# t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
+# t4450.start()
+# t4450.join(300)
+# if t4450.is_alive(): t4450.terminate()
 
-
+read_well(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
 
 
 # #542
