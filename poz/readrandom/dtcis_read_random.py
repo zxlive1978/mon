@@ -1227,12 +1227,12 @@ def readdd_well(nametime, table, start, stop, whathdo):
 
 
 #Саратов (Обработчик)
-# t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
-# t4450.start()
-# t4450.join(300)
-# if t4450.is_alive(): t4450.terminate()
-# print (''+sys.argv[1]+sys.argv[2]+sys.argv[3]+sys.argv[4]+ sys.argv[5])
-read_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
+t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
+t4450.start()
+t4450.join(300)
+if t4450.is_alive(): t4450.terminate()
+
+
 
 
 # #542
