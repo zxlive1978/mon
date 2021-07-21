@@ -18,7 +18,7 @@ import zipfile
 from datetime import datetime
 # from datetime import timezone
 
-def read_well(nametime, table, start, stop, whathdo):
+def readd_well(nametime, table, start, stop, whathdo):
 		# вывод
 		print ('dsaddsd')
 		# распаковка архива
@@ -33,7 +33,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		os.remove(cur_arch)
 
 
-def readd_well(nametime, table, start, stop, whathdo):
+def read_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 
 	if (whathdo=='add'):
