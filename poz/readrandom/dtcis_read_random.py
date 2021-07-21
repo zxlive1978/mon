@@ -39,6 +39,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		# вывод
 		print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
 		# print (nametime, table, start, stop, whathdo)
+		exit()
 
 
 def readdd_well(nametime, table, start, stop, whathdo):

@@ -24,9 +24,9 @@ def read_well(nametime, table, start, stop, whathdo):
 		# import subprocess
 		# program = "notepad.exe"
 		#pid = subprocess.Popen([sys.executable, "/path/to/file/no/spaces/in/path/thecommand.py"], stdin=None, stdout=None, stderr=None, close_fds=True) # call subprocess
-		process = subprocess.Popen([sys.executable, "/usr/bin/python", "/var/www/html/mon/poz/readrandom/dtcis_read_random.py", nametime, table, start, stop, whathdo], stdin=None, stdout=None, stderr=None, close_fds=True)
+		process = subprocess.Popen([sys.executable, "/var/www/html/mon/poz/readrandom/dtcis_read_random.py", nametime, table, start, stop, whathdo], stdin=None, stdout=None, stderr=None, close_fds=True)
 		# print ("sukA")
-		sys.exit(0)
+		sys.exit()
 		
 
 #Саратов (Обработчик)
