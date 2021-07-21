@@ -37,6 +37,7 @@ def read_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 
 	if (str(whathdo) == 'add'):
+		print (nametime, table, start, stop, whathdo)
 
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
