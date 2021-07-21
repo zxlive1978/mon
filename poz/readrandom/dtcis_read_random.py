@@ -19,6 +19,11 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop, whathdo):
+
+		# import subprocess
+		# program = "notepad.exe"
+		# process = subprocess.Popen(program)
+		
 		nametime="/var/www/html/mon/poz/readrandom/"+nametime
 		# print ('suck')
 		# распаковка архива
