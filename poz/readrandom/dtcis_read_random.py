@@ -23,6 +23,14 @@ def read_well(nametime, table, start, stop, whathdo):
 	zipFile = zipfile.ZipFile(nametime, 'r')
 	zipFile.extractall()
 	zipFile.close()
+	try:
+		cur_arch=nametime.replace('.zip','.lst')
+		os.remove(cur_arch)
+		cur_arch=nametime.replace('.zip','.dep')
+		os.remove(cur_arch)
+	except IOError, e:
+		print (e)
+
 
 
 def readd_well(nametime, table, start, stop, whathdo):
