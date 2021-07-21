@@ -19,17 +19,17 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop, whathdo):
-		print ('suck')
+		# print ('suck')
 		# распаковка архива
 		zipFile = zipfile.ZipFile(nametime, 'r')
 		zipFile.extractall()
 		zipFile.close()
 		
 		# удаление dep lst
-		cur_arch=nametime.replace('.zip','.lst')
-		os.remove(cur_arch)
-		cur_arch=nametime.replace('.zip','.dep')
-		os.remove(cur_arch)
+		# cur_arch=nametime.replace('.zip','.lst')
+		# os.remove(cur_arch)
+		# cur_arch=nametime.replace('.zip','.dep')
+		# os.remove(cur_arch)
 		# вывод
 		print ('suck')
 		# print (nametime, table, start, stop, whathdo)
