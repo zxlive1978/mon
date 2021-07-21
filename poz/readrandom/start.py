@@ -15,6 +15,7 @@ import sys
 # import shutil
 # import zipfile
 import subprocess
+import shlex
 
 from datetime import datetime
 # from datetime import timezone
@@ -24,9 +25,13 @@ def read_well(nametime, table, start, stop, whathdo):
 		# import subprocess
 		# program = "notepad.exe"
 		#pid = subprocess.Popen([sys.executable, "/path/to/file/no/spaces/in/path/thecommand.py"], stdin=None, stdout=None, stderr=None, close_fds=True) # call subprocess
-		process = subprocess.Popen([sys.executable, "/var/www/html/mon/poz/readrandom/dtcis_read_random.py", nametime, table, start, stop, whathdo], stdin=None, stdout=None, stderr=None, close_fds=True)
-		print ("sukA")
-		# sys.exit()
+		# process = subprocess.Popen(/usr/bin/python, "/var/www/html/mon/poz/readrandom/dtcis_read_random.py", nametime, table, start, stop, whathdo], shell=True, stdin=None, stdout=None, stderr=None, close_fds=True)
+		# print ("sukA")
+		cmd ='/usr/bin/python '+'/var/www/html/mon/poz/readrandom/dtcis_read_random.py '+nametime+' '+table+' '+start+' '+stop+' '+whathdo
+		args = shlex.split(cmd)
+		print (args)
+		process = subprocess.Popen(args)
+		# sys.exit(0)
 		
 
 #Саратов (Обработчик)
