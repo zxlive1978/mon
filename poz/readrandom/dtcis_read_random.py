@@ -19,7 +19,10 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop, whathdo):
-	print ('dsadsd')
+	print ('dsaddsd')
+	zipFile = zipfile.ZipFile('nametime', 'w')
+	zipFile.extractall()
+	zipFile.close()
 
 
 def readd_well(nametime, table, start, stop, whathdo):
