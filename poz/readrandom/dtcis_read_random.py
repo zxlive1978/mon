@@ -35,7 +35,7 @@ def readd_well(nametime, table, start, stop, whathdo):
 
 def read_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
-
+	print (nametime, table, start, stop, whathdo)
 	if (str(whathdo) == 'add'):
 		print (nametime, table, start, stop, whathdo)
 
