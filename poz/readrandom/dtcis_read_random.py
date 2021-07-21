@@ -1232,7 +1232,7 @@ def readdd_well(nametime, table, start, stop, whathdo):
 # t4450.join(300)
 # if t4450.is_alive(): t4450.terminate()
 
-read_well(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
+read_well(args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
 
 
 # #542
