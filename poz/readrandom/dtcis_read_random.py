@@ -1118,6 +1118,9 @@ def read_well(nametime, table, start, stop, whathdo):
 		os.remove(cur_arch)
 		cur_arch=nametime.replace('.zip','.dep')
 		os.remove(cur_arch)
+
+		# вывод
+		print ('dsaddsd')
 		
 		# db_name=table
 		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
