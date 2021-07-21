@@ -19,22 +19,25 @@ from datetime import datetime
 # from datetime import timezone
 
 def read_well(nametime, table, start, stop, whathdo):
-	# вывод
-	print ('dsaddsd')
-	# распаковка архива
-	zipFile = zipfile.ZipFile(nametime, 'r')
-	zipFile.extractall()
-	zipFile.close()
-	
-	# удаление dep lst
-	cur_arch=nametime.replace('.zip','.lst')
-	os.remove(cur_arch)
-	cur_arch=nametime.replace('.zip','.dep')
-	os.remove(cur_arch)
+		# вывод
+		print ('dsaddsd')
+		# распаковка архива
+		zipFile = zipfile.ZipFile(nametime, 'r')
+		zipFile.extractall()
+		zipFile.close()
+		
+		# удаление dep lst
+		cur_arch=nametime.replace('.zip','.lst')
+		os.remove(cur_arch)
+		cur_arch=nametime.replace('.zip','.dep')
+		os.remove(cur_arch)
 
 
 def readd_well(nametime, table, start, stop, whathdo):
-		
+	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
+
+	if (whathdo=='add'):
+
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
 		start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
@@ -44,10 +47,15 @@ def readd_well(nametime, table, start, stop, whathdo):
 		dt = datetime.strptime(stop, '%H:%M:%S-%Y-%m-%d')
 		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
 		# print (stop)
+		
+		# распаковка архива
+		zipFile = zipfile.ZipFile(nametime, 'r')
+		zipFile.extractall()
+		zipFile.close()
 
 
 		file_ext='*.dep'
-		cur_time=nametime
+		cur_time=nametime.replace('.zip','.lst')
 		path_to_work = os.getcwd()
 		sbor = path_to_work
 		# for root, dirs, files in os.walk(sbor, topdown=False):
