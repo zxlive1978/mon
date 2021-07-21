@@ -36,7 +36,7 @@ def readd_well(nametime, table, start, stop, whathdo):
 def read_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 
-	if (whathdo=='add'):
+	if (str(whathdo) == 'add'):
 
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
@@ -1121,6 +1121,7 @@ def read_well(nametime, table, start, stop, whathdo):
 
 		# вывод
 		print ('dsaddsd')
+	print ('SUKA')
 		
 		# db_name=table
 		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
