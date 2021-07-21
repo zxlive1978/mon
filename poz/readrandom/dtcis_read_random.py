@@ -27,10 +27,10 @@ def read_well(nametime, table, start, stop, whathdo):
 		zipFile.close()
 		
 		# удаление dep lst
-		cur_arch=nametime.replace('.zip','.lst')
-		os.remove(cur_arch)
-		cur_arch=nametime.replace('.zip','.dep')
-		os.remove(cur_arch)
+		# cur_arch=nametime.replace('.zip','.lst')
+		# os.remove(cur_arch)
+		# cur_arch=nametime.replace('.zip','.dep')
+		# os.remove(cur_arch)
 		# вывод
 		print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
 		# print (nametime, table, start, stop, whathdo)
