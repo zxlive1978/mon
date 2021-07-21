@@ -4,16 +4,16 @@
 from os.path import join, getsize
 import os
 import sys
-import fnmatch
-from struct import *
-import math
-import MySQLdb
-import threading
+# import fnmatch
+# from struct import *
+# import math
+# import MySQLdb
+# import threading
 
-import time
-from multiprocessing import Process
-import shutil
-import zipfile
+# import time
+# from multiprocessing import Process
+# import shutil
+# import zipfile
 import subprocess
 
 from datetime import datetime
@@ -25,7 +25,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		# program = "notepad.exe"
 		#pid = subprocess.Popen([sys.executable, "/path/to/file/no/spaces/in/path/thecommand.py"], stdin=None, stdout=None, stderr=None, close_fds=True) # call subprocess
 		process = subprocess.Popen(    sys.executable,   "/usr/bin/python", "/var/www/html/mon/poz/readrandom/dtcis_read_random.py", nametime, table, start, stop, whathdo,. stdin=None, stdout=None, stderr=None, close_fds=True])
-		print ("sukA")
+		# print ("sukA")
 		sys.exit(0)
 		
 
