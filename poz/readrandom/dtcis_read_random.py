@@ -81,7 +81,7 @@ def readd_well(nametime, table, start, stop, whathdo):
 		# except IOError, e:
 		# 	print "Unable to copy file. %s"% e
 
-		cur_time=path_to_work+'/'+nametime
+		cur_time=path_to_work+'/'+nametime.replace('.zip','.dep')
 		# print (cur_time,cur_lst)
 		cur_lst=cur_time.replace('.dep','.lst')
 		
