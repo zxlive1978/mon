@@ -20,17 +20,17 @@ from datetime import datetime
 
 def read_well(nametime, table, start, stop, whathdo):
 		# print ('suck')
-		# распаковка архива
-		zipFile = zipfile.ZipFile(nametime, 'r')
-		zipFile.extractall()
-		zipFile.close()
+		## распаковка архива
+		# zipFile = zipfile.ZipFile(nametime, 'r')
+		# zipFile.extractall()
+		# zipFile.close()
 		
-		# удаление dep lst
+		## удаление dep lst
 		# cur_arch=nametime.replace('.zip','.lst')
 		# os.remove(cur_arch)
 		# cur_arch=nametime.replace('.zip','.dep')
 		# os.remove(cur_arch)
-		# вывод
+		## вывод
 		print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
 		# print (nametime, table, start, stop, whathdo)
 
