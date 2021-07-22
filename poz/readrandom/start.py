@@ -35,7 +35,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		
 
 #Саратов (Обработчик)
-read_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
+# read_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
 # t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
 # t4450.start()
 # t4450.join(300)
