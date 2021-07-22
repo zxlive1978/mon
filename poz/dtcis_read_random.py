@@ -62,7 +62,7 @@ def read_well(whathdo, nametime, table, start, stop):
 		
 		# распаковка архива
 		zipFile = zipfile.ZipFile(path_to_work+nametime, 'r')
-		zipFile.extractall()
+		zipFile.extractall(path_to_work)
 		zipFile.close()
 
 
@@ -93,7 +93,7 @@ def read_well(whathdo, nametime, table, start, stop):
 		# except IOError, e:
 		# 	print "Unable to copy file. %s"% e
 
-		cur_time=path_to_work+'/'+nametime.replace('.zip','.dep')
+		cur_time=path_to_work+nametime.replace('.zip','.dep')
 		# print (cur_time,cur_lst)
 		cur_lst=cur_time.replace('.dep','.lst')
 		
