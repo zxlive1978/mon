@@ -36,7 +36,7 @@ if __name__ == "__main__":
     "certfile": "/etc/letsencrypt/live/hydrofalll.ddns.net/cert.pem",
     "keyfile":  "/etc/letsencrypt/live/hydrofalll.ddns.net/privkey.pem"})
     http_server.listen(3333)
-    myIP = '95.182.120.47'
+    myIP = 'hydrofalll.ddns.net'
 	# socket.gethostbyname(socket.gethostname())
     print '*** Websocket Server Started at %s***' % myIP
     tornado.ioloop.IOLoop.instance().start()
