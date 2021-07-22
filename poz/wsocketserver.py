@@ -3,7 +3,7 @@ import tornado.websocket
 import tornado.ioloop
 import tornado.web
 import socket
-import 	
+import dtcis_read_random
 '''
 This is a simple Websocket Echo server that uses the Tornado websocket handler.
 Please run `pip install tornado` with python of version 2.7.9 or greater to install tornado.
@@ -19,9 +19,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
         print 'message received:  %s' % message
 		
         # Reverse Message and send it back
-		send=message.split(' ')
+		arg=message.split(' ')
         print 'sending back message: %s' % message[::-1]
-        self.write_message(dtcis_read_random(send))
+        self.write_message(dtcis_read_random.read_well(arg))
  
     def on_close(self):
         print 'connection closed'
