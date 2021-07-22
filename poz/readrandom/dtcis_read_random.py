@@ -8,10 +8,10 @@ import fnmatch
 from struct import *
 import math
 import MySQLdb
-import threading
+# import threading
 
 import time
-from multiprocessing import Process
+# from multiprocessing import Process
 import shutil
 import zipfile
 
@@ -1130,8 +1130,8 @@ def readdd_well(nametime, table, start, stop, whathdo):
 		os.remove(cur_arch)
 
 		# вывод
-		print ('dsaddsd')
-	print ('SUKA')
+	# 	print ('dsaddsd')
+	# print ('SUKA')
 		
 		# db_name=table
 		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
@@ -1233,10 +1233,11 @@ def readdd_well(nametime, table, start, stop, whathdo):
 
 
 #Саратов (Обработчик)
-t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
-t4450.start()
-t4450.join(300)
-if t4450.is_alive(): t4450.terminate()
+read_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
+# t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
+# t4450.start()
+# t4450.join(300)
+# if t4450.is_alive(): t4450.terminate()
 
 
 
