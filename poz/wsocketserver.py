@@ -32,7 +32,9 @@ application = tornado.web.Application([
  
  
 if __name__ == "__main__":
-    http_server = tornado.httpserver.HTTPServer(application)
+    http_server = tornado.httpserver.HTTPServer(application,ssl_options={
+    "certfile": "/etc/letsencrypt/live/hydrofalll.ddns.net/cert.pem",
+    "keyfile":  "/etc/letsencrypt/live/hydrofalll.ddns.net/privkey.pem",)
     http_server.listen(3333)
     myIP = '95.182.120.47'
 	# socket.gethostbyname(socket.gethostname())
