@@ -42,7 +42,7 @@ def readdd_well(nametime, table, start, stop, whathdo):
 		# exit()
 
 
-def read_well(nametime, table, start, stop, whathdo):
+def read_well(whathdo, nametime, table, start, stop):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 	# print (nametime, table, start, stop, whathdo)
 	if (str(whathdo) == 'add'):
