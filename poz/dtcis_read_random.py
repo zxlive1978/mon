@@ -18,7 +18,7 @@ import zipfile
 from datetime import datetime
 # from datetime import timezone
 
-def read_well(nametime, table, start, stop, whathdo):
+def readdd_well(nametime, table, start, stop, whathdo):
 
 		# import subprocess
 		# program = "notepad.exe"
@@ -37,16 +37,16 @@ def read_well(nametime, table, start, stop, whathdo):
 		# cur_arch=nametime.replace('.zip','.dep')
 		# os.remove(cur_arch)
 		# вывод
-		print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
+		# print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
 		# print (nametime, table, start, stop, whathdo)
 		# exit()
 
 
-def readdd_well(nametime, table, start, stop, whathdo):
+def read_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
-	print (nametime, table, start, stop, whathdo)
+	# print (nametime, table, start, stop, whathdo)
 	if (str(whathdo) == 'add'):
-		print (nametime, table, start, stop, whathdo)
+		# print (nametime, table, start, stop, whathdo)
 
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
@@ -1128,6 +1128,8 @@ def readdd_well(nametime, table, start, stop, whathdo):
 		os.remove(cur_arch)
 		cur_arch=nametime.replace('.zip','.dep')
 		os.remove(cur_arch)
+
+		return('Данные внесены!')
 
 		# вывод
 	# 	print ('dsaddsd')
