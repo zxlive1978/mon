@@ -45,8 +45,10 @@ def readdd_well(nametime, table, start, stop, whathdo):
 def read_well(whathdo, nametime, table, start, stop):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 	# print (nametime, table, start, stop, whathdo)
+	# nametime="/var/www/html/mon/poz/readrandom/"+nametime
 	if (str(whathdo) == 'add'):
 		# print (nametime, table, start, stop, whathdo)
+		path_to_work = "/var/www/html/mon/poz/readrandom/"
 
 		disp_time = 18000 + 10800 + 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
@@ -59,14 +61,14 @@ def read_well(whathdo, nametime, table, start, stop):
 		# print (stop)
 		
 		# распаковка архива
-		zipFile = zipfile.ZipFile(nametime, 'r')
+		zipFile = zipfile.ZipFile(path_to_work+nametime, 'r')
 		zipFile.extractall()
 		zipFile.close()
 
 
 		file_ext='*.dep'
 		cur_time=nametime.replace('.zip','.lst')
-		path_to_work = os.getcwd()
+		
 		sbor = path_to_work
 		# for root, dirs, files in os.walk(sbor, topdown=False):
 		# 	for name in files:
@@ -1124,9 +1126,9 @@ def read_well(whathdo, nametime, table, start, stop):
 		db.close()
 
 		# удаление dep lst
-		cur_arch=nametime.replace('.zip','.lst')
+		cur_arch=path_to_work+nametime.replace('.zip','.lst')
 		os.remove(cur_arch)
-		cur_arch=nametime.replace('.zip','.dep')
+		cur_arch=path_to_work+nametime.replace('.zip','.dep')
 		os.remove(cur_arch)
 
 		return('Данные внесены!')
