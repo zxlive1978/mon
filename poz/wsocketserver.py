@@ -33,7 +33,8 @@ application = tornado.web.Application([
  
 if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
-    http_server.listen(8888)
-    myIP = socket.gethostbyname(socket.gethostname())
+    http_server.listen(3333)
+    myIP = '95.182.120.47'
+	# socket.gethostbyname(socket.gethostname())
     print '*** Websocket Server Started at %s***' % myIP
     tornado.ioloop.IOLoop.instance().start()
