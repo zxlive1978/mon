@@ -3,6 +3,7 @@ import tornado.websocket
 import tornado.ioloop
 import tornado.web
 import socket
+import dtcis_read_random
 '''
 This is a simple Websocket Echo server that uses the Tornado websocket handler.
 Please run `pip install tornado` with python of version 2.7.9 or greater to install tornado.
