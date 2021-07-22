@@ -30,7 +30,7 @@ def read_well(nametime, table, start, stop, whathdo):
 		cmd ='/usr/bin/python '+'/var/www/html/mon/poz/readrandom/dtcis_read_random.py '+nametime+' '+table+' '+start+' '+stop+' '+whathdo
 		args = shlex.split(cmd)
 		print (args)
-		process = subprocess.Popen(args)
+		p = subprocess.Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)
 		# sys.exit(0)
 		
 
