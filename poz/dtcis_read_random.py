@@ -1109,7 +1109,7 @@ def read_well(whathdo, nametime, table, start, stop):
 		os.remove(cur_arch)
 
 		return('Данные внесены!')
-		
+
 	if (str(whathdo) == 'del'):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
@@ -1125,8 +1125,9 @@ def read_well(whathdo, nametime, table, start, stop):
 
 		dt = datetime.strptime(stop, '%H:%M:%S-%Y-%m-%d')
 		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
+		# delete from Table where id > 79 and id < 296
 
-		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
+		sql = "DELETE FROM "+db_name+"WHERE Vrema >= "+start+" AND  Vrema <= "+ stop	
 		cursor.execute(sql)
 		db.commit()
 		db.close()
