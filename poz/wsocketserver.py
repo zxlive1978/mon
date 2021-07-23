@@ -19,9 +19,15 @@ class WSHandler(tornado.websocket.WebSocketHandler):
         print 'message received:  %s' % message
 		
         # Reverse Message and send it back
+        ret='Неудача'
+        if(arg[0]=='add'){
         arg=message.split(' ')
         ret=dtcis_read_random.read_well(arg[0],arg[1],arg[2],arg[3],arg[4])
-        print 'sending back message: %s' % message[::-1]
+        print 'sending back message: %s' % message[::-1]}
+        if(arg[0]=='del'){
+        arg=message.split(' ')
+        ret=dtcis_read_random.read_well(arg[0],arg[1],arg[2],arg[3],arg[4])
+        print 'sending back message: %s' % message[::-1]}
         self.write_message(ret)
  
     def on_close(self):
