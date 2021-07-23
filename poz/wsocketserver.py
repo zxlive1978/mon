@@ -17,7 +17,6 @@ class WSHandler(tornado.websocket.WebSocketHandler):
       
     def on_message(self, message):
         print 'message received:  %s' % message
-		
         # Reverse Message and send it back
         ret='Неудача'
         arg=message.split(' ')
