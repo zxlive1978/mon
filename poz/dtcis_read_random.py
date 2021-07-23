@@ -18,29 +18,6 @@ import zipfile
 from datetime import datetime
 # from datetime import timezone
 
-def readdd_well(nametime, table, start, stop, whathdo):
-
-		# import subprocess
-		# program = "notepad.exe"
-		# process = subprocess.Popen(program)
-		
-		nametime="/var/www/html/mon/poz/readrandom/"+nametime
-		# print ('suck')
-		# распаковка архива
-		zipFile = zipfile.ZipFile(nametime, 'r')
-		zipFile.extractall()
-		zipFile.close()
-		
-		# удаление dep lst
-		# cur_arch=nametime.replace('.zip','.lst')
-		# os.remove(cur_arch)
-		# cur_arch=nametime.replace('.zip','.dep')
-		# os.remove(cur_arch)
-		# вывод
-		# print (nametime+' '+table+' '+start +' '+ stop+' '+whathdo)
-		# print (nametime, table, start, stop, whathdo)
-		# exit()
-
 
 def read_well(whathdo, nametime, table, start, stop):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
@@ -1132,30 +1109,27 @@ def read_well(whathdo, nametime, table, start, stop):
 		os.remove(cur_arch)
 
 		return('Данные внесены!')
-		if (str(whathdo) == 'add'):
-			# print (nametime, table, start, stop, whathdo)
-			path_to_work = "/var/www/html/mon/poz/readrandom/"
+		
+	if (str(whathdo) == 'del'):
+		db_name=table
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		cursor = db.cursor()
+		# print (nametime, table, start, stop, whathdo)
+		path_to_work = "/var/www/html/mon/poz/readrandom/"
 
-			disp_time = 18000 + 10800 + 3600
-			dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
-			start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
-			# print (start)
-			
+		disp_time = 18000 + 10800 + 3600
+		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
+		start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
+		# print (start)
+		
 
-			dt = datetime.strptime(stop, '%H:%M:%S-%Y-%m-%d')
-			stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
+		dt = datetime.strptime(stop, '%H:%M:%S-%Y-%m-%d')
+		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
 
-			sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
-					cursor.execute(sql)
-					db.commit()
-				ii=ii+1
-			
-				# except:
-				# 	a=0
-				# finally:
-				# 	a=0
-				
-			db.close()
+		sql = "INSERT INTO "+db_name+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
+		cursor.execute(sql)
+		db.commit()
+		db.close()
 
 		# вывод
 	# 	print ('dsaddsd')
