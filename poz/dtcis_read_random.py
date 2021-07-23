@@ -1131,6 +1131,7 @@ def read_well(whathdo, nametime, table, start, stop):
 		cursor.execute(sql)
 		db.commit()
 		db.close()
+		return('Данные удалены!')
 
 		# вывод
 	# 	print ('dsaddsd')
