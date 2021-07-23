@@ -1127,7 +1127,7 @@ def read_well(whathdo, nametime, table, start, stop):
 		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
 		# delete from Table where id > 79 and id < 296
 
-		sql = "DELETE FROM "+db_name+"WHERE Vrema >= "+start+" AND  Vrema <= "+ stop	
+		sql = "DELETE FROM "+db_name+" WHERE Vrema >= "+start+" AND  Vrema <= "+ stop	
 		cursor.execute(sql)
 		db.commit()
 		db.close()
