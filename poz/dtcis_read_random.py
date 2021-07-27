@@ -1102,7 +1102,7 @@ def read_well(whathdo, nametime, table, start, stop):
 			
 		db.close()
 
-		# удаление dep lst
+		#  удаление dep lst
 		cur_arch=path_to_work+nametime.replace('.zip','.lst')
 		os.remove(cur_arch)
 		cur_arch=path_to_work+nametime.replace('.zip','.dep')
