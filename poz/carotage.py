@@ -38,7 +38,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				print(b)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400))):
+				if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
 					carot=''
 					if (b.find('PTS')>0):
 						carot='PTS'
@@ -47,6 +47,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					if (b.find('LM')>0):
 						carot='LM'
 					if (b.find('PROF')>0):
+						carot='PROF'
+					if (b.find('PFOF')>0):
 						carot='PROF'
 					if (b.find('RK')>0):
 						carot='RK'
