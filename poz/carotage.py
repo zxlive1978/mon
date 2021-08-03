@@ -30,16 +30,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 		output = subprocess.check_output("/usr/bin/find " +share +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			b=a.decode('utf-8').upper()
-			# print(a)
-			#png
-			# if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
-			# 	statbuf = os.stat(a)
-			# 	if ((statbuf.st_mtime>(time.time()-86400))):
-			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
-			# 		print(a)
-			# 		print(names)
-			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-			# 		# shutil.copy('"'+a+'"', '"'+names+'"')
+			
 
 			# LAS
 			# if (a.find(shablon2)>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
@@ -65,133 +56,46 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
-			if (b.find('.TXT')>0  and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
-				print(b)
-				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-				statbuf = os.stat(a)
-				# if ((statbuf.st_mtime>(time.time()-86400))):
-				carot=''
-				if (b.find(u'ИНКЛ')>0):
-					carot='INC'
-				if (b.find('INC')>0):
-					carot='INC'
-				
-				if (carot!=''):
-					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
-					
-					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-
-			if ((b.find('.DOC')>0 or b.find('.XLS')>0) and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
-				print(b)
-				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-				statbuf = os.stat(a)
-				# if ((statbuf.st_mtime>(time.time()-86400))):
-				carot=''
-				if (b.find(u'ИНКЛ')>0):
-					carot='INC'
-				if (b.find('INC')>0):
-					carot='INC'
-
-
-				
-				if (carot!=''):
-					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
-					
-					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-					subprocess.call('/usr/bin/unoconv -f txt -e PageRange=1 '+'"'+names+'"', shell=True)
-					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
-
-			# if (b.find('.DOC')>0 ):
-			# 	print(a)
-			# 	# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
+			# ИНКЛИНОМЕРИЯ
+			# if (b.find('.TXT')>0  and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
+			# 	print(b)
 			# 	statbuf = os.stat(a)
-			# 	# if ((statbuf.st_mtime>(time.time()-86400))):
+			# 	carot=''
+			# 	if (b.find(u'ИНКЛ')>0):
+			# 		carot='INC'
+			# 	if (b.find('INC')>0):
+			# 		carot='INC'
+				
+			# 	if (carot!=''):
+			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
+					
+			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+
+			# if ((b.find('.DOC')>0 or b.find('.XLS')>0) and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
+			# 	print(b)
+			# 	statbuf = os.stat(a)
 			# 	carot=''
 			# 	if (b.find(u'ИНКЛ')>0):
 			# 		carot='INC'
 			# 	if (b.find('INC')>0):
 			# 		carot='INC'
 
-				
-			# 	if (carot!=''):
-			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
-					
-			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-			
-			# if (b.find('.DOCX')>0 ):
-			# 	print(a)
-			# 	# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
-			# 	statbuf = os.stat(a)
-			# 	# if ((statbuf.st_mtime>(time.time()-86400))):
-			# 	carot=''
-			# 	if (b.find(u'ИНКЛ')>0):
-			# 		carot='INC'
-			# 	if (b.find('INC')>0):
-			# 		carot='INC'
 
 				
 			# 	if (carot!=''):
 			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
 					
 			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-				
-			# 		# subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
-			# 		# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
+			# 		subprocess.call('/usr/bin/unoconv -f txt -e PageRange=1 '+'"'+names+'"', shell=True)
+			# 		subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
-	# for a in output.split("\n\n"):
-	# 	odnadir=a.split("\n")
-	# 	dir1=odnadir[0]
-	# 	namefile=''
-	# 	for i in odnadir:
-	# 		if i.find(":")<0:
-	# 			namefile=i
-	# 			print (u"".format(dir+namefile))
 		
-		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
-		# subprocess.call('cp -R "'+share+'" "'+dirr+'"', shell=True)
-		# for root, dirs, files in os.walk(share, topdown=False):
-		# 		for name in files:
-		# 			print(share)
-		# 			print(name)
-		# 			if fnmatch.fnmatch(name, shablon):
-		# 				statbuf = os.stat(share+name)
-		# 				if ((statbuf.st_mtime>(time.time()-86400))):
-		# 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-		# 					shutil.copy(share+name, names)
-		# 					subprocess.call('unoconv -f html -e PageRange=1 '+names, shell=True)
-
-		# 					subprocess.call('cd "'+dirr+lastdir+'" && ls && mv "' +name+'" "'+name[-15:-5]+skv+'.xlsx"'+' && unoconv -f html -e PageRange=1 "'+name[-15:-5]+skv+'.xlsx"', shell=True)
-
-			# path = sorted(Path(dirr).glob(shablon))
-		# filles=list(map(str, path))
-		# for fil in filles:
-		# 	# statbuf = os.stat(fil)
-		# 	# if ((statbuf.st_mtime>(time.time()-86400))):
-		# 	print("Modification time: {}".format(statbuf.st_mtime))
-		# 		# names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' АГКМ-'+skv+''+'.xlsx'
-		# 		# shutil.copy(fil, names)
-		# 	subprocess.call('unoconv -f html -e PageRange=1 '+fil, shell=True)
-			
-			
 			
 		exit
 	except:
 		# print ("неудача")
 		exit
-		# unoconv -f html -e PageRange=1 542.xlsx
-		# wget --quiet https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    	# tar vxf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    	# cp wkhtmltox/bin/wk* /usr/local/bin/ && \
-    	# rm -rf wkhtmltox
-		# pdfkit.from_url('http://google.com', 'out.pdf')
-		# pdfkit.from_file(host, '542pdf.pdf')
-		# pdfkit.from_string('Hello!', 'out.pdf')
-	
-	# 	print(reset_vpn_host + ": Error!")
-# c=5	
-# r,t=speed("192.168.146.49","5188",int(c))
-# print r,t
-# pozreboot(sys.argv[1],"5188", 10,sys.argv[1])
+		
 
 
 # 828 /АРХИВ/Архив скв.828/ pts. lm.las
