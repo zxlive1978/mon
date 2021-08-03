@@ -137,12 +137,14 @@ t208.start()
 
 
 
-# 1-------------449
-# t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
-# t201.start()
+# \c$\Users\user\Desktop\Мониторинг
+# \d$\СНГС №14\АРХИВЫ СКВАЖИН\Архив скв.№449\Материал в КИП
+# 449
+t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Материал в КИП/"',"СКВ 449 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-449'])
+t201.start()
 
 
-# t201.join(1000)
+t201.join(1000)
 t202.join(1000)
 t204.join(1000)
 t203.join(1000)
@@ -153,6 +155,7 @@ t208.join(1000)
 
 
 
+if t201.is_alive(): t201.terminate()
 if t202.is_alive(): t202.terminate()
 
 
