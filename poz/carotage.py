@@ -106,7 +106,7 @@ t202.start()
 
 
 #542 Обработчик c: /mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/ bk.LAS Prof.LAS rk.LAS
-t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
+t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
 t204.start()
 
 # ------------------------------------------------------------------------
