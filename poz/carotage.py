@@ -132,10 +132,10 @@ t207.start()
 
 # ------------------------------------------------------------------------
 # 1РФ /mnt/83oc/Users/User/Desktop
-t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
-t207.start()
+t208 = Process(target=read_well, args=['"/mnt/4450oc/d/Скважина 1-РФ/Материал в контору/"',"Скв №1-РФ Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-1РФ'])
+t208.start()
 
-d\Скважина 1-РФ\Материал в контору\
+
 
 # 1-------------449
 # t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
@@ -149,6 +149,7 @@ t203.join(1000)
 t205.join(1000)
 # t206.join(1000)
 t207.join(1000)
+t208.join(1000)
 
 
 
@@ -168,6 +169,8 @@ if t205.is_alive(): t205.terminate()
 
 
 if t207.is_alive(): t207.terminate()
+
+if t208.is_alive(): t208.terminate()
 
 # if t201.is_alive(): t201.terminate()
 
