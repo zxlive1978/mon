@@ -62,7 +62,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				print(b+' ку!')
 				statbuf = os.stat(a)
 				# if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
-				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot	
+				names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.INC'	
 				subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
 				# if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
