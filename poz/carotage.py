@@ -130,7 +130,12 @@ t205.start()
 t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
 t207.start()
 
+# ------------------------------------------------------------------------
+# 1РФ /mnt/83oc/Users/User/Desktop
+t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
+t207.start()
 
+d\Скважина 1-РФ\Материал в контору\
 
 # 1-------------449
 # t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/"',"СКВ 449 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-449'])
