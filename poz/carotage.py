@@ -57,12 +57,12 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 						subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
 			# ИНКЛИНОМЕРИЯ
-			if (b.find('.TXT')>0  and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
+			if (b.find('.TXT')>0  and (b.find(u'ИНК')>0 or  (b.find('INC')>0))):
 				print(b)
 				statbuf = os.stat(a)
 				if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
 					carot=''
-					if (b.find(u'ИНКЛ')>0):
+					if (b.find(u'ИНК')>0):
 						carot='INC'
 					if (b.find('INC')>0):
 						carot='INC'
@@ -72,24 +72,24 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 						
 						subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
-			# if ((b.find('.DOC')>0 or b.find('.XLS')>0) and (b.find(u'ИНКЛ')>0 or  (b.find('INC')>0))):
-			# 	print(b)
-			# 	statbuf = os.stat(a)
-			# 	# if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
-			# 	carot=''
-			# 	if (b.find(u'ИНКЛ')>0):
-			# 		carot='INC'
-			# 	if (b.find('INC')>0):
-			# 		carot='INC'
+			if ((b.find('.DOC')>0 or b.find('.XLS')>0) and (b.find(u'ИНК')>0 or  (b.find('INC')>0))):
+				print(b)
+				statbuf = os.stat(a)
+				# if ((statbuf.st_mtime>(time.time()-259200))): # 3 суток
+				carot=''
+				if (b.find(u'ИНК')>0):
+					carot='INC'
+				if (b.find('INC')>0):
+					carot='INC'
 
 
 				
-			# 	if (carot!=''):
-			# 		names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
+				if (carot!=''):
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
 					
-			# 		subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-			# 		subprocess.call('/usr/bin/unoconv -f txt   -e PageRange=0-2 '+'"'+names+'"', shell=True)
-			# 		subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
+					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
+					# subprocess.call('/usr/bin/unoconv -f txt   -e PageRange=0-2 '+'"'+names+'"', shell=True)
+					subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 		
 	
