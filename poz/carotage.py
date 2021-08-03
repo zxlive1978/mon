@@ -85,10 +85,12 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 
 				
 				if (carot!=''):
+					htmlname=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.html'
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
 					
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
-					subprocess.call('/usr/bin/unoconv -f txt  '+'"'+names+'"', shell=True)
+					subprocess.call('/usr/bin/unoconv -f html  '+'"'+names+'"', shell=True)
+					subprocess.call('/usr/bin/unoconv -f txt  '+'"'+htmlname+'"', shell=True)
 					# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 		
