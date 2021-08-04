@@ -99,6 +99,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			# 			subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 
 		# CREATE TABLE table2 SELECT * FROM table1
+		# SHOW TABLES LIKE 'tablename'
 	
 		exit
 	except:
