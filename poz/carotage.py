@@ -13,7 +13,7 @@ from datetime import date
 from datetime import datetime
 import fnmatch
 
-def read_well(share,shablon1,shablon2,dirr,skv):
+def start_ws(share,shablon1,shablon2,dirr,skv):
 	dt_now =datetime.utcfromtimestamp(time.time()-86400) # date.today()
 	#print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
@@ -110,25 +110,25 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 
 
 # 828 /АРХИВ/Архив скв.828/ pts. lm.las
-t202 = Process(target=read_well, args=['"/mnt/3oc//АРХИВ/Архив скв.828/"',"СКВ 828 Пл АГКМ сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-828'])
+t202 = Process(target=start_ws, args=['"/mnt/3oc//АРХИВ/Архив скв.828/"',"СКВ 828 Пл АГКМ сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-828'])
 t202.start()
 
 
 
 
 #542 Обработчик c: /mnt/915oc/Users/user/Desktop/ГИС 542/Мониторинг/ bk.LAS Prof.LAS rk.LAS
-t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
+t204 = Process(target=start_ws, args=['"/mnt/915oc/Users/user/Desktop/Мониторинг/"',"СКВ 542 Пл АГКМ Сводка", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-542'])
 t204.start()
 
 # ------------------------------------------------------------------------
 # 938
-t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-938'])
+t203 = Process(target=start_ws, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-938'])
 t203.start()
 
 
 # ------------------------------------------------------------------------
 # 632
-t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Мониторинг/"',"СКВ 632 АГКМ сводка ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-632'])
+t205 = Process(target=start_ws, args=['"/mnt/629oc/Users/User/Desktop/Мониторинг/"',"СКВ 632 АГКМ сводка ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-632'])
 t205.start()
 
 # 1------------------------------------------------------------------------
@@ -138,12 +138,12 @@ t205.start()
 
 # ------------------------------------------------------------------------
 # 222 /mnt/83oc/Users/User/Desktop
-t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
+t207 = Process(target=start_ws, args=['"/mnt/83oc/Users/User/Desktop/"',"Скв 222 Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-222'])
 t207.start()
 
 # ------------------------------------------------------------------------
 # 1РФ /mnt/83oc/Users/User/Desktop
-t208 = Process(target=read_well, args=['"/mnt/4450oc/d/Скважина 1-РФ/Материал в контору/"',"Скв №1-РФ Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-1РФ'])
+t208 = Process(target=start_ws, args=['"/mnt/4450oc/d/Скважина 1-РФ/Материал в контору/"',"Скв №1-РФ Пл АГКМ Сводка за ", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-1РФ'])
 t208.start()
 
 
@@ -151,7 +151,7 @@ t208.start()
 # \c$\Users\user\Desktop\Мониторинг
 # \d$\СНГС №14\АРХИВЫ СКВАЖИН\Архив скв.№449\Материал в КИП
 # 449
-t201 = Process(target=read_well, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Материал в КИП/"',"СКВ 449 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-449'])
+t201 = Process(target=start_ws, args=['"/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Материал в КИП/"',"СКВ 449 Пл АГКМ Сводка за", ".LAS","/var/www/html/mon/poz/carotage",'АГКМ-449'])
 t201.start()
 
 
