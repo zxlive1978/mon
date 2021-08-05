@@ -12,42 +12,46 @@ This is a simple Websocket Echo server that uses the Tornado websocket handler.
 Please run `pip install tornado` with python of version 2.7.9 or greater to install tornado.
 This program will echo back the reverse of whatever it recieves.
 Messages are output to the terminal for debuggin purposes. 
-''' 
- 
+'''
+
+
 class WSHandler(tornado.websocket.WebSocketHandler):
-    def open(self):
-        print 'new connection'
-      
-    def on_message(self, message):
-        print 'message received:  %s' % message
-        # Reverse Message and send it back
-        ret='Неудача'
-        arg=message.split(' ')
-        if(arg[0]=='add'):
-           ret=dtcis_read_random.read_well(arg[0],arg[1],arg[2],arg[3],arg[4])
-           print 'sending back message: %s' % message[::-1]
-        if(arg[0]=='del'):
-             ret=dtcis_read_random.read_well(arg[0],arg[1],arg[2],arg[3],arg[4])
-             print 'sending back message: %s' % message[::-1]
-        self.write_message(ret)
- 
-    def on_close(self):
-        print 'connection closed'
- 
-    def check_origin(self, origin):
-        return True
- 
+	def open(self):
+		print 'new connection'
+
+	def on_message(self, message):
+		print 'message received:  %s' % message
+		# Reverse Message and send it back
+		ret = 'Неудача'
+		arg = message.split(' ')
+		if(arg[0] == 'add'):
+			ret = dtcis_read_random.read_well(
+				arg[0], arg[1], arg[2], arg[3], arg[4])
+			print 'sending back message: %s' % message[::-1]
+		if(arg[0] == 'del'):
+			ret = dtcis_read_random.read_well(
+				arg[0], arg[1], arg[2], arg[3], arg[4])
+			print 'sending back message: %s' % message[::-1]
+		self.write_message(ret)
+
+	def on_close(self):
+		print 'connection closed'
+
+	def check_origin(self, origin):
+		return True
+
+
 application = tornado.web.Application([
-    (r'/ws', WSHandler),
+	(r'/ws', WSHandler),
 ])
- 
- 
+
+
 if __name__ == "__main__":
-    http_server = tornado.httpserver.HTTPServer(application,ssl_options={
-    "certfile": "/etc/letsencrypt/live/hydrofalll.ddns.net/cert.pem",
-    "keyfile":  "/etc/letsencrypt/live/hydrofalll.ddns.net/privkey.pem"})
-    http_server.listen(3333)
-    myIP = 'hydrofalll.ddns.net'
+	http_server = tornado.httpserver.HTTPServer(application, ssl_options={
+		"certfile": "/etc/letsencrypt/live/hydrofalll.ddns.net/cert.pem",
+		"keyfile":  "/etc/letsencrypt/live/hydrofalll.ddns.net/privkey.pem"})
+	http_server.listen(3333)
+	myIP = 'hydrofalll.ddns.net'
 	# socket.gethostbyname(socket.gethostname())
-    print '*** Websocket Server Started at %s***' % myIP
-    tornado.ioloop.IOLoop.instance().start()
+	print '*** Websocket Server Started at %s***' % myIP
+	tornado.ioloop.IOLoop.instance().start()
