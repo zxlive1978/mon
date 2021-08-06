@@ -16,13 +16,29 @@ import shutil
 def read_carot(sbor,table):
 	#print os.listdir(sbor)
 	# try:
+
+		# Создание базы на основе другой(шаблон)
+		# CREATE TABLE table2 SELECT * FROM table1
+		# Проверка, существует ли база
+		# SHOW TABLES LIKE 'tablename'
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
+
+
 		sql = "TRUNCATE "+db_name
 		cursor.execute(sql)
 		db.commit()
 		db.close()
+		if (names)
+		#чтение файл
+		with open(names, "r", encoding = "utf-8" ) as file:
+			for line in file:
+				print (line,end='')
+		
+		# удалить файл
+		# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
+		
 
 		file_ext='*.dep'
 		cur_time='STORE.dep'
