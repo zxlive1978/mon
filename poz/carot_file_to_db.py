@@ -21,17 +21,21 @@ def read_carot(name):
 		# CREATE TABLE table2 SELECT * FROM table1
 		# Проверка, существует ли база
 		# SHOW TABLES LIKE 'tablename'
-		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
-		for a in output.split("\n"):
-			print (a)
-		
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
 
+		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
+		for filename in output.split("\n"):
+			
+			sql = "SHOW TABLES LIKE "+"'"+filename+"'"
+			isbe=cursor.execute(sql)
+			print (filename+' '+str(isbe))
+		
+		
 
-		sql = "SHOW TABLES LIKE "+db_name
-		cursor.execute(sql)
+
+		
 		db.commit()
 		db.close()
 
