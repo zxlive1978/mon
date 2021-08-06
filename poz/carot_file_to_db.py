@@ -24,7 +24,7 @@ def read_carot(dirr):
 		# Проверка, существует ли база
 		# SHOW TABLES LIKE 'tablename'
 		# db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8', use_unicode = True)
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset="utf8")
 		cursor = db.cursor()
 
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
@@ -35,7 +35,8 @@ def read_carot(dirr):
 			if (isbe==0):
 				if (filename.find('PTS')>0):
 					# Создание базы на основе другой(шаблон)
-					sql = sql = "CREATE TABLE "+"'"+filename+"' "+"SELECT * FROM 'shablon_carot_pts'"
+					fname=unicode(filename, "utf-8")
+					sql = sql = "CREATE TABLE "+"'pozitron."+'ssss'+"' "+"SELECT * FROM 'shablon_carot_pts'"
 					cursor.execute(sql)
 					db.commit()
 					print (filename)
