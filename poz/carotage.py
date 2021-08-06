@@ -59,7 +59,7 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 					carot='RK'
 				
 				if (carot!=''):
-					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+'_'+skv+'_'+'_'+carot
+					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+'_'+skv+'_'+carot
 					#Копирование файла
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 						
