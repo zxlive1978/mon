@@ -21,7 +21,7 @@ def read_carot(name):
 		# CREATE TABLE table2 SELECT * FROM table1
 		# Проверка, существует ли база
 		# SHOW TABLES LIKE 'tablename'
-		db_name=table
+		# db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
 
