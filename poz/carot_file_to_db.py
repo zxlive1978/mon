@@ -34,12 +34,17 @@ def read_carot(dirr):
 			# isbe=cursor.execute(sql)
 			# if (isbe==0):
 			if (filename.find('PTS')>0):
-				# Создание базы на основе другой(шаблон)
-				# fname=unicode(filename, "utf-8")
-				sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
-				cursor.execute(sql)
-				db.commit()
-				print (filename)
+
+				with open(dirr+filename, 'r') as fp:
+    				for line in fp:
+        				print(line.rstrip('\n'))
+
+
+				# # Создание базы на основе другой(шаблон)
+				# sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
+				# cursor.execute(sql)
+				# db.commit()
+				# print (filename)
 		
 		
 
@@ -748,7 +753,7 @@ def read_carot(dirr):
 
 
 #Внесение в базу
-read_carot("/var/www/html/mon/poz/carotage")
+read_carot("/var/www/html/mon/poz/carotage/")
 
 # #threading.TIMEOUT_MAX=5
 # #Потоки
