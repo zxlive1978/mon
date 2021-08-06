@@ -82,7 +82,7 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 						carot='INC'
 					
 					if (carot!=''):
-						names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.'+carot
+						names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+'_'+skv+'_'+'_'+carot
 						
 						subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 
