@@ -12,6 +12,7 @@ from time import mktime
 from datetime import date
 from datetime import datetime
 import fnmatch
+import carot_file_to_db
 
 def start_ws(share,shablon1,shablon2,dirr,skv):
 	dt_now =datetime.utcfromtimestamp(time.time()-86400) # date.today()
