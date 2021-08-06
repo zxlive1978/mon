@@ -13,7 +13,7 @@ import time
 from multiprocessing import Process
 import shutil
 
-def read_carot(sbor,table):
+def read_carot(name):
 	#print os.listdir(sbor)
 	# try:
 
@@ -21,23 +21,23 @@ def read_carot(sbor,table):
 		# CREATE TABLE table2 SELECT * FROM table1
 		# Проверка, существует ли база
 		# SHOW TABLES LIKE 'tablename'
+		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
+		for a in output.split("\n"):
+			print (a)
+		
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
 
 
-		sql = "TRUNCATE "+db_name
+		sql = "SHOW TABLES LIKE "+db_name
 		cursor.execute(sql)
 		db.commit()
 		db.close()
 
 
-		# if (names)
-		#чтение файл
-		with open(names, "r", encoding = "utf-8" ) as file:
-			for line in file:
-				print( line+"/n" )
-
+		
+		'''
 		# удалить файл
 		# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 		
@@ -729,6 +729,7 @@ def read_carot(sbor,table):
 		#print db_name
 	# except:
 	# 	return
+	'''
 	
 	
 # #threading.TIMEOUT_MAX=5
