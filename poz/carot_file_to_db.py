@@ -32,7 +32,9 @@ def read_carot(dirr):
 			
 			sql = "SHOW TABLES LIKE "+"'"+filename+"'"
 			isbe=cursor.execute(sql)
-			print (filename+' '+str(isbe))
+			if (isbe=='0'):
+
+				print (filename)
 		
 		
 
