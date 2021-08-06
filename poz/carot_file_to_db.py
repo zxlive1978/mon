@@ -54,7 +54,7 @@ def read_carot(dirr):
 							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ("+str(linesplit[0])+","+str(linesplit[1])+","+str(linesplit[2])+","+str(linesplit[3])+","+str(linesplit[4])+","+str(linesplit[5])+")"	
 							cursor.execute(sql)
 							db.commit()
-						if (line.find('~ASCII Log Data')>0):
+						if (line.find('ASCI')>0):
 							dataflow=True
 
 
