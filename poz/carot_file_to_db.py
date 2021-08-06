@@ -13,8 +13,9 @@ import time
 from multiprocessing import Process
 import shutil
 import subprocess
+from multiprocessing import Process
 
-def read_carot(name):
+def read_carot(dirr):
 	#print os.listdir(sbor)
 	# try:
 
@@ -760,10 +761,10 @@ def read_carot(name):
 # if t630.is_alive(): t630.terminate()
 
 #632
-t631 = Process(target=read_carot, args=["/mnt/631","s629depth"])
-t631.start()
-t631.join(180)
-if t631.is_alive(): t631.terminate()
+# t631 = Process(target=read_carot, args=["/mnt/631","s629depth"])
+# t631.start()
+# t631.join(180)
+# if t631.is_alive(): t631.terminate()
 
 
 # #71
