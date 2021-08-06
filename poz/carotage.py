@@ -12,13 +12,12 @@ from time import mktime
 from datetime import date
 from datetime import datetime
 import fnmatch
-import carot_file_to_db
 
 
 
 
 def start_ws(share,shablon1,shablon2,dirr,skv):
-	'''
+	
 	dt_now =datetime.utcfromtimestamp(time.time()-86400) # date.today()
 	#print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
@@ -28,8 +27,8 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 	# month_now1 = str(dt_now)[5:7]
 	# day_now1 = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
-	'''
-	'''
+	
+	
 	try:
 	
 		# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
@@ -107,16 +106,14 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 			# 			subprocess.call('/usr/bin/unoconv -f html  '+'"'+names+'"', shell=True)
 			# 			subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 			
-	'''
 	
-	'''
+	
 		exit
 	except:
 		# print ("неудача")
 		exit
-	'''
-#Внесение в базу
-carot_file_to_db.read_carot("/var/www/html/mon/poz/carotage")
+
+
 		
 
 

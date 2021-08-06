@@ -737,7 +737,12 @@ def read_carot(dirr):
 	# 	return
 	'''
 	
-	
+
+
+
+#Внесение в базу
+carot_file_to_db.read_carot("/var/www/html/mon/poz/carotage")
+
 # #threading.TIMEOUT_MAX=5
 # #Потоки
 # #406
