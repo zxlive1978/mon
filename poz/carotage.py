@@ -115,7 +115,8 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 		# print ("неудача")
 		exit
 	'''
-	carot_file_to_db.read_carot(dirr)
+#Внесение в базу
+carot_file_to_db.read_carot("/var/www/html/mon/poz/carotage")
 		
 
 
