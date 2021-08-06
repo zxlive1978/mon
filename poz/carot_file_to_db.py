@@ -24,7 +24,7 @@ def read_carot(dirr):
 		# Проверка, существует ли база
 		# SHOW TABLES LIKE 'tablename'
 		# db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8', use_unicode = True)
 		cursor = db.cursor()
 
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
