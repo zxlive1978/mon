@@ -105,9 +105,9 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 			# 			subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 			
 	'''
-		output = subprocess.check_output("/usr/bin/find " +dirr +" -print", stderr=subprocess.STDOUT, shell=True)
-		for a in output.split("\n"):
-			print (a)
+	output = subprocess.check_output("/usr/bin/find " +dirr +" -print", stderr=subprocess.STDOUT, shell=True)
+	for a in output.split("\n"):
+		print (a)
 	'''
 		exit
 	except:

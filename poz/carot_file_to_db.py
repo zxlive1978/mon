@@ -30,7 +30,9 @@ def read_carot(sbor,table):
 		cursor.execute(sql)
 		db.commit()
 		db.close()
-		if (names)
+
+
+		# if (names)
 		#чтение файл
 		with open(names, "r", encoding = "utf-8" ) as file:
 			for line in file:
