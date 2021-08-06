@@ -58,11 +58,11 @@ def read_carot(dirr):
 							dsstr=''
 							for st in ds:
 								dsstr=dsstr+st+','
-							dsstr=dsstr[:-1]
+							dssstr=dsstr[:-1]
 
 							print(linesplit)
 							# Добавление записи
-							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ( "+dsstr+" )"	
+							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ( "+dssstr+" )"	
 							cursor.execute(sql)
 							db.commit()
 						if (line.find('ASCII')>0):
