@@ -33,7 +33,7 @@ def read_carot(dirr):
 			sql = "SHOW TABLES LIKE "+"'"+filename+"'"
 			isbe=cursor.execute(sql)
 			if (isbe==0):
-				if (b.find('PTS')>0):
+				if (filename.find('PTS')>0):
 					# Создание базы на основе другой(шаблон)
 					sql = sql = "CREATE TABLE "+"'"+filename+"' "+"SELECT * FROM 'shablon_carot_pts'"
 					cursor.execute(sql)
