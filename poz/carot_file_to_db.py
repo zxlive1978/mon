@@ -39,6 +39,9 @@ def read_carot(dirr):
 				sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
 				cursor.execute(sql)
 				db.commit()
+				sql = "TRUNCATE "+"`"+filename+"`"
+				cursor.execute(sql)
+				db.commit()
 				# print (filename)
 				dataflow=False
 				with open(dirr+filename, 'r') as fp:
@@ -47,10 +50,11 @@ def read_carot(dirr):
 						if (dataflow):
 							linesplit=line.split()
 							print(linesplit)
-							# break
-							# sql = "INSERT INTO "+filename+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
-							# cursor.execute(sql)
-						if (line.find('ASCI')>0):
+							# Добавление записи
+							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ("+str(linesplit[0])+","+str(linesplit[1])+","+str(linesplit[2])+","+str(linesplit[3])+","+str(linesplit[4])+","+str(linesplit[5])+")"	
+							cursor.execute(sql)
+							db.commit()
+						if (line.find('~ASCII Log Data')>0):
 							dataflow=True
 
 
