@@ -30,16 +30,16 @@ def read_carot(dirr):
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
 			# Проверка, существует ли база
-			sql = "SHOW TABLES LIKE "+"'"+filename+"'"
-			isbe=cursor.execute(sql)
-			if (isbe==0):
-				if (filename.find('PTS')>0):
-					# Создание базы на основе другой(шаблон)
-					fname=unicode(filename, "utf-8")
-					sql = sql = "CREATE TABLE "+"'"+"ssss"+"' "+"SELECT * FROM 'shablon_carot_pts'"
-					cursor.execute(sql)
-					db.commit()
-					print (filename)
+			# sql = "SHOW TABLES LIKE "+"'"+filename+"'"
+			# isbe=cursor.execute(sql)
+			# if (isbe==0):
+			if (filename.find('PTS')>0):
+				# Создание базы на основе другой(шаблон)
+				# fname=unicode(filename, "utf-8")
+				sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
+				cursor.execute(sql)
+				db.commit()
+				print (filename)
 		
 		
 
