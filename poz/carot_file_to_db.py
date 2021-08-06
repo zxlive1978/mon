@@ -33,18 +33,29 @@ def read_carot(dirr):
 			# sql = "SHOW TABLES LIKE "+"'"+filename+"'"
 			# isbe=cursor.execute(sql)
 			# if (isbe==0):
+			dataflow=False
 			if (filename.find('PTS')>0):
+				# # Создание базы на основе другой(шаблон)
+				sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
+				cursor.execute(sql)
+				db.commit()
+				# print (filename)
 
 				with open(dirr+filename, 'r') as fp:
-    				for line in fp:
-        				print(line.rstrip('\n'))
+					for line in fp:
+						print(line.rstrip('\n'))
+						if (dataflow):
+							linesplit=line.split()
+							print(line)
+							# sql = "INSERT INTO "+filename+"(Vrema, Wkp, Wdol, Mpot, Npot, Pbx, Qbx, Talblok, C1C5, C1, Xn1, Xn2, Potok, Tbix, V1, V2, V3, V4, Vdol, Vobj, Zaboj, Instr, Vinstr, Dmk, Vbur, Xn3, V5, V6, C2, C3, C4, C5, Kalcid, Dolomit, C1sh, C2sh, C3sh, C4sh, C5sh, C1C5sh, Minbx, Minbix) VALUE ("+str(Vrema)+","+str(Wkp)+","+str(Wdol)+","+str(Mpot)+","+str(Npot)+","+str(Pbx)+","+str(Qbx)+","+str(Talblok)+","+str(C1C5)+","+str(C1)+","+str(Xn1)+","+str(Xn2)+","+str(Potok)+","+str(Tbix)+","+str(V1)+","+str(V2)+","+str(V3)+","+str(V4)+","+str(Vdol)+","+str(Vobj)+","+str(Zaboj)+","+str(Instr)+","+str(Vinstr)+","+str(Dmk)+","+str(Vbur)+","+str(Xn3)+","+str(V5)+","+str(V6)+","+str(C2)+","+str(C3)+","+str(C4)+","+str(C5)+","+str(Kalcid)+","+str(Dolomit)+","+str(C1sh)+","+str(C2sh)+","+str(C3sh)+","+str(C4sh)+","+str(C5sh)+","+str(C1C5sh)+","+str(Minbx)+","+str(Minbix)+")"	
+							# cursor.execute(sql)
+						if (line=='~ASCII Log Data'):
+							dataflow=True
 
 
-				# # Создание базы на основе другой(шаблон)
-				# sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
-				# cursor.execute(sql)
-				# db.commit()
-				# print (filename)
+
+
+				
 		
 		
 
