@@ -13,7 +13,7 @@ import time
 from multiprocessing import Process
 import shutil
 
-def read_well(sbor,table):
+def read_carot(sbor,table):
 	#print os.listdir(sbor)
 	# try:
 		db_name=table
@@ -736,7 +736,7 @@ def read_well(sbor,table):
 # if t630.is_alive(): t630.terminate()
 
 #632
-t631 = Process(target=read_well, args=["/mnt/631","s629depth"])
+t631 = Process(target=read_carot, args=["/mnt/631","s629depth"])
 t631.start()
 t631.join(180)
 if t631.is_alive(): t631.terminate()
