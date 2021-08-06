@@ -36,8 +36,8 @@ def read_carot(sbor,table):
 		#чтение файл
 		with open(names, "r", encoding = "utf-8" ) as file:
 			for line in file:
-				print( line, end="" )
-						
+				print( line+"/n" )
+
 		# удалить файл
 		# subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
 		
