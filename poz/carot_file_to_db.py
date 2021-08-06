@@ -36,7 +36,7 @@ def read_carot(dirr):
 				if (filename.find('PTS')>0):
 					# Создание базы на основе другой(шаблон)
 					fname=unicode(filename, "utf-8")
-					sql = sql = "CREATE TABLE "+"'pozitron."+'ssss'+"' "+"SELECT * FROM 'shablon_carot_pts'"
+					sql = sql = "CREATE TABLE "+"'"+"ssss"+"' "+"SELECT * FROM 'shablon_carot_pts'"
 					cursor.execute(sql)
 					db.commit()
 					print (filename)
