@@ -26,9 +26,9 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 	# day_now1 = str(dt_now)[8:10]
 	# print (month_now,' ',day_now)
 	'''
-
-	try:
 	'''
+	try:
+	
 		# output = subprocess.check_output(['программа', 'аргумент 1', '2'])
 		#output = subprocess.check_output("ls -R "+share, stderr=subprocess.STDOUT, shell=True)#.check_output(['ls', "-R", "/mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/","/dev/null"])
 		# -iname без регистра
@@ -103,8 +103,8 @@ def start_ws(share,shablon1,shablon2,dirr,skv):
 			# 			subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 			# 			subprocess.call('/usr/bin/unoconv -f html  '+'"'+names+'"', shell=True)
 			# 			subprocess.call('/bin/rm '+'"'+names+'"', shell=True)
-		
-		'''
+			
+	'''
 		output = subprocess.check_output("/usr/bin/find " +dirr +" -print", stderr=subprocess.STDOUT, shell=True)
 		for a in output.split("\n"):
 			print (a)
