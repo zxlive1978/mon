@@ -176,7 +176,7 @@ if t629.is_alive(): t629.terminate()
 # t20.join(30)
 # if t20.is_alive(): t20.terminate()
 
-# # Саратов комментарии Обработчик 908
+# # Саратов комментарии  и геология Обработчик 235
 t928 = Process(target=read_well, args=["/mnt/908o","k908","//192.168.146.99/C/Program Files/Common Files/PS Shared/Database/"])
 t928.start()
 t928.join(30)
