@@ -111,7 +111,7 @@ def read_well(sbor,table):
 		#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
 		#Типы По времени 2, По глубине, Геолог
 		type_cmt_time=int(str(cur_rec[5]))
-		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
+		if (cur_unix_time != begin_time):
 		
 			#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
 			#cur_txt_comment = str(cur_rec[15]).split("</Text>")
