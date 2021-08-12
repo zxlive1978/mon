@@ -47,25 +47,24 @@ def float_to_datetime(fl):
 def read_well(sbor,table):
 	path_to_work ="/var/www/html/mon/poz/"
 	
-	#print os.listdir(sbor)
-	#try:
-	file='WELLSITEDB.gz'
-				
-	full_path_skf=sbor+'/WELLSITEDB.gz'
-	#копирование файла с обработчика с папки c:\Program files\Common files\Ps Shared\WELLSITEDB.zip
-	#который заархивирован с помощью Reciever на той стороне
-	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
-	pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
-	print pathtocopy
-	# try:
-		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
-	shutil.copy(full_path_skf, pathtocopy)
-	# except IOError, e:
-		# print "Unable to copy file. %s" % e
+	# #print os.listdir(sbor)
+	# #try:
+	# file='WELLSITEDB.gz'
+	# full_path_skf=sbor+'/WELLSITEDB.gz'
+	# #копирование файла с обработчика с папки c:\Program files\Common files\Ps Shared\WELLSITEDB.zip
+	# #который заархивирован с помощью Reciever на той стороне
+	# # Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
+	# pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
+	# print pathtocopy
+	# # try:
+	# 	# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
+	# shutil.copy(full_path_skf, pathtocopy)
+	# # except IOError, e:
+	# 	# print "Unable to copy file. %s" % e
 			
-	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
-	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
-	print "Распаковано"
+	# #if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
+	# subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
+	# print "Распаковано"
 
 	# # --------------------------------------------------
 	# # Чтение Комментарии Logsbuilder (сейчас закомментированы!!!)
@@ -73,7 +72,8 @@ def read_well(sbor,table):
 	
 	#mdb файл в csv! только комментарии
 	#if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
-	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
+	print("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"suck.mdb"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ")
+	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"suck.mdb"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
 	print "Скопировано"
 	
 	
@@ -111,47 +111,46 @@ def read_well(sbor,table):
 		#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
 		#Типы По времени 2, По глубине, Геолог
 		type_cmt_time=int(str(cur_rec[5]))
-		if (cur_unix_time != begin_time):
+		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
 		
-			cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
-			print (cur_txt_comment)
+			#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
 			#cur_txt_comment = str(cur_rec[15]).split("</Text>")
 			#comment_line = cur_rec[15].decode('cp866')
 			#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
-			# deltxt=cur_par[30][17:]
-			# #deltxt ="gjjkjklj/jkjks/Tklk;"
+			deltxt=cur_par[30][17:]
+			#deltxt ="gjjkjklj/jkjks/Tklk;"
 			
-			# #deltxt = re.split(r'/T', deltxt)
+			#deltxt = re.split(r'/T', deltxt)
 			
-			# #print unichr(struct.unpack('>i',chr(deltxt[0][2:4].encode("hex"))))
-			# #Длина комментария 2 byte символ
-			# cmt_txt_len=abs(len(deltxt)/2)*2
-			# #cmt_txt_len=8
-			# #Финальный текст комментария
-			# finish_comment='';
-			# #print abs(cmt_txt_len /2)*2
-			# j=0
-			# while j<cmt_txt_len:
-			# 	codchr = deltxt[j:j+2]
-			# 	finish_comment+=unichr(int(struct.unpack("<H", codchr)[0]))
-			# 	j+=2
-			# '''
-			# codchr = deltxt[0][0:2]
-			# print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
-			# codchr = deltxt[0][2:4]
-			# print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
-			# '''
-			# #print int(struct.unpack("h", codchr[0]))
-			# #codchr=struct.pack('>H',deltxt[0][0:2])
-			
-			
-			# #print deltxt[0][0:2].encode("hex") #,int(deltxt[0][0:2].encode("hex")), len (deltxt[0])
-			# #print deltxt[0][2:4].encode("hex")
+			#print unichr(struct.unpack('>i',chr(deltxt[0][2:4].encode("hex"))))
+			#Длина комментария 2 byte символ
+			cmt_txt_len=abs(len(deltxt)/2)*2
+			#cmt_txt_len=8
+			#Финальный текст комментария
+			finish_comment='';
+			#print abs(cmt_txt_len /2)*2
+			j=0
+			while j<cmt_txt_len:
+				codchr = deltxt[j:j+2]
+				finish_comment+=unichr(int(struct.unpack("<H", codchr)[0]))
+				j+=2
+			'''
+			codchr = deltxt[0][0:2]
+			print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
+			codchr = deltxt[0][2:4]
+			print deltxt[0].encode("hex"), codchr.encode("hex"),unichr(int(struct.unpack("<H", codchr)[0]))
+			'''
+			#print int(struct.unpack("h", codchr[0]))
+			#codchr=struct.pack('>H',deltxt[0][0:2])
 			
 			
-			# #print unicode(deltxt[0])
+			#print deltxt[0][0:2].encode("hex") #,int(deltxt[0][0:2].encode("hex")), len (deltxt[0])
+			#print deltxt[0][2:4].encode("hex")
+			
+			
+			#print unicode(deltxt[0])
 			finish_comment = re.split(r"</T", finish_comment)
-			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
+			print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
 		#Если зашифровано
 		else:
@@ -159,7 +158,7 @@ def read_well(sbor,table):
 		left =int(round(float(cur_rec[18])*100))
 		
 		
-		#Поиск
+		# #Поиск
 		# db_name=table
 		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		# cursor = db.cursor()
