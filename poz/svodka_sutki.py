@@ -150,6 +150,10 @@ t201.start()
 t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-1РФ'])
 t200.start()
 
+# 235
+t199 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'235 ПУУПХГ'])
+t199.start()
+
 
 t200.join(1000)
 t201.join(1000)
