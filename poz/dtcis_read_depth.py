@@ -1137,6 +1137,7 @@ def read_well(sbor,table):
 # t110.join(30)
 # if t110.is_alive(): t110.terminate()
 
+
 # #449 406
 # #read_well("/mnt/104","s110")
 t110 = Process(target=read_well, args=["/mnt/104","s401depth"])
@@ -1177,9 +1178,16 @@ t4450.start()
 t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
 
+#542
+#read_well("/mnt/915","s915")
+t915 = Process(target=read_well, args=["/mnt/915","s915depth"])
+t915.start()
+t915.join(300)
+if t915.is_alive(): t915.terminate()
+
 
 #Саратов (Обработчик)
-t44150 = Process(target=read_well, args=["/mnt/908oс/-=DATA=-/STORE/","s908depth"])
+t44150 = Process(target=read_well, args=['/mnt/908oc/-=DATA=-/STORE',"s908depth"])
 t44150.start()
 t44150.join(300)
 if t44150.is_alive(): t44150.terminate()
@@ -1187,12 +1195,6 @@ if t44150.is_alive(): t44150.terminate()
 
 
 
-#542
-#read_well("/mnt/915","s915")
-t915 = Process(target=read_well, args=["/mnt/915","s915depth"])
-t915.start()
-t915.join(300)
-if t915.is_alive(): t915.terminate()
 
 # #threading.Thread(target=read_well, args=["/mnt/631","s631"]).join(5)
 # #read_well("/mnt/631","s631")

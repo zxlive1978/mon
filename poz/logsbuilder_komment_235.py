@@ -47,24 +47,25 @@ def float_to_datetime(fl):
 def read_well(sbor,table):
 	path_to_work ="/var/www/html/mon/poz/"
 	
-	# #print os.listdir(sbor)
-	# #try:
-	# file='WELLSITEDB.gz'
-	# full_path_skf=sbor+'/WELLSITEDB.gz'
-	# #копирование файла с обработчика с папки c:\Program files\Common files\Ps Shared\WELLSITEDB.zip
-	# #который заархивирован с помощью Reciever на той стороне
-	# # Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
-	# pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
-	# print pathtocopy
-	# # try:
-	# 	# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
-	# shutil.copy(full_path_skf, pathtocopy)
-	# # except IOError, e:
-	# 	# print "Unable to copy file. %s" % e
+	#print os.listdir(sbor)
+	#try:
+	file='WELLSITEDB.gz'
+				
+	full_path_skf=sbor+'/WELLSITEDB.gz'
+	#копирование файла с обработчика с папки c:\Program files\Common files\Ps Shared\WELLSITEDB.zip
+	#который заархивирован с помощью Reciever на той стороне
+	# Внимание! Не забыть раскомментировать, когда отключится шифрование XceedZip.dll.
+	pathtocopy=path_to_work+'WELLSITEDB'+table+'.gz'
+	print pathtocopy
+	# try:
+		# subprocess.call("rm "+path_to_work+"WELLSITEDB", shell=True)
+	shutil.copy(full_path_skf, pathtocopy)
+	# except IOError, e:
+		# print "Unable to copy file. %s" % e
 			
-	# #if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
-	# subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
-	# print "Распаковано"
+	#if (cur_time_size==getsize(""+path_to_work+"WELLSITEDB.gz")):
+	subprocess.call("gzip -d -k -f "+path_to_work+"WELLSITEDB"+table+".gz > "+path_to_work+"WELLSITEDB"+table, shell=True)
+	print "Распаковано"
 
 	# # --------------------------------------------------
 	# # Чтение Комментарии Logsbuilder (сейчас закомментированы!!!)
@@ -72,8 +73,7 @@ def read_well(sbor,table):
 	
 	#mdb файл в csv! только комментарии
 	#if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
-	print("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"suck.mdb"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ")
-	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"suck.mdb"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
+	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
 	print "Скопировано"
 	
 	
@@ -150,33 +150,31 @@ def read_well(sbor,table):
 			
 			#print unicode(deltxt[0])
 			finish_comment = re.split(r"</T", finish_comment)
-			print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
+			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
 		#Если зашифровано
 		else:
 				finish_comment = "Encrypted"
 		left =int(round(float(cur_rec[18])*100))
-		
-		
-		# #Поиск
-		# db_name=table
-		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# cursor = db.cursor()
-		# sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
-		# #sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-		# cursor.execute(sql)
-		# data =  cursor.fetchall()
-		# #print data
-		# if len(data) == 0:
-		# 	#Вставка
-		# 	db_name=table
-		# 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# 	cursor = db.cursor()
-		# 	sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
-		# 	cursor.execute(sql)
-		# 	db.commit()
-		# i+=1
-		# db.close()
+		#Поиск
+		db_name=table
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		cursor = db.cursor()
+		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+		cursor.execute(sql)
+		data =  cursor.fetchall()
+		#print data
+		if len(data) == 0:
+			#Вставка
+			db_name=table
+			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+			cursor = db.cursor()
+			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
+			cursor.execute(sql)
+			db.commit()
+		i+=1
+		db.close()
 
 
 	# -------------------------
@@ -332,44 +330,44 @@ def read_well(sbor,table):
 # t41450.join(10)
 # if t41450.is_alive(): t41450.terminate()
 
-# #9917
-# t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
-# t11450.start()
-# t11450.join(100)
-# if t11450.is_alive(): t11450.terminate()
+#9917
+t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
+t11450.start()
+t11450.join(100)
+if t11450.is_alive(): t11450.terminate()
 
 
-# # #938
-# # t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-# # t21450.start()
-# # t21450.join(10)
-# # if t21450.is_alive(): t21450.terminate()
+# #938
+# t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+# t21450.start()
+# t21450.join(10)
+# if t21450.is_alive(): t21450.terminate()
 
-# #542 Обработчик
-# t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
-# t629.start()
-# t629.join(100)
-# if t629.is_alive(): t629.terminate()
+#542 Обработчик
+t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
+t629.start()
+t629.join(100)
+if t629.is_alive(): t629.terminate()
 
-# #632
-# t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
-# t31450.start()
-# t31450.join(100)
-# if t31450.is_alive(): t31450.terminate()
+#632
+t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
+t31450.start()
+t31450.join(100)
+if t31450.is_alive(): t31450.terminate()
 
-# # ------------------------------------------------------------------------
-# # 449 # 104
-# t20 = Process(target=read_well, args=["/mnt/104o/Archive","s401kr"])
-# t20.start()
-# t20.join(300)
-# if t20.is_alive(): t20.terminate()
+# ------------------------------------------------------------------------
+# 449 # 104
+t20 = Process(target=read_well, args=["/mnt/104o/Archive","s401kr"])
+t20.start()
+t20.join(300)
+if t20.is_alive(): t20.terminate()
 
-# # ------------------------------------------------------------------------
-# # 938
-# t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-# t201.start()
-# t201.join(300)
-# if t201.is_alive(): t201.terminate()
+# ------------------------------------------------------------------------
+# 938
+t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+t201.start()
+t201.join(300)
+if t201.is_alive(): t201.terminate()
 
 # 235
 t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
