@@ -150,7 +150,7 @@ def read_well(sbor,table):
 			
 			#print unicode(deltxt[0])
 			finish_comment = re.split(r"</T", finish_comment)
-			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
+			print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
 		#Если зашифровано
 		else:
