@@ -120,8 +120,8 @@ def read_well(sbor,table):
 			deltxt=cur_par[30][17:]
 			#deltxt ="gjjkjklj/jkjks/Tklk;"
 
-			okomrus=(cur_rec[15]).decode("utf-8")
-			print(okomrus)
+			okomrus=(cur_par[30][17:]).decode("utf-8")
+			print(cur_par[30])
 
 
 			#deltxt = re.split(r'/T', deltxt)
