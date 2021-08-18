@@ -310,7 +310,6 @@ def read_well(sbor,table):
 
 #Комментарии Logsbuilder
 
-
 # #544
 # t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
 # t629.start()
@@ -369,7 +368,7 @@ t201.start()
 t201.join(300)
 if t201.is_alive(): t201.terminate()
 
-# 938
+# 235
 t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
 t201.start()
 t201.join(300)
