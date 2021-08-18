@@ -160,7 +160,7 @@ def read_well(sbor,table):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
-		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8')+"'"
 		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
 		cursor.execute(sql)
 		data =  cursor.fetchall()
@@ -170,7 +170,7 @@ def read_well(sbor,table):
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 			cursor = db.cursor()
-			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
+			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
 			cursor.execute(sql)
 			db.commit()
 		i+=1

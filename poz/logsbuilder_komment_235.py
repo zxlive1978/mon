@@ -119,11 +119,7 @@ def read_well(sbor,table):
 			#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
 			deltxt=cur_par[30][17:]
 			#deltxt ="gjjkjklj/jkjks/Tklk;"
-
-			okomrus=(cur_par[30][17:]).decode("utf-8")
-			print(cur_par[30])
-
-
+			
 			#deltxt = re.split(r'/T', deltxt)
 			
 			#print unichr(struct.unpack('>i',chr(deltxt[0][2:4].encode("hex"))))
@@ -153,10 +149,10 @@ def read_well(sbor,table):
 			
 			
 			#print unicode(deltxt[0])
-			# finish_comment = re.split(r"</T", finish_comment)
-			# print finish_comment#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
+			finish_comment = re.split(r"</T", finish_comment)
+			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
-		#Если зашифровано
+		#Если   зашифровано
 		else:
 				finish_comment = "Encrypted"
 		left =int(round(float(cur_rec[18])*100))
@@ -164,7 +160,7 @@ def read_well(sbor,table):
 		db_name=table
 		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 		cursor = db.cursor()
-		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8', 'replace')+"'"
+		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8')+"'"
 		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
 		cursor.execute(sql)
 		data =  cursor.fetchall()
@@ -174,7 +170,7 @@ def read_well(sbor,table):
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 			cursor = db.cursor()
-			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8', 'replace')+"'"+", "+str(left)+" )"
+			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
 			cursor.execute(sql)
 			db.commit()
 		i+=1
@@ -313,7 +309,6 @@ def read_well(sbor,table):
 
 
 #Комментарии Logsbuilder
-
 
 # # #544
 # # t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
