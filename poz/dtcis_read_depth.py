@@ -1187,7 +1187,7 @@ if t915.is_alive(): t915.terminate()
 
 
 #Саратов (Обработчик)
-t44150 = Process(target=read_well, args=['/mnt/908oc/-=DATA=-/STORE',"s908depth"])
+t44150 = Process(target=read_well, args=['/mnt/908/-=DATA=-',"s908depth"])
 t44150.start()
 t44150.join(300)
 if t44150.is_alive(): t44150.terminate()
