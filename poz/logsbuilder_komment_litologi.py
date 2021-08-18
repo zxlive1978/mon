@@ -154,7 +154,7 @@ def read_well(sbor,table):
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
 		#Если   зашифровано
 		else:
-				finish_comment = "Encrypted"
+				finish_comment = ["Encrypted","jxty"]
 		left =int(round(float(cur_rec[18])*100))
 		#Поиск
 		db_name=table
