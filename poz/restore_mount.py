@@ -189,7 +189,7 @@ t104.join(30)
 if t104.is_alive(): t104.terminate()
 
 #Саратов 235 Сборщик c: /mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/ "СКВ №449 01.05.2021.xlsx"
-t1041 = Process(target=read_well, args=["/mnt/908","908","/""/192.168.146.98/c/"""])
+t1041 = Process(target=read_well, args=["/mnt/908","908","/""/192.168.146.98/d/"""])
 t1041.start()
 t1041.join(30)
 if t1041.is_alive(): t1041.terminate()
