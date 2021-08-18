@@ -14,7 +14,7 @@ from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
-	dt_now =datetime.utcfromtimestamp(time.time()-86400) # date.today()
+	dt_now =datetime.utcfromtimestamp(time.time()-5*86400) # date.today()
 	#print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
 	day_now = str(dt_now)[8:10]
@@ -151,7 +151,7 @@ t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/С�
 t200.start()
 
 # 235
-t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки 235/"',"235", ".xlsx","/var/www/html/mon/poz/svodka",'235 ПУУПХГ'])
+t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки 235/"',"СКВ 235", ".xlsx","/var/www/html/mon/poz/svodka",'235 ПУУПХГ'])
 t199.start()
 
 
