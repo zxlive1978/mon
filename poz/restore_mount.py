@@ -183,7 +183,7 @@ t928.join(30)
 if t928.is_alive(): t928.terminate()
 
 #Саратов сводки или глубинка Обработчик 908 Обработчик c: /mnt/104oc/СНГС №14/АРХИВЫ СКВАЖИН/Архив скв.№449/Сводки скв.№449/Май 21/ "СКВ №449 01.05.2021.xlsx"
-t104 = Process(target=read_well, args=["/mnt/908oc","908o","/""/192.168.146.99/D/"""])
+t104 = Process(target=read_well, args=["/mnt/908oc","908oc","/""/192.168.146.99/c/"""])
 t104.start()
 t104.join(30)
 if t104.is_alive(): t104.terminate()
