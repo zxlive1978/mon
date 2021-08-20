@@ -99,7 +99,7 @@ def read_well(sbor,table):
 		time_cur=str(cur_rec[6])
 		print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
 		#test_time ="01/28/18 02:55:00"
-		#print len(cur_par)
+		# print len(cur_par[30])
 		time_tuple = time.strptime(time_cur[1:17], "%m/%d/%y %H:%M:%S")
 		dtt = datetime.fromtimestamp(mktime(time_tuple))
 		cur_unix_time = datetime_to_float(dtt)
@@ -109,6 +109,9 @@ def read_well(sbor,table):
 		# Комментарии с текущей даты
 		begin_time = 1528269694 # 6 June 2018 г., 07:21:34
 		#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
+		#richtext length 249
+		# richtext=
+
 		#Типы По времени 2, По глубине, Геолог
 		type_cmt_time=int(str(cur_rec[5]))
 		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
@@ -118,6 +121,7 @@ def read_well(sbor,table):
 			#comment_line = cur_rec[15].decode('cp866')
 			#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
 			deltxt=cur_par[30][17:]
+			# 0000000004 richtext!s
 			#deltxt ="gjjkjklj/jkjks/Tklk;"
 			
 			#deltxt = re.split(r'/T', deltxt)
@@ -165,7 +169,8 @@ def read_well(sbor,table):
 		cursor.execute(sql)
 		data =  cursor.fetchall()
 		#print data
-		if len(data) == 0:
+		# len(finish_comment)!=249 RICHTEXT
+		if (len(data) == 0 and len(finish_comment)!=249):
 			#Вставка
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
