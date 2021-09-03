@@ -91,6 +91,26 @@ def read_well(sbor,table):
 	i=0
 	#f = open('out.txt', 'w')
 	#sys.stdout = f
+
+	#
+	#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
+	#
+	db_name=table
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "CREATE TABLE IF NOT EXISTS"+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "TRUNCATE "+db_name+"_all"
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
 	for cur_rec in data:
 		cur_rec=cur_rec.split('%%%')
 		cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
@@ -160,26 +180,82 @@ def read_well(sbor,table):
 		else:
 				finish_comment = ["Encrypted","jxty"]
 		left =int(round(float(cur_rec[18])*100))
-		#Поиск
-		db_name=table
-		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		cursor = db.cursor()
-		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8')+"'"
-		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-		cursor.execute(sql)
-		data =  cursor.fetchall()
-		#print data
-		# len(finish_comment)!=249 RICHTEXT
+		# #
+		# #Алгоритм 1 (Поиск новых комментариев и доавление)
+		# #Поиск
+		# db_name=table
+		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# cursor = db.cursor()
+		# sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8')+"'"
+		# #sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+		# cursor.execute(sql)
+		# data =  cursor.fetchall()
+		# #print data
+		# # len(finish_comment)!=249 RICHTEXT
+		# if (len(data) == 0 and len(finish_comment)!=249):
+		# 	#Вставка
+		# 	db_name=table
+		# 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# 	cursor = db.cursor()
+		# 	sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
+		# 	cursor.execute(sql)
+		# 	db.commit()
+		# i+=1
+		# db.close()
+
+		#
+		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
+		#
+		# db_name=table
+		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# cursor = db.cursor()
+		# sql = "CREATE TABLE IF NOT EXISTS"+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
+		# cursor.execute(sql)
+		# db.commit()
+		# db.close()
+
+		# # IF NOT EXISTS (SELECT * FROM TestTable WHERE ProductId > 3);
+		# # CREATE TABLE IF NOT EXISTS new_table AS (SELECT * FROM old_table WHERE 1=0);
+
+		# # db_name=table
+		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		# cursor = db.cursor()
+		# sql = "TRUNCATE "+db_name
+		# cursor.execute(sql)
+		# db.commit()
+		# db.close()
+
+		#
+		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
+		#
+
 		if (len(data) == 0 and len(finish_comment)!=249):
 			#Вставка
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 			cursor = db.cursor()
-			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
+			sql = "INSERT INTO "+db_name+"_all "+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
 			cursor.execute(sql)
 			db.commit()
 		i+=1
-		db.close()
+
+	db.close()
+
+	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	cursor = db.cursor()
+	sql = "RENAME TABLE "+db_name+ "_all TO "+ db_name+";"
+	cursor.execute(sql)
+	db.commit()
+	db.close()
+
+	# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+	# cursor = db.cursor()
+	# sql = "TRUNCATE "+db_name+"_all"
+	# cursor.execute(sql)
+	# db.commit()
+	# db.close()
+
+
 
 
 	# -------------------------
@@ -295,8 +371,6 @@ def read_well(sbor,table):
 
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
-
-
 	sql = "RENAME TABLE "+db_name+ " TO tmp_table, " +db_name+"_all TO "+ db_name+ ", tmp_table TO "+db_name+"_all;"
 	cursor.execute(sql)
 	db.commit()
