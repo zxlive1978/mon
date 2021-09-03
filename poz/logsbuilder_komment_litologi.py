@@ -98,7 +98,7 @@ def read_well(sbor,table):
 	db_name=table
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
-	sql = "CREATE TABLE IF NOT EXISTS"+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
+	sql = "CREATE TABLE IF NOT EXISTS "+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
 	cursor.execute(sql)
 	db.commit()
 	db.close()
