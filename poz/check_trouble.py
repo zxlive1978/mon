@@ -81,66 +81,66 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 		# 			if treerecords[2][4] <0:
 		# 				message = "DOWN"
 		# 				bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+" Выключен Mlcache на Обработчике: "+ip_obrab+"\n"
-			#Видеорегистратор
-			if treerecords[0][8] <0:
-				if treerecords[1][8] <0:
-					if treerecords[2][8] <0:
-						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Видеорегистратор: "+ip_dvr+"\n"
-			
-			#Ubi1
-			if analogdvr == False:
-				if treerecords[0][13] <0:
-					if treerecords[1][13] <0:
-						if treerecords[2][13] <0:
-							message = "DOWN"
-							bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+" Сломалась Ubi1_Ap: "+ip_ub1+"\n"
-							
-			#Ubi2
-			if analogdvr == False:
-				if treerecords[0][14] <0:
-					if treerecords[1][14] <0:
-						if treerecords[2][14] <0:
-							message = "DOWN"
-							bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+" Сломалась Ubi2_Client: "+ip_ub2+"\n"
-			
-			#Камера 1
-			if treerecords[0][9] <0:
-				if treerecords[1][9] <0:
-					if treerecords[2][9] <0:
-						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM1: "+ip_cam1+"\n"
-			#Камера 2
-			if treerecords[0][10] <0:
-				if treerecords[1][10] <0:
-					if treerecords[2][10] <0:
-						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM2: "+ip_cam2+"\n"
-			#Камера 3
-			if treerecords[0][11] <0:
-				if treerecords[1][11] <0:
-					if treerecords[2][11] <0:
-						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM3: "+ip_cam3+"\n"
-			#Камера 4
-			if treerecords[0][12] <0:
-				if treerecords[1][12] <0:
-					if treerecords[2][12] <0:
-						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM4: "+ip_cam4+"\n"
-			#Сборщик
+		#Видеорегистратор
+		if treerecords[0][8] <0:
+			if treerecords[1][8] <0:
+				if treerecords[2][8] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Видеорегистратор: "+ip_dvr+"\n"
+		
+		#Ubi1
+		if analogdvr == False:
 			if treerecords[0][13] <0:
 				if treerecords[1][13] <0:
 					if treerecords[2][13] <0:
 						message = "DOWN"
-						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Сборщик: "+ip_sbor+"\n"
-			#Выключен Обработчик
-			# if treerecords[0][4]==1.8:
-				# if treerecords[1][4]==1.8:
-					# if treerecords[2][4]==1.8:
-						# message = "DOWN"
-						# bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Обработчик: "+ip_obrab+"\n"
-			
+						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+" Сломалась Ubi1_Ap: "+ip_ub1+"\n"
+						
+		#Ubi2
+		if analogdvr == False:
+			if treerecords[0][14] <0:
+				if treerecords[1][14] <0:
+					if treerecords[2][14] <0:
+						message = "DOWN"
+						bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+" Сломалась Ubi2_Client: "+ip_ub2+"\n"
+		
+		#Камера 1
+		if treerecords[0][9] <0:
+			if treerecords[1][9] <0:
+				if treerecords[2][9] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM1: "+ip_cam1+"\n"
+		#Камера 2
+		if treerecords[0][10] <0:
+			if treerecords[1][10] <0:
+				if treerecords[2][10] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM2: "+ip_cam2+"\n"
+		#Камера 3
+		if treerecords[0][11] <0:
+			if treerecords[1][11] <0:
+				if treerecords[2][11] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM3: "+ip_cam3+"\n"
+		#Камера 4
+		if treerecords[0][12] <0:
+			if treerecords[1][12] <0:
+				if treerecords[2][12] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Сломалась CAM4: "+ip_cam4+"\n"
+		#Сборщик
+		if treerecords[0][13] <0:
+			if treerecords[1][13] <0:
+				if treerecords[2][13] <0:
+					message = "DOWN"
+					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Сборщик: "+ip_sbor+"\n"
+		#Выключен Обработчик
+		# if treerecords[0][4]==1.8:
+			# if treerecords[1][4]==1.8:
+				# if treerecords[2][4]==1.8:
+					# message = "DOWN"
+					# bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Обработчик: "+ip_obrab+"\n"
+		
 
 		#Проверка пинга white ip
 		if treerecords[0][1] <0:
@@ -167,6 +167,12 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 		cursor = db.cursor()
 		sql = "INSERT INTO alarm(date, nwell, mess, bigmess) VALUES ("+str(timestamp)+",'"+str(name_well)+"','"+str(message)+"','"+str(bigmessage)+"')"
 		cursor.execute(sql)
+		mailtmp=unicode(" "+
+		""+datetime.utcfromtimestamp(timestamp).strftime('%H:%M')+" Скв."+str(name_well)+
+		"\n\n"+bigmessage, "utf8")
+		#print alarmnwell[0][2],message,mailtmp
+		#gmail_post.post(mailtmp,"Скважина: "+str(name_well))
+		telegram_post.post(mailtmp,"-267211915")
 	#Если событие было
 	if len(alarmnwell)!=0:
 		#И оно было другое, то запись в базу и посылка почты
