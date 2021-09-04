@@ -171,17 +171,19 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 	if len(alarmnwell)!=0:
 		#И оно было другое, то запись в базу и посылка почты
 		if alarmnwell[0][2]!=message:
+			mailtmp=unicode(" "
+			+""+datetime.utcfromtimestamp(timestamp).strftime('%H:%M')+" Скв."+str(name_well)
+			+"\n\n"+bigmessage, "utf-8")
+			#print alarmnwell[0][2],message,mailtmp
+			#gmail_post.post(mailtmp,"Скважина: "+str(name_well))
+			telegram_post.post(mailtmp,"-267211915")
+			
 			db_name=name_base
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 			cursor = db.cursor()
 			sql = "INSERT INTO alarm(date, nwell, mess, bigmess) VALUES ("+str(timestamp)+",'"+str(name_well)+"','"+str(message)+"','"+unicode(bigmessage, "utf-8")+"')"
 			cursor.execute(sql)
-			mailtmp=unicode(" "+
-			""+datetime.utcfromtimestamp(timestamp).strftime('%H:%M')+" Скв."+str(name_well)+
-			"\n\n"+bigmessage, "utf-8")
-			#print alarmnwell[0][2],message,mailtmp
-			#gmail_post.post(mailtmp,"Скважина: "+str(name_well))
-			telegram_post.post(mailtmp,"-267211915")
+			
 			#whatsapp_post.post(mailtmp,"79272857676-1490802779")
 			
 			
