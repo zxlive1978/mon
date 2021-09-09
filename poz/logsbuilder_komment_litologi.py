@@ -231,6 +231,7 @@ def read_well(sbor,table):
 		#
 
 		if (len(data) != 0 and len(finish_comment)!=249):
+			print (len(finish_comment))
 			#Вставка
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
