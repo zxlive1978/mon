@@ -134,7 +134,8 @@ def read_well(sbor,table):
 
 		#Типы По времени 2, По глубине, Геолог
 		type_cmt_time=int(str(cur_rec[5]))
-		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
+		# if (cur_unix_time >= begin_time and len(cur_par)>= 30):
+		if (cur_unix_time >= begin_time):
 		
 			#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
 			#cur_txt_comment = str(cur_rec[15]).split("</Text>")
@@ -239,7 +240,7 @@ def read_well(sbor,table):
 			db.commit()
 		i+=1
 
-	db.close()
+	# db.close()
 
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
