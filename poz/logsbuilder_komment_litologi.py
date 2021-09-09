@@ -244,7 +244,8 @@ def read_well(sbor,table):
 
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
-	sql = "RENAME TABLE "+db_name+ "_all TO "+ db_name+";"
+	# sql = "RENAME TABLE "+db_name+ "_all TO "+ db_name+";"
+	sql = "RENAME TABLE "+db_name+ "_all TO tmp_table, " +db_name+" TO "+ db_name+ "_all , tmp_table TO "+db_name+";"
 	cursor.execute(sql)
 	db.commit()
 	db.close()
