@@ -33,31 +33,31 @@ def clear_well(table,coldate):
 #908
 # clear_well("s908", "Vrema")
 #547
-# clear_well("s110", "Vrema")
-# #224
-# clear_well("s224", "Vrema")
-# #20Э
-# clear_well("s20", "Vrema")
-# #4450
-# clear_well("s4450", "Vrema")
-# #630
-# clear_well("s630", "Vrema")
-# #96
-# clear_well("s89", "Vrema")
-# #631
-# clear_well("s631", "Vrema")
-# #629
-# clear_well("s629", "Vrema")
-# #915
-# clear_well("s915", "Vrema")
-# #83
-# clear_well("s83", "Vrema")
-# #401
-# clear_well("s401", "Vrema")
-# #627
-# clear_well("s627", "Vrema")
-# #605
-# clear_well("s610", "Vrema")
+clear_well("s110", "Vrema")
+#224
+clear_well("s224", "Vrema")
+#20Э
+clear_well("s20", "Vrema")
+#4450
+clear_well("s4450", "Vrema")
+#630
+clear_well("s630", "Vrema")
+#96
+clear_well("s89", "Vrema")
+#631
+clear_well("s631", "Vrema")
+#629
+clear_well("s629", "Vrema")
+#915
+clear_well("s915", "Vrema")
+#83
+clear_well("s83", "Vrema")
+#401
+clear_well("s401", "Vrema")
+#627
+clear_well("s627", "Vrema")
+#605
+clear_well("s610", "Vrema")
 
 #533
 # clear_well("s544", "Vrema")
