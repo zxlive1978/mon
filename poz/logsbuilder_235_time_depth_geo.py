@@ -88,6 +88,18 @@ def read_well(sbor,table):
 	for cur_rec in data:
 		cur_rec=cur_rec.split('%%%')
 		print (cur_rec)
+		deltxt=cur_rec[7]
+		cmt_txt_len=abs(len(deltxt)/2)*2
+		#cmt_txt_len=8
+		#Финальный текст комментария
+		finish_txt='';
+		#print abs(cmt_txt_len /2)*2
+		j=0
+		while j<cmt_txt_len:
+			codchr = deltxt[j:j+2]
+			finish_txt+=unichr(int(struct.unpack("<H", codchr)[0]))
+			j+=2
+		print (finish_txt)
 		# cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
 
 
