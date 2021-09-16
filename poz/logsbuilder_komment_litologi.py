@@ -233,12 +233,13 @@ def read_well(sbor,table):
 		if (len(data) != 0 and len(finish_comment)!=249):
 			print (len(finish_comment))
 			#Вставка
-			db_name=table
-			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-			cursor = db.cursor()
-			sql = "INSERT INTO "+db_name+"_all "+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
-			cursor.execute(sql)
-			db.commit()
+			if (finish_comment[0]!='0'):
+				db_name=table
+				db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+				cursor = db.cursor()
+				sql = "INSERT INTO "+db_name+"_all "+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
+				cursor.execute(sql)
+				db.commit()
 		i+=1
 
 	db.close()
