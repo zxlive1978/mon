@@ -250,7 +250,7 @@ def read_well(sbor,table):
 		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
 		#
 
-		if (len(data) != 0 and cur_rec[5] == id_time):
+		if (len(data) != 0 and cur_rec[5] == '2'):
 			# print (len(finish_comment))
 			#Вставка
 			if (finish_comment[0]!='0'):
