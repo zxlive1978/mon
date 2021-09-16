@@ -85,23 +85,8 @@ def read_well(sbor,table):
 	f1_lst.close()
 	records_data = lst_data.split("$$$")
 	data =records_data[:(len(records_data)-1)]
-	for cur_rec in data:
-		cur_rec=cur_rec.split('%%%')
-		print (cur_rec)
-		deltxt=cur_rec[7]
-		cmt_txt_len=abs(len(deltxt)/2)*2
-		#cmt_txt_len=8
-		#Финальный текст комментария
-		finish_txt='';
-		#print abs(cmt_txt_len /2)*2
-		j=0
-		while j<cmt_txt_len:
-			codchr = deltxt[j:j+2]
-			finish_txt+=unichr(int(struct.unpack("<H", codchr)[0]))
-			j+=2
-		print (finish_txt)
-		# cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
-
+	id_time=data[0][0]
+	
 
 
 
@@ -265,7 +250,7 @@ def read_well(sbor,table):
 		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
 		#
 
-		if (len(data) != 0 and len(finish_comment)!=249):
+		if (len(data) != 0 and cur_rec[5] == id_time):
 			# print (len(finish_comment))
 			#Вставка
 			if (finish_comment[0]!='0'):
