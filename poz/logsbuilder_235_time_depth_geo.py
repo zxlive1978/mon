@@ -140,7 +140,7 @@ def read_well(sbor,table):
 		
 		#Текущее время комментария
 		time_cur=str(cur_rec[6])
-		print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
+		# print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
 		#test_time ="01/28/18 02:55:00"
 		# print len(cur_par[30])
 		time_tuple = time.strptime(time_cur[1:17], "%m/%d/%y %H:%M:%S")
@@ -254,7 +254,7 @@ def read_well(sbor,table):
 		#
 
 		if (len(data) != 0 and len(finish_comment)!=249):
-			print (len(finish_comment))
+			# print (len(finish_comment))
 			#Вставка
 			if (finish_comment[0]!='0'):
 				db_name=table
