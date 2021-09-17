@@ -158,6 +158,13 @@ t199.start()
 t198 = Process(target=read_well, args=['"/mnt/544oc/Users/user/Desktop/АРХИВ 533/"',"СКВ 533 Пл АГКМ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-533'])
 t198.start()
 
+# 9917
+t197 = Process(target=read_well, args=['"/mnt/630oc/Users/user/Desktop/Сводки 9917/"',"Скв 9917 Пл АГКМ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-9917'])
+t197.start()
+
+
+
+t197.join(1000)
 t198.join(1000)
 t199.join(1000)
 t200.join(1000)
@@ -168,6 +175,9 @@ t203.join(1000)
 t205.join(1000)
 t206.join(1000)
 t207.join(1000)
+
+
+if t197.is_alive(): t197.terminate()
 
 if t198.is_alive(): t198.terminate()
 
