@@ -251,7 +251,7 @@ def read_well(sbor,table):
 		#
 
 		# if (len(data) != 0 and cur_rec[5] == '2'):
-		if (len(data) != 0):
+		if (len(data) != 0 and cur_rec[5] == '7'):
 			# print (finish_comment[0][:9])
 			#Вставка
 			if (finish_comment[0][:9]!='000000000'):
