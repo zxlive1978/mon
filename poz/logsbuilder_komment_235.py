@@ -165,7 +165,7 @@ def read_well(sbor,table):
 		cursor.execute(sql)
 		data =  cursor.fetchall()
 		#print data
-		if len(data) == 0 and finish_comment!='0000000004':
+		if len(data) == 0 and finish_comment != '0000000004':
 			#Вставка
 			db_name=table
 			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')

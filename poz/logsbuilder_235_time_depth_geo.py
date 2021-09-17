@@ -250,11 +250,11 @@ def read_well(sbor,table):
 		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
 		#
 
-		if (len(data) != 0 and cur_rec[5] == '2'):
-		if (len(data) != 0 and cur_rec[5] == '2'):
-			# print (len(finish_comment))
+		# if (len(data) != 0 and cur_rec[5] == '2'):
+		if (len(data) != 0):
+			# print (finish_comment[0][:9])
 			#Вставка
-			if (finish_comment[0]!='0'):
+			if (finish_comment[0][:9]!='000000000'):
 				db_name=table
 				db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 				cursor = db.cursor()
