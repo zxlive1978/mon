@@ -53,21 +53,21 @@ t110.start()
 t110.join(30)
 if t110.is_alive(): t110.terminate()
 
-#544 Сборщик
+#533 Сборщик
 #threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
 t544 = Process(target=read_well, args=["/mnt/544","s544","//192.168.147.130/d/PetroServices/Database/Online/Store"])
 t544.start()
 t544.join(30)
 if t544.is_alive(): t544.terminate()
 
-#544 Обработчик
+#533 Обработчик
 #threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
 t544 = Process(target=read_well, args=["/mnt/544o","s544o","/""/192.168.147.131/c$/Program Files/Common Files/PS Shared/Database/"""])
 t544.start()
 t544.join(30)
 if t544.is_alive(): t544.terminate()
 
-#544 Обработчик c:
+#533 Обработчик c:
 #threading.Thread(target=read_well, args=["/mnt/104","s110","//192.168.146.2/d/PetroServices/Database/Online/Store"]).start()
 t544 = Process(target=read_well, args=["/mnt/544oc","s544o","/""/192.168.147.131/c$"""])
 t544.start()
