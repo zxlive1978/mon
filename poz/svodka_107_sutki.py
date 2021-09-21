@@ -130,7 +130,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
 t206.start()
 
 # # ------------------------------------------------------------------------
