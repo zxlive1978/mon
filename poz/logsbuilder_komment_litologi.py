@@ -400,11 +400,11 @@ t629.join(360)
 if t629.is_alive(): t629.terminate()
 
 
-# #71
-# t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
-# t4450.start()
-# t4450.join(10)
-# if t4450.is_alive(): t4450.terminate()
+#1РФ
+t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
+t4450.start()
+t4450.join(100)
+if t4450.is_alive(): t4450.terminate()
 
 # #610
 # t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
