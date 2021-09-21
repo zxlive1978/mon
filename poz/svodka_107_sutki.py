@@ -14,7 +14,7 @@ from datetime import datetime
 import fnmatch
 
 def read_well(share,shablon1,shablon2,dirr,skv):
-	dt_now =datetime.utcfromtimestamp(time.time()-86400*60) # date.today()
+	dt_now =datetime.utcfromtimestamp(time.time()-86400) # date.today()
 	#print(datetime.utcfromtimestamp(dt_now))
 	month_now = str(dt_now)[5:7]
 	day_now = str(dt_now)[8:10]
@@ -32,7 +32,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 			#png
 			if (a.find('png')>0 and (a.find(month_now)>0) and (a.find(day_now)>0)):
 				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400*60))):
+				if ((statbuf.st_mtime>(time.time()-86400))):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.png'
 					print(a)
 					print(names)
@@ -44,7 +44,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 				# print(a)
 				# subprocess.call('cp "'+a+'" "'+dirr+'"', shell=True)
 				statbuf = os.stat(a)
-				if ((statbuf.st_mtime>(time.time()-86400*60))):
+				if ((statbuf.st_mtime>(time.time()-86400))):
 					names=dirr+'/'+str(datetime.fromtimestamp(statbuf.st_mtime))[:16]+' '+skv+''+'.xlsx'
 					subprocess.call('/bin/cp '+'"'+a+'"'+' "'+names+'"', shell=True)
 					subprocess.call('/usr/bin/unoconv -f html -e PageRange=1 '+'"'+names+'"', shell=True)
@@ -130,7 +130,7 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 
 # ------------------------------------------------------------------------
 # 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/Сентябрь/"',"СКВ 107 Пл АГКМ Сводка", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/user/Desktop/Суточные сводки №107 скв/Сентябрь/Сводка/"',"СКВ 107 Пл", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
 t206.start()
 
 # # ------------------------------------------------------------------------
