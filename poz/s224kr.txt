@@ -4,8 +4,8 @@ object TChartContext
   Right = 0
   Bottom = 0
   MainID = 0
-  Min = 44354.834863587970000000
-  Max = 44355.834805902780000000
+  Min = 44445.836788368050000000
+  Max = 44446.448190729170000000
   Scale = 0.004901960784313725
   Step = 0.041666666666666660
   IsDateTime = True
@@ -63,7 +63,7 @@ object TChartContext
       Top = 13
       Right = 158
       Bottom = 19
-      Caption = '07.06.21 20:02 - 08.06.21 20:02'
+      Caption = '06.09.21 20:04 - 07.09.21 10:45'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clBlue
       Font.Height = -16
@@ -184,7 +184,7 @@ object TChartContext
     Left = 13
     Top = 24
     Right = 55
-    Bottom = 277
+    Bottom = 198
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -293,10 +293,10 @@ object TChartContext
       PenStyle = psSolid
     end
     object TCommentSeries
-      Left = 13
-      Top = -1151
-      Right = 43
-      Bottom = -1141
+      Left = 18
+      Top = -1152
+      Right = 48
+      Bottom = -1142
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -304,15 +304,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.834375000000000000
-      Comment = #1058#1056
-      Align = 1
+      Value = 44439.833333333340000000
+      Comment = #1055#1058
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -1133
-      Right = 43
-      Bottom = -1123
+      Left = 18
+      Top = -1150
+      Right = 48
+      Bottom = -1140
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -320,15 +320,111 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.921527777780000000
+      Value = 44439.842361111110000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 18
+      Top = -1145
+      Right = 48
+      Bottom = -1135
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44439.868055555550000000
+      Comment = #1055#1054#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -1052
+      Right = 56
+      Bottom = -1042
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.320868055550000000
+      Comment = #1056#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -1048
+      Right = 56
+      Bottom = -1038
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.341701388890000000
+      Comment = #1055#1054#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -976
+      Right = 56
+      Bottom = -966
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.695868055550000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 18
+      Top = -947
+      Right = 48
+      Bottom = -937
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.834791666670000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -897
+      Right = 56
+      Bottom = -887
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.083333333340000000
       Comment = #1057#1055#1048
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -1131
-      Right = 43
-      Bottom = -1121
+      Left = 16
+      Top = -863
+      Right = 56
+      Bottom = -853
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -336,15 +432,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.934027777780000000
-      Comment = #1055#1058
-      Align = 1
+      Value = 44441.250000000000000000
+      Comment = #1056#1056
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -1102
-      Right = 43
-      Bottom = -1092
+      Left = 16
+      Top = -857
+      Right = 56
+      Bottom = -847
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -352,15 +448,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44349.074305555560000000
-      Comment = #1055#1054#1044
-      Align = 1
+      Value = 44441.277777777780000000
+      Comment = #1057#1055#1048
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -1099
-      Right = 43
-      Bottom = -1089
+      Left = 16
+      Top = -828
+      Right = 56
+      Bottom = -818
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -368,15 +464,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44349.090277777780000000
+      Value = 44441.418125000000000000
       Comment = #1058#1056
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 18
-      Top = -994
-      Right = 43
-      Bottom = -984
+      Left = 16
+      Top = -817
+      Right = 56
+      Bottom = -807
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -384,15 +480,31 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44349.605208333330000000
+      Value = 44441.472291666670000000
+      Comment = #1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -813
+      Right = 56
+      Bottom = -803
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.494513888890000000
       Comment = #1058#1056
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -991
-      Right = 43
-      Bottom = -981
+      Left = 16
+      Top = -809
+      Right = 56
+      Bottom = -799
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -400,31 +512,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44349.619097222220000000
-      Comment = #1041
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -946
-      Right = 43
-      Bottom = -936
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44349.840277777780000000
-      Comment = #1041
-      Align = 1
+      Value = 44441.515347222220000000
+      Comment = #1057#1055#1048
+      Align = 2
     end
     object TCommentSeries
       Left = 18
-      Top = -876
-      Right = 43
-      Bottom = -866
+      Top = -743
+      Right = 48
+      Bottom = -733
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -432,110 +528,14 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.184027777780000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -850
-      Right = 43
-      Bottom = -840
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.312500000000000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -842
-      Right = 43
-      Bottom = -832
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.347222222220000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -834
-      Right = 43
-      Bottom = -824
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.388888888890000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -830
-      Right = 43
-      Bottom = -820
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.406250000000000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -827
-      Right = 43
-      Bottom = -817
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.423611111110000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -815
-      Right = 43
-      Bottom = -805
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.482638888890000000
-      Comment = #1055#1054#1044
-      Align = 1
+      Value = 44441.834907407410000000
+      Comment = #1057#1055#1048
+      Align = 2
     end
     object TCommentSeries
       Left = 18
       Top = -741
-      Right = 43
+      Right = 48
       Bottom = -731
       BlackCaption = False
       GID = ''
@@ -544,15 +544,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.843703703700000000
+      Value = 44441.847222222220000000
       Comment = #1058#1056
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
       Left = 18
-      Top = -739
-      Right = 43
-      Bottom = -729
+      Top = -735
+      Right = 48
+      Bottom = -725
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -560,15 +560,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.855509259260000000
-      Comment = #1056#1056
-      Align = 1
+      Value = 44441.875000000000000000
+      Comment = #1055#1058' '#1086#1073#1088#1072#1090#1085#1072#1103'.'
+      Align = 2
     end
     object TCommentSeries
       Left = 18
-      Top = -736
-      Right = 43
-      Bottom = -726
+      Top = -731
+      Right = 48
+      Bottom = -721
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -576,78 +576,110 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.867314814820000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -818
-      Right = 43
-      Bottom = -808
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.468703703700000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -818
-      Right = 43
-      Bottom = -808
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.468703703700000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -615
-      Right = 43
-      Bottom = -605
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.461759259260000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -609
-      Right = 43
-      Bottom = -599
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.489537037040000000
+      Value = 44441.895833333340000000
       Comment = #1057#1055#1048
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
+      Left = 18
+      Top = -690
+      Right = 48
+      Bottom = -680
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.095833333330000000
+      Comment = #1055#1058' '#1086#1073#1088#1072#1090#1085#1072#1103'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 18
+      Top = -686
+      Right = 48
+      Bottom = -676
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.118055555550000000
+      Comment = #1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 15
+      Top = -590
+      Right = 55
+      Bottom = -580
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.584907407410000000
+      Comment = #1055#1058' '#1086#1073#1088#1072#1090#1085#1072#1103'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -585
+      Right = 56
+      Bottom = -575
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.612685185190000000
+      Comment = #1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -643
+      Right = 56
+      Bottom = -633
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.327962962960000000
+      Comment = #1055#1058' '#1086#1073#1088#1072#1090#1085#1072#1103'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -639
+      Right = 56
+      Bottom = -629
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.348796296300000000
+      Comment = #1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
       Top = -539
-      Right = 43
+      Right = 56
       Bottom = -529
       BlackCaption = False
       GID = ''
@@ -656,31 +688,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44351.835312500000000000
-      Comment = #1057#1055#1048
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = -516
-      Right = 43
-      Bottom = -506
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.946423611110000000
+      Value = 44442.835034722220000000
       Comment = #1058#1056
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -511
-      Right = 43
-      Bottom = -501
+      Left = 16
+      Top = -538
+      Right = 56
+      Bottom = -528
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -688,14 +704,62 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44351.972812500000000000
-      Comment = #1055#1058
-      Align = 1
+      Value = 44442.843750000000000000
+      Comment = #1057#1055#1048
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
+      Left = 18
+      Top = -517
+      Right = 48
+      Bottom = -507
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.944444444450000000
+      Comment = #1055#1058' '#1086#1073#1088#1072#1090#1085#1072#1103'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -509
+      Right = 56
+      Bottom = -499
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.986111111110000000
+      Comment = #1057#1055#1048
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -484
+      Right = 56
+      Bottom = -474
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.105868055560000000
+      Comment = #1055#1054#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
       Top = -504
-      Right = 43
+      Right = 56
       Bottom = -494
       BlackCaption = False
       GID = ''
@@ -704,15 +768,31 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.007534722220000000
+      Value = 44443.008333333330000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -501
+      Right = 56
+      Bottom = -491
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.022534722220000000
       Comment = #1057#1055#1048
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -478
-      Right = 43
-      Bottom = -468
+      Left = 16
+      Top = -479
+      Right = 56
+      Bottom = -469
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -720,78 +800,14 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.133923611110000000
-      Comment = #1055#1058
-      Align = 1
+      Value = 44443.131944444450000000
+      Comment = #1058#1056
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
-      Top = -468
-      Right = 43
-      Bottom = -458
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.181145833330000000
-      Comment = #1057#1055#1048
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -437
-      Right = 43
-      Bottom = -427
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.335312500000000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -428
-      Right = 43
-      Bottom = -418
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.376979166660000000
-      Comment = #1057#1055#1048
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -403
-      Right = 43
-      Bottom = -393
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.501979166660000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
+      Left = 16
       Top = -392
-      Right = 43
+      Right = 56
       Bottom = -382
       BlackCaption = False
       GID = ''
@@ -800,15 +816,79 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.557534722230000000
+      Value = 44443.555555555550000000
+      Comment = #1055#1054#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 18
+      Top = 677
+      Right = 48
+      Bottom = 687
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44448.798611111110000000
+      Comment = #1055#1054'/'#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -388
+      Right = 56
+      Bottom = -378
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.576388888890000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -381
+      Right = 56
+      Bottom = -371
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.611111111110000000
+      Comment = #1055#1054#1044
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
+      Top = -365
+      Right = 56
+      Bottom = -355
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.689201388890000000
       Comment = #1057#1055#1048
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 18
-      Top = -386
-      Right = 43
-      Bottom = -376
+      Left = 16
+      Top = -347
+      Right = 56
+      Bottom = -337
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -816,15 +896,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.585312500000000000
-      Comment = #1055#1056#1056
-      Align = 1
+      Value = 44443.779479166670000000
+      Comment = #1055#1054#1044
+      Align = 2
     end
     object TCommentSeries
-      Left = 18
-      Top = -334
-      Right = 43
-      Bottom = -324
+      Left = 16
+      Top = -341
+      Right = 56
+      Bottom = -331
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -832,14 +912,30 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.841689814810000000
-      Comment = #1055#1056#1056
-      Align = 1
+      Value = 44443.807256944440000000
+      Comment = #1058#1056
+      Align = 2
     end
     object TCommentSeries
-      Left = 18
+      Left = 16
+      Top = -335
+      Right = 56
+      Bottom = -325
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.834826388890000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
       Top = -310
-      Right = 43
+      Right = 56
       Bottom = -300
       BlackCaption = False
       GID = ''
@@ -848,126 +944,30 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.959745370370000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -261
-      Right = 43
-      Bottom = -251
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.195856481490000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -234
-      Right = 43
-      Bottom = -224
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.331967592600000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = -230
-      Right = 43
-      Bottom = -220
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.347245370370000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = -131
-      Right = 43
-      Bottom = -121
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.834756944450000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = -127
-      Right = 43
-      Bottom = -117
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.855590277780000000
-      Comment = #1055#1054#1044
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = -55
-      Right = 43
-      Bottom = -45
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44354.209756944450000000
-      Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = -50
-      Right = 43
-      Bottom = -40
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44354.230590277780000000
+      Value = 44443.958333333340000000
       Comment = #1057#1055#1048
-      Align = 1
+      Align = 2
     end
     object TCommentSeries
-      Left = 13
+      Left = 16
+      Top = -284
+      Right = 56
+      Bottom = -274
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.084826388890000000
+      Comment = #1058#1056
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 16
       Top = 73
-      Right = 43
+      Right = 56
       Bottom = 83
       BlackCaption = False
       GID = ''
@@ -976,64 +976,16 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.834861111110000000
+      Value = 44445.836782407410000000
       Comment = #1058#1056
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 13
-      Top = 76
-      Right = 43
-      Bottom = 86
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44354.847361111110000000
-      Comment = #1057#1055#1048
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = 152
-      Right = 43
-      Bottom = 162
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.223750000000000000
-      Comment = #1055#1058
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 18
-      Top = 202
-      Right = 43
-      Bottom = 212
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.466805555550000000
-      Comment = #1055#1054#1044
-      Align = 1
+      Align = 2
     end
   end
   object TPrintField
     Left = 55
     Top = 24
     Right = 97
-    Bottom = 277
+    Bottom = 198
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -1094,7 +1046,7 @@ object TChartContext
       SGID = '1601'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 4.000000000000000000
+      Max = 0.500000000000000000
       Caption = 'C1'
       Units = '%'#1072#1073#1089
       Color = 191
@@ -1113,7 +1065,7 @@ object TChartContext
       SGID = '1600'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 4.000000000000000000
+      Max = 0.500000000000000000
       Caption = #1057#1091#1084#1084#1072' '#1057'1-5'
       Units = '%'#1072#1073#1089
       Color = clBlack
@@ -1133,7 +1085,7 @@ object TChartContext
       ShowHeader = True
       SrcID = 'GST'
       Max = 30.000000000000000000
-      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1042#1057#1055
+      Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1057#1042#1055
       Units = #1084'.'
       Color = 16732181
       ShowSubLabels = False
@@ -1170,7 +1122,7 @@ object TChartContext
       SGID = '302'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 150.000000000000000000
+      Max = 350.000000000000000000
       Caption = #1044#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1090#1088#1091#1073#1085#1086#1077
       ShortName = #1044#1072#1074#1083'. '#1079#1072#1090#1088#1091#1073'.'
       Units = #1082#1075#1089'/'#1089#1084'2'
@@ -1181,9 +1133,73 @@ object TChartContext
       PenStyle = psSolid
     end
     object TCommentSeries
+      Left = 58
+      Top = -1049
+      Right = 98
+      Bottom = -1039
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.334756944450000000
+      Comment = #1056#1077#1084#1086#1085#1090' '#1075#1080#1076#1088#1072#1074#1083#1080#1095#1077#1089#1082#1086#1075#1086' '#1082#1083#1102#1095#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 58
+      Top = -973
+      Right = 98
+      Bottom = -963
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.709756944450000000
+      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 58
+      Top = -956
+      Right = 98
+      Bottom = -946
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.793090277780000000
+      Comment = #1062#1077#1085#1090#1088#1086#1074#1082#1072' '#1084#1072#1095#1090#1099' '#1052#1041#1059'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -964
+      Right = 96
+      Bottom = -954
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.751423611110000000
+      Comment = #1048#1079#1074#1083#1077#1095#1077#1085#1080#1077' '#1087#1088#1077#1076#1086#1093#1088#1072#1085#1080#1090#1077#1083#1100#1085#1086#1081' '#1074#1090#1091#1083#1082#1080' '#1090#1088#1091#1073#1085#1086#1081' '#1075#1086#1083#1086#1074#1082#1080'.'
+      Align = 2
+    end
+    object TCommentSeries
       Left = 56
       Top = -1151
-      Right = 97
+      Right = 96
       Bottom = -1141
       BlackCaption = False
       GID = ''
@@ -1192,18 +1208,161 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.834375000000000000
+      Value = 44439.834756944450000000
       Comment = 
-        #1058#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103' '#1074#1099#1076#1077#1088#1078#1082#1072' '#1089#1082#1074#1072#1078#1080#1085#1099', '#1085#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1076#1072#1074#1083'. '#1054#1073#1088#1072#1073#1086#1090#1082#1072 +
-        ' '#1073#1091#1088'. '#1088'-'#1088#1072' ('#1091#1090#1103#1078#1077#1083#1077#1085#1080#1077') '#1089' 1.80 '#1075'/'#1089#1084'3 '#1076#1086' 1.85 '#1075'/'#1089#1084'3. '#1056#1090#1088'-49'#1082#1075#1089'/'#1089#1084 +
-        '2, '#1056#1079#1090#1088'-41'#1082#1075#1089'/'#1089#1084'2.'
+        #1047#1072#1094#1077#1087#1083#1077#1085#1080#1077' '#1080#1079#1074#1083#1077#1082#1072#1102#1097#1077#1075#1086' '#1080#1085#1089#1090#1088#1091#1084#1077#1085#1090#1072' '#1094#1072#1085#1075#1086#1081' '#1079#1072' '#1086#1090#1074#1077#1090#1085#1091#1102' '#1088#1077#1079#1100#1073#1091' '#1087#1088 +
+        #1077#1076#1086#1093#1088#1072#1085#1080#1090#1077#1083#1100#1085#1086#1081' '#1074#1090#1091#1083#1082#1080
       Align = 2
     end
     object TCommentSeries
       Left = 56
-      Top = -1136
+      Top = -947
+      Right = 97
+      Bottom = -937
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.834791666670000000
+      Comment = #1062#1077#1085#1090#1088#1086#1074#1082#1072' '#1084#1072#1095#1090#1099' '#1052#1041#1059'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -922
+      Right = 97
+      Bottom = -912
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44440.958333333340000000
+      Comment = #1052#1086#1085#1090#1072#1078' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103'. '#1055#1088#1086#1087#1072#1088#1082#1072' '#1053#1050#1058' 88.9 '#1084#1084'.  '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -897
+      Right = 97
+      Bottom = -887
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.083333333340000000
+      Comment = #1057#1087#1091#1089#1082' '#1055#1054' '#1085#1072' '#1053#1050#1058' 88.9 '#1084#1084
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -863
+      Right = 97
+      Bottom = -853
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.250000000000000000
+      Comment = #1056#1077#1084#1086#1085#1090' '#1084#1072#1085#1080#1087#1091#1083#1103#1090#1086#1088#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = -828
+      Right = 97
+      Bottom = -818
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.418125000000000000
+      Comment = #1055#1077#1088#1077#1082#1083#1072#1076#1082#1072' '#1053#1050#1058' '#1085#1072' '#1089#1090#1077#1083#1072#1078#1072#1093' '#1089#1086#1075#1083#1072#1089#1085#1086' '#1088#1080#1077#1089#1090#1088#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 58
+      Top = -811
+      Right = 98
+      Bottom = -801
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44441.501458333330000000
+      Comment = #1055#1088#1086#1074#1077#1076#1077#1085#1080#1077' '#1059#1058#1047
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -540
+      Right = 90
+      Bottom = -530
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44442.833333333340000000
+      Comment = #1055#1088#1086#1074#1077#1088#1082#1072' '#1055#1042#1054'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -505
+      Right = 97
+      Bottom = -495
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.003472222220000000
+      Comment = #1084#1086#1085#1090#1072#1078' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103' '#1076#1083#1103' '#1089#1087#1091#1089#1082#1072' '#1055#1054' '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 60
+      Top = -477
+      Right = 90
+      Bottom = -467
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.142361111110000000
+      Comment = #1043#1077#1088#1084#1077#1090#1080#1079#1072#1094#1080#1103' '#1089#1082#1074#1072#1078#1080#1085#1099'. '
+      Align = 0
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -472
       Right = 96
-      Bottom = -1126
+      Bottom = -462
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1211,67 +1370,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.909722222220000000
-      Comment = #1057#1090#1088#1072#1074#1083#1080#1074#1072#1085#1080#1077' '#1076#1072#1074#1083#1077#1085#1080#1103
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 57
-      Top = -1126
-      Right = 97
-      Bottom = -1116
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44348.959375000000000000
-      Comment = 
-        #1055#1088#1086#1084#1099#1074#1082#1072' '#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103'  '#1085#1072' '#1075#1083#1091#1073#1080#1085#1077' 3802 '#1084' '#1089' '#1074#1099#1088#1072#1074#1085#1080#1074#1072#1085#1080#1077#1084' '#1087#1072#1088#1072 +
-        #1084#1077#1090#1088#1086#1074' '#1073#1091#1088#1086#1074#1086#1075#1086' '#1088#1072#1089#1090#1074#1086#1088#1072'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 57
-      Top = -1100
-      Right = 97
-      Bottom = -1090
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44349.084375000000000000
-      Comment = 
-        #1058#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103' '#1074#1099#1076#1077#1088#1078#1082#1072', '#1085#1072#1073#1083#1102#1076#1077#1085#1080#1077' '#1079#1072' '#1089#1082#1074#1072#1078#1080#1085#1086#1081' '#1089' '#1086#1090#1082#1088#1099#1090#1099#1084' '#1091#1089#1090 +
-        #1100#1077#1084'. '#1055#1077#1088#1077#1083#1080#1074' '#1089' '#1090#1088#1091#1073#1085#1086#1075#1086' '#1087#1088#1086#1089#1090#1088#1072#1085#1089#1090#1074#1072' '#1080#1085#1090#1077#1085#1089#1080#1074#1085#1086#1089#1090#1100#1102' 7 '#1083'/'#1095'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -946
-      Right = 90
-      Bottom = -936
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44349.840277777780000000
-      Comment = #1056#1072#1079#1073#1091#1088#1080#1074#1072#1085#1080#1077' '#1094#1077#1084#1077#1085#1090#1085#1086#1075#1086' '#1084#1086#1089#1090#1072' '#1092#1088#1077#1079' '#1076#1086#1083#1086#1090#1086#1084'.'
+      Value = 44443.166666666660000000
+      Comment = #1056#1072#1089#1082#1072#1090#1082#1072' '#1080' '#1087#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1090#1088#1091#1073' '#1080' '#1076#1086#1087#1091#1089#1082#1085#1086#1075#1086' '#1087#1072#1090#1088#1091#1073#1082#1072' '#1082' '#1089#1087#1091#1089#1082#1091'.'
       Align = 2
     end
     object TCommentSeries
       Left = 56
-      Top = -854
-      Right = 93
-      Bottom = -844
+      Top = -488
+      Right = 96
+      Bottom = -478
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1279,176 +1386,16 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.291666666660000000
+      Value = 44443.085034722220000000
       Comment = 
-        #1048#1089#1087'. '#1094#1077#1084'. '#1084#1086#1089#1090#1072' '#1088#1072#1079#1075#1088#1091#1079#1082#1086#1081' '#1080#1085#1089#1090#1088#1091#1084#1077#1085#1090#1072' '#1085#1072' 6 '#1090' '#1057#1057#1042' '#1089' '#1087#1088#1103#1084#1086#1081' '#1087#1088#1086#1084#1099 +
-        #1074#1082#1086#1081'. '#1054#1087#1088#1077#1077#1089#1086#1074#1082#1072' ('#1072#1075#1088#1077#1075#1072#1090#1086#1084') '#1085#1072' 60 '#1082#1075#1089'/'#1089#1084'2 ('#1075#1077#1088#1084#1077#1090#1080#1095#1085#1086').'
+        #1053#1072#1097#1091#1087#1099#1074#1072#1085#1080#1077' '#1075#1086#1083#1086#1074#1099' "'#1093#1074#1086#1089#1090#1086#1074#1080#1082#1072'" '#1088#1072#1079#1075#1088#1091#1079#1082#1086#1081' 0.8 '#1090' '#1085#1072' '#1075#1083'. 3582.91 ' +
+        #1084'. '#1056#1086#1089#1090' '#1056#1074#1093' '#1089' 10 '#1082#1075#1089'/'#1089#1084'2 '#1076#1086' 15 '#1082#1075#1089'/'#1089#1084'2. '
       Align = 2
     end
     object TCommentSeries
-      Left = 57
-      Top = -826
-      Right = 92
-      Bottom = -816
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.427083333340000000
-      Comment = #1055#1088#1086#1084#1099#1074#1082#1072' '#1090#1077#1093#1085#1086#1083#1086#1075#1080#1095#1077#1089#1082#1072#1103' '#1089' '#1074#1099#1088#1072#1074#1085#1080#1074#1072#1085#1080#1077#1084' '#1087#1072#1088#1072#1084#1077#1090#1088#1086#1074' '#1073#1091#1088'. '#1088'-'#1088#1072'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -742
-      Right = 90
-      Bottom = -732
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.840925925930000000
-      Comment = #1055#1088#1086#1074#1077#1088#1082#1072' '#1055#1042#1054
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -739
-      Right = 90
-      Bottom = -729
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44350.853425925930000000
-      Comment = #1056#1077#1084#1086#1085#1090' '#1044#1042#1057'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -615
-      Right = 90
-      Bottom = -605
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.461759259260000000
-      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -613
-      Right = 90
-      Bottom = -603
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.472870370370000000
-      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 57
-      Top = -518
-      Right = 99
-      Bottom = -508
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.939479166660000000
-      Comment = #1052#1086#1085#1090#1072#1078' '#1072#1074#1072#1088#1080#1081#1085#1086#1081' '#1089#1073#1086#1088#1082#1080' '#1080' '#1083#1080#1085#1080#1080' '#1086#1073#1088#1072#1090#1085#1086#1081' '#1087#1088#1086#1084#1099#1074#1082#1080'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -509
-      Right = 90
-      Bottom = -499
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.981145833340000000
-      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1072
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -475
-      Right = 90
-      Bottom = -465
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.147812500000000000
-      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1072
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -435
-      Right = 90
-      Bottom = -425
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.342256944440000000
-      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1072
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
-      Top = -400
-      Right = 90
-      Bottom = -390
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.515868055550000000
-      Comment = #1054#1073#1088#1072#1090#1085#1072#1103' '#1087#1088#1086#1084#1099#1074#1082#1072
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 60
+      Left = 58
       Top = -386
-      Right = 90
+      Right = 98
       Bottom = -376
       BlackCaption = False
       GID = ''
@@ -1457,15 +1404,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.585312500000000000
-      Comment = #1055#1088#1086#1088#1072#1073#1086#1090#1082#1072' '#1089#1082#1088#1077#1087#1077#1088#1086#1084' 168.3 '#1084#1084
+      Value = 44443.585034722220000000
+      Comment = #1055#1077#1088#1077#1087#1086#1076#1075#1086#1090#1086#1074#1082#1072' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103' '#1076#1083#1103' '#1087#1086#1076#1098#1105#1084#1072' '#1053#1050#1058'. '
       Align = 2
     end
     object TCommentSeries
-      Left = 60
-      Top = -334
-      Right = 90
-      Bottom = -324
+      Left = 58
+      Top = -340
+      Right = 98
+      Bottom = -330
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1473,15 +1420,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44352.841689814810000000
-      Comment = #1055#1088#1086#1088#1072#1073#1086#1090#1082#1072' '#1089#1082#1088#1077#1087#1077#1088#1086#1084' 168.3 '#1084#1084
+      Value = 44443.814201388890000000
+      Comment = #1052#1086#1085#1090#1072#1078' '#1096#1090#1088#1086#1087#1086#1074' '#1080' '#1101#1083#1077#1074#1072#1090#1086#1088#1072'.'
       Align = 2
     end
     object TCommentSeries
-      Left = 60
-      Top = -290
-      Right = 90
-      Bottom = -280
+      Left = 58
+      Top = -352
+      Right = 98
+      Bottom = -342
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1489,15 +1436,17 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44353.056967592590000000
-      Comment = #1047#1072#1082#1072#1095#1082#1072' '#1042#1059#1057' '#1074' '#1086#1073#1098#1105#1084#1077' V=10'#1084'3'
+      Value = 44443.751701388890000000
+      Comment = 
+        #1053#1072#1097#1091#1087#1099#1074#1072#1085#1080#1077' '#1075#1086#1083#1086#1074#1099' "'#1093#1074#1086#1089#1090#1086#1074#1080#1082#1072'" '#1088#1072#1079#1075#1088#1091#1079#1082#1086#1081' 0.8 '#1090' '#1085#1072' '#1075#1083'. 3582.91 ' +
+        #1084'. '#1056#1086#1089#1090' '#1056#1074#1093' '#1089' 10 '#1082#1075#1089'/'#1089#1084'2 '#1076#1086' 15 '#1082#1075#1089'/'#1089#1084'2.'
       Align = 2
     end
     object TCommentSeries
-      Left = 60
-      Top = -233
-      Right = 90
-      Bottom = -223
+      Left = 56
+      Top = -335
+      Right = 97
+      Bottom = -325
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1505,14 +1454,191 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44353.334745370370000000
-      Comment = #1055#1088#1086#1074#1077#1088#1082#1072' '#1055#1042#1054
+      Value = 44443.834826388890000000
+      Comment = 
+        #1056#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1080' '#1076#1077#1084#1086#1085#1090#1072#1078' '#1091#1089#1090#1100#1077#1074#1086#1081' '#1074#1086#1088#1086#1085#1082#1080' '#1085#1072' '#1055#1042#1054', '#1087#1086#1076#1074#1077#1096#1080#1074#1072#1085#1080#1077' '#1078#1077 +
+        #1083#1086#1073#1072'. '
       Align = 2
     end
     object TCommentSeries
-      Left = 60
+      Left = 56
+      Top = -280
+      Right = 97
+      Bottom = -270
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.104166666660000000
+      Comment = 
+        #1055#1088#1086#1087#1072#1088#1082#1072' '#1087#1086#1089#1072#1076#1086#1095#1085#1086#1075#1086' '#1084#1077#1089#1090#1072' '#1087#1086#1076#1074#1077#1089#1085#1086#1075#1086' '#1091#1089#1090#1088#1086#1081#1089#1090#1074#1072', '#1088#1072#1079#1075#1088#1091#1079#1082#1072' '#1082#1086#1083#1086 +
+        #1085#1085#1099' '#1053#1050#1058' '#1089' '#1086#1089#1077#1074#1086#1081' '#1085#1072#1075#1088#1091#1079#1082#1086#1081' '#1085#1072' 12 '#1090'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = -164
+      Right = 97
+      Bottom = -154
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.675104166660000000
+      Comment = #1056#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1089#1090#1074#1086#1083#1086#1074#1086#1081' '#1095#1072#1089#1090#1080' '#1055#1042#1054
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = -174
+      Right = 97
+      Bottom = -164
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.626493055560000000
+      Comment = #1044#1077#1084#1086#1085#1090#1072#1078' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103' "'#1069#1085#1076#1077#1074#1077#1088'". '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = -191
+      Right = 97
+      Bottom = -181
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.543159722220000000
+      Comment = 
+        #1056#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1080' '#1076#1077#1084#1086#1085#1090#1072#1078' '#1084#1077#1093#1072#1085#1080#1095#1077#1089#1082#1080#1093' '#1087#1088#1080#1074#1086#1076#1086#1074' '#1055#1042#1054' '#1089#1086#1074#1084#1077#1089#1090#1085#1086' '#1089' '#1086#1090 +
+        #1073#1086#1081#1085#1099#1084#1080' '#1097#1080#1090#1072#1084#1080'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -214
+      Right = 96
+      Bottom = -204
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.432048611110000000
+      Comment = 
+        #1057#1073#1088#1086#1089' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1089' '#1083#1080#1085#1080#1080' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103' '#1087#1088#1077#1074#1077#1085#1090#1086#1088#1072#1084#1080', '#1088#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1080' '#1076 +
+        #1077#1084#1086#1085#1090#1072#1078' '#1083#1080#1085#1080#1080' '#1086#1090' '#1055#1042#1054' '#1076#1086' '#1053#1040#1059'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -229
+      Right = 96
+      Bottom = -219
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.355659722220000000
+      Comment = 
+        #1059#1089#1090#1072#1085#1086#1074#1082#1072' '#1091#1089#1090#1100#1077#1074#1086#1075#1086' '#1082#1083#1072#1087#1072#1085#1072' '#1074' '#1087#1086#1076#1074#1077#1089#1085#1086#1075#1086' '#1091#1089#1090#1088#1086#1081#1089#1090#1074#1072' '#1053#1050#1058' '#1074' '#1087#1088#1080#1089#1091#1090 +
+        #1089#1090#1074#1080#1080' '#1087#1088#1077#1076#1089#1090#1072#1074#1080#1090#1077#1083#1103' '#1040#1042#1063', '#1085#1072#1074#1086#1088#1086#1090' '#1074' '#1088#1091#1095#1085#1091#1102'. '#1055#1086#1083#1091#1095#1077#1085#1080#1077' '#1088#1072#1079#1088#1077#1096#1077#1085#1080#1103' ' +
+        #1085#1072' '#1076#1077#1084#1086#1085#1090#1072#1078' '#1055#1042#1054'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = -240
+      Right = 97
+      Bottom = -230
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.300104166660000000
+      Comment = #1055#1083#1072#1074#1085#1086#1077' '#1089#1090#1088#1072#1074#1083#1080#1074#1072#1085#1080#1077' '#1076#1072#1074#1083#1077#1085#1080#1103
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -249
+      Right = 96
+      Bottom = -239
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.258437500000000000
+      Comment = #1054#1087#1088#1077#1089#1089#1086#1074#1082#1072' '#1075#1077#1088#1084#1077#1090#1080#1079#1080#1088#1091#1102#1097#1077#1075#1086' '#1091#1079#1083#1072' '#1085#1072' 300 '#1082#1075#1089'/'#1089#1084'2 - '#1075#1077#1088#1084#1077#1090#1080#1095#1085#1086
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -267
+      Right = 96
+      Bottom = -257
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.168159722220000000
+      Comment = 
+        #1050#1088#1077#1087#1083#1077#1085#1080#1077' '#1074' '#1090#1088#1091#1073#1085#1086#1081' '#1075#1086#1083#1086#1074#1082#1077' '#1092#1080#1082#1089#1080#1088#1091#1102#1097#1080#1084#1080' '#1074#1080#1085#1090#1072#1084#1080' '#1087#1086#1076#1074#1077#1089#1085#1086#1075#1086' '#1091#1089#1090#1088 +
+        #1086#1081#1089#1090#1074#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -316
+      Right = 96
+      Bottom = -306
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44443.932048611110000000
+      Comment = 
+        #1057#1087#1091#1089#1082' '#1055#1054' '#1085#1072' '#1053#1050#1058' 114.3 '#1084#1084' '#1074' '#1080#1085#1090#1077#1088#1074#1072#1083#1077' 3526-3582,81'#1084' ('#1089#1087#1091#1097#1077#1085#1086' '#1074#1089#1077#1075 +
+        #1086' 318 '#1090#1088'.), '#1089' '#1086#1087#1088#1077#1089#1089#1086#1074#1082#1086#1081' '#1080#1084#1087#1091#1083#1100#1089#1085#1086#1081' '#1083#1080#1085#1080#1080' '#1085#1072' 700 '#1082#1075#1089'/'#1089#1084'2 - '#1075#1077#1088#1084 +
+        #1077#1090#1080#1095#1085#1086', '#1089#1090#1088#1072#1074#1083#1080#1074#1072#1085#1080#1077' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1076#1086' 200 '#1082#1075#1089'/'#1089#1084'2, '#1084#1086#1085#1090#1072#1078' '#1083#1080#1085#1080#1080' '#1091#1087#1088#1072#1074 +
+        #1083#1077#1085#1080#1103' '#1050#1054'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
       Top = -131
-      Right = 90
+      Right = 97
       Bottom = -121
       BlackCaption = False
       GID = ''
@@ -1521,14 +1647,64 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44353.834756944450000000
-      Comment = #1055#1088#1086#1074#1077#1088#1082#1072' '#1055#1042#1054'.'
+      Value = 44444.834780092590000000
+      Comment = ' '#1056#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1089#1090#1074#1086#1083#1086#1074#1086#1081' '#1095#1072#1089#1090#1080' '#1055#1042#1054' - 100%. '
       Align = 2
     end
     object TCommentSeries
-      Left = 55
+      Left = 56
+      Top = -106
+      Right = 97
+      Bottom = -96
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44444.959780092590000000
+      Comment = #1056#1072#1089#1082#1088#1077#1087#1083#1077#1085#1080#1077' '#1080' '#1076#1077#1084#1086#1085#1090#1072#1078' '#1086#1090#1074#1086#1076#1072' '#1086#1090' '#1055#1042#1054' '#1076#1086' '#1041#1043' - 100%.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -80
+      Right = 97
+      Bottom = -70
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44445.084780092590000000
+      Comment = 
+        #1044#1077#1084#1086#1085#1090#1072#1078' '#1073#1091#1088#1086#1074#1086#1081' '#1087#1077#1088#1077#1093#1086#1076#1085#1086#1081' '#1082#1072#1090#1091#1096#1082#1080' 9"'#1093'10", '#1082#1088#1077#1089#1090#1086#1074#1080#1085#1099' '#1089' '#1079#1072#1076#1074#1080#1078#1082 +
+        #1072#1084#1080'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 56
+      Top = -69
+      Right = 97
+      Bottom = -59
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44445.138888888890000000
+      Comment = #1044#1077#1084#1086#1085#1090#1072#1078' '#1085#1080#1078#1085#1077#1075#1086' '#1087#1083#1072#1096#1077#1095#1085#1086#1075#1086' '#1087#1088#1077#1074#1077#1085#1090#1086#1088#1072'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
       Top = -55
-      Right = 85
+      Right = 97
       Bottom = -45
       BlackCaption = False
       GID = ''
@@ -1537,15 +1713,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.208368055560000000
-      Comment = #1056#1072#1079#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
-      Align = 1
+      Value = 44445.209780092590000000
+      Comment = #1044#1077#1084#1086#1085#1090#1072#1078' '#1089#1087#1072#1088#1077#1085#1085#1086#1075#1086' '#1087#1088#1077#1074#1077#1085#1090#1086#1088#1072'. '
+      Align = 2
     end
     object TCommentSeries
-      Left = 60
-      Top = -52
-      Right = 90
-      Bottom = -42
+      Left = 56
+      Top = -46
+      Right = 96
+      Bottom = -36
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1553,15 +1729,17 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.222256944440000000
-      Comment = #1057#1073#1086#1088#1082#1072' '#1050#1053#1041#1050
+      Value = 44445.251446759260000000
+      Comment = 
+        #1044#1077#1084#1086#1085#1090#1072#1078' '#1055#1059#1043', '#1087#1077#1088#1077#1082#1083#1072#1076#1082#1072' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103' '#1082' '#1084#1077#1089#1090#1091' '#1084#1086#1085#1090#1072#1078#1072' '#1080' '#1074#1099#1074#1086#1079#1072' '#1085 +
+        #1072' '#1088#1077#1074#1080#1079#1080#1102'.'
       Align = 2
     end
     object TCommentSeries
-      Left = 60
-      Top = 53
-      Right = 95
-      Bottom = 63
+      Left = 56
+      Top = -29
+      Right = 96
+      Bottom = -19
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1569,14 +1747,54 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.737534722220000000
-      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080'.'
+      Value = 44445.334780092590000000
+      Comment = 
+        #1059#1089#1090#1072#1085#1086#1074#1082#1072' '#1072#1076#1072#1087#1090#1077#1088#1085#1086#1075#1086' '#1092#1083#1072#1085#1094#1072' 4 1/16" '#1093' 9" API 10000psi '#8470'0097, '#1074' ' +
+        #1089#1073#1086#1088#1077' '#1089' '#1082#1086#1088#1077#1085#1085#1086#1081' '#1079#1072#1076#1074#1080#1078#1082#1086#1081' 4 1/16"API 10000psi '#8470'1263, '#1086#1087#1088#1077#1089#1089#1086#1074#1082#1072 +
+        ' '#1085#1072' 700 '#1082#1075#1089'/'#1089#1084'2 - '#1075#1077#1088#1084#1077#1090#1080#1095#1085#1086'. '#1055#1083#1072#1074#1085#1099#1081' '#1089#1073#1088#1086#1089' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1089' '#1051#1059#1050#1054' '#1076#1086' 2' +
+        '00 '#1082#1075#1089'/'#1089#1084'. '#1047#1072#1082#1072#1095#1082#1072' '#1075#1077#1088#1084#1077#1090#1080#1082#1072' '#1074' "'#1056'" '#1091#1087#1083#1072#1090#1085#1077#1085#1080#1077' '#1072#1076#1072#1087#1090#1077#1088#1072' '#1087#1088#1080' '#1076#1072#1074#1083#1077 +
+        #1085#1080#1080' 500 '#1082#1075#1089'/'#1089#1084'2. '#1054#1087#1088#1077#1089#1089#1086#1074#1082#1072' '#1087#1086#1083#1086#1089#1090#1080' '#1072#1076#1072#1087#1090#1077#1088#1085#1086#1075#1086' '#1092#1083#1072#1085#1094#1072' '#1085#1072' 700 '#1082#1075 +
+        #1089'/'#1089#1084'2 - '#1075#1077#1088#1084#1077#1090#1080#1095#1085#1086'. '#1055#1083#1072#1074#1085#1099#1081' '#1089#1073#1088#1086#1089' '#1076#1072#1074#1083#1077#1085#1080#1103' '#1076#1086' 0 '#1082#1075#1089'/'#1089#1084'2'
       Align = 2
     end
     object TCommentSeries
-      Left = 60
+      Left = 56
+      Top = 22
+      Right = 96
+      Bottom = 32
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44445.584780092590000000
+      Comment = 
+        #1059#1089#1090#1072#1085#1086#1074#1082#1072' '#1092#1072#1085#1090#1072#1085#1085#1086#1081' '#1072#1088#1084#1072#1090#1091#1088#1099'('#1105#1083#1082#1072') '#1089' '#1096#1072#1073#1083#1086#1085#1080#1088#1086#1074#1082#1086#1081' '#1092#1072#1085#1090#1072#1085#1085#1086#1081' '#1072#1088#1084 +
+        #1072#1090#1072#1088#1099' '#1091#1089#1090#1100#1077#1074#1099#1084' '#1082#1083#1072#1087#1072#1085#1086#1084'. '#1050#1088#1077#1087#1083#1077#1085#1080#1077' '#1092#1072#1085#1090#1072#1085#1085#1086#1081' '#1072#1088#1084#1072#1090#1091#1088#1099'.'
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
+      Top = 47
+      Right = 97
+      Bottom = 57
+      BlackCaption = False
+      GID = ''
+      ShowHeader = False
+      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+      Color = clBlack
+      ShowSubLabels = False
+      Flags = []
+      Value = 44445.709780092590000000
+      Comment = #1055#1086#1089#1090#1077#1087#1077#1085#1085#1072#1103' '#1089#1073#1086#1088#1082#1072' '#1086#1073#1074#1103#1079#1082#1080' '#1091#1089#1090#1100#1103' '#1087#1088#1080' '#1086#1089#1074#1086#1077#1085#1080#1080'. '
+      Align = 2
+    end
+    object TCommentSeries
+      Left = 57
       Top = 73
-      Right = 90
+      Right = 97
       Bottom = 83
       BlackCaption = False
       GID = ''
@@ -1585,15 +1803,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.834861111110000000
-      Comment = #1055#1088#1086#1074#1077#1088#1082#1072' '#1055#1042#1054
+      Value = 44445.836782407410000000
+      Comment = #1055#1086#1089#1090#1077#1087#1077#1085#1085#1072#1103' '#1089#1073#1086#1088#1082#1072' '#1086#1073#1074#1103#1079#1082#1080' '#1091#1089#1090#1100#1103' '#1089#1082#1074#1072#1078#1080#1085#1099' '#1087#1088#1080' '#1086#1089#1074#1086#1077#1085#1080#1080' '
       Align = 2
     end
     object TCommentSeries
       Left = 57
-      Top = 80
-      Right = 99
-      Bottom = 90
+      Top = 107
+      Right = 97
+      Bottom = 117
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1601,40 +1819,8 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44354.868194444450000000
-      Comment = #1074#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077#1084' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 57
-      Top = 108
-      Right = 99
-      Bottom = 118
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.006388888890000000
-      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 57
-      Top = 135
-      Right = 99
-      Bottom = 145
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.139722222220000000
-      Comment = #1042#1086#1089#1089#1090#1072#1085#1086#1074#1083#1077#1085#1080#1077' '#1094#1080#1088#1082#1091#1083#1103#1094#1080#1080'.'
+      Value = 44446.003449074070000000
+      Comment = #1044#1077#1084#1086#1085#1090#1072#1078' '#1089#1090#1072#1085#1094#1080#1080' '#1043#1058#1048
       Align = 2
     end
   end
@@ -1642,7 +1828,7 @@ object TChartContext
     Left = 97
     Top = 24
     Right = 139
-    Bottom = 277
+    Bottom = 198
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -1773,10 +1959,10 @@ object TChartContext
       PenStyle = psSolid
     end
     object TCommentSeries
-      Left = 102
-      Top = -813
-      Right = 132
-      Bottom = -803
+      Left = 98
+      Top = -1151
+      Right = 139
+      Bottom = -1141
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1784,15 +1970,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.493055555550000000
-      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074'. '#1087#1088#1080' '#1055#1054#1044'.'
+      Value = 44439.834756944450000000
+      Comment = #1048#1079#1074#1083#1077#1082#1072#1102#1097#1080#1081' '#1080#1085#1089#1090#1088#1091#1084#1077#1085#1090' '#1048#1048#1042#1090#1055#1088'  132/76 '#1084#1084' - 0.41'#1084
       Align = 2
     end
     object TCommentSeries
-      Left = 102
-      Top = -612
-      Right = 132
-      Bottom = -602
+      Left = 98
+      Top = -973
+      Right = 138
+      Bottom = -963
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1800,15 +1986,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44351.475648148150000000
-      Comment = #1057#1082#1088#1077#1087#1077#1088' '#8470' '#1040'377821-1'
+      Value = 44440.709756944450000000
+      Comment = #1054#1089#1074#1086#1073#1086#1078#1076#1077#1085#1080#1077' '#1087#1088#1077#1076#1086#1093#1088#1072#1085#1080#1090#1077#1083#1100#1085#1086#1081' '#1074#1090#1091#1083#1082#1080' '#1087#1086#1083#1080#1088#1086#1074#1072#1085#1085#1086#1081' '#1074#1086#1088#1086#1085#1082#1080'. '
       Align = 2
     end
     object TCommentSeries
-      Left = 102
-      Top = -609
-      Right = 132
-      Bottom = -599
+      Left = 100
+      Top = -1141
+      Right = 140
+      Bottom = -1131
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -1816,56 +2002,8 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44351.489537037040000000
-      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1087#1088#1080' '#1057#1055#1048'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 102
-      Top = -530
-      Right = 132
-      Bottom = -520
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.876979166660000000
-      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1087#1088#1080' '#1057#1055#1048'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 102
-      Top = -46
-      Right = 132
-      Bottom = -36
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44354.251423611110000000
-      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1087#1088#1080' '#1057#1055#1048'.'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 102
-      Top = 203
-      Right = 132
-      Bottom = 213
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.473750000000000000
-      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074'. '#1087#1088#1080' '#1055#1054#1044'.'
+      Value = 44439.883368055550000000
+      Comment = #1044#1086#1083#1080#1074' '#1089#1082#1074'.'
       Align = 2
     end
   end
@@ -1873,7 +2011,7 @@ object TChartContext
     Left = 139
     Top = 24
     Right = 181
-    Bottom = 277
+    Bottom = 198
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -1934,7 +2072,7 @@ object TChartContext
       SGID = '712'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 30.000000000000000000
+      Max = 50.000000000000000000
       Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 2'
       Units = #1084'3'
       Color = 16732181
@@ -1973,7 +2111,7 @@ object TChartContext
       SGID = '716'
       ShowHeader = True
       SrcID = 'GST'
-      Max = 30.000000000000000000
+      Max = 50.000000000000000000
       Caption = #1054#1073#1098#1077#1084' '#1088'-'#1088#1072' '#1074' '#1077#1084#1082#1086#1089#1090#1080' 4'
       ShortName = #1054#1073#1098#1077#1084' '#1074' 4 '#1077#1084#1082'.'
       Units = #1084'3'
@@ -2044,10 +2182,10 @@ object TChartContext
       PenStyle = psSolid
     end
     object TCommentSeries
-      Left = 140
-      Top = -1130
-      Right = 180
-      Bottom = -1120
+      Left = 141
+      Top = -962
+      Right = 181
+      Bottom = -952
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -2055,15 +2193,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44348.937500000000000000
-      Comment = #1056#1072#1073#1086#1090#1072' '#1084#1077#1088#1085#1080#1082#1072#1084#1080'.'
+      Value = 44440.765312500000000000
+      Comment = 'V'#1084#1077#1090'=10.1 '#1084'3,  V'#1076#1086#1083'=10.3 '#1084'3.'
       Align = 2
     end
     object TCommentSeries
-      Left = 144
-      Top = -956
-      Right = 174
-      Bottom = -946
+      Left = 141
+      Top = -760
+      Right = 181
+      Bottom = -750
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -2071,15 +2209,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44349.792708333330000000
-      Comment = #1088'-'#1088'  1.85  120'
+      Value = 44441.751458333330000000
+      Comment = #1055#1077#1088#1077#1082#1072#1095#1082#1072' '#1088'-'#1088#1072' '#1074' '#1085#1077#1082#1086#1085#1090#1088'. '#1077#1084#1082'.'
       Align = 2
     end
     object TCommentSeries
-      Left = 144
-      Top = -824
-      Right = 174
-      Bottom = -814
+      Left = 142
+      Top = -888
+      Right = 182
+      Bottom = -878
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -2087,15 +2225,15 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.437638888890000000
-      Comment = #1088'-'#1088'  1.85  120'
+      Value = 44441.126458333330000000
+      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1088'-'#1088#1072' '#1087#1088#1080' '#1057#1055#1048
       Align = 2
     end
     object TCommentSeries
-      Left = 144
-      Top = -741
-      Right = 174
-      Bottom = -731
+      Left = 141
+      Top = -743
+      Right = 181
+      Bottom = -733
       BlackCaption = False
       GID = ''
       ShowHeader = False
@@ -2103,119 +2241,8 @@ object TChartContext
       Color = clBlack
       ShowSubLabels = False
       Flags = []
-      Value = 44350.843703703700000000
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 144
-      Top = -615
-      Right = 174
-      Bottom = -605
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44351.461759259260000000
-      Comment = 'V'#1088#1072#1089#1095'=10.37 '#1084'3; V'#1092#1072#1082#1090'=10.44 '#1084'3.'
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 144
-      Top = -343
-      Right = 174
-      Bottom = -333
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.793645833340000000
-      Comment = #1088'-'#1088'  1.85  100'
-      Align = 2
-    end
-    object TCommentSeries
-      Left = 149
-      Top = -394
-      Right = 179
-      Bottom = -384
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44352.543645833340000000
-      Comment = 'V'#1088#1072#1089#1095'=9.25 '#1084'3; V'#1092#1072#1082#1090'=9.3 '#1084'3.'
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 144
-      Top = -270
-      Right = 174
-      Bottom = -260
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44353.154189814810000000
-      Comment = #1088'-'#1088'  1.85  100'
-      Align = 1
-    end
-    object TCommentSeries
-      Left = 149
-      Top = -63
-      Right = 179
-      Bottom = -53
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44354.168090277780000000
-      Comment = 'V'#1088#1072#1089#1095'=9.83 '#1084'3;               V'#1092#1072#1082#1090'=10 '#1084'3.'
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 149
-      Top = 147
-      Right = 179
-      Bottom = 157
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.195972222220000000
-      Comment = 'V'#1088#1072#1089#1095'=9.83 '#1084'3; V'#1092#1072#1082#1090'=9.9 '#1084'3.'
-      Align = 0
-    end
-    object TCommentSeries
-      Left = 144
-      Top = 192
-      Right = 174
-      Bottom = 202
-      BlackCaption = False
-      GID = ''
-      ShowHeader = False
-      Caption = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
-      Color = clBlack
-      ShowSubLabels = False
-      Flags = []
-      Value = 44355.418194444440000000
-      Comment = #1088'-'#1088'  1.85  100'
+      Value = 44441.834907407410000000
+      Comment = #1042#1099#1090#1077#1089#1085#1077#1085#1080#1077' '#1088'-'#1088#1072' '#1087#1088#1080' '#1057#1055#1048
       Align = 2
     end
   end
@@ -2223,7 +2250,7 @@ object TChartContext
     Left = 0
     Top = 24
     Right = 13
-    Bottom = 277
+    Bottom = 198
     Caption = '    '#1042#1088#1077#1084#1103
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET
@@ -2259,7 +2286,7 @@ object TChartContext
     Left = 181
     Top = 24
     Right = 193
-    Bottom = 277
+    Bottom = 198
     Caption = #1043#1083#1091#1073#1080#1085#1072' '#1079#1072#1073#1086#1103' '
     Decades = 10
     Font.Charset = RUSSIAN_CHARSET

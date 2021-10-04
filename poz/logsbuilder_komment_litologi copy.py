@@ -70,29 +70,9 @@ def read_well(sbor,table):
 	# # --------------------------------------------------
 	# # Чтение Комментарии Logsbuilder (сейчас закомментированы!!!)
 	# #---------------------------------------------------
-	#id По времени
-	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'objMessages' > "+path_to_work+"objMessages.csv ", shell=True)
-	print "Скопировано"
-	
-	
-	curSizecsv=getsize(""+path_to_work+"objMessages.csv")
-
-	print (curSizecsv)
-	
-	f1_lst=open(path_to_work+"objMessages.csv",'rb')
-	f1_lst.seek(0)
-	lst_data=f1_lst.read(curSizecsv)
-	f1_lst.close()
-	records_data = lst_data.split("$$$")
-	data =records_data[:(len(records_data)-1)]
-	id_time=data[0][0]
-	
-
-
-
 	
 	#mdb файл в csv! только комментарии
-	
+	#if (cur_time_size==getsize(path_to_work+"WELLSITEDB")):
 	subprocess.call("mdb-export -H -d '%%%' -R '$$$' '"+path_to_work+"WELLSITEDB"+table+"' 'messageData' > "+path_to_work+"WELLSITEDB.csv ", shell=True)
 	print "Скопировано"
 	
@@ -111,35 +91,15 @@ def read_well(sbor,table):
 	i=0
 	#f = open('out.txt', 'w')
 	#sys.stdout = f
-
-	#
-	#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
-	#
-	db_name=table
-	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-	cursor = db.cursor()
-	sql = "CREATE TABLE IF NOT EXISTS "+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
-	cursor.execute(sql)
-	db.commit()
-	db.close()
-
-	
-	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-	cursor = db.cursor()
-	sql = "TRUNCATE "+db_name+"_all"
-	cursor.execute(sql)
-	db.commit()
-	db.close()
-
 	for cur_rec in data:
 		cur_rec=cur_rec.split('%%%')
 		cur_par =cur_rec[15].split('""')#.split('\x00/\x00>\x00<\x00T\x00e\x00x\x00t\x00>')
 		
 		#Текущее время комментария
 		time_cur=str(cur_rec[6])
-		# print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
+		print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(cur_rec[18])
 		#test_time ="01/28/18 02:55:00"
-		# print len(cur_par[30])
+		#print len(cur_par)
 		time_tuple = time.strptime(time_cur[1:17], "%m/%d/%y %H:%M:%S")
 		dtt = datetime.fromtimestamp(mktime(time_tuple))
 		cur_unix_time = datetime_to_float(dtt)
@@ -149,12 +109,8 @@ def read_well(sbor,table):
 		# Комментарии с текущей даты
 		begin_time = 1528269694 # 6 June 2018 г., 07:21:34
 		#begin_time = 1496733694 # 6 June 2017 г., 07:21:34
-		#richtext length 249
-		# richtext=
-
 		#Типы По времени 2, По глубине, Геолог
 		type_cmt_time=int(str(cur_rec[5]))
-		# if (cur_unix_time >= begin_time and len(cur_par)>= 30):
 		if (cur_unix_time >= begin_time and len(cur_par)>= 30):
 		
 			#cur_txt_comment = (cur_rec[15]).decode("utf-8").split(u"Text")
@@ -162,7 +118,6 @@ def read_well(sbor,table):
 			#comment_line = cur_rec[15].decode('cp866')
 			#deltxt=cur_par[30][17:(len(cur_par))].split(u'</')
 			deltxt=cur_par[30][17:]
-			# 0000000004 richtext!s
 			#deltxt ="gjjkjklj/jkjks/Tklk;"
 			
 			#deltxt = re.split(r'/T', deltxt)
@@ -197,90 +152,29 @@ def read_well(sbor,table):
 			finish_comment = re.split(r"</T", finish_comment)
 			#print finish_comment[0]#, deltxt.encode("hex")#deltxt[0].encode("hex"), cur_par[30].encode("hex")
 			#print "dbid="+str(cur_rec[0]),"uidObjMessage="+str(cur_rec[5]),"dTimLastChange"+str(cur_rec[4]),"dTim="+str(cur_rec[6]), "objImage=","objPosition="+str(int(round(float(cur_rec[18])*100)))
-		#Если   зашифровано
+		#Если зашифровано
 		else:
-				finish_comment = ["Encrypted","jxty"]
+				finish_comment = "Encrypted"
 		left =int(round(float(cur_rec[18])*100))
-		# #
-		# #Алгоритм 1 (Поиск новых комментариев и доавление)
-		# #Поиск
-		# db_name=table
-		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# cursor = db.cursor()
-		# sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment[0].encode('utf-8')+"'"
-		# #sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
-		# cursor.execute(sql)
-		# data =  cursor.fetchall()
-		# #print data
-		# # len(finish_comment)!=249 RICHTEXT
-		# if (len(data) == 0 and len(finish_comment)!=249):
-		# 	#Вставка
-		# 	db_name=table
-		# 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# 	cursor = db.cursor()
-		# 	sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
-		# 	cursor.execute(sql)
-		# 	db.commit()
-		# i+=1
-		# db.close()
-
-		#
-		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
-		#
-		# db_name=table
-		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# cursor = db.cursor()
-		# sql = "CREATE TABLE IF NOT EXISTS"+ db_name+"_all AS (SELECT * FROM "+db_name+" WHERE 1=0);"
-		# cursor.execute(sql)
-		# db.commit()
-		# db.close()
-
-		# # IF NOT EXISTS (SELECT * FROM TestTable WHERE ProductId > 3);
-		# # CREATE TABLE IF NOT EXISTS new_table AS (SELECT * FROM old_table WHERE 1=0);
-
-		# # db_name=table
-		# db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-		# cursor = db.cursor()
-		# sql = "TRUNCATE "+db_name
-		# cursor.execute(sql)
-		# db.commit()
-		# db.close()
-
-		#
-		#Алгоритм 2 (Стереть все и заново добавить через промежуточную базу с переименованием)
-		#
-
-		# if (len(data) != 0 and cur_rec[5] == '2'):
-		if (len(data) != 0):
-			# print (finish_comment[0][:9])
+		#Поиск
+		db_name=table
+		db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+		cursor = db.cursor()
+		sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)+ " AND Comment =" + "'"+finish_comment.encode('utf-8')+"'"
+		#sql = "SELECT Vrema, Comment FROM "+db_name+" WHERE Vrema = "+str(cur_unix_time)
+		cursor.execute(sql)
+		data =  cursor.fetchall()
+		#print data
+		if len(data) == 0:
 			#Вставка
-			if (finish_comment[0][:9]!='000000000'):
-				db_name=table
-				db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-				cursor = db.cursor()
-				sql = "INSERT INTO "+db_name+"_all "+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment[0].encode('utf-8')+"'"+", "+str(left)+" )"
-				cursor.execute(sql)
-				db.commit()
+			db_name=table
+			db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
+			cursor = db.cursor()
+			sql = "INSERT INTO "+db_name+"(Vrema, Comment, left_txt) VALUE ( "+str(cur_unix_time)+", "+"'"+finish_comment.encode('utf-8')+"'"+", "+str(left)+" )"
+			cursor.execute(sql)
+			db.commit()
 		i+=1
-
-	db.close()
-
-	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-	cursor = db.cursor()
-	# sql = "RENAME TABLE "+db_name+ "_all TO "+ db_name+";"
-	sql = "RENAME TABLE "+db_name+ "_all TO tmp_table, " +db_name+" TO "+ db_name+ "_all , tmp_table TO "+db_name+";"
-	cursor.execute(sql)
-	db.commit()
-	db.close()
-
-	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
-	cursor = db.cursor()
-	sql = "TRUNCATE "+db_name+"_all"
-	cursor.execute(sql)
-	db.commit()
-	db.close()
-
-
+		db.close()
 
 
 	# -------------------------
@@ -396,6 +290,8 @@ def read_well(sbor,table):
 
 	db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="goodman1978", db="pozitron", charset='utf8')
 	cursor = db.cursor()
+
+
 	sql = "RENAME TABLE "+db_name+ " TO tmp_table, " +db_name+"_all TO "+ db_name+ ", tmp_table TO "+db_name+"_all;"
 	cursor.execute(sql)
 	db.commit()
@@ -412,72 +308,72 @@ def read_well(sbor,table):
 	
 
 
-# #Комментарии Logsbuilder
-
-# 235
-t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
-t201.start()
-t201.join(300)
-if t201.is_alive(): t201.terminate()
+#Комментарии Logsbuilder
 
 
-# # #533
+# #544
 # t629 = Process(target=read_well, args=["/mnt/544o/Archive","s544kr"])
 # t629.start()
 # t629.join(360)
 # if t629.is_alive(): t629.terminate()
 
 
-# # #71
-# # t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
-# # t4450.start()
-# # t4450.join(10)
-# # if t4450.is_alive(): t4450.terminate()
+# #71
+# t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
+# t4450.start()
+# t4450.join(10)
+# if t4450.is_alive(): t4450.terminate()
 
-# # #610
-# # t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
-# # t41450.start()
-# # t41450.join(10)
-# # if t41450.is_alive(): t41450.terminate()
+# #610
+# t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
+# t41450.start()
+# t41450.join(10)
+# if t41450.is_alive(): t41450.terminate()
 
-# #9917
-# t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
-# t11450.start()
-# t11450.join(100)
-# if t11450.is_alive(): t11450.terminate()
+#9917
+t11450 = Process(target=read_well, args=["/mnt/630o/Archive","s630kr"])
+t11450.start()
+t11450.join(100)
+if t11450.is_alive(): t11450.terminate()
 
 
-# # #938
-# # t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-# # t21450.start()
-# # t21450.join(10)
-# # if t21450.is_alive(): t21450.terminate()
+# #938
+# t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+# t21450.start()
+# t21450.join(10)
+# if t21450.is_alive(): t21450.terminate()
 
-# #542 Обработчик
-# t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
-# t629.start()
-# t629.join(100)
-# if t629.is_alive(): t629.terminate()
+#542 Обработчик
+t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
+t629.start()
+t629.join(100)
+if t629.is_alive(): t629.terminate()
 
-# #632
-# t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
-# t31450.start()
-# t31450.join(100)
-# if t31450.is_alive(): t31450.terminate()
+#632
+t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
+t31450.start()
+t31450.join(100)
+if t31450.is_alive(): t31450.terminate()
 
-# # ------------------------------------------------------------------------
-# # 449 # 104
-# t20 = Process(target=read_well, args=["/mnt/104o/Archive","s401kr"])
-# t20.start()
-# t20.join(300)
-# if t20.is_alive(): t20.terminate()
+# ------------------------------------------------------------------------
+# 449 # 104
+t20 = Process(target=read_well, args=["/mnt/104o/Archive","s401kr"])
+t20.start()
+t20.join(300)
+if t20.is_alive(): t20.terminate()
 
-# # ------------------------------------------------------------------------
-# # 938
-# t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-# t201.start()
-# t201.join(300)
-# if t201.is_alive(): t201.terminate()
+# ------------------------------------------------------------------------
+# 938
+t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+t201.start()
+t201.join(300)
+if t201.is_alive(): t201.terminate()
+
+# 235
+t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
+t201.start()
+t201.join(300)
+if t201.is_alive(): t201.terminate()
 
 # #629
 # t629 = Process(target=read_well, args=["/mnt/631o/Archive","s629kr"])
