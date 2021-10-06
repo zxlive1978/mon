@@ -1115,11 +1115,11 @@ def readdd_well(nametime, table, start, stop, whathdo):
 				cursor.execute(sql)
 				db.commit()
 			ii=ii+1
-		
-			# except:
-			# 	a=0
-			# finally:
-			# 	a=0
+
+			except:
+				a=0
+			finally:
+				a=0
 			
 		db.close()
 
