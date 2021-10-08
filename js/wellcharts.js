@@ -2,6 +2,7 @@
 
 var chart;
 $(function() {
+  try{
   //prepare values
   data = []; 
   data10 = [];
@@ -49,11 +50,12 @@ $(function() {
   chart.bAxis.setMinMax(d916[0]["date"]/1, d916[numbs916-1]["date"]/1); //set x limits
   chart.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart.draw(); //draw chart  
-});
+}catch(e){}});
 
 
 var chart2;
 $(function() {
+  try{
   //prepare values
   data2 = []; //data array
   data12 = [];
@@ -99,10 +101,11 @@ $(function() {
   chart2.bAxis.setMinMax(d4450[0]["date"]/1, d4450[numbs4450-1]["date"]/1); //set x limits
   chart2.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart2.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart3;
 $(function() {
+  try{
   //prepare values
   data3 = []; //data array
   data14 = [];
@@ -171,10 +174,11 @@ $(function() {
   chart3.bAxis.setMinMax(d631[0]["date"]/1, d631[numbs631-1]["date"]/1); //set x limits
   chart3.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart3.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart4;
 $(function() {
+  try{
   //prepare values
   data4 = []; //data array
   data16 = [];
@@ -220,10 +224,11 @@ $(function() {
   chart4.bAxis.setMinMax(d110[0]["date"]/1, d110[numbs110-1]["date"]/1); //set x limits
   chart4.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart4.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart5;
 $(function() {
+  try{
   //prepare values
   data5 = []; //data array
   data18 = [];
@@ -292,11 +297,12 @@ $(function() {
   chart5.bAxis.setMinMax(d224[0]["date"]/1, d224[numbs224-1]["date"]/1); //set x limits
   chart5.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart5.draw(); //draw chart  
-});
+}catch(e){}});
 
 
 var chart6;
 $(function() {
+  try{
   //prepare values
   data6 = []; //data array
   data20 = [];
@@ -341,11 +347,12 @@ $(function() {
   chart6.bAxis.setMinMax(d908[0]["date"]/1, d908[numbs908-1]["date"]/1); //set x limits
   chart6.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart6.draw(); //draw chart  
-});
+}catch(e){}});
 
 
 var chart7;
 $(function() {
+  try{
   //prepare values
   data7 = []; 
   data8 = [];
@@ -391,11 +398,12 @@ $(function() {
   chart7.bAxis.setMinMax(d411[0]["date"]/1, d411[numbs411-1]["date"]/1); //set x limits
   chart7.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart7.draw(); //draw chart  
-});
+}catch(e){}});
 
 
 var chart8;
 $(function() {
+  try{
   //prepare values
   data29 = []; 
   data30 = [];
@@ -422,10 +430,11 @@ $(function() {
   chart8.bAxis.setMinMax(dconn[0]["date"]/1, dconn[numbsconn-1]["date"]/1); //set x limits
   chart8.lAxis.setMinMax(-1.1, 200.1); //set y limits
   chart8.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart9;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -470,10 +479,11 @@ $(function() {
   chart9.bAxis.setMinMax(d89[0]["date"]/1, d89[numbs89-1]["date"]/1); //set x limits
   chart9.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart9.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart10;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -519,10 +529,11 @@ $(function() {
   chart10.bAxis.setMinMax(d83[0]["date"]/1, d83[numbs83-1]["date"]/1); //set x limits
   chart10.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart10.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart11;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -568,11 +579,12 @@ $(function() {
   chart11.bAxis.setMinMax(d401[0]["date"]/1, d401[numbs401-1]["date"]/1); //set x limits
   chart11.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart11.draw(); //draw chart  
-});
+}catch(e){}});
 
 
 var chart12;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -617,10 +629,11 @@ $(function() {
   chart12.bAxis.setMinMax(d610[0]["date"]/1, d610[numbs610-1]["date"]/1); //set x limits
   chart12.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart12.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart13;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -665,10 +678,11 @@ $(function() {
   chart13.bAxis.setMinMax(d627[0]["date"]/1, d627[numbs627-1]["date"]/1); //set x limits
   chart13.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart13.draw(); //draw chart  
-});
+}catch(e){}});
 
 var chart14;
 $(function() {
+  try{
   //prepare values
   data33 = []; 
   data34 = [];
@@ -713,7 +727,7 @@ $(function() {
   chart14.bAxis.setMinMax(d544[0]["date"]/1, d544[numbs544-1]["date"]/1); //set x limits
   chart14.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart14.draw(); //draw chart  
-});
+}catch(e){}});
 
 //function tick() {
 
