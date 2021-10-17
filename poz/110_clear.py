@@ -31,7 +31,7 @@ def clear_well(table,coldate):
 		a=0
 
 # #908
-# # clear_well("s908", "Vrema")
+# #  clear_well("s908", "Vrema")
 # #547
 # clear_well("s110", "Vrema")
 # #224
