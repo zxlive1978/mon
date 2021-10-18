@@ -154,7 +154,7 @@ def read_well(sbor,table):
 #104
 #read_well("/mnt/104","s110")
 
-#20Э
+#201 938 20Э
 t20 = Process(target=read_well, args=["/mnt/20o","s20kr"])
 t20.start()
 t20.join(10)

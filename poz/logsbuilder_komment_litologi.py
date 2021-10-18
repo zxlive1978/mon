@@ -401,10 +401,10 @@ if t629.is_alive(): t629.terminate()
 
 
 #1РФ
-t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
-t4450.start()
-t4450.join(100)
-if t4450.is_alive(): t4450.terminate()
+# t4450 = Process(target=read_well, args=["/mnt/4450o/Archive","s4450kr"])
+# t4450.start()
+# t4450.join(100)
+# if t4450.is_alive(): t4450.terminate()
 
 # #610
 # t41450 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
@@ -419,11 +419,6 @@ t11450.join(100)
 if t11450.is_alive(): t11450.terminate()
 
 
-# #938
-# t21450 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-# t21450.start()
-# t21450.join(10)
-# if t21450.is_alive(): t21450.terminate()
 
 #542 Обработчик
 t629 = Process(target=read_well, args=["/mnt/915o/Archive","s915kr"])
@@ -432,10 +427,10 @@ t629.join(100)
 if t629.is_alive(): t629.terminate()
 
 #632
-t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
-t31450.start()
-t31450.join(100)
-if t31450.is_alive(): t31450.terminate()
+# t31450 = Process(target=read_well, args=["/mnt/629o/Archive","s629kr"])
+# t31450.start()
+# t31450.join(100)
+# if t31450.is_alive(): t31450.terminate()
 
 # ------------------------------------------------------------------------
 # 449 # 104
@@ -446,10 +441,10 @@ if t20.is_alive(): t20.terminate()
 
 # ------------------------------------------------------------------------
 # 938
-t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
-t201.start()
-t201.join(300)
-if t201.is_alive(): t201.terminate()
+# t201 = Process(target=read_well, args=["/mnt/20o/Archive","s20kr"])
+# t201.start()
+# t201.join(300)
+# if t201.is_alive(): t201.terminate()
 
 # 235
 t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])

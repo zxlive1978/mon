@@ -118,8 +118,8 @@ t204 = Process(target=read_well, args=['"/mnt/915oc/Users/user/Desktop/Свод�
 t204.start()
 
 # ------------------------------------------------------------------------
-# 938
-t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 938/2020-2021/"',"СКВ 938 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-938'])
+# 201 938
+t203 = Process(target=read_well, args=['"/mnt/20oc/Users/user/Desktop/Сводки 201/2020-2021/"',"СКВ 201 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-201'])
 t203.start()
 
 
