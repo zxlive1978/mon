@@ -53,14 +53,14 @@ def read_carot(dirr):
 							if (steep3>=4):
 								params +=" `"+line.rstrip('\n').split(':')[1].split()[0]+'` FLOAT ,'
 								cort_params +=line.rstrip('\n').split(':')[1].split()
-								nameparams +='__'+ line.rstrip('\n').split(':')[1].split()
+								nameparams +='$'+ line.rstrip('\n').split(':')[1].split()
 							if (line.find('Curve information')>0):
 								ok=True
 							if (ok):
 								steep3 +=1
 				print(params[:len(params)-1])
 				print(cort_params)
-				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"__depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" )"
+				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"$depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" )"
 				cursor.execute(sql)
 				db.commit()
 				
