@@ -29,6 +29,7 @@ def read_carot(dirr):
 
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
+			print (filename)
 			# Поиск названия параметров ~Curve information ~Parameter information block
 			if (filename.find('PTS')>0):
 				steep3=0
