@@ -30,15 +30,16 @@ def read_carot(dirr):
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
 			# Поиск названия параметров ~Curve information ~Parameter information block
-			steep3=0
-			with open(dirr+filename, 'r') as fp:
-					for line in fp:
-						if (line.find('~Parameter information block')>0):
-							break
-						if (steep3==3):
-							print(line.rstrip('\n')) 
-						if (line.find('~Curve information')>0):
-							steep3 +=1
+			if (filename.find('PTS')>0):
+				steep3=0
+				with open(dirr+filename, 'r') as fp:
+						for line in fp:
+							if (line.find('~Parameter information block')>0):
+								break
+							if (steep3==3):
+								print(line.rstrip('\n')) 
+							if (line.find('~Curve information')>0):
+								steep3 +=1
 
 			# dataflow=False
 			# if (filename.find('PTS')>0):
