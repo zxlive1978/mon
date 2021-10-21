@@ -90,7 +90,7 @@ def read_carot(dirr):
 							
 							dsstr=''
 							for st in linesplit:
-								dsstr=dsstr+st+','
+								dsstr=dsstr+st+', '
 							dssstr=dsstr[:-1]
 
 							# print(linesplit)
