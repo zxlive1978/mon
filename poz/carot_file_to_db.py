@@ -62,7 +62,7 @@ def read_carot(dirr):
 								steep3 +=1
 				print(params[:len(params)-1])
 				print(cort_params)
-				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"$depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" )"
+				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"$depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" , PRIMARY KEY (`depth`) )"
 				cursor.execute(sql)
 				db.commit()
 				
