@@ -29,19 +29,27 @@ def read_carot(dirr):
 
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
-			print (filename)
+			
 			# Поиск названия параметров ~Curve information ~Parameter information block
 			if (filename.find('PTS')>0):
+				
 				steep3=0
+				ok=False
+				params=''
+				cort_params=[]
 				with open(dirr+filename, 'r') as fp:
 						for line in fp:
-							if (line.find('~Parameter information block')>0):
+							if (line.find('Parameter information block')>0):
 								break
-							if (steep3==3):
-								print(line.rstrip('\n')) 
-							if (line.find('~Curve information')>0):
+							if (steep3>=4):
+								params +=' '+line.rstrip('\n').split(':')[1].split()[0]+','
+								cort_params +=line.rstrip('\n').split(':')[1].split()[0]
+							if (line.find('Curve information')>0):
+								ok=True
+							if (ok):
 								steep3 +=1
-
+				print(params[:len(params)-1])
+				print(cort_params)
 			# dataflow=False
 			# if (filename.find('PTS')>0):
 			# 	# # Проверка, существует ли база Создание базы на основе другой(шаблон)
