@@ -53,7 +53,8 @@ def read_carot(dirr):
 							if (steep3>=4):
 								params +=" `"+line.rstrip('\n').split(':')[1].split()[0]+'` FLOAT ,'
 								cort_params +=line.rstrip('\n').split(':')[1].split()
-								nameparams +='$'+ line.rstrip('\n').split(':')[1].split()
+								nameparams +="$"+ line.rstrip('\n').split(':')[1].split()[0]
+								insert_name +=" "+line.rstrip('\n').split(':')[1].split()[0]+" ,"
 							if (line.find('Curve information')>0):
 								ok=True
 							if (ok):
@@ -93,7 +94,7 @@ def read_carot(dirr):
 
 							# print(linesplit)
 							# # Добавление записи
-							# sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "++" ) VALUE ( "+dssstr+" )"	
+							# sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
 							# cursor.execute(sql)
 							# db.commit()
 						if (line.find('ASCII')>0):
