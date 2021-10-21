@@ -29,44 +29,51 @@ def read_carot(dirr):
 
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
-			# Проверка, существует ли база
-			# sql = "SHOW TABLES LIKE "+"'"+filename+"'"
-			# isbe=cursor.execute(sql)
-			# if (isbe==0):
-			dataflow=False
-			if (filename.find('PTS')>0):
-				# # Создание базы на основе другой(шаблон)
-				sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
-				cursor.execute(sql)
-				db.commit()
-				sql = "TRUNCATE "+"`"+filename+"`"
-				cursor.execute(sql)
-				db.commit()
-				# print (filename)
-				dataflow=False
-				with open(dirr+filename, 'r') as fp:
+			# Поиск названия параметров ~Curve information ~Parameter information block
+			steep3=0
+			with open(dirr+filename, 'r') as fp:
 					for line in fp:
-						# print(line.rstrip('\n'))
-						if (dataflow):
-							linesplit=line.split()
-							ds=[ '0','0','0','0','0','0']
-							i=0
-							for val in linesplit:
-								ds[i]= val
-								i=i+1
-							
-							dsstr=''
-							for st in ds:
-								dsstr=dsstr+st+','
-							dssstr=dsstr[:-1]
+						if (line.find('~Parameter information block')>0):
+							break
+						if (steep3==3):
+							print(line.rstrip('\n')) 
+						if (line.find('~Curve information')>0):
+							steep3 +=1
 
-							print(linesplit)
-							# Добавление записи
-							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ( "+dssstr+" )"	
-							cursor.execute(sql)
-							db.commit()
-						if (line.find('ASCII')>0):
-							dataflow=True
+			# dataflow=False
+			# if (filename.find('PTS')>0):
+			# 	# # Проверка, существует ли база Создание базы на основе другой(шаблон)
+			# 	sql = sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"`"+" LIKE shablon_carot_pts"
+			# 	cursor.execute(sql)
+			# 	db.commit()
+			# 	sql = "TRUNCATE "+"`"+filename+"`"
+			# 	cursor.execute(sql)
+			# 	db.commit()
+			# 	# print (filename)
+			# 	dataflow=False
+			# 	with open(dirr+filename, 'r') as fp:
+			# 		for line in fp:
+			# 			# print(line.rstrip('\n'))
+			# 			if (dataflow):
+			# 				linesplit=line.split()
+			# 				ds=[ '0','0','0','0','0','0']
+			# 				i=0
+			# 				for val in linesplit:
+			# 					ds[i]= val
+			# 					i=i+1
+							
+			# 				dsstr=''
+			# 				for st in ds:
+			# 					dsstr=dsstr+st+','
+			# 				dssstr=dsstr[:-1]
+
+			# 				print(linesplit)
+			# 				# Добавление записи
+			# 				sql = "INSERT INTO "+"`"+filename+"`"+" (depth, ds1, ds2, ds3, ds4, ds5 ) VALUE ( "+dssstr+" )"	
+			# 				cursor.execute(sql)
+			# 				db.commit()
+			# 			if (line.find('ASCII')>0):
+			# 				dataflow=True
 
 
 
