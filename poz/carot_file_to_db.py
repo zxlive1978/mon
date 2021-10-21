@@ -44,6 +44,7 @@ def read_carot(dirr):
 				cort_params=[]
 				# Строка названия параметров для запроса вставки значения параметров
 				insert_name=''
+				# Кортеж значений
 
 				# Поиск названия параметров  и создание таблицы ~Curve information ~Parameter information block
 				with open(dirr+filename, 'r') as fp:
@@ -80,21 +81,22 @@ def read_carot(dirr):
 							linesplit=line.split()
 
 
-							ds=[]
-							print (len(linesplit))
+							
+							# print (len(linesplit))
 							# i=0
 							# for val in linesplit:
 							# 	ds[i]= val
 							# 	i=i+1
 							
-							# dsstr=''
-							# for st in ds:
-							# 	dsstr=dsstr+st+','
-							# dssstr=dsstr[:-1]
+							dsstr=''
+							for st in linesplit:
+								dsstr=dsstr+st+','
+							dssstr=dsstr[:-1]
 
 							# print(linesplit)
-							# # Добавление записи
-							# sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
+							# Добавление записи
+							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
+							print (sql)
 							# cursor.execute(sql)
 							# db.commit()
 						if (line.find('ASCII')>0):
