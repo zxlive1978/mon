@@ -59,8 +59,8 @@ def read_carot(dirr):
 								ok=True
 							if (ok):
 								steep3 +=1
-				print(params[:len(params)-1])
-				print(cort_params)
+				# print(params[:len(params)-1])
+				# print(cort_params)
 				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"$depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" , PRIMARY KEY (`depth`) )"
 				cursor.execute(sql)
 				db.commit()
@@ -82,10 +82,10 @@ def read_carot(dirr):
 							for st in linesplit:
 								dsstr=dsstr+st+', '
 							dssstr=dsstr[:-2]
-							
+
 							# Добавление записи
 							sql = "INSERT INTO "+"`"+filename+"$depth"+nameparams+"`"+" ( depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
-							print (sql)
+							# print (sql)
 							cursor.execute(sql)
 							db.commit()
 						if (line.find('ASCII')>0):
