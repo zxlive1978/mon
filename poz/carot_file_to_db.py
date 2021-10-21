@@ -30,26 +30,78 @@ def read_carot(dirr):
 		output = subprocess.check_output("ls " +dirr , stderr=subprocess.STDOUT, shell=True)
 		for filename in output.split("\n"):
 			
-			# Поиск названия параметров ~Curve information ~Parameter information block
+			
 			if (filename.find('PTS')>0):
-				
+				# Сдвиг на три строки ниже
 				steep3=0
+				# Начало описания заголовка
 				ok=False
+				# Строка названия параметров для создания таблицы
 				params=''
+				# Строка названия параметров для имени таблицы
+				nameparams=''
+				# Кортеж параметров
 				cort_params=[]
+				# Строка названия параметров для запроса вставки значения параметров
+				insert_name=''
+
+				# Поиск названия параметров  и создание таблицы ~Curve information ~Parameter information block
 				with open(dirr+filename, 'r') as fp:
 						for line in fp:
 							if (line.find('Parameter information block')>0):
 								break
 							if (steep3>=4):
-								params +=' '+line.rstrip('\n').split(':')[1].split()[0]+','
-								cort_params +=line.rstrip('\n').split(':')[1].split()[0]
+								params +=" `"+line.rstrip('\n').split(':')[1].split()[0]+'` FLOAT ,'
+								cort_params +=line.rstrip('\n').split(':')[1].split()
+								nameparams +='__'+ line.rstrip('\n').split(':')[1].split()
 							if (line.find('Curve information')>0):
 								ok=True
 							if (ok):
 								steep3 +=1
 				print(params[:len(params)-1])
 				print(cort_params)
+				sql = "CREATE TABLE  IF NOT EXISTS  "+"`"+filename+"__depth"+nameparams+"`"+" ( `depth` FLOAT,"+params[:len(params)-1]+" )"
+				cursor.execute(sql)
+				db.commit()
+				
+
+				# Очистка таблицы
+				sql = "TRUNCATE "+"`"+filename+"`"
+				cursor.execute(sql)
+				db.commit()
+
+				# Наполненение данными таблицы
+				dataflow=False
+				with open(dirr+filename, 'r') as fp:
+					for line in fp:
+						# print(line.rstrip('\n'))
+						if (dataflow):
+							linesplit=line.split()
+
+
+							ds=[]
+							print (len(linesplit))
+							# i=0
+							# for val in linesplit:
+							# 	ds[i]= val
+							# 	i=i+1
+							
+							# dsstr=''
+							# for st in ds:
+							# 	dsstr=dsstr+st+','
+							# dssstr=dsstr[:-1]
+
+							# print(linesplit)
+							# # Добавление записи
+							# sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "++" ) VALUE ( "+dssstr+" )"	
+							# cursor.execute(sql)
+							# db.commit()
+						if (line.find('ASCII')>0):
+							dataflow=True
+
+
+
+				# fubar ( id int, name varchar(80) )
 			# dataflow=False
 			# if (filename.find('PTS')>0):
 			# 	# # Проверка, существует ли база Создание базы на основе другой(шаблон)
