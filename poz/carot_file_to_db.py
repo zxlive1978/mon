@@ -67,7 +67,7 @@ def read_carot(dirr):
 				
 
 				# Очистка таблицы
-				sql = "TRUNCATE "+"`"+filename+"`"
+				sql = "TRUNCATE "+"`"+filename+"$depth"+nameparams+"`"
 				cursor.execute(sql)
 				db.commit()
 
