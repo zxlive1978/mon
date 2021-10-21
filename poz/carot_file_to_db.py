@@ -81,10 +81,11 @@ def read_carot(dirr):
 							dsstr=''
 							for st in linesplit:
 								dsstr=dsstr+st+', '
-							dssstr=dsstr[:-1]
+							dssstr=dsstr[:-2]
+							# print (dssstr[:-1])
 
 							# Добавление записи
-							sql = "INSERT INTO "+"`"+filename+"`"+" (depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
+							sql = "INSERT INTO "+"`"+filename+"$depth"+nameparams+"`"+" ( depth, "+insert_name[:len(insert_name)-1]+" ) VALUE ( "+dssstr+" )"	
 							print (sql)
 							cursor.execute(sql)
 							db.commit()
