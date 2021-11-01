@@ -124,7 +124,7 @@ def read_well(sbor,table):
 		dtt = datetime.fromtimestamp(mktime(time_tuple))
 		cur_unix_time = datetime_to_float(dtt)
 		#Сдвиг
-		shift_hours= 14400
+		shift_hours= 14400 - 3600
 		cur_unix_time-=shift_hours
 		# Комментарии с текущей даты
 		begin_time = 1528269694 # 6 June 2018 г., 07:21:34
