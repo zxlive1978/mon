@@ -41,22 +41,22 @@ def read_well(nametime, table, start, stop, whathdo):
 		# print (nametime, table, start, stop, whathdo)
 		# exit()
 
-
+# python dtcis_read_random_saratov.py Time_100.zip s908 06:00:00-2021-10-06 10:13:00-2021-10-06 add
 def readdd_well(nametime, table, start, stop, whathdo):
 	# if (int(Vrema))>=int(start) and (int(Vrema))<=int(stop):
 	print (nametime, table, start, stop, whathdo)
 	if (str(whathdo) == 'add'):
 		print (nametime, table, start, stop, whathdo)
 
-		disp_time = 18000 + 10800 + 3600
+		disp_time = 18000 + 10800 #+ 3600
 		dt = datetime.strptime(start, '%H:%M:%S-%Y-%m-%d')
 		start = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
-		# print (start)
+		print (start)
 		
 
 		dt = datetime.strptime(stop, '%H:%M:%S-%Y-%m-%d')
 		stop = (dt - datetime(1970, 1, 1)).total_seconds() -4.0*3600
-		# print (stop)
+		print (stop)
 		
 		# распаковка архива
 		zipFile = zipfile.ZipFile(nametime, 'r')
@@ -701,7 +701,6 @@ def readdd_well(nametime, table, start, stop, whathdo):
 							result=round(value[0],2)
 						else: result= value[0]
 						Vinstr = result
-	# # # # # # # 
 					if numb_par[0]==23:
 						if type_par=='f':
 							cur_type='f'
@@ -1115,7 +1114,7 @@ def readdd_well(nametime, table, start, stop, whathdo):
 					cursor.execute(sql)
 					db.commit()
 				ii=ii+1
-		
+
 			except:
 				a=0
 			finally:
@@ -1233,7 +1232,7 @@ def readdd_well(nametime, table, start, stop, whathdo):
 
 
 #Саратов (Обработчик)
-read_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
+readdd_well(sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5])
 # t4450 = Process(target=read_well, args=[sys.argv[1], sys.argv[2], sys.argv[3],  sys.argv[4],  sys.argv[5]])
 # t4450.start()
 # t4450.join(300)
