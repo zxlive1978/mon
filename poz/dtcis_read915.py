@@ -1067,6 +1067,7 @@ def read_well(sbor,table):
 
 #542
 #read_well("/mnt/915","s915")
+print("go")
 t915 = Process(target=read_well, args=["/mnt/915","s915"])
 t915.start()
 t915.join(300)
