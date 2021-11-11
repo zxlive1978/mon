@@ -24,7 +24,7 @@ def read_well(sbor,table):
 				if fnmatch.fnmatch(name, file_ext):
 				  cur_time=name
 				 
-		#print name
+		print name
 		cur_lst=cur_time.replace('dep','lst')
 		cur_lst_size=getsize(join(root, cur_lst))
 		cur_time_size=getsize(join(root, cur_time))
