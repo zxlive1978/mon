@@ -1069,7 +1069,7 @@ def read_well(sbor,table):
 #read_well("/mnt/915","s915")
 t915 = Process(target=read_well, args=["/mnt/915","s915"])
 t915.start()
-t915.join(30)
+t915.join(300)
 if t915.is_alive(): t915.terminate()
 
 # #threading.Thread(target=read_well, args=["/mnt/631","s631"]).join(5)
