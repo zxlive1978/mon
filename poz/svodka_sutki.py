@@ -150,7 +150,7 @@ t201.start()
 t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-1РФ'])
 t200.start()
 
-# 235
+# 173бис
 t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки 173/"',"СКВ 173 Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'173бис'])
 t199.start()
 
