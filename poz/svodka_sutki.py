@@ -134,8 +134,8 @@ t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточ
 t206.start()
 
 # ------------------------------------------------------------------------
-# 222
-t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/2021 скв 222/"',"Скв 222 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-222'])
+# 101
+t207 = Process(target=read_well, args=['"/mnt/83oc/Users/User/Desktop/Сводки в контору/Скв.101 Сводки в контору/"',"Скв 101 Пл АГКМ Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-101'])
 t207.start()
 
 
@@ -151,7 +151,7 @@ t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/С�
 t200.start()
 
 # 173бис
-t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки 173/"',"СКВ 173 Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'173бис'])
+t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводкм скв 173бис/"',"СКВ 173бис Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'173бис'])
 t199.start()
 
 # 533
