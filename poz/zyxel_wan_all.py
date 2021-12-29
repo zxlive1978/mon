@@ -17,7 +17,7 @@ def speed_zyxel(host,port,delay, ip_sngs):
 			telnet.write("enable\n")
 			telnet.read_until("Router#",timeout=delay)
 			#SNGS VIDEO
-			telnet.write("show conn source "+ip_sngs+" \n")
+			telnet.write("show conn destination "+ip_sngs+" \n")
 			#ALL TRAFFIC
 			# telnet.write("show conn"+" \n")
 			telnet.read_until("N",timeout=delay)
