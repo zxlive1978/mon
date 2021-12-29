@@ -29,15 +29,26 @@ def speed_zyxel(host,port,delay, ip_sngs):
 			wanrx = float(data[len(data)-5].split(':')[1].split('(')[0][1:])
 			wanr= data[len(data)-5].split(':')[1].split('(')[1]
 			#print wanr
-			#if
+			#if Mb
+			# if wanr[0] == "B":
+			# 	wanrx = float((wanrx*8.0)/1048576.0)
+			# if wanr[0] == "K":
+			# 	wanrx = float((wanrx*8.0)/1024.0)
+			# if wanr[0] == "M":
+			# 	wanrx = float(wanrx*8.0)
+			# if wanr[0] == "G":
+			# 	wanrx = float((wanrx*1024.0)*8.0)
+			
+
+			#if Kbps
 			if wanr[0] == "B":
-				wanrx = float((wanrx*8.0)/1048576.0)
-			if wanr[0] == "K":
 				wanrx = float((wanrx*8.0)/1024.0)
+			if wanr[0] == "K":
+				wanrx = float((wanrx*8.0))
 			if wanr[0] == "M":
-				wanrx = float(wanrx*8.0)
+				wanrx = float((wanrx*8.0))*1024
 			if wanr[0] == "G":
-				wanrx = float((wanrx*1024.0)*8.0)
+				wanrx = float((wanrx*1048576.0)*8.0)
 				
 			#print wanrx 
 			
