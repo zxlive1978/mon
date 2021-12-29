@@ -62,7 +62,13 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
 		# 	tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "95.182.120.47")
 		# else:
 		# 	tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
+
+		#GBOX 2 IP TUMEN
 		tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "178.72.74.118")
+		tx2,rx2 = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "217.151.129.61")
+		tx = tx + tx2
+		rx = rx + rx2
+
 		mlrx,mltx=zyxel_sngs_port2206.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
         if (luch):
             luchtx,luchrx = zyxel_wan_all_luch.speed_zyxel(ip_poz,"5188",int(c))
