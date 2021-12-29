@@ -64,8 +64,8 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
 		# 	tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
 
 		#GBOX 2 IP TUMEN
-		tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "178.72.74.118")
-		tx2,rx2 = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "217.151.129.61")
+		rx,tx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "178.72.74.118")
+		rx2,tx2 = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "217.151.129.61")
 		tx = tx + tx2
 		rx = rx + rx2
 
