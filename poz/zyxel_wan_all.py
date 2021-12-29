@@ -55,15 +55,25 @@ def speed_zyxel(host,port,delay, ip_sngs):
 			wantx = float(data[len(data)-4].split(':')[1].split('(')[0][1:])
 			want= data[len(data)-4].split(':')[1].split('(')[1]
 			#print wanr
-			#if
+			# #if Mb
+			# if want[0] == "B":
+			# 	wantx = float((wantx*8.0)/1048576.0)
+			# if want[0] == "K":
+			# 	wantx = float((wantx*8.0)/1024.0)
+			# if want[0] == "M":
+			# 	wantx = float(wantx*8.0)
+			# if want[0] == "G":
+			# 	wantx = float((wantx*1024.0)*8.0)
+
+			#if Kbps
 			if want[0] == "B":
-				wantx = float((wantx*8.0)/1048576.0)
-			if want[0] == "K":
 				wantx = float((wantx*8.0)/1024.0)
+			if want[0] == "K":
+				wantx = float((wantx*8.0))
 			if want[0] == "M":
-				wantx = float(wantx*8.0)
+				wantx = float((wantx*8.0))*1024
 			if want[0] == "G":
-				wantx = float((wantx*1024.0)*8.0)
+				wantx = float((wantx*1048576.0)*8.0)
 				
 			#print wantx
 			
