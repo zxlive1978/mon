@@ -173,8 +173,8 @@ if (r.ret_code==0):
 		average8084=r.avg_rtt
 #average8084 = megamultiping.ping ('80.247.113.226')
 
-#213.80.235.178
-r = pyping.ping('213.80.235.178')
+#Тюмень
+r = pyping.ping('178.72.74.118')
 if (r.ret_code==0):
 		average773=r.avg_rtt
 #average773 = megamultiping.ping ('192.168.77.3')
