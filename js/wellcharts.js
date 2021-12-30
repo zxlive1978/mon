@@ -19,8 +19,8 @@ $(function() {
 		rx1=100*(Number(d916[t]["tx"])-Number(d916[t-1]["tx"]))/(Number(d916[t]["date"]/1) - Number(d916[t-1]["date"]/1));
 		tx1=100*(Number(d916[t]["rx"])-Number(d916[t-1]["rx"]))/(Number(d916[t]["date"]/1) - Number(d916[t-1]["date"]/1));
 	} else {rx1=(100*(d916[t]["tx"]))/1; tx1=(100*(d916[t]["rx"]))/1;}
-	mrx1=(10000*(d916[t]["mtx"]))/10;
-	mtx1=(10000*(d916[t]["mrx"]))/10;
+	mrx1=(10000*(d916[t]["mtx"]))/100;
+	mtx1=(10000*(d916[t]["mrx"]))/100;
 	ml1=(100*(d916[t]["ml"]))/1;
 	mlrx1=((d916[t]["mltx"]))/1;
 	mltx1=((d916[t]["mlrx"]))/1;
@@ -71,8 +71,8 @@ $(function() {
 		rx1=100*(Number(d4450[t]["tx"])-Number(d4450[t-1]["tx"]))/(Number(d4450[t]["date"]/1) - Number(d4450[t-1]["date"]/1));
 		tx1=100*(Number(d4450[t]["rx"])-Number(d4450[t-1]["rx"]))/(Number(d4450[t]["date"]/1) - Number(d4450[t-1]["date"]/1));
 	} else {rx1=(100*(d4450[t]["tx"]))/1; tx1=(100*(d4450[t]["rx"]))/1;}
-	mrx1=(10000*(d4450[t]["mtx"]))/10;
-	mtx1=(10000*(d4450[t]["mrx"]))/10;
+	mrx1=(10000*(d4450[t]["mtx"]))/100;
+	mtx1=(10000*(d4450[t]["mrx"]))/100;
 	mlrx1=((d4450[t]["mltx"]))/1;
 	mltx1=((d4450[t]["mlrx"]))/1;
 	ml1=(100*(d4450[t]["ml"]))/1;
@@ -123,8 +123,8 @@ $(function() {
 		rx1=100*(Number(d631[t]["tx"])-Number(d631[t-1]["tx"]))/(Number(d631[t]["date"]/1) - Number(d631[t-1]["date"]/1));
 		tx1=100*(Number(d631[t]["rx"])-Number(d631[t-1]["rx"]))/(Number(d631[t]["date"]/1) - Number(d631[t-1]["date"]/1));
 	} else {rx1=(100*(d631[t]["tx"]))/1; tx1=(100*(d631[t]["rx"]))/1;}
-	mrx1=(10000*(d631[t]["mtx"]))/10;
-	mtx1=(10000*(d631[t]["mrx"]))/10;
+	mrx1=(10000*(d631[t]["mtx"]))/100;
+	mtx1=(10000*(d631[t]["mrx"]))/100;
 	mlrx1=((d631[t]["mltx"]))/1;
 	mltx1=((d631[t]["mlrx"]))/1;
 	//console.log(Number(d631[t]["luchtx"]));
@@ -194,8 +194,8 @@ $(function() {
 		rx1=100*(Number(d110[t]["tx"])-Number(d110[t-1]["tx"]))/(Number(d110[t]["date"]/1) - Number(d110[t-1]["date"]/1));
 		tx1=100*(Number(d110[t]["rx"])-Number(d110[t-1]["rx"]))/(Number(d110[t]["date"]/1) - Number(d110[t-1]["date"]/1));
 	} else {rx1=(100*(d110[t]["tx"]))/1; tx1=(100*(d110[t]["rx"]))/1;}
-	mrx1=(10000*(d110[t]["mtx"]))/10;
-	mtx1=(10000*(d110[t]["mrx"]))/10;
+	mrx1=(10000*(d110[t]["mtx"]))/100;
+	mtx1=(10000*(d110[t]["mrx"]))/100;
 	ml1=(100*(d110[t]["ml"]))/1;
 	mlrx1=((d110[t]["mltx"]))/1;
 	mltx1=((d110[t]["mlrx"]))/1;
@@ -246,8 +246,8 @@ $(function() {
 		rx1=100*(Number(d224[t]["tx"])-Number(d224[t-1]["tx"]))/(Number(d224[t]["date"]/1) - Number(d224[t-1]["date"]/1));
 		tx1=100*(Number(d224[t]["rx"])-Number(d224[t-1]["rx"]))/(Number(d224[t]["date"]/1) - Number(d224[t-1]["date"]/1));
 	} else {rx1=(100*(d224[t]["tx"]))/1; tx1=(100*(d224[t]["rx"]))/1;}
-	mrx1=(10000*(d224[t]["mtx"]))/10;
-	mtx1=(10000*(d224[t]["mrx"]))/10;
+	mrx1=(10000*(d224[t]["mtx"]))/100;
+	mtx1=(10000*(d224[t]["mrx"]))/100;
 	mlrx1=((d224[t]["mltx"]))/1;
 	mltx1=((d224[t]["mlrx"]))/1;
   
@@ -318,8 +318,8 @@ $(function() {
 		rx1=100*(Number(d908[t]["tx"])-Number(d908[t-1]["tx"]))/(Number(d908[t]["date"]/1) - Number(d908[t-1]["date"]/1));
 		tx1=100*(Number(d908[t]["rx"])-Number(d908[t-1]["rx"]))/(Number(d908[t]["date"]/1) - Number(d908[t-1]["date"]/1));
 	} else {rx1=(100*(d908[t]["tx"]))/1; tx1=(100*(d908[t]["rx"]))/1;}
-	mrx1=(10000*(d908[t]["mtx"]))/10;
-	mtx1=(10000*(d908[t]["mrx"]))/10;
+	mrx1=(10000*(d908[t]["mtx"]))/100;
+	mtx1=(10000*(d908[t]["mrx"]))/100;
 	mlrx1=((d908[t]["mltx"]))/1;
 	mltx1=((d908[t]["mlrx"]))/1;
 	ml1=(100*(d908[t]["ml"]))/1;
@@ -368,8 +368,8 @@ $(function() {
 		rx1=100*(Number(d411[t]["tx"])-Number(d411[t-1]["tx"]))/(Number(d411[t]["date"]/1) - Number(d411[t-1]["date"]/1));
 		tx1=100*(Number(d411[t]["rx"])-Number(d411[t-1]["rx"]))/(Number(d411[t]["date"]/1) - Number(d411[t-1]["date"]/1));
 	} else {rx1=(100*(d411[t]["tx"]))/1; tx1=(100*(d411[t]["rx"]))/1;}
-	mrx1=(10000*(d411[t]["mtx"]))/10;
-	mtx1=(10000*(d411[t]["mrx"]))/10;
+	mrx1=(10000*(d411[t]["mtx"]))/100;
+	mtx1=(10000*(d411[t]["mrx"]))/100;
 	mlrx1=((d411[t]["mltx"]))/1;
 	mltx1=((d411[t]["mlrx"]))/1;
 	ml1=(100*(d411[t]["ml"]))/1;
@@ -450,8 +450,8 @@ $(function() {
 		rx1=100*(Number(d89[t]["rx"])-Number(d89[t-1]["rx"]))/(Number(d89[t]["date"]/1) - Number(d89[t-1]["date"]/1));
 		tx1=100*(Number(d89[t]["tx"])-Number(d89[t-1]["tx"]))/(Number(d89[t]["date"]/1) - Number(d89[t-1]["date"]/1));
 	} else {rx1=(100*(d89[t]["rx"]))/1; tx1=(100*(d89[t]["tx"]))/1;}
-	mrx1=(10000*(d89[t]["mtx"]))/10;
-	mtx1=(10000*(d89[t]["mrx"]))/10;
+	mrx1=(10000*(d89[t]["mtx"]))/100;
+	mtx1=(10000*(d89[t]["mrx"]))/100;
 	mlrx1=((d89[t]["mltx"]))/1;
 	mltx1=((d89[t]["mlrx"]))/1;
 	ml1=(100*(d89[t]["ml"]))/1;
@@ -499,8 +499,8 @@ $(function() {
 		rx1=100*(Number(d83[t]["rx"])-Number(d83[t-1]["rx"]))/(Number(d83[t]["date"]/1) - Number(d83[t-1]["date"]/1));
 		tx1=100*(Number(d83[t]["tx"])-Number(d83[t-1]["tx"]))/(Number(d83[t]["date"]/1) - Number(d83[t-1]["date"]/1));
 	} else {rx1=(100*(d83[t]["rx"]))/1; tx1=(100*(d83[t]["tx"]))/1;}
-	mrx1=(10000*(d83[t]["mtx"]))/10;
-	mtx1=(10000*(d83[t]["mrx"]))/10;
+	mrx1=(10000*(d83[t]["mtx"]))/100;
+	mtx1=(10000*(d83[t]["mrx"]))/100;
 	mlrx1=((d83[t]["mltx"]))/1;
 	mltx1=((d83[t]["mlrx"]))/1;
 	ml1=(100*(d83[t]["ml"]))/1;
@@ -549,8 +549,8 @@ $(function() {
 		rx1=100*(Number(d401[t]["rx"])-Number(d401[t-1]["rx"]))/(Number(d401[t]["date"]/1) - Number(d401[t-1]["date"]/1));
 		tx1=100*(Number(d401[t]["tx"])-Number(d401[t-1]["tx"]))/(Number(d401[t]["date"]/1) - Number(d401[t-1]["date"]/1));
 	} else {rx1=(100*(d401[t]["rx"]))/1; tx1=(100*(d401[t]["tx"]))/1;}
-	mrx1=(10000*(d401[t]["mtx"]))/10;
-	mtx1=(10000*(d401[t]["mrx"]))/10;
+	mrx1=(10000*(d401[t]["mtx"]))/100;
+	mtx1=(10000*(d401[t]["mrx"]))/100;
 	mlrx1=((d401[t]["mltx"]))/1;
 	mltx1=((d401[t]["mlrx"]))/1;
 	ml1=(100*(d401[t]["ml"]))/1;
@@ -600,8 +600,8 @@ $(function() {
 		rx1=100*(Number(d610[t]["rx"])-Number(d610[t-1]["rx"]))/(Number(d610[t]["date"]/1) - Number(d610[t-1]["date"]/1));
 		tx1=100*(Number(d610[t]["tx"])-Number(d610[t-1]["tx"]))/(Number(d610[t]["date"]/1) - Number(d610[t-1]["date"]/1));
 	} else {rx1=(100*(d610[t]["rx"]))/1; tx1=(100*(d610[t]["tx"]))/1;}
-	mrx1=(10000*(d610[t]["mtx"]))/10;
-	mtx1=(10000*(d610[t]["mrx"]))/10;
+	mrx1=(10000*(d610[t]["mtx"]))/100;
+	mtx1=(10000*(d610[t]["mrx"]))/100;
 	mlrx1=((d610[t]["mltx"]))/1;
 	mltx1=((d610[t]["mlrx"]))/1;
 	ml1=(100*(d610[t]["ml"]))/1;
@@ -649,8 +649,8 @@ $(function() {
 		rx1=100*(Number(d627[t]["rx"])-Number(d627[t-1]["rx"]))/(Number(d627[t]["date"]/1) - Number(d627[t-1]["date"]/1));
 		tx1=100*(Number(d627[t]["tx"])-Number(d627[t-1]["tx"]))/(Number(d627[t]["date"]/1) - Number(d627[t-1]["date"]/1));
 	} else {rx1=(100*(d627[t]["rx"]))/1; tx1=(100*(d627[t]["tx"]))/1;}
-	mrx1=(10000*(d627[t]["mtx"]))/10;
-	mtx1=(10000*(d627[t]["mrx"]))/10;
+	mrx1=(10000*(d627[t]["mtx"]))/100;
+	mtx1=(10000*(d627[t]["mrx"]))/100;
 	mlrx1=((d627[t]["mltx"]))/1;
 	mltx1=((d627[t]["mlrx"]))/1;
 	ml1=(100*(d627[t]["ml"]))/1;
@@ -698,8 +698,8 @@ $(function() {
 		rx1=100*(Number(d544[t]["rx"])-Number(d544[t-1]["rx"]))/(Number(d544[t]["date"]/1) - Number(d544[t-1]["date"]/1));
 		tx1=100*(Number(d544[t]["tx"])-Number(d544[t-1]["tx"]))/(Number(d544[t]["date"]/1) - Number(d544[t-1]["date"]/1));
 	} else {rx1=(100*(d544[t]["rx"]))/1; tx1=(100*(d544[t]["tx"]))/1;}
-	mrx1=(10000*(d544[t]["mtx"]))/10;
-	mtx1=(10000*(d544[t]["mrx"]))/10;
+	mrx1=(10000*(d544[t]["mtx"]))/100;
+	mtx1=(10000*(d544[t]["mrx"]))/100;
 	mlrx1=((d544[t]["mltx"]))/1;
 	mltx1=((d544[t]["mlrx"]))/1;
 	ml1=(100*(d544[t]["ml"]))/1;
