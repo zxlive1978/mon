@@ -19,8 +19,8 @@ $(function() {
 		rx1=100*(Number(d916[t]["tx"])-Number(d916[t-1]["tx"]))/(Number(d916[t]["date"]/1) - Number(d916[t-1]["date"]/1));
 		tx1=100*(Number(d916[t]["rx"])-Number(d916[t-1]["rx"]))/(Number(d916[t]["date"]/1) - Number(d916[t-1]["date"]/1));
 	} else {rx1=(100*(d916[t]["tx"]))/1; tx1=(100*(d916[t]["rx"]))/1;}
-	mrx1=(10000*(d916[t]["mtx"]))/10;
-	mtx1=(10000*(d916[t]["mrx"]))/10;
+	mrx1=(10000*(d916[t]["mtx"]))/100;
+	mtx1=(10000*(d916[t]["mrx"]))/100;
 	ml1=(100*(d916[t]["ml"]))/1;
 	mlrx1=((d916[t]["mltx"]))/1;
 	mltx1=((d916[t]["mlrx"]))/1;
@@ -48,7 +48,7 @@ $(function() {
   chart.trends[7].data = mldata11;
   
   chart.bAxis.setMinMax(d916[0]["date"]/1, d916[numbs916-1]["date"]/1); //set x limits
-  chart.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart.draw(); //draw chart  
 }catch(e){}});
 
@@ -71,8 +71,8 @@ $(function() {
 		rx1=100*(Number(d4450[t]["tx"])-Number(d4450[t-1]["tx"]))/(Number(d4450[t]["date"]/1) - Number(d4450[t-1]["date"]/1));
 		tx1=100*(Number(d4450[t]["rx"])-Number(d4450[t-1]["rx"]))/(Number(d4450[t]["date"]/1) - Number(d4450[t-1]["date"]/1));
 	} else {rx1=(100*(d4450[t]["tx"]))/1; tx1=(100*(d4450[t]["rx"]))/1;}
-	mrx1=(10000*(d4450[t]["mtx"]))/10;
-	mtx1=(10000*(d4450[t]["mrx"]))/10;
+	mrx1=(10000*(d4450[t]["mtx"]))/100;
+	mtx1=(10000*(d4450[t]["mrx"]))/100;
 	mlrx1=((d4450[t]["mltx"]))/1;
 	mltx1=((d4450[t]["mlrx"]))/1;
 	ml1=(100*(d4450[t]["ml"]))/1;
@@ -99,7 +99,7 @@ $(function() {
   chart2.trends[7].data = mldata13;
   
   chart2.bAxis.setMinMax(d4450[0]["date"]/1, d4450[numbs4450-1]["date"]/1); //set x limits
-  chart2.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart2.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart2.draw(); //draw chart  
 }catch(e){}});
 
@@ -123,8 +123,8 @@ $(function() {
 		rx1=100*(Number(d631[t]["tx"])-Number(d631[t-1]["tx"]))/(Number(d631[t]["date"]/1) - Number(d631[t-1]["date"]/1));
 		tx1=100*(Number(d631[t]["rx"])-Number(d631[t-1]["rx"]))/(Number(d631[t]["date"]/1) - Number(d631[t-1]["date"]/1));
 	} else {rx1=(100*(d631[t]["tx"]))/1; tx1=(100*(d631[t]["rx"]))/1;}
-	mrx1=(10000*(d631[t]["mtx"]))/10;
-	mtx1=(10000*(d631[t]["mrx"]))/10;
+	mrx1=(10000*(d631[t]["mtx"]))/100;
+	mtx1=(10000*(d631[t]["mrx"]))/100;
 	mlrx1=((d631[t]["mltx"]))/1;
 	mltx1=((d631[t]["mlrx"]))/1;
 	//console.log(Number(d631[t]["luchtx"]));
@@ -172,7 +172,7 @@ $(function() {
   chart3.trends[9].data = luchdata15;
   
   chart3.bAxis.setMinMax(d631[0]["date"]/1, d631[numbs631-1]["date"]/1); //set x limits
-  chart3.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart3.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart3.draw(); //draw chart  
 }catch(e){}});
 
@@ -194,8 +194,8 @@ $(function() {
 		rx1=100*(Number(d110[t]["tx"])-Number(d110[t-1]["tx"]))/(Number(d110[t]["date"]/1) - Number(d110[t-1]["date"]/1));
 		tx1=100*(Number(d110[t]["rx"])-Number(d110[t-1]["rx"]))/(Number(d110[t]["date"]/1) - Number(d110[t-1]["date"]/1));
 	} else {rx1=(100*(d110[t]["tx"]))/1; tx1=(100*(d110[t]["rx"]))/1;}
-	mrx1=(10000*(d110[t]["mtx"]))/10;
-	mtx1=(10000*(d110[t]["mrx"]))/10;
+	mrx1=(10000*(d110[t]["mtx"]))/100;
+	mtx1=(10000*(d110[t]["mrx"]))/100;
 	ml1=(100*(d110[t]["ml"]))/1;
 	mlrx1=((d110[t]["mltx"]))/1;
 	mltx1=((d110[t]["mlrx"]))/1;
@@ -222,7 +222,7 @@ $(function() {
   chart4.trends[6].data = mldata16;
   chart4.trends[7].data = mldata17;
   chart4.bAxis.setMinMax(d110[0]["date"]/1, d110[numbs110-1]["date"]/1); //set x limits
-  chart4.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart4.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart4.draw(); //draw chart  
 }catch(e){}});
 
@@ -246,8 +246,8 @@ $(function() {
 		rx1=100*(Number(d224[t]["tx"])-Number(d224[t-1]["tx"]))/(Number(d224[t]["date"]/1) - Number(d224[t-1]["date"]/1));
 		tx1=100*(Number(d224[t]["rx"])-Number(d224[t-1]["rx"]))/(Number(d224[t]["date"]/1) - Number(d224[t-1]["date"]/1));
 	} else {rx1=(100*(d224[t]["tx"]))/1; tx1=(100*(d224[t]["rx"]))/1;}
-	mrx1=(10000*(d224[t]["mtx"]))/10;
-	mtx1=(10000*(d224[t]["mrx"]))/10;
+	mrx1=(10000*(d224[t]["mtx"]))/100;
+	mtx1=(10000*(d224[t]["mrx"]))/100;
 	mlrx1=((d224[t]["mltx"]))/1;
 	mltx1=((d224[t]["mlrx"]))/1;
   
@@ -295,7 +295,7 @@ $(function() {
   
  // chart5.trends[1].data = data6; //set data
   chart5.bAxis.setMinMax(d224[0]["date"]/1, d224[numbs224-1]["date"]/1); //set x limits
-  chart5.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart5.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart5.draw(); //draw chart  
 }catch(e){}});
 
@@ -318,8 +318,8 @@ $(function() {
 		rx1=100*(Number(d908[t]["tx"])-Number(d908[t-1]["tx"]))/(Number(d908[t]["date"]/1) - Number(d908[t-1]["date"]/1));
 		tx1=100*(Number(d908[t]["rx"])-Number(d908[t-1]["rx"]))/(Number(d908[t]["date"]/1) - Number(d908[t-1]["date"]/1));
 	} else {rx1=(100*(d908[t]["tx"]))/1; tx1=(100*(d908[t]["rx"]))/1;}
-	mrx1=(10000*(d908[t]["mtx"]))/10;
-	mtx1=(10000*(d908[t]["mrx"]))/10;
+	mrx1=(10000*(d908[t]["mtx"]))/100;
+	mtx1=(10000*(d908[t]["mrx"]))/100;
 	mlrx1=((d908[t]["mltx"]))/1;
 	mltx1=((d908[t]["mlrx"]))/1;
 	ml1=(100*(d908[t]["ml"]))/1;
@@ -345,7 +345,7 @@ $(function() {
   chart6.trends[6].data = mldata20;
   chart6.trends[7].data = mldata21;
   chart6.bAxis.setMinMax(d908[0]["date"]/1, d908[numbs908-1]["date"]/1); //set x limits
-  chart6.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart6.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart6.draw(); //draw chart  
 }catch(e){}});
 
@@ -368,8 +368,8 @@ $(function() {
 		rx1=100*(Number(d411[t]["tx"])-Number(d411[t-1]["tx"]))/(Number(d411[t]["date"]/1) - Number(d411[t-1]["date"]/1));
 		tx1=100*(Number(d411[t]["rx"])-Number(d411[t-1]["rx"]))/(Number(d411[t]["date"]/1) - Number(d411[t-1]["date"]/1));
 	} else {rx1=(100*(d411[t]["tx"]))/1; tx1=(100*(d411[t]["rx"]))/1;}
-	mrx1=(10000*(d411[t]["mtx"]))/10;
-	mtx1=(10000*(d411[t]["mrx"]))/10;
+	mrx1=(10000*(d411[t]["mtx"]))/100;
+	mtx1=(10000*(d411[t]["mrx"]))/100;
 	mlrx1=((d411[t]["mltx"]))/1;
 	mltx1=((d411[t]["mlrx"]))/1;
 	ml1=(100*(d411[t]["ml"]))/1;
@@ -396,7 +396,7 @@ $(function() {
   chart7.trends[7].data = mldata9;
   
   chart7.bAxis.setMinMax(d411[0]["date"]/1, d411[numbs411-1]["date"]/1); //set x limits
-  chart7.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart7.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart7.draw(); //draw chart  
 }catch(e){}});
 
@@ -450,8 +450,8 @@ $(function() {
 		rx1=100*(Number(d89[t]["rx"])-Number(d89[t-1]["rx"]))/(Number(d89[t]["date"]/1) - Number(d89[t-1]["date"]/1));
 		tx1=100*(Number(d89[t]["tx"])-Number(d89[t-1]["tx"]))/(Number(d89[t]["date"]/1) - Number(d89[t-1]["date"]/1));
 	} else {rx1=(100*(d89[t]["rx"]))/1; tx1=(100*(d89[t]["tx"]))/1;}
-	mrx1=(10000*(d89[t]["mtx"]))/10;
-	mtx1=(10000*(d89[t]["mrx"]))/10;
+	mrx1=(10000*(d89[t]["mtx"]))/100;
+	mtx1=(10000*(d89[t]["mrx"]))/100;
 	mlrx1=((d89[t]["mltx"]))/1;
 	mltx1=((d89[t]["mlrx"]))/1;
 	ml1=(100*(d89[t]["ml"]))/1;
@@ -477,7 +477,7 @@ $(function() {
   chart9.trends[6].data = mldata34;
   chart9.trends[7].data = mldata35;
   chart9.bAxis.setMinMax(d89[0]["date"]/1, d89[numbs89-1]["date"]/1); //set x limits
-  chart9.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart9.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart9.draw(); //draw chart  
 }catch(e){}});
 
@@ -499,8 +499,8 @@ $(function() {
 		rx1=100*(Number(d83[t]["rx"])-Number(d83[t-1]["rx"]))/(Number(d83[t]["date"]/1) - Number(d83[t-1]["date"]/1));
 		tx1=100*(Number(d83[t]["tx"])-Number(d83[t-1]["tx"]))/(Number(d83[t]["date"]/1) - Number(d83[t-1]["date"]/1));
 	} else {rx1=(100*(d83[t]["rx"]))/1; tx1=(100*(d83[t]["tx"]))/1;}
-	mrx1=(10000*(d83[t]["mtx"]))/10;
-	mtx1=(10000*(d83[t]["mrx"]))/10;
+	mrx1=(10000*(d83[t]["mtx"]))/100;
+	mtx1=(10000*(d83[t]["mrx"]))/100;
 	mlrx1=((d83[t]["mltx"]))/1;
 	mltx1=((d83[t]["mlrx"]))/1;
 	ml1=(100*(d83[t]["ml"]))/1;
@@ -527,7 +527,7 @@ $(function() {
   chart10.trends[7].data = mldata35;
   
   chart10.bAxis.setMinMax(d83[0]["date"]/1, d83[numbs83-1]["date"]/1); //set x limits
-  chart10.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart10.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart10.draw(); //draw chart  
 }catch(e){}});
 
@@ -549,8 +549,8 @@ $(function() {
 		rx1=100*(Number(d401[t]["rx"])-Number(d401[t-1]["rx"]))/(Number(d401[t]["date"]/1) - Number(d401[t-1]["date"]/1));
 		tx1=100*(Number(d401[t]["tx"])-Number(d401[t-1]["tx"]))/(Number(d401[t]["date"]/1) - Number(d401[t-1]["date"]/1));
 	} else {rx1=(100*(d401[t]["rx"]))/1; tx1=(100*(d401[t]["tx"]))/1;}
-	mrx1=(10000*(d401[t]["mtx"]))/10;
-	mtx1=(10000*(d401[t]["mrx"]))/10;
+	mrx1=(10000*(d401[t]["mtx"]))/100;
+	mtx1=(10000*(d401[t]["mrx"]))/100;
 	mlrx1=((d401[t]["mltx"]))/1;
 	mltx1=((d401[t]["mlrx"]))/1;
 	ml1=(100*(d401[t]["ml"]))/1;
@@ -577,7 +577,7 @@ $(function() {
   chart11.trends[7].data = mldata35;
   
   chart11.bAxis.setMinMax(d401[0]["date"]/1, d401[numbs401-1]["date"]/1); //set x limits
-  chart11.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart11.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart11.draw(); //draw chart  
 }catch(e){}});
 
@@ -600,8 +600,8 @@ $(function() {
 		rx1=100*(Number(d610[t]["rx"])-Number(d610[t-1]["rx"]))/(Number(d610[t]["date"]/1) - Number(d610[t-1]["date"]/1));
 		tx1=100*(Number(d610[t]["tx"])-Number(d610[t-1]["tx"]))/(Number(d610[t]["date"]/1) - Number(d610[t-1]["date"]/1));
 	} else {rx1=(100*(d610[t]["rx"]))/1; tx1=(100*(d610[t]["tx"]))/1;}
-	mrx1=(10000*(d610[t]["mtx"]))/10;
-	mtx1=(10000*(d610[t]["mrx"]))/10;
+	mrx1=(10000*(d610[t]["mtx"]))/100;
+	mtx1=(10000*(d610[t]["mrx"]))/100;
 	mlrx1=((d610[t]["mltx"]))/1;
 	mltx1=((d610[t]["mlrx"]))/1;
 	ml1=(100*(d610[t]["ml"]))/1;
@@ -627,7 +627,7 @@ $(function() {
   chart12.trends[6].data = mldata34;
   chart12.trends[7].data = mldata35;
   chart12.bAxis.setMinMax(d610[0]["date"]/1, d610[numbs610-1]["date"]/1); //set x limits
-  chart12.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart12.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart12.draw(); //draw chart  
 }catch(e){}});
 
@@ -649,8 +649,8 @@ $(function() {
 		rx1=100*(Number(d627[t]["rx"])-Number(d627[t-1]["rx"]))/(Number(d627[t]["date"]/1) - Number(d627[t-1]["date"]/1));
 		tx1=100*(Number(d627[t]["tx"])-Number(d627[t-1]["tx"]))/(Number(d627[t]["date"]/1) - Number(d627[t-1]["date"]/1));
 	} else {rx1=(100*(d627[t]["rx"]))/1; tx1=(100*(d627[t]["tx"]))/1;}
-	mrx1=(10000*(d627[t]["mtx"]))/10;
-	mtx1=(10000*(d627[t]["mrx"]))/10;
+	mrx1=(10000*(d627[t]["mtx"]))/100;
+	mtx1=(10000*(d627[t]["mrx"]))/100;
 	mlrx1=((d627[t]["mltx"]))/1;
 	mltx1=((d627[t]["mlrx"]))/1;
 	ml1=(100*(d627[t]["ml"]))/1;
@@ -676,7 +676,7 @@ $(function() {
   chart13.trends[6].data = mldata34;
   chart13.trends[7].data = mldata35;
   chart13.bAxis.setMinMax(d627[0]["date"]/1, d627[numbs627-1]["date"]/1); //set x limits
-  chart13.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart13.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart13.draw(); //draw chart  
 }catch(e){}});
 
@@ -698,8 +698,8 @@ $(function() {
 		rx1=100*(Number(d544[t]["rx"])-Number(d544[t-1]["rx"]))/(Number(d544[t]["date"]/1) - Number(d544[t-1]["date"]/1));
 		tx1=100*(Number(d544[t]["tx"])-Number(d544[t-1]["tx"]))/(Number(d544[t]["date"]/1) - Number(d544[t-1]["date"]/1));
 	} else {rx1=(100*(d544[t]["rx"]))/1; tx1=(100*(d544[t]["tx"]))/1;}
-	mrx1=(10000*(d544[t]["mtx"]))/10;
-	mtx1=(10000*(d544[t]["mrx"]))/10;
+	mrx1=(10000*(d544[t]["mtx"]))/100;
+	mtx1=(10000*(d544[t]["mrx"]))/100;
 	mlrx1=((d544[t]["mltx"]))/1;
 	mltx1=((d544[t]["mlrx"]))/1;
 	ml1=(100*(d544[t]["ml"]))/1;
@@ -725,7 +725,7 @@ $(function() {
   chart14.trends[6].data = mldata34;
   chart14.trends[7].data = mldata35;
   chart14.bAxis.setMinMax(d544[0]["date"]/1, d544[numbs544-1]["date"]/1); //set x limits
-  chart14.lAxis.setMinMax(-1.1, 600.1); //set y limits
+  chart14.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart14.draw(); //draw chart  
 }catch(e){}});
 
