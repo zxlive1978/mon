@@ -30,25 +30,25 @@ def speed_zyxel(host,port,delay, ip_sngs):
 			wanr= data[len(data)-5].split(':')[1].split('(')[1]
 			#print wanr
 			#if Mb
-			if wanr[0] == "B":
-				wanrx = float((wanrx*8.0)/1048576.0)
-			if wanr[0] == "K":
-				wanrx = float((wanrx*8.0)/1024.0)
-			if wanr[0] == "M":
-				wanrx = float(wanrx*8.0)
-			if wanr[0] == "G":
-				wanrx = float((wanrx*1024.0)*8.0)
+			# if wanr[0] == "B":
+			# 	wanrx = float((wanrx*8.0)/1048576.0)
+			# if wanr[0] == "K":
+			# 	wanrx = float((wanrx*8.0)/1024.0)
+			# if wanr[0] == "M":
+			# 	wanrx = float(wanrx*8.0)
+			# if wanr[0] == "G":
+			# 	wanrx = float((wanrx*1024.0)*8.0)
 			
 
-			# #if Kbps
-			# if wanr[0] == "B":
-			# 	wanrx = float((wanrx*8.0)/1024.0)
-			# if wanr[0] == "K":
-			# 	wanrx = float((wanrx*8.0))
-			# if wanr[0] == "M":
-			# 	wanrx = float((wanrx*8.0))*1024
-			# if wanr[0] == "G":
-			# 	wanrx = float((wanrx*1048576.0)*8.0)
+			#if Kbps
+			if wanr[0] == "B":
+				wanrx = float((wanrx*8.0)/1024.0)
+			if wanr[0] == "K":
+				wanrx = float((wanrx*8.0))
+			if wanr[0] == "M":
+				wanrx = float((wanrx*8.0))*1024
+			if wanr[0] == "G":
+				wanrx = float((wanrx*1048576.0)*8.0)
 				
 			#print wanrx 
 			
@@ -56,24 +56,24 @@ def speed_zyxel(host,port,delay, ip_sngs):
 			want= data[len(data)-4].split(':')[1].split('(')[1]
 			#print wanr
 			# #if Mb
-			if want[0] == "B":
-				wantx = float((wantx*8.0)/1048576.0)
-			if want[0] == "K":
-				wantx = float((wantx*8.0)/1024.0)
-			if want[0] == "M":
-				wantx = float(wantx*8.0)
-			if want[0] == "G":
-				wantx = float((wantx*1024.0)*8.0)
+			# if want[0] == "B":
+			# 	wantx = float((wantx*8.0)/1048576.0)
+			# if want[0] == "K":
+			# 	wantx = float((wantx*8.0)/1024.0)
+			# if want[0] == "M":
+			# 	wantx = float(wantx*8.0)
+			# if want[0] == "G":
+			# 	wantx = float((wantx*1024.0)*8.0)
 
 			#if Kbps
-			# if want[0] == "B":
-			# 	wantx = float((wantx*8.0)/1024.0)
-			# if want[0] == "K":
-			# 	wantx = float((wantx*8.0))
-			# if want[0] == "M":
-			# 	wantx = float((wantx*8.0))*1024
-			# if want[0] == "G":
-			# 	wantx = float((wantx*1048576.0)*8.0)
+			if want[0] == "B":
+				wantx = float((wantx*8.0)/1024.0)
+			if want[0] == "K":
+				wantx = float((wantx*8.0))
+			if want[0] == "M":
+				wantx = float((wantx*8.0))*1024
+			if want[0] == "G":
+				wantx = float((wantx*1048576.0)*8.0)
 				
 			#print wantx
 			
