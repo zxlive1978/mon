@@ -159,7 +159,7 @@ t198 = Process(target=read_well, args=['"/mnt/544oc/Users/user/Desktop/Архи�
 t198.start()
 
 # 534 9917
-t197 = Process(target=read_well, args=['"/mnt/630oc/Users/user/Desktop/Сводки скв 534/"',"Скв 534 Пл АГКМ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-534'])
+t197 = Process(target=read_well, args=['"/mnt/630oc/Users/user/Desktop/Сводки скв 534/"',"Скв 534 Пл АГКМ С", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-534'])
 t197.start()
 
 
