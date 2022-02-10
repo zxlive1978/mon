@@ -24,9 +24,9 @@ $(function() {
 	ml1=(100*(d916[t]["ml"]))/1;
 	mlrx1=((d916[t]["mltx"]))/1;
 	mltx1=((d916[t]["mlrx"]))/1;
-	data10.push({x: d916[t]["date"]/1, y: rx1 });
+	data10.push({x: d916[t]["date"]/1,  y: Math.log10(rx1) });
 	data11.push({x: d916[t]["date"]/1, y: tx1 });
-	mdata10.push({x: d916[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata10.push({x: d916[t]["date"]/1, y: mrx1 });
 	mdata11.push({x: d916[t]["date"]/1, y: mtx1 });
 	mldata10.push({x: d916[t]["date"]/1, y: mlrx1 });
 	mldata11.push({x: d916[t]["date"]/1, y: mltx1 });
@@ -76,9 +76,9 @@ $(function() {
 	mlrx1=((d4450[t]["mltx"]))/1;
 	mltx1=((d4450[t]["mlrx"]))/1;
 	ml1=(100*(d4450[t]["ml"]))/1;
-	data12.push({x: d4450[t]["date"]/1, y: rx1 });
+	data12.push({x: d4450[t]["date"]/1,  y: Math.log10(rx1) });
 	data13.push({x: d4450[t]["date"]/1, y: tx1 });
-	mdata12.push({x: d4450[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata12.push({x: d4450[t]["date"]/1, y: mrx1 });
 	mdata13.push({x: d4450[t]["date"]/1, y: mtx1 });
 	mldata12.push({x: d4450[t]["date"]/1, y: mlrx1 });
 	mldata13.push({x: d4450[t]["date"]/1, y: mltx1 });
@@ -145,9 +145,9 @@ $(function() {
 	} 
 	luchrx1=((d631[t]["luchtx"])/10);
 	ml1=(100*(d631[t]["ml"]))/1;
-	data14.push({x: d631[t]["date"]/1, y: rx1 });
+	data14.push({x: d631[t]["date"]/1,  y: Math.log10(rx1) });
 	data15.push({x: d631[t]["date"]/1, y: tx1 });
-	mdata14.push({x: d631[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata14.push({x: d631[t]["date"]/1, y: mrx1 });
 	mdata15.push({x: d631[t]["date"]/1, y: mtx1 });
 	mldata14.push({x: d631[t]["date"]/1, y: mlrx1 });
 	mldata15.push({x: d631[t]["date"]/1, y: mltx1 });
@@ -199,9 +199,9 @@ $(function() {
 	ml1=(100*(d110[t]["ml"]))/1;
 	mlrx1=((d110[t]["mltx"]))/1;
 	mltx1=((d110[t]["mlrx"]))/1;
-	data16.push({x: d110[t]["date"]/1, y: rx1 });
+	data16.push({x: d110[t]["date"]/1,  y: Math.log10(rx1) });
 	data17.push({x: d110[t]["date"]/1, y: tx1 });
-	mdata16.push({x: d110[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata16.push({x: d110[t]["date"]/1, y: mrx1 });
 	mdata17.push({x: d110[t]["date"]/1, y: mtx1 });
 	mldata16.push({x: d110[t]["date"]/1, y: mlrx1 });
 	mldata17.push({x: d110[t]["date"]/1, y: mltx1 });
@@ -269,9 +269,9 @@ $(function() {
   luchrx1=((d224[t]["luchtx"])/10);
   ml1=(100*(d224[t]["ml"]))/1;
   
-	data18.push({x: d224[t]["date"]/1, y: rx1 });
+	data18.push({x: d224[t]["date"]/1,  y: Math.log10(rx1) });
 	data19.push({x: d224[t]["date"]/1, y: tx1 });
-	mdata18.push({x: d224[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata18.push({x: d224[t]["date"]/1, y: mrx1 });
 	mdata19.push({x: d224[t]["date"]/1, y: mtx1 });
 	mldata18.push({x: d224[t]["date"]/1, y: mlrx1 });
 	mldata19.push({x: d224[t]["date"]/1, y: mltx1 });
@@ -323,9 +323,9 @@ $(function() {
 	mlrx1=((d908[t]["mltx"]))/1;
 	mltx1=((d908[t]["mlrx"]))/1;
 	ml1=(100*(d908[t]["ml"]))/1;
-	data20.push({x: d908[t]["date"]/1, y: rx1 });
+	data20.push({x: d908[t]["date"]/1,  y: Math.log10(rx1) });
 	data21.push({x: d908[t]["date"]/1, y: tx1 });
-	mdata20.push({x: d908[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata20.push({x: d908[t]["date"]/1, y: mrx1 });
 	mdata21.push({x: d908[t]["date"]/1, y: mtx1 });
 	mldata20.push({x: d908[t]["date"]/1, y: mlrx1 });
 	mldata21.push({x: d908[t]["date"]/1, y: mltx1 });
@@ -373,9 +373,9 @@ $(function() {
 	mlrx1=((d411[t]["mltx"]))/1;
 	mltx1=((d411[t]["mlrx"]))/1;
 	ml1=(100*(d411[t]["ml"]))/1;
-	data8.push({x: d411[t]["date"]/1, y: rx1 });
+	data8.push({x: d411[t]["date"]/1,  y: Math.log10(rx1) });
 	data9.push({x: d411[t]["date"]/1, y: tx1 });
-	mdata8.push({x: d411[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata8.push({x: d411[t]["date"]/1, y: mrx1 });
 	mdata9.push({x: d411[t]["date"]/1, y: mtx1 });
 	mldata8.push({x: d411[t]["date"]/1, y: mlrx1 });
 	mldata9.push({x: d411[t]["date"]/1, y: mltx1 });
@@ -455,9 +455,9 @@ $(function() {
 	mlrx1=((d89[t]["mltx"]))/1;
 	mltx1=((d89[t]["mlrx"]))/1;
 	ml1=(100*(d89[t]["ml"]))/1;
-	data34.push({x: d89[t]["date"]/1, y: rx1 });
+	data34.push({x: d89[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d89[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d89[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d89[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d89[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d89[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d89[t]["date"]/1, y: mltx1 });
@@ -504,9 +504,9 @@ $(function() {
 	mlrx1=((d83[t]["mltx"]))/1;
 	mltx1=((d83[t]["mlrx"]))/1;
 	ml1=(100*(d83[t]["ml"]))/1;
-	data34.push({x: d83[t]["date"]/1, y: rx1 });
+	data34.push({x: d83[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d83[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d83[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d83[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d83[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d83[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d83[t]["date"]/1, y: mltx1 });
@@ -554,9 +554,9 @@ $(function() {
 	mlrx1=((d401[t]["mltx"]))/1;
 	mltx1=((d401[t]["mlrx"]))/1;
 	ml1=(100*(d401[t]["ml"]))/1;
-	data34.push({x: d401[t]["date"]/1, y: rx1 });
+	data34.push({x: d401[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d401[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d401[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d401[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d401[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d401[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d401[t]["date"]/1, y: mltx1 });
@@ -605,9 +605,9 @@ $(function() {
 	mlrx1=((d610[t]["mltx"]))/1;
 	mltx1=((d610[t]["mlrx"]))/1;
 	ml1=(100*(d610[t]["ml"]))/1;
-	data34.push({x: d610[t]["date"]/1, y: rx1 });
+	data34.push({x: d610[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d610[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d610[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d610[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d610[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d610[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d610[t]["date"]/1, y: mltx1 });
@@ -654,9 +654,9 @@ $(function() {
 	mlrx1=((d627[t]["mltx"]))/1;
 	mltx1=((d627[t]["mlrx"]))/1;
 	ml1=(100*(d627[t]["ml"]))/1;
-	data34.push({x: d627[t]["date"]/1, y: rx1 });
+	data34.push({x: d627[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d627[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d627[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d627[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d627[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d627[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d627[t]["date"]/1, y: mltx1 });
@@ -703,9 +703,9 @@ $(function() {
 	mlrx1=((d544[t]["mltx"]))/1;
 	mltx1=((d544[t]["mlrx"]))/1;
 	ml1=(100*(d544[t]["ml"]))/1;
-	data34.push({x: d544[t]["date"]/1, y: rx1 });
+	data34.push({x: d544[t]["date"]/1,  y: Math.log10(rx1) });
 	data35.push({x: d544[t]["date"]/1, y: tx1 });
-	mdata34.push({x: d544[t]["date"]/1,  y: Math.log10(mrx1) });
+	mdata34.push({x: d544[t]["date"]/1, y: mrx1 });
 	mdata35.push({x: d544[t]["date"]/1, y: mtx1 });
 	mldata34.push({x: d544[t]["date"]/1, y: mlrx1 });
 	mldata35.push({x: d544[t]["date"]/1, y: mltx1 });
