@@ -24,6 +24,9 @@ $(function() {
 	ml1=(100*(d916[t]["ml"]))/1;
 	mlrx1=((d916[t]["mltx"]))/1;
 	mltx1=((d916[t]["mlrx"]))/1;
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data10.push({x: d916[t]["date"]/1, y: rx1 });
 	data11.push({x: d916[t]["date"]/1, y: tx1 });
 	mdata10.push({x: d916[t]["date"]/1, y: mrx1 });
@@ -75,6 +78,10 @@ $(function() {
 	mtx1=(10000*(d4450[t]["mrx"]))/100;
 	mlrx1=((d4450[t]["mltx"]))/1;
 	mltx1=((d4450[t]["mlrx"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	ml1=(100*(d4450[t]["ml"]))/1;
 	data12.push({x: d4450[t]["date"]/1, y: rx1 });
 	data13.push({x: d4450[t]["date"]/1, y: tx1 });
@@ -127,6 +134,9 @@ $(function() {
 	mtx1=(10000*(d631[t]["mrx"]))/100;
 	mlrx1=((d631[t]["mltx"]))/1;
 	mltx1=((d631[t]["mlrx"]))/1;
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	//console.log(Number(d631[t]["luchtx"]));
 	if (t>0){
 		
@@ -199,6 +209,10 @@ $(function() {
 	ml1=(100*(d110[t]["ml"]))/1;
 	mlrx1=((d110[t]["mltx"]))/1;
 	mltx1=((d110[t]["mlrx"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data16.push({x: d110[t]["date"]/1, y: rx1 });
 	data17.push({x: d110[t]["date"]/1, y: tx1 });
 	mdata16.push({x: d110[t]["date"]/1, y: mrx1 });
@@ -250,6 +264,10 @@ $(function() {
 	mtx1=(10000*(d224[t]["mrx"]))/100;
 	mlrx1=((d224[t]["mltx"]))/1;
 	mltx1=((d224[t]["mlrx"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
   
   if (t>0){
 		
@@ -322,6 +340,10 @@ $(function() {
 	mtx1=(10000*(d908[t]["mrx"]))/100;
 	mlrx1=((d908[t]["mltx"]))/1;
 	mltx1=((d908[t]["mlrx"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	ml1=(100*(d908[t]["ml"]))/1;
 	data20.push({x: d908[t]["date"]/1, y: rx1 });
 	data21.push({x: d908[t]["date"]/1, y: tx1 });
@@ -372,6 +394,10 @@ $(function() {
 	mtx1=(10000*(d411[t]["mrx"]))/100;
 	mlrx1=((d411[t]["mltx"]))/1;
 	mltx1=((d411[t]["mlrx"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	ml1=(100*(d411[t]["ml"]))/1;
 	data8.push({x: d411[t]["date"]/1, y: rx1 });
 	data9.push({x: d411[t]["date"]/1, y: tx1 });
@@ -455,6 +481,10 @@ $(function() {
 	mlrx1=((d89[t]["mltx"]))/1;
 	mltx1=((d89[t]["mlrx"]))/1;
 	ml1=(100*(d89[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d89[t]["date"]/1, y: rx1 });
 	data35.push({x: d89[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d89[t]["date"]/1, y: mrx1 });
@@ -504,6 +534,10 @@ $(function() {
 	mlrx1=((d83[t]["mltx"]))/1;
 	mltx1=((d83[t]["mlrx"]))/1;
 	ml1=(100*(d83[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d83[t]["date"]/1, y: rx1 });
 	data35.push({x: d83[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d83[t]["date"]/1, y: mrx1 });
@@ -554,6 +588,10 @@ $(function() {
 	mlrx1=((d401[t]["mltx"]))/1;
 	mltx1=((d401[t]["mlrx"]))/1;
 	ml1=(100*(d401[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d401[t]["date"]/1, y: rx1 });
 	data35.push({x: d401[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d401[t]["date"]/1, y: mrx1 });
@@ -605,6 +643,9 @@ $(function() {
 	mlrx1=((d610[t]["mltx"]))/1;
 	mltx1=((d610[t]["mlrx"]))/1;
 	ml1=(100*(d610[t]["ml"]))/1;
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d610[t]["date"]/1, y: rx1 });
 	data35.push({x: d610[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d610[t]["date"]/1, y: mrx1 });
@@ -654,6 +695,10 @@ $(function() {
 	mlrx1=((d627[t]["mltx"]))/1;
 	mltx1=((d627[t]["mlrx"]))/1;
 	ml1=(100*(d627[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d627[t]["date"]/1, y: rx1 });
 	data35.push({x: d627[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d627[t]["date"]/1, y: mrx1 });
@@ -703,6 +748,10 @@ $(function() {
 	mlrx1=((d544[t]["mltx"]))/1;
 	mltx1=((d544[t]["mlrx"]))/1;
 	ml1=(100*(d544[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=ln(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=ln(tx1*131.2967)*28.3933;};
+
 	data34.push({x: d544[t]["date"]/1, y: rx1 });
 	data35.push({x: d544[t]["date"]/1, y: tx1 });
 	mdata34.push({x: d544[t]["date"]/1, y: mrx1 });
