@@ -53,6 +53,7 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 	bigmessage = ""
 	#print treerecords[0][24],treerecords[0][25]
 	#Проверки Три последних записи и до конторы VPN работает
+	print (treerecords)
 	if len(treerecords) == 3 and konrecords[0][4]>0:
 		#Время начала события
 		timestamp =int(treerecords[0][0])
