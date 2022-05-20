@@ -804,23 +804,23 @@ d610[numbs610-1]["ub2sig"]>-80?document.getElementById("s2sinalnumb610").style.b
 <br>Zyxel_to_Tumen <a  class ="paperhref" href="javascript:zyx('192.168.146.193');">146.193 RX:</a><span class="paper" id="zyx224tx" >0.0</span>Kbps TX:<span class="paper" id="zyx224rx" >0.0</span>Kbps
 <br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.193');">19.193 RX:</a><span class="paper" id="modem224tx" >0.0</span>Kbps TX:<span class="paper" id="modem224rx" >0.0</span>Kbps
 Csq:<span class="paper" id="signal224-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb224" >0.0</span>
-<br>GBOX447 <a  class ="paperhref" href="http://192.168.146.206/">146.206:</a> <span class="paperb" id="mlcache224" > [нет связи] </span>  Port_2206 RX:</a><span class="paper" id="modem224ltx" >0.0</span>MB TX:<span class="paper" id="modem224lrx" >0.0</span>MB
+<br>Gbox447 <a  class ="paperhref" href="http://192.168.146.206/">146.206:</a>  <span id="gbox224" >&nbsp;&nbsp;&nbsp;</span> 
 <br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.204');">146.204:</a><span class="paper" id="ubi224-1" >0</span> Client:<span class="paper" id="ubi224-1clt" >0</span> Q:<span class="paper" id="q1signal224-1" >&nbsp;</span><span class="paper" id="q1signal224-2" >&nbsp;</span><span class="paper" id="q1signal224-3" >&nbsp;</span><span class="paper" id="q1signal224-4" >&nbsp;</span><span class="paper" id="q1signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb224" >0.0</span>% C:<span class="paper" id="c1signal224-1" >&nbsp;</span><span class="paper" id="c1signal224-2" >&nbsp;</span><span class="paper" id="c1signal224-3" >&nbsp;</span><span class="paper" id="c1signal224-4" >&nbsp;</span><span class="paper" id="c1signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb224" >0.0</span>%
 <br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.205');">146.205:</a><span class="paper" id="ubi224-2" >0</span> Q:<span class="paper" id="q2signal224-1" >&nbsp;</span><span class="paper" id="q2signal224-2" >&nbsp;</span><span class="paper" id="q2signal224-3" >&nbsp;</span><span class="paper" id="q2signal224-4" >&nbsp;</span><span class="paper" id="q2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb224" >0.0</span>% C:<span class="paper" id="c2signal224-1" >&nbsp;</span><span class="paper" id="c2signal224-2" >&nbsp;</span><span class="paper" id="c2signal224-3" >&nbsp;</span><span class="paper" id="c2signal224-4" >&nbsp;</span><span class="paper" id="c2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb224" >0.0</span>% S:<span class="paper" id="s2signal224-1" >&nbsp;</span><span class="paper" id="s2signal224-2" >&nbsp;</span><span class="paper" id="s2signal224-3" >&nbsp;</span><span class="paper" id="s2signal224-4" >&nbsp;</span><span class="paper" id="s2signal224-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb224" >0.0</span>dbi
-<br>Sbor 146.194: <span id="sbor224" >&nbsp;&nbsp;&nbsp;</span> DVR 146.199: <span id="dvr224" >&nbsp;&nbsp;&nbsp;</span>  <span class="pppred" >Luch </span> RX:</a><span class="paper" id="luch224ltx" >0.0</span>KB TX:<span class="paper" id="luch224lrx" >0.0</span>KB
+<br>Sbor 146.194: <span id="sbor224" >&nbsp;&nbsp;&nbsp;</span>  Obrab 146.195: <span id="obrab224" >&nbsp;&nbsp;&nbsp;</span> DVR 146.199: <span id="dvr224" >&nbsp;&nbsp;&nbsp;</span>
 <br>Cam1 <a  class ="paperhref" href="javascript:camshoot('192.168.146.200','sm');">146.200:</a><span id="cam224-1" >&nbsp;&nbsp;&nbsp;</span> Cam2 <a  class ="paperhref" href="javascript:camshoot('192.168.146.201','sm');">146.201:</a><span id="cam224-2" >&nbsp;&nbsp;&nbsp;</span> Cam3 <a  class ="paperhref" href="javascript:camshoot('192.168.146.202','sm');">146.202:</a><span id="cam224-3" >&nbsp;&nbsp;&nbsp;</span> Cam4 <a  class ="paperhref" href="javascript:camshoot('192.168.146.203','sm');">146.203:</a><span id="cam224-4" >&nbsp;&nbsp;&nbsp;</span>
 </div>
 <script type="text/javascript">
-//Luch Port 7654 <span class="pppred" >Luch</span> RX:</a><span class="paper" id="luch224ltx" >0.0</span>KB TX:<span class="paper" id="luch224lrx" >0.0</span>KB
-document.getElementById("luch224lrx").innerHTML=d224[numbs224-1]["luchtx"];
-d224[numbs224-1]["luchtx"]>0?document.getElementById("luch224lrx").style.backgroundColor="Red":document.getElementById("luch224lrx").style.backgroundColor="Red";
-document.getElementById("luch224ltx").innerHTML=d224[numbs224-1]["luchrx"];
-d224[numbs224-1]["luchrx"]>0?document.getElementById("luch224ltx").style.backgroundColor="Tomato":document.getElementById("luch224ltx").style.backgroundColor="Red";
-//Zyxel_to_Tumen Port 2206
-document.getElementById("modem224lrx").innerHTML=d224[numbs224-1]["mltx"];
-d224[numbs224-1]["mltx"]>0.05?document.getElementById("modem224lrx").style.backgroundColor="Black":document.getElementById("modem224lrx").style.backgroundColor="red";
-document.getElementById("modem224ltx").innerHTML=d224[numbs224-1]["mlrx"];
-d224[numbs224-1]["mlrx"]>0.05?document.getElementById("modem224ltx").style.backgroundColor="Maroon":document.getElementById("modem224ltx").style.backgroundColor="red";
+// //Luch Port 7654 <span class="pppred" >Luch</span> RX:</a><span class="paper" id="luch224ltx" >0.0</span>KB TX:<span class="paper" id="luch224lrx" >0.0</span>KB
+// document.getElementById("luch224lrx").innerHTML=d224[numbs224-1]["luchtx"];
+// d224[numbs224-1]["luchtx"]>0?document.getElementById("luch224lrx").style.backgroundColor="Red":document.getElementById("luch224lrx").style.backgroundColor="Red";
+// document.getElementById("luch224ltx").innerHTML=d224[numbs224-1]["luchrx"];
+// d224[numbs224-1]["luchrx"]>0?document.getElementById("luch224ltx").style.backgroundColor="Tomato":document.getElementById("luch224ltx").style.backgroundColor="Red";
+// //Zyxel_to_Tumen Port 2206
+// document.getElementById("modem224lrx").innerHTML=d224[numbs224-1]["mltx"];
+// d224[numbs224-1]["mltx"]>0.05?document.getElementById("modem224lrx").style.backgroundColor="Black":document.getElementById("modem224lrx").style.backgroundColor="red";
+// document.getElementById("modem224ltx").innerHTML=d224[numbs224-1]["mlrx"];
+// d224[numbs224-1]["mlrx"]>0.05?document.getElementById("modem224ltx").style.backgroundColor="Maroon":document.getElementById("modem224ltx").style.backgroundColor="red";
 
 //WAN
 document.getElementById("well224").innerHTML=d224[numbs224-1]["value"];
@@ -904,11 +904,13 @@ d224[numbs224-1]["cam2"]>0?document.getElementById("cam224-2").style.backgroundC
 d224[numbs224-1]["cam3"]>0?document.getElementById("cam224-3").style.backgroundColor="limegreen":document.getElementById("cam224-3").style.backgroundColor="red";
 d224[numbs224-1]["cam4"]>0?document.getElementById("cam224-4").style.backgroundColor="limegreen":document.getElementById("cam224-4").style.backgroundColor="red";
 d224[numbs224-1]["sbor"]>0?document.getElementById("sbor224").style.backgroundColor="limegreen":document.getElementById("sbor224").style.backgroundColor="red";
+d224[numbs224-1]["luchrx"]>0?document.getElementById("obrab224").style.backgroundColor="limegreen":document.getElementById("obrab224").style.backgroundColor="red";
+d224[numbs224-1]["luchtx"]>0?document.getElementById("gbox224").style.backgroundColor="limegreen":document.getElementById("gbox224").style.backgroundColor="red";
 //Mlcache
-if (d224[numbs224-1]["ml"]>1.8)
-{document.getElementById("mlcache224").innerHTML="[ on ]";document.getElementById("mlcache224").style.backgroundColor="DarkGreen";}
-if (d224[numbs224-1]["ml"]<1.8)
-{document.getElementById("mlcache224").innerHTML="[ off ]";document.getElementById("mlcache224").style.backgroundColor="red";}
+// if (d224[numbs224-1]["ml"]>1.8)
+// {document.getElementById("mlcache224").innerHTML="[ on ]";document.getElementById("mlcache224").style.backgroundColor="DarkGreen";}
+// if (d224[numbs224-1]["ml"]<1.8)
+// {document.getElementById("mlcache224").innerHTML="[ off ]";document.getElementById("mlcache224").style.backgroundColor="red";}
 </script>
 <div id="chart5" class="chart"></div></div>
 
