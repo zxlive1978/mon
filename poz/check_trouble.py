@@ -136,15 +136,15 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 					message = "DOWN"
 					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Сборщик: "+ip_sbor+"\n"
 		#Выключен Обработчик
-		if treerecords[0][4]<0:
-			if treerecords[1][4]<0:
-				if treerecords[2][4]<0:
+		if treerecords[0][24]<0:
+			if treerecords[1]2[4]<0:
+				if treerecords[2][24]<0:
 					message = "DOWN"
 					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Обработчик: "+ip_obrab+"\n"
 		#Выключен Gbox
-		if treerecords[0][14]<0:
-			if treerecords[1][14]<0:
-				if treerecords[2][14]<0:
+		if treerecords[0][25]<0:
+			if treerecords[1][25]<0:
+				if treerecords[2][25]<0:
 					message = "DOWN"
 					bigmessage +=(fullchr(random.randrange(0x1F680,0x1F6A4))).encode("utf-8")+ " Выключен Gbox: "+ip_gbox+"\n"
 		
