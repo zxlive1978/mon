@@ -122,8 +122,8 @@ $(function() {
   mdata15 = [];
   mldata14 = [];
   mldata15 = [];
-  luchdata14 = [];
-  luchdata15 = [];
+  // luchdata14 = [];
+  // luchdata15 = [];
   for (var t = 0; t < numbs631; t++){
     data3.push({x: d631[t]["date"]/1, y: d631[t]["value"]});
 	if (t>0 && (Number(d631[t]["tx"]))>0 && (Number(d631[t]["rx"])>0)&& (Number(d631[t-1]["tx"]))>0 && (Number(d631[t-1]["rx"])>0)){
@@ -138,22 +138,22 @@ $(function() {
   tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=Math.log(tx1*131.2967)*28.3933;};
 
 	//console.log(Number(d631[t]["luchtx"]));
-	if (t>0){
+	// if (t>0){
 		
-		if ((Number(d631[t]["luchtx"]))>0) {
-			luchtx1=300;}
-		else {luchtx1=0;}
+	// 	if ((Number(d631[t]["luchtx"]))>0) {
+	// 		luchtx1=300;}
+	// 	else {luchtx1=0;}
 		
-		if (Number(d631[t]["luchtx"])==-1){
-			luchtx1=280;
-			//console.log(Number(d631[t]["luchtx"]));
-		}
-	}else{
-		if (Number(d631[t]["luchtx"])>0){
-			luchtx1=300;
-		} else {luchtx1=0;}
-	} 
-	luchrx1=((d631[t]["luchtx"])/10);
+	// 	if (Number(d631[t]["luchtx"])==-1){
+	// 		luchtx1=280;
+	// 		//console.log(Number(d631[t]["luchtx"]));
+	// 	}
+	// }else{
+	// 	if (Number(d631[t]["luchtx"])>0){
+	// 		luchtx1=300;
+	// 	} else {luchtx1=0;}
+	// } 
+	// luchrx1=((d631[t]["luchtx"])/10);
 	ml1=(100*(d631[t]["ml"]))/1;
 	data14.push({x: d631[t]["date"]/1, y: rx1 });
 	data15.push({x: d631[t]["date"]/1, y: tx1 });
@@ -162,8 +162,8 @@ $(function() {
 	mldata14.push({x: d631[t]["date"]/1, y: mlrx1 });
 	mldata15.push({x: d631[t]["date"]/1, y: mltx1 });
 	data24.push({x: d631[t]["date"]/1, y: ml1 });
-	luchdata14.push({x: d631[t]["date"]/1, y: luchrx1 });
-	luchdata15.push({x: d631[t]["date"]/1, y: luchtx1 });
+	// luchdata14.push({x: d631[t]["date"]/1, y: luchrx1 });
+	// luchdata15.push({x: d631[t]["date"]/1, y: luchtx1 });
 	}
   //create and draw chart
   chart3 = new JSGadget.Chart($("#chart3"), { //create chart
@@ -178,8 +178,8 @@ $(function() {
   chart3.trends[5].data = data3;
   chart3.trends[6].data = mldata14;
   chart3.trends[7].data = mldata15;
-  chart3.trends[8].data = luchdata14;
-  chart3.trends[9].data = luchdata15;
+  // chart3.trends[8].data = luchdata14;
+  // chart3.trends[9].data = luchdata15;
   
   chart3.bAxis.setMinMax(d631[0]["date"]/1, d631[numbs631-1]["date"]/1); //set x limits
   chart3.lAxis.setMinMax(-1.1, 400.1); //set y limits
@@ -252,8 +252,8 @@ $(function() {
   mdata19 = [];
   mldata18 = [];
   mldata19 = [];
-  luchdata14 = [];
-  luchdata15 = [];
+  // luchdata14 = [];
+  // luchdata15 = [];
   for (var t = 0; t < numbs224; t++) {
     data5.push({x: d224[t]["date"]/1, y: d224[t]["value"]});
 	if (t>0){
@@ -269,22 +269,22 @@ $(function() {
   tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=Math.log(tx1*131.2967)*28.3933;};
 
   
-  if (t>0){
+  // if (t>0){
 		
-		if ((Number(d224[t]["luchtx"]))>0) {
-			luchtx1=300;}
-		else {luchtx1=0;}
+	// 	if ((Number(d224[t]["luchtx"]))>0) {
+	// 		luchtx1=300;}
+	// 	else {luchtx1=0;}
 		
-		if (Number(d224[t]["luchtx"])==-1){
-			luchtx1=280;
-			//console.log(Number(d631[t]["luchtx"]));
-		}
-	}else{
-		if (Number(d224[t]["luchtx"])>0){
-			luchtx1=300;
-		} else {luchtx1=0;}
-	} 
-  luchrx1=((d224[t]["luchtx"])/10);
+	// 	if (Number(d224[t]["luchtx"])==-1){
+	// 		luchtx1=280;
+	// 		//console.log(Number(d631[t]["luchtx"]));
+	// 	}
+	// }else{
+	// 	if (Number(d224[t]["luchtx"])>0){
+	// 		luchtx1=300;
+	// 	} else {luchtx1=0;}
+	// } 
+  // luchrx1=((d224[t]["luchtx"])/10);
   ml1=(100*(d224[t]["ml"]))/1;
   
 	data18.push({x: d224[t]["date"]/1, y: rx1 });
@@ -294,8 +294,8 @@ $(function() {
 	mldata18.push({x: d224[t]["date"]/1, y: mlrx1 });
 	mldata19.push({x: d224[t]["date"]/1, y: mltx1 });
   data26.push({x: d224[t]["date"]/1, y: ml1 });
-  luchdata14.push({x: d224[t]["date"]/1, y: luchrx1 });
-	luchdata15.push({x: d224[t]["date"]/1, y: luchtx1 });
+  // luchdata14.push({x: d224[t]["date"]/1, y: luchrx1 });
+	// luchdata15.push({x: d224[t]["date"]/1, y: luchtx1 });
   }
   chart5 = new JSGadget.Chart($("#chart5"), { //create chart
   trends: [new JSGadget.ATrend({color: "green", width: 1}),new JSGadget.ATrend({color: "Violet", width: 1}),new JSGadget.ATrend({color: "orange", width: 1}),new JSGadget.ATrend({color: "IndianRed", width: 1}),new JSGadget.ATrend({color: "teal", width: 1}),new JSGadget.ATrend({color: "blue", width: 1}),new JSGadget.ATrend({color: "Black", width: 1}),new JSGadget.ATrend({color: "Maroon", width: 1}),new JSGadget.ATrend({color: "Red", width: 1}),new JSGadget.ATrend({color: "Red", width: 1})]
@@ -308,8 +308,8 @@ $(function() {
   chart5.trends[5].data = data5;
   chart5.trends[6].data = mldata18;
   chart5.trends[7].data = mldata19;
-  chart5.trends[8].data = luchdata14;
-  chart5.trends[9].data = luchdata15;
+  // chart5.trends[8].data = luchdata14;
+  // chart5.trends[9].data = luchdata15;
   
  // chart5.trends[1].data = data6; //set data
   chart5.bAxis.setMinMax(d224[0]["date"]/1, d224[numbs224-1]["date"]/1); //set x limits
