@@ -128,8 +128,8 @@ setInterval("obnovit_stranicu()", 60*1000);
 <br>Zyxel_to_Tumen <a  class ="paperhref" href="javascript:zyx('192.168.146.65');">146.65 RX:</a><span class="paper" id="zyx916tx" >0.0</span>Kbps TX:<span class="paper" id="zyx916rx" >0.0</span>Kbps
 <br>Poz_modem <a  class ="paperhref" href="javascript:poz('192.168.19.113');">19.113 RX:</a><span class="paper" id="modem916tx" >0.0</span>Kbps TX:<span class="paper" id="modem916rx" >0.0</span>Kbps
 Csq:<span class="paper" id="signal916-1" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-2" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-3" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-4" >&nbsp;</span><span class="paper">&nbsp;</span><span class="paper" id="signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="sinalnumb916" >0.0</span>
-<br>Gbox442 <a  class ="paperhref" href="http://192.168.146.78/">146.78:</a> <!-- <span id="gbox916" >&nbsp;&nbsp;&nbsp;</span>-->
-<!-- <span class="paperb" id="mlcache916" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem916ltx" >0.0</span>MB TX:<span class="paper" id="modem916lrx" >0.0</span>MB -->
+<br>Gbox442 <a  class ="paperhref" href="http://192.168.146.78/">146.78:</a>  <span id="gbox916" >&nbsp;&nbsp;&nbsp;</span>
+<span class="paperb" id="mlcache916" > [нет связи] </span> Port_2206 RX:</a><span class="paper" id="modem916ltx" >0.0</span>MB TX:<span class="paper" id="modem916lrx" >0.0</span>MB
 <br>Ubi1_ap <a  class ="paperhref" href="javascript:ubi('192.168.146.76');">146.76:</a><span class="paper" id="ubi916-1" >0</span> Client:<span class="paper" id="ubi916-1clt" >0</span> Q:<span class="paper" id="q1signal916-1" >&nbsp;</span><span class="paper" id="q1signal916-2" >&nbsp;</span><span class="paper" id="q1signal916-3" >&nbsp;</span><span class="paper" id="q1signal916-4" >&nbsp;</span><span class="paper" id="q1signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="q1sinalnumb916" >0.0</span>% C:<span class="paper" id="c1signal916-1" >&nbsp;</span><span class="paper" id="c1signal916-2" >&nbsp;</span><span class="paper" id="c1signal916-3" >&nbsp;</span><span class="paper" id="c1signal916-4" >&nbsp;</span><span class="paper" id="c1signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="c1sinalnumb916" >0.0</span>%
 <br>Ubi2_clt <a  class ="paperhref" href="javascript:ubi('192.168.146.77');">146.77:</a><span class="paper" id="ubi916-2" >0</span> Q:<span class="paper" id="q2signal916-1" >&nbsp;</span><span class="paper" id="q2signal916-2" >&nbsp;</span><span class="paper" id="q2signal916-3" >&nbsp;</span><span class="paper" id="q2signal916-4" >&nbsp;</span><span class="paper" id="q2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="q2sinalnumb916" >0.0</span>% C:<span class="paper" id="c2signal916-1" >&nbsp;</span><span class="paper" id="c2signal916-2" >&nbsp;</span><span class="paper" id="c2signal916-3" >&nbsp;</span><span class="paper" id="c2signal916-4" >&nbsp;</span><span class="paper" id="c2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="c2sinalnumb916" >0.0</span>%  S:<span class="paper" id="s2signal916-1" >&nbsp;</span><span class="paper" id="s2signal916-2" >&nbsp;</span><span class="paper" id="s2signal916-3" >&nbsp;</span><span class="paper" id="s2signal916-4" >&nbsp;</span><span class="paper" id="s2signal916-5" >&nbsp;</span>&nbsp;<span class="paper" id="s2sinalnumb916" >0.0</span>dbi
 <br>Sbor 146.66: <span id="sbor916" >&nbsp;&nbsp;&nbsp;</span>  Obrab 146.67: <span id="obrab916" >&nbsp;&nbsp;&nbsp;</span> DVR 146.71: <span id="dvr916" >&nbsp;&nbsp;&nbsp;</span>
@@ -225,13 +225,14 @@ d916[numbs916-1]["cam3"]>0?document.getElementById("cam916-3").style.backgroundC
 d916[numbs916-1]["cam4"]>0?document.getElementById("cam916-4").style.backgroundColor="limegreen":document.getElementById("cam916-4").style.backgroundColor="red";
 d916[numbs916-1]["sbor"]>0?document.getElementById("sbor916").style.backgroundColor="limegreen":document.getElementById("sbor916").style.backgroundColor="red";
 d916[numbs916-1]["luchrx"]>0?document.getElementById("obrab916").style.backgroundColor="limegreen":document.getElementById("obrab916").style.backgroundColor="red";
-d916[numbs916-1]["luchtx"]>0?document.getElementById("gbox916").style.backgroundColor="limegreen":document.getElementById("gbox916").style.backgroundColor="red";
+d916[numbs916-1]["luchrx"]>0?document.getElementById("obrab916").style.backgroundColor="limegreen":document.getElementById("obrab916").style.backgroundColor="red";
+d916[numbs916-1]["luchrx"]>0?document.getElementById("gbox916").style.backgroundColor="limegreen":document.getElementById("gbox916").style.backgroundColor="red";
 //Mlcache
-if (d916[numbs916-1]["ml"]>1.8)
-{document.getElementById("mlcache916").innerHTML="[ on ]";document.getElementById("mlcache916").style.backgroundColor="DarkGreen";}
-if (d916[numbs916-1]["ml"]<1.8)
-{document.getElementById("mlcache916").innerHTML="[ off ]";document.getElementById("mlcache916").style.backgroundColor="red";}
-</script><div id="chart" class="chart"> </div></div>
+// if (d916[numbs916-1]["ml"]>1.8)
+// {document.getElementById("mlcache916").innerHTML="[ on ]";document.getElementById("mlcache916").style.backgroundColor="DarkGreen";}
+// if (d916[numbs916-1]["ml"]<1.8)
+// {document.getElementById("mlcache916").innerHTML="[ off ]";document.getElementById("mlcache916").style.backgroundColor="red";}
+// </script><div id="chart" class="chart"> </div></div>
 
 <!-- <iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=971846407760990775765167" frameborder="0" allowfullscreen></iframe> -->
 
