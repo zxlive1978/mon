@@ -106,8 +106,8 @@ def read_well(share,shablon1,shablon2,dirr,skv):
 # pozreboot(sys.argv[1],"5188", 10,sys.argv[1])
 
 
-# 828
-t202 = Process(target=read_well, args=['"/mnt/3oc/АРХИВ/Архив скв.604/суточные сводки скв.604/"',"СКВ 828 Пл АГКМ сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-828'])
+# 721 828
+t202 = Process(target=read_well, args=['"/mnt/3oc/АРХИВ/Архив СКВ №721/Суточные сводки/"',"СКВ 721 Пл АГКМ сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-721'])
 t202.start()
 
 
@@ -125,12 +125,12 @@ t203.start()
 
 # ------------------------------------------------------------------------
 # 629 632
-t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-629'])
+t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 629/"',"СКВ 629 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-629'])
 t205.start()
 
 # ------------------------------------------------------------------------
-# 107
-t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop/Суточные сводки №107 скв/"',"СКВ 107 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-107'])
+# 701 107
+t206 = Process(target=read_well, args=['"/mnt/96oc/Users/User/Desktop//Суточные сводки скв701/"',"СКВ 701 Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-701'])
 t206.start()
 
 # ------------------------------------------------------------------------
@@ -146,8 +146,8 @@ t201.start()
 
 
 
-# 1РФ
-t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-1РФ'])
+# 211Д 1РФ
+t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 211 Д/Сводки/"',"Скв №211Д Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-211Д'])
 t200.start()
 
 # 228бис
