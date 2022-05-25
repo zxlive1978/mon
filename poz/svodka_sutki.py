@@ -124,8 +124,8 @@ t203.start()
 
 
 # ------------------------------------------------------------------------
-# 632
-t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-632'])
+# 629 632
+t205 = Process(target=read_well, args=['"/mnt/629oc/Users/User/Desktop/Сводки в контору скв. 632/2021/"',"СКВ 632 АГКМ сводка ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-629'])
 t205.start()
 
 # ------------------------------------------------------------------------
@@ -150,8 +150,8 @@ t201.start()
 t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 1-РФ/Сводки/"',"Скв №1-РФ Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-1РФ'])
 t200.start()
 
-# 173бис
-t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводкм скв 173бис/"',"СКВ 173бис Сводка за ", ".xlsx","/var/www/html/mon/poz/svodka",'173бис'])
+# 228бис
+t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки П-У ПХГ скв_228/СУточные/"',"ПУ-ПХГ скв 228 Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'228 ПУУПХГ'])
 t199.start()
 
 # 533
