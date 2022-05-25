@@ -162,7 +162,7 @@ t198.start()
 t197 = Process(target=read_well, args=['"/mnt/630oc/Users/user/Desktop/Сводки скв 534/"',"Скв 534 Пл АГКМ С", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-534'])
 t197.start()
 
-
+"СКВ 325 Пл АГКМ Сводка за" 'АГКМ-325' "/Users/user/Desktop/Сводки/"
 
 t197.join(1000)
 t198.join(1000)

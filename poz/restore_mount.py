@@ -100,17 +100,25 @@ t544.join(30)
 if t544.is_alive(): t544.terminate()
 
 
-#610 Сборщик
+#325 610 Сборщик
 t610 = Process(target=read_well, args=["/mnt/610","s610","//192.168.147.2/d/PetroServices/Database/Online/Store"])
 t610.start()
 t610.join(30)
 if t610.is_alive(): t610.terminate()
 
-#610 Обработчик
+#325 610 Обработчик
 t629 = Process(target=read_well, args=["/mnt/610o","610o","/""/192.168.147.3/c$/Program Files/Common Files/PS Shared/Database/"""])
 t629.start()
 t629.join(30)
 if t629.is_alive(): t629.terminate()
+
+#325 610 Обработчик c
+t629 = Process(target=read_well, args=["/mnt/610oc","610oc","/""/192.168.147.3/c$"""])
+t629.start()
+t629.join(30)
+if t629.is_alive(): t629.terminate()
+
+
 
 
 #9917
