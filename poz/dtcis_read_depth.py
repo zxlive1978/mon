@@ -1158,7 +1158,7 @@ t630.start()
 t630.join(300)
 if t630.is_alive(): t630.terminate()
 
-#632
+#629
 t631 = Process(target=read_well, args=["/mnt/631","s629depth"])
 t631.start()
 t631.join(300)
@@ -1170,6 +1170,13 @@ t4450 = Process(target=read_well, args=["/mnt/4450","s4450depth"])
 t4450.start()
 t4450.join(300)
 if t4450.is_alive(): t4450.terminate()
+
+#325
+#read_well("/mnt/104","s110")
+t610 = Process(target=read_well, args=["/mnt/610","s610depth"])
+t610.start()
+t610.join(300)
+if t610.is_alive(): t610.terminate()
 
 
 #201 938 (Обработчик)
