@@ -973,6 +973,74 @@ while($row = mysqli_fetch_array ($result)){
 	$numbs_rec116=$row[0];
 	}
 
+
+
+
+#438	
+$table="p1921681481";
+$x_id="date";
+$y_id="value";
+$z1_id="rx";
+$z2_id="tx";
+$z3_id="ml";
+$z4_id="mrx";
+$z5_id="mtx";
+$z6_id="sigpoz";
+$z7_id="dvr";
+$z8_id="cam1";
+$z9_id="cam2";
+$z10_id="cam3";
+$z11_id="cam4";
+$z12_id="ub1";
+$z13_id="ub2";
+$z14_id="sbor";
+$z15_id="ub1sig";
+$z16_id="ub1amq";
+$z17_id="ub1amc";
+$z18_id="ub2sig";
+$z19_id="ub2amq";
+$z20_id="ub2amc";
+$z21_id="mlrx";
+$z22_id="mltx";
+$z31_id="luchrx";
+$z32_id="luchtx";
+$xy_value117=array();
+
+
+$query="SELECT ".$x_id.",".$y_id.",".$z1_id.",".$z2_id.",".$z3_id.",".$z4_id.",".$z5_id.",".$z6_id.",".$z7_id.",".$z8_id.",".$z9_id.",".$z10_id.",".$z11_id.",".$z12_id.",".$z13_id.",".$z14_id.",".$z15_id.",".$z16_id.",".$z17_id.",".$z18_id.",".$z19_id.",".$z20_id.",".$z21_id.",".$z22_id.",".$z31_id.",".$z32_id." FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$cur_time.";";
+//echo $query;
+$result=mysqli_query($dbc,$query) or
+	die(mysqli_sqlstate($dbc));
+//echo mysqli_sqlstate($dbc);
+// echo $_POST['email'];
+// echo $_POST['pass'];
+
+//Добавление значений в массив
+while($row = mysqli_fetch_array ($result)){
+	//echo $row[$x_id]." - ".$row[$y_id]."<br />";
+	array_push($xy_value117,$row);
+	}
+	
+
+
+//Умножаем дату на 1000 перевод из мсек в сек плюс часовой пояс +4 часа
+//echo count($xy_value);
+for ($i=0;$i<count($xy_value117);$i++){
+	$xy_value117[$i][0]=1000*$xy_value117[$i][0]+14400000;
+	
+}
+
+
+
+$query="SELECT COUNT(*) FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$cur_time.";";
+
+$result=mysqli_query($dbc,$query) or
+	die(mysqli_sqlstate($dbc));
+while($row = mysqli_fetch_array ($result)){
+	//echo $row[$x_id]." - ".$row[$y_id]."<br />";
+	$numbs_rec117=$row[0];
+	}
+
 #544	
 $table="p3729899";
 $x_id="date";
