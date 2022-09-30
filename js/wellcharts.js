@@ -886,6 +886,61 @@ $(function() {
   chart16.lAxis.setMinMax(-1.1, 400.1); //set y limits
   chart16.draw(); //draw chart  
 }catch(e){}});
+
+
+var chart17;
+$(function() {
+  try{
+  //prepare values
+  data33 = []; 
+  data34 = [];
+  data35 = [];
+  data36 = [];
+  mdata34 = [];
+  mdata35 = [];
+  mldata34 = [];
+  mldata35 = [];
+  for (var t = 0; t < numbs118; t++){
+    data33.push({x: d118[t]["date"]/1, y: d118[t]["value"]});
+	if (t>0){
+		rx1=100*(Number(d118[t]["rx"])-Number(d118[t-1]["rx"]))/(Number(d118[t]["date"]/1) - Number(d118[t-1]["date"]/1));
+		tx1=100*(Number(d118[t]["tx"])-Number(d118[t-1]["tx"]))/(Number(d118[t]["date"]/1) - Number(d118[t-1]["date"]/1));
+	} else {rx1=(100*(d118[t]["rx"]))/1; tx1=(100*(d118[t]["tx"]))/1;}
+	mrx1=(10000*(d118[t]["mtx"]))/100;
+	mtx1=(10000*(d118[t]["mrx"]))/100;
+	mlrx1=((d118[t]["mltx"]))/1;
+	mltx1=((d118[t]["mlrx"]))/1;
+	ml1=(100*(d118[t]["ml"]))/1;
+
+  rx1=rx1/100.0; if (rx1<0.01) {rx1=0;} else {rx1=Math.log(rx1*131.2967)*28.3933;};
+  tx1=tx1/100.0; if (tx1<0.01) {tx1=0;} else {tx1=Math.log(tx1*131.2967)*28.3933;};
+
+	data34.push({x: d118[t]["date"]/1, y: rx1 });
+	data35.push({x: d118[t]["date"]/1, y: tx1 });
+	mdata34.push({x: d118[t]["date"]/1, y: mrx1 });
+	mdata35.push({x: d118[t]["date"]/1, y: mtx1 });
+	mldata34.push({x: d118[t]["date"]/1, y: mlrx1 });
+	mldata35.push({x: d118[t]["date"]/1, y: mltx1 });
+	data36.push({x: d118[t]["date"]/1, y: ml1 });
+	}
+  
+  chart17 = new JSGadget.Chart($("#chart17"), { //create chart
+  trends: [new JSGadget.ATrend({color: "green", width: 1}),new JSGadget.ATrend({color: "Violet", width: 1}),new JSGadget.ATrend({color: "orange", width: 1}),new JSGadget.ATrend({color: "IndianRed", width: 1}),new JSGadget.ATrend({color: "teal", width: 1}),new JSGadget.ATrend({color: "blue", width: 1}),new JSGadget.ATrend({color: "Black", width: 1}),new JSGadget.ATrend({color: "Maroon", width: 1})]
+ });
+ 
+  chart17.trends[0].data = data36;
+  chart17.trends[1].data = data35;
+  chart17.trends[2].data = data34;
+  chart17.trends[3].data = mdata34;
+  chart17.trends[4].data = mdata35;
+  chart17.trends[5].data = data33;
+  chart17.trends[6].data = mldata34;
+  chart17.trends[7].data = mldata35;
+  chart17.bAxis.setMinMax(d118[0]["date"]/1, d118[numbs118-1]["date"]/1); //set x limits
+  chart17.lAxis.setMinMax(-1.1, 400.1); //set y limits
+  chart17.draw(); //draw chart  
+}catch(e){}});
+
 //function tick() {
 
   //var t2 = new Date(), tz = tz = t2.getTimezoneOffset() * 60;
