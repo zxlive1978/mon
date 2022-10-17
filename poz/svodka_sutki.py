@@ -150,9 +150,9 @@ t201.start()
 t200 = Process(target=read_well, args=['"/mnt/4450oc/Скважина 211 Д/Сводки/"',"Скв №211Д Пл АГКМ Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-211Д'])
 t200.start()
 
-# 228бис
-t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки П-У ПХГ скв_228/СУточные/"',"ПУ-ПХГ скв 228 Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'228 ПУУПХГ'])
-t199.start()
+# 240 Саратов
+# t199 = Process(target=read_well, args=['"/mnt/908oc/Users/user/Desktop/Сводки П-У ПХГ скв_228/СУточные/"',"ПУ-ПХГ скв 228 Сводка за", ".xlsx","/var/www/html/mon/poz/svodka",'228 ПУУПХГ'])
+# t199.start()
 
 # 533
 t198 = Process(target=read_well, args=['"/mnt/544oc/Users/user/Desktop/Архив сводок/Суточные сводки/"',"СКВ 533 Пл АГКМ", ".xlsx","/var/www/html/mon/poz/svodka",'АГКМ-533'])
@@ -171,7 +171,7 @@ t196.start()
 t196.join(1000)
 t197.join(1000)
 t198.join(1000)
-t199.join(1000)
+# t199.join(1000)
 t200.join(1000)
 t201.join(1000)
 t202.join(1000)
@@ -188,7 +188,7 @@ if t197.is_alive(): t197.terminate()
 
 if t198.is_alive(): t198.terminate()
 
-if t199.is_alive(): t199.terminate()
+# if t199.is_alive(): t199.terminate()
 
 if t200.is_alive(): t200.terminate()
 

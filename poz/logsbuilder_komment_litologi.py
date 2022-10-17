@@ -446,11 +446,11 @@ if t20.is_alive(): t20.terminate()
 # t201.join(300)
 # if t201.is_alive(): t201.terminate()
 
-# 235
-t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
-t201.start()
-t201.join(300)
-if t201.is_alive(): t201.terminate()
+# 240 Саратов
+# t201 = Process(target=read_well, args=["/mnt/908o/Archive","s908kr"])
+# t201.start()
+# t201.join(300)
+# if t201.is_alive(): t201.terminate()
 
 #325
 t31451 = Process(target=read_well, args=["/mnt/610o/Archive","s610kr"])
