@@ -211,8 +211,8 @@ def read_well(host,table):
 		db.close()
 
 #Потоки
-#605
-threading.Thread(target=read_well, args=["192.168.146.98","s908"]).start()
+#240 Саратов 605
+# threading.Thread(target=read_well, args=["192.168.146.98","s908"]).start()
 #read_well("192.168.146.98","s908")
 #99
 threading.Thread(target=read_well, args=["192.168.147.66","s110"]).start()
