@@ -77,7 +77,7 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 					return -100,-100,-100
 
 	if (ubi_ver=="3"):
-        # return -100,-100,-100
+		# return -100,-100,-100
 		while time.time() < timeout_start + timeout:
 			time.sleep(retry_interval)
 			try:
@@ -92,6 +92,8 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				data = output.splitlines()
 				
 				remote_conn.send("exit\n")
+				
+				# print data
 				# time.sleep(retry_interval)
 				# output = remote_conn.recv(65535)
 				# print data[30].split()[1][:-1]
@@ -99,9 +101,9 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				# print data[33].split()[1]
 				#wlanConnections=2 'wlanPollingQuality=90', 'wlanPollingCapacity=80') signal -100..-65
 				if (ap):
-					return data[14][16:], data[70][19:],data[72][20:]
+					return data[9][16:], data[65][19:],data[67][20:]
 				else: 
-					return data[30][7:], data[70][19:],data[72][20:]
+					return data[25][7:], data[65][19:],data[67][20:]
 
 				
 			except:
