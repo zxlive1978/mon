@@ -270,12 +270,16 @@ if t104.is_alive(): t104.terminate()
 
 
 #438 Саратов
-#threading.Thread(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"]).start()
-# t631 = Process(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"])
 t731 = Process(target=read_well, args=["/mnt/438","s438","//192.168.148.1/c/MLDIP/Mlsystem2.0/Store"])
 t731.start()
 t731.join(30)
 if t731.is_alive(): t731.terminate()
+
+#153 Ставрополь
+t153 = Process(target=read_well, args=["/mnt/153","s153","//192.168.152.1/c/MLDIP/Mlsystem2.0/Store"])
+t153.start()
+t153.join(30)
+if t153.is_alive(): t153.terminate()
 
 
 
