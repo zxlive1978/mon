@@ -76,9 +76,9 @@ if t544.is_alive(): t544.terminate()
 
 
 
-#1РФ Сборщик
+#707 1РФ Сборщик
 #threading.Thread(target=read_well, args=["/mnt/4450","s4450","//192.168.146.34/d/PetroServices/Database/Online/Store"]).start()
-t4450 = Process(target=read_well, args=["/mnt/4450","s4450","//192.168.146.34/c/PetroServices/Database/Online/Store"])
+t4450 = Process(target=read_well, args=["/mnt/4450","s4450","//192.168.146.34/d/PetroServices/Database/Online/Store"])
 t4450.start()
 t4450.join(30)
 if t4450.is_alive(): t4450.terminate()
