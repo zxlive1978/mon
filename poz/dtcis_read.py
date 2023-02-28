@@ -1058,7 +1058,7 @@ t544.start()
 t544.join(30)
 if t544.is_alive(): t544.terminate()
 
-#6611
+#707 6611
 #read_well("/mnt/4450","s4450")
 t4450 = Process(target=read_well, args=["/mnt/4450","s4450"])
 t4450.start()
