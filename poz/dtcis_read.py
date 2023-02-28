@@ -1025,7 +1025,15 @@ def read_well(sbor,table):
 	except:
 		return
 	
-	
+
+
+#438 Саратов
+t438 = Process(target=read_well, args=["/mnt/438","s438"])
+t438.start()
+t438.join(30)
+if t438.is_alive(): t438.terminate()
+
+
 #threading.TIMEOUT_MAX=5
 #Потоки
 #449 406
