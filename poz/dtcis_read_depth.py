@@ -1137,6 +1137,11 @@ def read_well(sbor,table):
 # t110.join(30)
 # if t110.is_alive(): t110.terminate()
 
+#153 Мирненская Ставрополь
+t153 = Process(target=read_well, args=["/mnt/153","s153depth"])
+t153.start()
+t153.join(30)
+if t153.is_alive(): t153.terminate()
 
 #438 Саратов
 t438 = Process(target=read_well, args=["/mnt/438","s438depth"])
