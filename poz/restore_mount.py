@@ -282,10 +282,10 @@ if t104.is_alive(): t104.terminate()
 #2103 НЕ МАГА НУРЖАН 542
 #threading.Thread(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"]).start()
 # t631 = Process(target=read_well, args=["/mnt/915","s915","//192.168.146.226/d/PetroServices/Database/Online/Store"])
-# t631 = Process(target=read_well, args=["/mnt/915","s915","//192.168.146.226/c/MLDIP/Mlsystem2.0/Store"])
-# t631.start()
-# t631.join(30)
-# if t631.is_alive(): t631.terminate()
+t631 = Process(target=read_well, args=["/mnt/915","s915","//192.168.146.226/c/MLDIP/Mlsystem2.0/Store"])
+t631.start()
+t631.join(30)
+if t631.is_alive(): t631.terminate()
 
 #542 Обработчик
 t629 = Process(target=read_well, args=["/mnt/915o","915o","/""/192.168.146.227/c$/Program Files/Common Files/PS Shared/Database/"""])
