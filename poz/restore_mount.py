@@ -276,7 +276,7 @@ t731.join(30)
 if t731.is_alive(): t731.terminate()
 
 #153 Ставрополь
-t153 = Process(target=read_well, args=["/mnt/153","s153","//192.168.152.1/c/MLDIP/Mlsystem2.0/Store"])
+t153 = Process(target=read_well, args=["/mnt/153","s153","//192.168.152.3/c/MLDIP/Mlsystem2.0/Store"])
 t153.start()
 t153.join(30)
 if t153.is_alive(): t153.terminate()
