@@ -1138,6 +1138,12 @@ def read_well(sbor,table):
 # if t110.is_alive(): t110.terminate()
 
 
+#438 Саратов
+t438 = Process(target=read_well, args=["/mnt/438","s438depth"])
+t438.start()
+t438.join(300)
+if t438.is_alive(): t438.terminate()
+
 # #449 406
 # #read_well("/mnt/104","s110")
 t110 = Process(target=read_well, args=["/mnt/104","s401depth"])
