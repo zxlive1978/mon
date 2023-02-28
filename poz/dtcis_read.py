@@ -1027,6 +1027,13 @@ def read_well(sbor,table):
 	
 
 
+#153 Мирненская Ставрополь
+t153 = Process(target=read_well, args=["/mnt/153","s153"])
+t153.start()
+t153.join(30)
+if t153.is_alive(): t153.terminate()
+
+
 #438 Саратов
 t438 = Process(target=read_well, args=["/mnt/438","s438"])
 t438.start()
