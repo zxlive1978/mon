@@ -1027,18 +1027,18 @@ def read_well(sbor,table):
 	
 
 
-#153 Мирненская Ставрополь
-t153 = Process(target=read_well, args=["/mnt/153","s153"])
-t153.start()
-t153.join(30)
-if t153.is_alive(): t153.terminate()
+# #153 Мирненская Ставрополь
+# t153 = Process(target=read_well, args=["/mnt/153","s153"])
+# t153.start()
+# t153.join(30)
+# if t153.is_alive(): t153.terminate()
 
 
-#438 Саратов
-t438 = Process(target=read_well, args=["/mnt/438","s438"])
-t438.start()
-t438.join(30)
-if t438.is_alive(): t438.terminate()
+# #438 Саратов
+# t438 = Process(target=read_well, args=["/mnt/438","s438"])
+# t438.start()
+# t438.join(30)
+# if t438.is_alive(): t438.terminate()
 
 
 #threading.TIMEOUT_MAX=5
@@ -1080,12 +1080,12 @@ t631.start()
 t631.join(30)
 if t631.is_alive(): t631.terminate()
 
-#934
+#2201 934
 #read_well("/mnt/915","s915")
-t915 = Process(target=read_well, args=["/mnt/915","s915"])
-t915.start()
-t915.join(30)
-if t915.is_alive(): t915.terminate()
+# t915 = Process(target=read_well, args=["/mnt/915","s915"])
+# t915.start()
+# t915.join(30)
+# if t915.is_alive(): t915.terminate()
 
 #threading.Thread(target=read_well, args=["/mnt/631","s631"]).join(5)
 #read_well("/mnt/631","s631")

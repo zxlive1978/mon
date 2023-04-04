@@ -292,16 +292,16 @@ if t104.is_alive(): t104.terminate()
 # if t631.is_alive(): t631.terminate()
 
 #542 Обработчик
-t629 = Process(target=read_well, args=["/mnt/915o","915o","/""/192.168.146.227/c$/Program Files/Common Files/PS Shared/Database/"""])
-t629.start()
-t629.join(30)
-if t629.is_alive(): t629.terminate()
+# t629 = Process(target=read_well, args=["/mnt/915o","915o","/""/192.168.146.227/c$/Program Files/Common Files/PS Shared/Database/"""])
+# t629.start()
+# t629.join(30)
+# if t629.is_alive(): t629.terminate()
 
 #542 Обработчик c: /Users/user/Desktop/Сводки 542/Май 2021/Сводки директору Скв № 542 09.05.2021.xlsx
-t629 = Process(target=read_well, args=["/mnt/915oc","915o","/""/192.168.146.227/c$"""])
-t629.start()
-t629.join(30)
-if t629.is_alive(): t629.terminate()
+# t629 = Process(target=read_well, args=["/mnt/915oc","915o","/""/192.168.146.227/c$"""])
+# t629.start()
+# t629.join(30)
+# if t629.is_alive(): t629.terminate()
 
 
 
