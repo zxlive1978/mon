@@ -175,8 +175,8 @@ if (r.ret_code==0):
 		average8888=r.avg_rtt
 #average8888 = megamultiping.ping ('8.8.8.8')
 
-#31.173.139.34
-r = pyping.ping('31.173.139.34')
+#31.173.139.39
+r = pyping.ping('31.173.139.39')
 if (r.ret_code==0):
 		average62220=r.avg_rtt
 #average62220 = megamultiping.ping ('62.220.55.149')
