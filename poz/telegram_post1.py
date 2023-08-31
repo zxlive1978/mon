@@ -15,7 +15,7 @@ def post(message,chat_id):
 #a = (""\"x"+str(hex(0xF0)[2:])+""\"x"+str(hex(0x9F)[2:])+""\"x"+str(hex(0x9A)[2:])+""\"x"+str(hex(random.randrange(0x80,0xA4))[2:]))
 
 #print fullchr(random.randrange(0x1F680,0x1F6A4))
-post(fullchr(random.randrange(0x1F680,0x1F6A4)) , "-576447110")
+post(fullchr(random.randrange(0x1F680,0x1F6A4)) , "-1001943332725")
 
 #\xF0\x9F\x9A\xA4
 #post ("\xF0\x9F\x9A\x80","-267211915")
