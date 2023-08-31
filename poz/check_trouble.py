@@ -199,7 +199,8 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 			"\n\n"+bigmessage, "utf8")
 			# print (message, mailtmp)
 			#gmail_post.post(mailtmp,"Скважина: "+str(name_well))
-			telegram_post.post(mailtmp,"-576447110")
+			# telegram_post.post(mailtmp,"-576447110")
+			telegram_post.post(mailtmp,"-1001943332725")
 			#whatsapp_post.post(mailtmp,"79272857676-1490802779")
 			
 			
