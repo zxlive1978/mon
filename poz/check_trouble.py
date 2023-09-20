@@ -209,7 +209,7 @@ def check_trouble (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_m
 	# print average
 	db.commit()
 	db.close()
-	####Поиск трех последних записей
+	#######Поиск трех последних записей
 	#SELECT * FROM `p192168146161` ORDER BY `date` DESC LIMIT 3 
 	#Проверка сломалось ли что-то, в поле три значения меньше 0
 	#Чтение последнего сообщения(состояния), если отличное от текущего то записываем в алярм и  посылаем почту
