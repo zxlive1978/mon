@@ -191,7 +191,8 @@ if (r.ret_code==0):
 #213.80.235.178
 r = pyping.ping('213.80.235.178')
 if (r.ret_code==0):
-		average773=r.avg_rtt
+		#average773=r.avg_rtt
+		average773=-100
 #average773 = megamultiping.ping ('192.168.77.3')
 
 	
