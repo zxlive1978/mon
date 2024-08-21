@@ -29,7 +29,8 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				remote_conn.send("exit\n")
 				
 				#print data
-				# time.sleep(retry_interval)
+				time.sleep(retry_interval)
+				client.close()
 				# output = remote_conn.recv(65535)
 				# print data[30].split()[1][:-1]
 				# print data[32].split()[1][:-1]
@@ -60,6 +61,9 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				data = output.splitlines()
 				
 				remote_conn.send("exit\n")
+				
+				time.sleep(retry_interval)
+				client.close()
 				# time.sleep(retry_interval)
 				# output = remote_conn.recv(65535)
 				# print data[30].split()[1][:-1]
@@ -92,7 +96,8 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				data = output.splitlines()
 				
 				remote_conn.send("exit\n")
-				
+				time.sleep(retry_interval)
+				client.close()
 				# print data
 				# time.sleep(retry_interval)
 				# output = remote_conn.recv(65535)

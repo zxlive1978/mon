@@ -85,11 +85,13 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
 	
 	
 	#Signal Ubi1 ubisignal how connect!
-	ub1signal, ub1amq, ub1amc =ubisignal_ap.ubisignal(ip_ub1,"22",5,2, True, ubi_ver)
+	ub1signal, ub1amq, ub1amc =ubisignal_ap.ubisignal(ip_ub1,"22",60,2, True, ubi_ver)
+	# ub1signal, ub1amq, ub1amc =ubisignal_ap.ubisignal(ip_ub1,"22",5,2, True, ubi_ver)
 	print "ubi1\n"
 	
 	#Signal Ubi2
-	ub2signal, ub2amq, ub2amc =ubisignal_ap.ubisignal(ip_ub2,"22",5,2, False, ubi_ver)
+	ub2signal, ub2amq, ub2amc =ubisignal_ap.ubisignal(ip_ub2,"22",60,2, False, ubi_ver)
+	# ub2signal, ub2amq, ub2amc =ubisignal_ap.ubisignal(ip_ub2,"22",5,2, False, ubi_ver)
 	print "ubi2\n"
 	
 	threadLock.acquire()
