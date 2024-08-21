@@ -128,6 +128,6 @@ def speed_zyxel(host,port,delay, ip_sngs):
 		# return str(speedtx), str(speedrx)
 
 	# return str(round(speedtx*8/1024/1024,3)), str(round(speedrx*8/1024/1024,3))
-#c = 5	
-#r,t=speed_zyxel("192.168.146.97","5188",int(c), "213.80.235.178")
-#print r,t
+c = 5	
+r,t=speed_zyxel("192.168.146.17","5188",int(c), "213.80.235.178")
+print r,t
