@@ -30,21 +30,22 @@ def speed_eltex(host, port, timeout, retry_interval):
 				client.close()
 				
 
-				rx=0
-				tx=0
+				rx=0.0
+				tx=0.0
 				for str in trash:
 					
 					if len(str)>3 and (str[0] =="M" ):
 						rx+=int(str.split()[22])
 						tx+=int(str.split()[23])
-						print (rx,tx)
+						# print (rx,tx)
 					if len(str)>3 and (str[0] =="t" ):
 						rx+=int(str.split()[6])
 						tx+=int(str.split()[7])
-						print (rx,tx)
+						# print (rx,tx)
 					
 				# data =[rx,tx]
-				
+				rx = float(rx/1024)
+				tx = float(tx/1024)
 				return rx, tx
 				
 				print (trash[8][1])
