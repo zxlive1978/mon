@@ -28,8 +28,9 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				data = output.splitlines()
 				time.sleep(retry_interval)
 				client.close()
+				return data[]
 				# return data[8:]
-                return data[]
+                
 			except:
 				return -100,-100,-100
             	#print data
