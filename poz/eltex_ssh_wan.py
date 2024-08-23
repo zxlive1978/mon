@@ -29,16 +29,30 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				time.sleep(retry_interval)
 				client.close()
 				
-				data =[]
-				for str in trash:
-					if str[0] == 't' & str[1] == 'c'  & str[1] == 'p':
-						data.append(str)
 
+				rx=0
+				tx=0
+				for str in trash:
+					
+					if len(str)>3 and (str[0] =="M" ):
+						rx+=int(str.split()[22])
+						tx+=int(str.split()[23])
+						print (rx,tx)
+					if len(str)>3 and (str[0] =="t" ):
+						rx+=int(str.split()[6])
+						tx+=int(str.split()[7])
+						print (rx,tx)
+					
+				data =[rx,tx]
+				
 				return data
+				
+				print (trash[8][1])
+				return trash
 				# return data[8:]
                 
 			except:
-				return -100,-100,-100
+				return -100,-100
             	#print data
                 
 		        
@@ -57,3 +71,6 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				
 s=ubisignal(sys.argv[1],"22",10,2, True,"1")
 print ('hello' ,s)
+# for str in s:
+# 		if len(str)>0:
+# 			print (str[0])
