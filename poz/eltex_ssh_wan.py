@@ -5,7 +5,7 @@ import paramiko
 import time
 
 
-def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
+def speed_eltex(host, port, timeout, retry_interval):
 	client = paramiko.client.SSHClient()
 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 	client.load_system_host_keys()
@@ -43,9 +43,9 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 						tx+=int(str.split()[7])
 						print (rx,tx)
 					
-				data =[rx,tx]
+				# data =[rx,tx]
 				
-				return data
+				return rx, tx
 				
 				print (trash[8][1])
 				return trash
@@ -69,8 +69,8 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
             
 		        
 				
-s=ubisignal(sys.argv[1],"22",10,2, True,"1")
-print ('hello' ,s)
+# s=ubisignal(sys.argv[1],"22",10,2, True,"1")
+# print ('hello' ,s)
 # for str in s:
 # 		if len(str)>0:
 # 			print (str[0])

@@ -3,7 +3,7 @@
 import sys
 import telnetlib
 
-def speed_zyxel(host,port,delay, ip_sngs):
+def speed_eltex(host,port,delay, ip_sngs):
 	
 	rx, tx = 0.0, 0.0	
 	try:	

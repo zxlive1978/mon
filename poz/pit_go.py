@@ -30,6 +30,9 @@ import badanalogcam
 import ubisignal_ap
 #import megamultiping
 
+#Speed ELTEX
+import eltex_ssh_wan
+
 
 
 def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,ippoz_modem,ip_signal,ip_dvr, ip_cam1, ip_cam2, ip_cam3, ip_cam4, ip_ub1, ip_ub2, ip_sbor, analogdvr, ubi_ver, ip_gbox):
@@ -63,13 +66,13 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
 		# else:
 		# 	tx,rx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
 
-		#GBOX 2 IP TUMEN
+		#GBOX 2 IP TUMEN ZYXEL
 		rx,tx = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "178.72.74.118")
 		rx2,tx2 = zyxel_wan_all.speed_zyxel(ip_poz,"5188",int(c), "217.151.129.61")
 		tx = tx + tx2
 		rx = rx + rx2
-
-		mlrx,mltx=zyxel_sngs_port2206.speed_zyxel(ip_poz,"5188",int(c), "213.80.235.178")
+		#GBOX 2 IP TUMEN ZYXEL ELTEX
+		rx, tx = eltex_ssh_wan.speed_eltex(ip_poz, "22", 60, 2)
         # if (luch):
         #     luchtx,luchrx = zyxel_wan_all_luch.speed_zyxel(ip_poz,"5188",int(c))
 		#tx,rx=-1,-1
