@@ -23,11 +23,17 @@ def ubisignal(host, port, timeout, retry_interval, ap, ubi_ver):
 				remote_conn.send("r")
 				time.sleep(retry_interval)
 				output = remote_conn.recv(65535)
-				data = output.splitlines()
+				trash = output.splitlines()
 				remote_conn.send("exit\n")
-				data = output.splitlines()
+				trash = output.splitlines()
 				time.sleep(retry_interval)
 				client.close()
+				
+				data =[]
+				for str in trash:
+					if str[0] == 't' & str[1] == 'c'  & str[1] == 'p':
+						data.append(str)
+
 				return data
 				# return data[8:]
                 
