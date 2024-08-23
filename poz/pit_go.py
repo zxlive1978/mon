@@ -76,7 +76,7 @@ def read_zyxel_ping_rxtx (poz_type, name_well,ip_well,ip_poz,ip_obrab,name_base,
         # if (luch):
         #     luchtx,luchrx = zyxel_wan_all_luch.speed_zyxel(ip_poz,"5188",int(c))
 		#tx,rx=-1,-1
-	print "speed zyxel/poz\n"
+	print "speed eltex/zyxel/poz\n"
 	
 	#Speed poz_modem
 	mrx, mtx = pozmodem.speed(ippoz_modem,"5188",int(c))
