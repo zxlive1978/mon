@@ -44,8 +44,8 @@ def speed_eltex(host, port, timeout, retry_interval):
 						# print (rx,tx)
 					
 				# data =[rx,tx]
-				rx = float(rx/1024)
-				tx = float(tx/1024)
+				rx = float((rx*8)/1024)
+				tx = float((tx*8)/1024)
 				return rx, tx
 				
 				print (trash[8][1])
